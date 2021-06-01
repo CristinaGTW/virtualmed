@@ -70,7 +70,7 @@ class _QueryBodyState extends State<QueryBody> {
   }
 
   List<Widget> getQuestions() {
-    List<Widget> finalQuestions = List<Widget>();
+    List<Widget> finalQuestions = [];
     if (query[bodyPart] != null) {
       for (var i = 0; i < query[bodyPart].length; i++) {
         _groupValues.add(-1);
@@ -134,7 +134,7 @@ class _QueryBodyState extends State<QueryBody> {
   }
 
   List<Widget> getChoices(List<String> choices, int questionNo) {
-    List<Widget> displayChoices = List<Widget>();
+    List<Widget> displayChoices = [];
     for (int i = 0; i < choices.length; i++) {
       displayChoices.add(
         Container(

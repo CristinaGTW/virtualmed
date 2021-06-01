@@ -1,0 +1,9 @@
+build:
+  stage: build
+  script:
+    - flutter analyze
+
+test:
+  stage: test
+  script:
+    - flutter test

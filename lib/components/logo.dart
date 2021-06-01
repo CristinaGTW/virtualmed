@@ -14,13 +14,13 @@ class Logo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SvgPicture.asset(
-            "icons/cross.svg",
+            "assets/icons/cross.svg",
             height: 115,
             width: 115,
             color: iconColor,
           ),
           Image.asset(
-            "images/LogoWhite.png",
+            "assets/images/LogoWhite.png",
             width: size.width * 0.8,
           ),
         ],
