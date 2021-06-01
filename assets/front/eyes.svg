@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104.28" height="24.28" viewBox="0 0 104.28 24.28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: gray;
+        stroke-width: 1.28px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Eyes_copy" data-name="Eyes copy" class="cls-1" d="M513.5,433c11.322,0,20.5,5.149,20.5,11.5S524.822,456,513.5,456,493,450.851,493,444.5,502.178,433,513.5,433Zm62,0c11.322,0,20.5,5.149,20.5,11.5S586.822,456,575.5,456,555,450.851,555,444.5,564.178,433,575.5,433Z" transform="translate(-492.36 -432.36)"/>
+</svg>
