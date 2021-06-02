@@ -5,7 +5,9 @@ stages:
 build:
   stage: build
   script:
+    - cd android
     - bundle install
+    - cd ..
     - flutter build appbundle
     - cd android
     - bundle exec fastlane android test
