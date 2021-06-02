@@ -1,6 +1,7 @@
 build:
   stage: build
   script:
+    - flutter pub get
     - flutter build appbundle
 
 test:
