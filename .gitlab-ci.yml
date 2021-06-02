@@ -5,11 +5,10 @@ stages:
 build:
   stage: build
   script:
-    - echo "Hello world"
-    - whoami
-#    - flutter build appbundle
-#    - cd android
-#    - bundle exec fastlane android test
+    - bundle install
+    - flutter build appbundle
+    - cd android
+    - bundle exec fastlane android test
 
 test:
   stage: test
