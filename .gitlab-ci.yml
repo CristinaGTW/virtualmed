@@ -1,5 +1,7 @@
-build:
-  stage: build
+#build:
+#  stage: build
+#  script:
+#    -
 #  script:
 #    - flutter build appbundle
 #    - cd android
