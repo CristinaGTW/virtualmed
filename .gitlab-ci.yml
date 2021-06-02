@@ -1,7 +1,7 @@
 build:
   stage: build
   script:
-    - flutter analyze
+    - flutter build appbundle
 
 test:
   stage: test

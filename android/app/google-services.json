@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "51942467504",
+    "project_id": "virtualmed-f70e5",
+    "storage_bucket": "virtualmed-f70e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51942467504:android:746da90b1140eaa01c5875",
+        "android_client_info": {
+          "package_name": "com.example.virtual_med"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51942467504-f84hq2d5k56gqf5c9sr9q7v3so515l7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOiURSfdNC2k23sCxVUATBkdvXCDvnRYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51942467504-f84hq2d5k56gqf5c9sr9q7v3so515l7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -23,7 +23,13 @@ class _QueryBodyState extends State<QueryBody> {
       {
         "question": "Are you experiencing ...?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
-        "answerChoices": ["Yes", "No", "Sometimes"]
+        "answerChoices": ["Yes", "No", "Sometimes"],
+        "onYesResponse": [
+          {
+            "Tendonitis": 20,
+            "Sprained wrist": 10,
+          }
+        ]
       },
       {
         "question": "Multiple choice test",
@@ -33,6 +39,17 @@ class _QueryBodyState extends State<QueryBody> {
       {"question": "Describe what happened", "answerType": AnswerType.TEXT_BOX}
     ]
   };
+
+  // static const diseases = {
+  //   "Sprained Wrist": {
+  //     "overview": "........",
+  //     "try": ["resting your wrist ...", "take paracetamol ...", "take off any "],
+  //     "avoid": ["do not use", "do not lift"]
+  //     },
+  //   "Tendinitis": {
+  //
+  //   }
+  // };
 
   final String bodyPart;
 

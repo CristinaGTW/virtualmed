@@ -153,7 +153,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
 
   Color _getBodyPartColor(String svgName, bool isBack) {
     if (svgName.contains("Eyes")) {
-      return Color(0xFFC4C4C4);
+      return kPrimaryBgColor;
     }
     return Colors.white;
   }

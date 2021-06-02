@@ -106,6 +106,39 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
     ]);
   }
 
+  Widget getFurtherActionsPage() {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      color: kPrimaryBgColor,
+      child: ListView(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.only(top: size.height / 3 - 25,
+                left: (size.width - 400) / 2, right: (size.width - 400) / 2),
+            child: Container(
+              child: RoundedButton(
+                width: 400,
+                text: "View Nearby Medical Centers",
+                press: () => setProgress(3),
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 50,
+                left: (size.width - 400) / 2, right: (size.width - 400) / 2),
+            child: Container(
+              child: RoundedButton(
+                width: 400,
+                text: "Contact a Specialist Directly",
+                press: () => setProgress(3),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     switch (_currentIndex) {
@@ -116,9 +149,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       case 2:
         return getDiagnosisPage();
       case 3:
-        return Container(
-          child: Text("Further actions"),
-        );
+        return getFurtherActionsPage();
     }
     return Scaffold(
       body: Text("Error"),

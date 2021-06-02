@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/query_body.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/top-title.dart';
+import 'package:virtual_med/components.dart';
 
 class QueryPage extends StatelessWidget {
   final String bodyPart;
@@ -12,7 +13,7 @@ class QueryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFFC4C4C4),
+      color: kPrimaryBgColor,
       child: Column(
         children: <Widget>[
           TopTitle(

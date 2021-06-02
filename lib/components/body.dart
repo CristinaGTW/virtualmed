@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_med/Screens/Authentication/account_selection.dart';
+import 'package:virtual_med/Screens/Authentication/login_page.dart';
 import 'package:virtual_med/Screens/main_nav.dart';
 import 'package:virtual_med/components/rounded_button.dart';
 
@@ -10,7 +12,9 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery
+        .of(context)
+        .size;
     return Container(
       color: kPrimaryColor,
       height: size.height,
@@ -28,8 +32,8 @@ class Body extends StatelessWidget {
               text: "EMERGENCY",
               press: () =>
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return MainNavUnauth();
-              })),
+                    return MainNavUnauth();
+                  })),
               color: Colors.white,
               textColor: kPrimaryColor,
             ),
@@ -40,8 +44,8 @@ class Body extends StatelessWidget {
               text: "LOG IN",
               press: () =>
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return MainNavAuth();
-              })),
+                    return LoginPage();
+                  })),
               color: kPrimaryColor,
               borderColor: Colors.white,
               textColor: Colors.white,
@@ -50,7 +54,10 @@ class Body extends StatelessWidget {
           Positioned(
             top: 3 * size.height / 5 + 150,
             child: TextButton(
-              onPressed: () {},
+              onPressed: () =>
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return AccountSelection();
+                  })),
               child: Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
                 child: Text(

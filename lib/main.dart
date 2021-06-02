@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_med/components.dart';
 
 import 'components/body.dart';
 
@@ -11,6 +12,7 @@ class VirtualMed extends StatelessWidget {
       title: 'VirtualMed - Welcome',
       theme: ThemeData(
         primarySwatch: Colors.red,
+        // primarySwatch: Colors.blue,
       ),
       home: Scaffold(
         body: Body(),
