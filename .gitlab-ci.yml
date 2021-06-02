@@ -1,8 +1,9 @@
 build:
   stage: build
-  script:
-    - cd android
-    - bundle exec fastlane android test
+#  script:
+#    - flutter build appbundle
+#    - cd android
+#    - bundle exec fastlane android test
 
 test:
   stage: test
