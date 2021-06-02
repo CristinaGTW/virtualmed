@@ -6,7 +6,7 @@ build:
   stage: build
   script:
     - cd android
-    - bundle install
+    - sudo bundle install
     - cd ..
     - flutter build appbundle
     - cd android
