@@ -15,7 +15,10 @@ class RoundedPasswordField extends StatelessWidget {
     return Container(
       height: 60,
       child: TextFieldContainer(
-        child: TextField(
+        child: TextFormField(
+          validator: (value) => value.length < 8
+              ? "Password must be at least 8 characters long"
+              : null,
           obscureText: true,
           onChanged: onChanged,
           style: TextStyle(fontSize: 20),

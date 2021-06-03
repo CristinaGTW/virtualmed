@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:virtual_med/components.dart';
 
 import 'components/body.dart';
 
@@ -14,9 +13,20 @@ class VirtualMed extends StatelessWidget {
         primarySwatch: Colors.red,
         // primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        body: Body(),
-      ),
+      // home: Body(),
+      home: LandingPage(),
     );
+  }
+}
+
+class LandingPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _LandingPage();
+}
+
+class _LandingPage extends State<LandingPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Body();
   }
 }

@@ -17,7 +17,8 @@ class RoundedInputField extends StatelessWidget {
     return Container(
       height: 60,
       child: TextFieldContainer(
-        child: TextField(
+        child: TextFormField(
+          validator: (value) => value.isEmpty ? "This field is required" : null,
           onChanged: onChanged,
           decoration: InputDecoration(
             icon: Icon(icon),
