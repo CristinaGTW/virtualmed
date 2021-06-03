@@ -2,12 +2,15 @@ stages:
   - build
   - test
 
+before_script:
+  - ls
+  - flutter pub get
+  - flutter clean
+
 build:
   stage: build
   script:
-    - flutter build appbundle
-    - cd android
-    - bundle exec fastlane android test
+    - flutter build bundle
 
 test:
   stage: test
