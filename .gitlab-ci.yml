@@ -16,3 +16,11 @@ test:
   stage: test
   script:
     - flutter test
+
+deploy:
+  stage: deploy
+  script:
+    - flutter build apk --release
+  artifacts:
+    paths:
+      - build/app/outputs/apk/app-release.apk
