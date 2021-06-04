@@ -28,7 +28,7 @@ class _ProfileTabState extends State<ProfileTab> {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return Text(
-                "Hello, " + snapshot.data.firstName,
+                "Hello, " + snapshot.data.lastName,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
