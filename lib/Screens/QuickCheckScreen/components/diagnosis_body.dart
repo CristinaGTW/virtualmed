@@ -4,7 +4,6 @@ import 'package:virtual_med/Screens/QuickCheckScreen/components/top-title.dart';
 import '../../../components.dart';
 
 class DiagnosisBody extends StatelessWidget {
-
   final List possibleDiagnoses;
 
   const DiagnosisBody({Key key, this.possibleDiagnoses}) : super(key: key);
@@ -12,7 +11,7 @@ class DiagnosisBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(bottom: 50),
+      padding: EdgeInsets.only(bottom: 50, left: 20, right: 20),
       decoration: BoxDecoration(
         color: kPrimaryLightColor,
         border: Border.all(
@@ -30,7 +29,25 @@ class DiagnosisBody extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 50),
             child: Column(
-              children: [],
+              children: <Widget>[
+                TopTitle(
+                  alignment: Alignment.topLeft,
+                  topMargin: 20.0,
+                  title: "Try",
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 50),
+            child: Column(
+              children: <Widget>[
+                TopTitle(
+                  alignment: Alignment.topLeft,
+                  topMargin: 20.0,
+                  title: "Avoid",
+                ),
+              ],
             ),
           ),
         ],

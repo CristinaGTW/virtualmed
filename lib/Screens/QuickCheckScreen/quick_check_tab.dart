@@ -103,13 +103,30 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       )),
       Container(
         padding: EdgeInsets.only(
-            left: (size.width - 300) / 2, right: (size.width - 300) / 2),
+            left: (size.width - 400) / 2, right: (size.width - 400) / 2),
         color: kPrimaryLightColor,
         child: Container(
-          child: RoundedButton(
-            width: 300,
-            text: "Further actions",
-            press: () => setProgress(3),
+          child: Column(
+            children: <Widget>[
+              Container(
+                child: Container(
+                  child: RoundedButton(
+                    width: 400,
+                    text: "View Nearby Medical Centers",
+                    press: () => setProgress(3),
+                  ),
+                ),
+              ),
+              Container(
+                child: Container(
+                  child: RoundedButton(
+                    width: 400,
+                    text: "Contact a Specialist Directly",
+                    press: () => setProgress(3),
+                  ),
+                ),
+              )
+            ],
           ),
         ),
       )
@@ -162,8 +179,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         return getQueryPage();
       case 2:
         return getDiagnosisPage();
-      case 3:
-        return getFurtherActionsPage();
+      // case 3:
+      //   return getFurtherActionsPage();
     }
     return Scaffold(
       body: Text("Error"),
