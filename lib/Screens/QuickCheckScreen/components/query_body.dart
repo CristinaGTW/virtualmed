@@ -3,59 +3,35 @@ import 'package:flutter/rendering.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/top-title.dart';
 
 import '../../../components.dart';
+import 'constants.dart';
 
 class QueryBody extends StatefulWidget {
   final String bodyPart;
+  final ValueChanged<List> onChanged;
 
-  const QueryBody({Key key, @required this.bodyPart}) : super(key: key);
+  const QueryBody({Key key, @required this.bodyPart, this.onChanged})
+      : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _QueryBodyState(bodyPart);
 }
 
 class _QueryBodyState extends State<QueryBody> {
-  static const query = {
-    "Hands": [
-      {
-        "question": "How bad does it hurt when ...?",
-        "answerType": AnswerType.INTENSITY
-      },
-      {
-        "question": "Are you experiencing ...?",
-        "answerType": AnswerType.MULTIPLE_CHOICE,
-        "answerChoices": ["Yes", "No", "Sometimes"],
-        "onYesResponse": [
-          {
-            "Tendonitis": 20,
-            "Sprained wrist": 10,
-          }
-        ]
-      },
-      {
-        "question": "Multiple choice test",
-        "answerType": AnswerType.MULTIPLE_CHOICE,
-        "answerChoices": ["choice 1", "choice 2", "choice 3", "choice 4"]
-      },
-      {"question": "Describe what happened", "answerType": AnswerType.TEXT_BOX}
-    ]
-  };
-
-  // static const diseases = {
-  //   "Sprained Wrist": {
-  //     "overview": "........",
-  //     "try": ["resting your wrist ...", "take paracetamol ...", "take off any "],
-  //     "avoid": ["do not use", "do not lift"]
-  //     },
-  //   "Tendinitis": {
-  //
-  //   }
-  // };
-
   final String bodyPart;
 
   List<int> _groupValues = [];
+  List<bool> _answeredBefore = [];
+  List finalDiagnosesList = [];
 
   _QueryBodyState(this.bodyPart);
+
+  @override
+  void initState() {
+    super.initState();
+    if (mounted) {
+      _publishDiagnosis(finalDiagnosesList);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,8 +64,8 @@ class _QueryBodyState extends State<QueryBody> {
 
   List<Widget> getQuestions() {
     List<Widget> finalQuestions = [];
-    if (query[bodyPart] != null) {
-      for (var i = 0; i < query[bodyPart].length; i++) {
+    if (Constants.query[bodyPart] != null) {
+      for (var i = 0; i < Constants.query[bodyPart].length; i++) {
         _groupValues.add(-1);
         finalQuestions.add(Stack(
           children: [
@@ -99,13 +75,15 @@ class _QueryBodyState extends State<QueryBody> {
               child: Stack(
                 children: <Widget>[
                   Text(
-                    (i + 1).toString() + ". " + query[bodyPart][i]["question"],
+                    (i + 1).toString() +
+                        ". " +
+                        Constants.query[bodyPart][i]["question"],
                     style: TextStyle(fontSize: 20),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 30),
-                    child: getAnswer(query[bodyPart][i]["answerType"],
-                        query[bodyPart][i]["answerChoices"], i),
+                    margin: EdgeInsets.only(top: 80),
+                    child: getAnswer(Constants.query[bodyPart][i]["answerType"],
+                        Constants.query[bodyPart][i]["answerChoices"], i),
                   ),
                 ],
               ),
@@ -169,8 +147,32 @@ class _QueryBodyState extends State<QueryBody> {
                   ? null
                   : (int value) {
                       setState(() {
-                        // groupValue = value;
+                        var diagnosis = Constants.query[bodyPart][questionNo]
+                            ["onYesResponse"];
+                        var diagnosisLabel = Constants.query[bodyPart]
+                            [questionNo]["onYesResponse"]["diagnosis"];
+                        if (choices[i].contains("Yes")) {
+                          if (getDiagnoses(diagnosisLabel) == null) {
+                            finalDiagnosesList.add(diagnosis);
+                          } else {
+                            changeScore(
+                                diagnosis, questionNo, diagnosis["score"]);
+                          }
+                        }
+                        if (choices[i].contains("No")) {
+                          if (_answeredBefore.length > questionNo &&
+                              _answeredBefore[questionNo] == true &&
+                              getDiagnoses(diagnosisLabel) != null) {
+                            changeScore(
+                                diagnosis, questionNo, -diagnosis["score"]);
+                          }
+                        }
                         _groupValues[questionNo] = value;
+                        // print(diagnosesList);
+                        if (_answeredBefore.length >= questionNo) {
+                          _answeredBefore.add(false);
+                          _answeredBefore[questionNo] = true;
+                        }
                       });
                     },
             ),
@@ -179,6 +181,33 @@ class _QueryBodyState extends State<QueryBody> {
       );
     }
     return displayChoices;
+  }
+
+  void changeScore(Object diagnosis, int questionNo, int score) {
+    var diagnosisLabel =
+        Constants.query[bodyPart][questionNo]["onYesResponse"]["diagnosis"];
+    var previousDiagnosis = getDiagnoses(diagnosisLabel);
+    var previousScore = previousDiagnosis["score"];
+    if (previousScore + score > 0) {
+      finalDiagnosesList
+          .add({"diagnosis": diagnosisLabel, "score": previousScore + score});
+    }
+    finalDiagnosesList.remove(previousDiagnosis);
+  }
+
+  void _publishDiagnosis(List _possibleDiagnosis) {
+    if (widget.onChanged != null) {
+      widget.onChanged(_possibleDiagnosis);
+    }
+  }
+
+  getDiagnoses(String diagnosisLabel) {
+    for (var diagnosis in finalDiagnosesList) {
+      if (diagnosis["diagnosis"] == diagnosisLabel) {
+        return diagnosis;
+      }
+    }
+    return null;
   }
 }
 

@@ -8,7 +8,11 @@ class QueryPage extends StatelessWidget {
   final String bodyPart;
   final String bodyPartImage;
 
-  const QueryPage({Key key, @required this.bodyPart, this.bodyPartImage}) : super(key: key);
+  final ValueChanged<List> onChanged;
+
+  const QueryPage(
+      {Key key, @required this.bodyPart, this.bodyPartImage, this.onChanged})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +34,7 @@ class QueryPage extends StatelessWidget {
             margin: EdgeInsets.only(top: 50),
             child: QueryBody(
               bodyPart: bodyPart,
+              onChanged: onChanged,
             ),
           ),
         ],

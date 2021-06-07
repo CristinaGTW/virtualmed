@@ -148,7 +148,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
             bodyPart(
                 "assets/front/calves.svg",
                 "Calves",
-                normalizeSize(475.0, humanHeight),
+                normalizeSize(476.0, humanHeight),
                 0.0,
                 0.0,
                 normalizeSize(125.0, humanHeight),
@@ -156,7 +156,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
             bodyPart(
                 "assets/front/feet.svg",
                 "Feet",
-                normalizeSize(590.0, humanHeight),
+                normalizeSize(595.0, humanHeight),
                 0.0,
                 0.0,
                 normalizeSize(65.0, humanHeight),
@@ -241,7 +241,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
                 normalizeSize(485.0, humanHeight),
                 0.0,
                 0.0,
-                normalizeSize(135.0, humanHeight),
+                normalizeSize(130.0, humanHeight),
                 true),
             bodyPart(
                 "assets/back/feet.svg",

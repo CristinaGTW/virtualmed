@@ -13,6 +13,7 @@ class QuickCheckTab extends StatefulWidget {
 
 class _QuickCheckTabState extends State<QuickCheckTab> {
   var _finalBodyPartList = [];
+  var _possibleDiagnosis = [];
   int _currentIndex = 0;
 
   void setProgress(int index) {
@@ -23,6 +24,10 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
 
   void bodyPartList(List value) {
     _finalBodyPartList = value;
+  }
+
+  void possibleDiagnosis(List value) {
+    _possibleDiagnosis = value;
   }
 
   String getBodyPartImage() {
@@ -70,6 +75,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
               ? _finalBodyPartList.elementAt(0)
               : "General",
           bodyPartImage: getBodyPartImage(),
+          onChanged: possibleDiagnosis,
         ),
       ),
       Container(
@@ -90,7 +96,11 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
   Widget getDiagnosisPage() {
     Size size = MediaQuery.of(context).size;
     return ListView(children: [
-      Container(child: DiagnosisPage(bodyPartImage: getBodyPartImage())),
+      Container(
+          child: DiagnosisPage(
+        bodyPartImage: getBodyPartImage(),
+        possibleDiagnoses: _possibleDiagnosis,
+      )),
       Container(
         padding: EdgeInsets.only(
             left: (size.width - 300) / 2, right: (size.width - 300) / 2),
@@ -113,8 +123,10 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       child: ListView(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(top: size.height / 3 - 25,
-                left: (size.width - 400) / 2, right: (size.width - 400) / 2),
+            padding: EdgeInsets.only(
+                top: size.height / 3 - 25,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
             child: Container(
               child: RoundedButton(
                 width: 400,
@@ -124,8 +136,10 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(top: 50,
-                left: (size.width - 400) / 2, right: (size.width - 400) / 2),
+            padding: EdgeInsets.only(
+                top: 50,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
             child: Container(
               child: RoundedButton(
                 width: 400,

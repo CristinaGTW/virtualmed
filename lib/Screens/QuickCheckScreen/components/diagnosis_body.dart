@@ -4,6 +4,11 @@ import 'package:virtual_med/Screens/QuickCheckScreen/components/top-title.dart';
 import '../../../components.dart';
 
 class DiagnosisBody extends StatelessWidget {
+
+  final List possibleDiagnoses;
+
+  const DiagnosisBody({Key key, this.possibleDiagnoses}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
