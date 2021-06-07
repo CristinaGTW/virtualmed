@@ -147,26 +147,30 @@ class _QueryBodyState extends State<QueryBody> {
                   ? null
                   : (int value) {
                       setState(() {
-                        var diagnosis = Constants.query[bodyPart][questionNo]
+                        var diagnosisList = Constants.query[bodyPart][questionNo]
                             ["onYesResponse"];
-                        var diagnosisLabel = Constants.query[bodyPart]
-                            [questionNo]["onYesResponse"]["diagnosis"];
-                        if (choices[i].contains("Yes")) {
-                          if (getDiagnoses(diagnosisLabel) == null) {
-                            finalDiagnosesList.add(diagnosis);
-                          } else {
-                            changeScore(
-                                diagnosis, questionNo, diagnosis["score"]);
+
+                        diagnosisList.forEach((diagnosis) {
+                          var index = (diagnosisList as List).lastIndexOf(diagnosis);
+                          var diagnosisLabel = Constants.query[bodyPart]
+                              [questionNo]["onYesResponse"][index]["diagnosis"];
+                          if (choices[i].contains("Yes")) {
+                            if (getDiagnoses(diagnosisLabel) == null) {
+                              finalDiagnosesList.add(diagnosis);
+                            } else {
+                              changeScore(
+                                  diagnosis, questionNo, diagnosis["score"], index);
+                            }
                           }
-                        }
-                        if (choices[i].contains("No")) {
-                          if (_answeredBefore.length > questionNo &&
-                              _answeredBefore[questionNo] == true &&
-                              getDiagnoses(diagnosisLabel) != null) {
-                            changeScore(
-                                diagnosis, questionNo, -diagnosis["score"]);
+                          if (choices[i].contains("No")) {
+                            if (_answeredBefore.length > questionNo &&
+                                _answeredBefore[questionNo] == true &&
+                                getDiagnoses(diagnosisLabel) != null) {
+                              changeScore(
+                                  diagnosis, questionNo, -diagnosis["score"], index);
+                            }
                           }
-                        }
+                        });
                         _groupValues[questionNo] = value;
                         // print(diagnosesList);
                         if (_answeredBefore.length >= questionNo) {
@@ -183,9 +187,9 @@ class _QueryBodyState extends State<QueryBody> {
     return displayChoices;
   }
 
-  void changeScore(Object diagnosis, int questionNo, int score) {
+  void changeScore(Object diagnosis, int questionNo, int score, int index) {
     var diagnosisLabel =
-        Constants.query[bodyPart][questionNo]["onYesResponse"]["diagnosis"];
+        Constants.query[bodyPart][questionNo]["onYesResponse"][index]["diagnosis"];
     var previousDiagnosis = getDiagnoses(diagnosisLabel);
     var previousScore = previousDiagnosis["score"];
     if (previousScore + score > 0) {
