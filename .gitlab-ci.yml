@@ -1,6 +1,7 @@
 stages:
   - build
   - test
+  - deploy
 
 before_script:
   - ls
@@ -16,3 +17,10 @@ test:
   stage: test
   script:
     - flutter test
+
+deploy:
+  stage: deploy
+  script:
+    - dpl --provider=heroku --app=virtual-med --api-key=87a6fcb6-b69e-48d1-afb7-ff19a7561e09 --skip-cleanup
+  only:
+    - master
