@@ -33,7 +33,8 @@ class RegularUser {
 
   static Future<RegularUser> login(String email, String password) async {
     var res = await postToServer(
-        api: 'Login', body: {'email': email, 'password': password});
+        api: 'Login',
+        body: {'email': email, 'password': password, 'acc_type': 'regular'});
     if (res['msg'] == 'Success') {
       return RegularUser(
           userId: res['body'][0]['id'],
@@ -45,8 +46,8 @@ class RegularUser {
     }
   }
 
-  static Future<RegularUser> register(String first_name,
-      String last_name, String email, String phone, String password) async {
+  static Future<RegularUser> register(String first_name, String last_name,
+      String email, String phone, String password) async {
     var res = await postToServer(api: 'Register', body: {
       'acc_type': 'regular',
       'first_name': first_name,

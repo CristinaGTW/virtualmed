@@ -39,7 +39,7 @@ class DoctorUser {
 
   static Future<DoctorUser> login(String email, String password) async {
     var res = await postToServer(
-        api: 'Login', body: {'email': email, 'password': password});
+        api: 'Login', body: {'email': email, 'password': password, 'acc_type': 'doctor'});
     if (res['msg'] == 'Success') {
       return DoctorUser(
           userId: res['body'][0]['id'],

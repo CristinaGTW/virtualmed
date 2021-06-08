@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:virtual_med/Screens/Doctor/main_nav_doctor.dart';
 import 'package:virtual_med/Screens/main_nav.dart';
 import 'package:virtual_med/Services/provider.dart';
 
@@ -32,12 +33,10 @@ class VirtualMed extends StatelessWidget {
       return MainNavAuth();
     }
     if (context.watch<UserProvider>().doctorUser != null) {
-      return Scaffold();
+      return MainNavDoctor();
     }
     return LandingPage();
   }
-
-
 }
 
 class LandingPage extends StatefulWidget {
