@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_med/Screens/QuickCheckScreen/components/diagnosis-overview.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/top-title.dart';
 
 import '../../../components.dart';
@@ -24,6 +25,16 @@ class DiagnosisBody extends StatelessWidget {
         children: [
           TopTitle(
             topMargin: 20.0,
+            title: "Overview",
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 10, bottom: 10),
+            padding: EdgeInsets.all(20),
+            child: Text(DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]
+            ['overview'], style: TextStyle(fontSize: 20),),
+          ),
+          TopTitle(
+            topMargin: 20.0,
             title: "Recommendations",
           ),
           Container(
@@ -35,6 +46,9 @@ class DiagnosisBody extends StatelessWidget {
                   topMargin: 20.0,
                   title: "Try",
                 ),
+                Column(
+                  children: getTry(),
+                )
               ],
             ),
           ),
@@ -47,11 +61,58 @@ class DiagnosisBody extends StatelessWidget {
                   topMargin: 20.0,
                   title: "Avoid",
                 ),
+                Column(
+                  children: getAvoid(),
+                )
               ],
             ),
           ),
         ],
       ),
     );
+  }
+
+  List<Widget> getTry() {
+    List tryFinal = List<Widget>();
+    var tryList =
+        DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]['try'];
+
+    for (var tryElem in tryList) {
+      tryFinal.add(
+          Container(
+            alignment: Alignment.topLeft,
+            margin: EdgeInsets.only(top: 10, left: 20),
+            child: Text(
+              tryElem,
+              style: TextStyle(
+                  fontSize: 20,),
+            ),
+          )
+      );
+    }
+    return tryFinal;
+  }
+
+  List<Widget> getAvoid() {
+    List avoidFinal = List<Widget>();
+
+    var avoidList =
+    DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]['avoid'];
+
+    for (var avoidElem in avoidList) {
+      avoidFinal.add(
+          Container(
+            alignment: Alignment.topLeft,
+            margin: EdgeInsets.only(top: 10, left: 20),
+            child: Text(
+              avoidElem,
+              style: TextStyle(
+                fontSize: 20,),
+            ),
+          )
+      );
+    }
+
+    return avoidFinal;
   }
 }
