@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_med/Models/doctor-user.dart';
+import 'package:virtual_med/Services/provider.dart';
 import 'package:virtual_med/components/rounded_button.dart';
+import 'package:provider/provider.dart';
 
 import '../../components.dart';
 import 'components/logo.dart';
 import 'components/rounded_input_field.dart';
 import 'components/rounded_password_field.dart';
 import 'login_page.dart';
+
+Map<String, String> _data = {
+  'first_name': '',
+  'last_name': '',
+  'email': '',
+  'phone': '',
+  'specialization': '',
+  'location': '',
+  'password': ''
+};
 
 class DoctorRegisterPage extends StatefulWidget {
   @override
@@ -15,14 +28,6 @@ class DoctorRegisterPage extends StatefulWidget {
 class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
   // final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
-
-  String firstName = "";
-  String lastName = "";
-  String email = "";
-  String phone = "";
-  String specialization = "";
-  String location = "";
-  String password = "";
 
   @override
   Widget build(BuildContext context) {
@@ -46,11 +51,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "First Name",
                 icon: Icons.person,
-                onChanged: (value) {
-                  setState(() {
-                    firstName = value;
-                  });
-                },
+                onChanged: (value) => _data['first_name'] = value,
               ),
             ),
             Container(
@@ -58,11 +59,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Last Name",
                 icon: Icons.person,
-                onChanged: (value) {
-                  setState(() {
-                    lastName = value;
-                  });
-                },
+                onChanged: (value) => _data['last_name'] = value,
               ),
             ),
             Container(
@@ -70,11 +67,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Your Office Email",
                 icon: Icons.email,
-                onChanged: (value) {
-                  setState(() {
-                    email = value;
-                  });
-                },
+                onChanged: (value) => _data['email'] = value,
               ),
             ),
             Container(
@@ -82,11 +75,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Phone Number",
                 icon: Icons.phone,
-                onChanged: (value) {
-                  setState(() {
-                    phone = value;
-                  });
-                },
+                onChanged: (value) => _data['phone'] = value,
               ),
             ),
             Container(
@@ -94,11 +83,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Your Specialization",
                 icon: Icons.medical_services,
-                onChanged: (value) {
-                  setState(() {
-                    specialization = value;
-                  });
-                },
+                onChanged: (value) => _data['specialization'] = value,
               ),
             ),
             Container(
@@ -106,31 +91,25 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Location",
                 icon: Icons.pin_drop,
-                onChanged: (value) {
-                  setState(() {
-                    location = value;
-                  });
-                },
+                onChanged: (value) => _data['location'] = value,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
+              child: RoundedPasswordField(
+                onChanged: (value) => _data['password'] = value,
               ),
             ),
             Container(
               margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
               child: RoundedPasswordField(
                 onChanged: (value) {
-                  setState(() {
-                    password = value;
-                  });
-                },
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
-              child: RoundedPasswordField(
-                onChanged: (value) {
-                  if (value.compareTo(password) == 0) {
-                    // passwords match ==> continue
-                  } else {
-                    // show error message
+                  if (value.compareTo(_data['password']) != 0) {
+                    final snackBar = SnackBar(
+                      content: Text('Passwords do not match'),
+                      backgroundColor: kPrimaryColor,
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   }
                 },
                 confirm: true,
@@ -141,11 +120,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
                   top: 50, bottom: 50, left: sidePadding, right: sidePadding),
               child: RoundedButton(
                 text: "Register",
-                press: () async {
-                  if (_formKey.currentState.validate()) {
-                    // success
-                  }
-                },
+                press: () => _formKey.currentState.validate() ? register() : {},
                 color: kPrimaryColor,
                 borderColor: Colors.white,
                 textColor: Colors.white,
@@ -187,5 +162,24 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
         ),
       ),
     );
+  }
+
+  void register() async {
+    try {
+      context.read<UserProvider>().setDoctorUser(await DoctorUser.register(
+          '${_data['first_name']}',
+          '${_data['last_name']}',
+          '${_data['email']}',
+          '${_data['phone']}',
+          '${_data['specialization']}',
+          '${_data['location']}',
+          '${_data['password']}'));
+    } catch (e) {
+      final snackBar = SnackBar(
+        content: Text('$e'),
+        backgroundColor: kPrimaryColor,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
   }
 }
