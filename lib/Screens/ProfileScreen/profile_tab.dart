@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:virtual_med/Models/regular-user.dart';
+import 'package:virtual_med/Services/provider.dart';
 import 'package:virtual_med/Services/utils.dart';
+import 'package:provider/provider.dart';
 
 class ProfileTab extends StatefulWidget {
   @override
@@ -21,6 +23,9 @@ class _ProfileTabState extends State<ProfileTab> {
 
   @override
   Widget build(BuildContext context) {
+    var regularUser = context.watch<UserProvider>().regularUser;
+    var doctorUser = context.watch<UserProvider>().doctorUser;
+    String user_name = regularUser != null ? regularUser.firstName : doctorUser.firstName;
     return Scaffold(
       body: Center(
         child: FutureBuilder<RegularUser>(
@@ -28,7 +33,7 @@ class _ProfileTabState extends State<ProfileTab> {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return Text(
-                "Hello, " + snapshot.data.lastName,
+                "Hello, " + user_name,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:virtual_med/Screens/ProfileScreen/profile_tab.dart';
+import 'package:virtual_med/Models/doctor-user.dart';
+import 'package:virtual_med/Models/regular-user.dart';
 import 'package:virtual_med/Screens/main_nav.dart';
+import 'package:virtual_med/Services/provider.dart';
 import 'package:virtual_med/components/rounded_button.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
 
 import '../../components.dart';
 import 'account_selection.dart';
@@ -9,23 +13,33 @@ import 'components/logo.dart';
 import 'components/rounded_input_field.dart';
 import 'components/rounded_password_field.dart';
 
+Map<String, String> _data = {'email': '', 'password': ''};
+
 class LoginPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
-
-  String email = "";
-  String password = "";
+  int radioButtonValue = 0;
 
   @override
   Widget build(BuildContext context) {
+    if (context.watch<UserProvider>().regularUser != null) {
+      return MainNavAuth();
+    }
+    if (context.watch<UserProvider>().doctorUser != null) {
+      return Scaffold();
+    }
+    return getLoginPage();
+  }
+
+  Widget getLoginPage() {
     Size size = MediaQuery.of(context).size;
     double sidePadding = (size.width - 400) / 2;
-    return Scaffold(
+    return SafeArea(
+        child: Scaffold(
       body: Form(
         key: _formKey,
         child: ListView(
@@ -42,34 +56,62 @@ class _LoginPageState extends State<LoginPage> {
               child: RoundedInputField(
                 inputText: "Email",
                 icon: Icons.email,
-                onChanged: (value) {
-                  setState(() {
-                    email = value;
-                  });
-                },
+                onChanged: (value) => _data['email'] = value,
               ),
             ),
             Container(
               margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
               child: RoundedPasswordField(
-                onChanged: (value) {
-                  setState(() {
-                    password = value;
-                  });
-                },
+                onChanged: (value) => _data['password'] = value,
               ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Radio(
+                              activeColor: kPrimaryColor,
+                              value: 0,
+                              groupValue: radioButtonValue,
+                              onChanged: (index) {
+                                setState(() {
+                                  radioButtonValue = 0;
+                                });
+                              }),
+                          Expanded(
+                            child: Text('Regular Account'),
+                          )
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Radio(
+                              activeColor: kPrimaryColor,
+                              value: 1,
+                              groupValue: radioButtonValue,
+                              onChanged: (index) {
+                                setState(() {
+                                  radioButtonValue = 1;
+                                });
+                              }),
+                          Expanded(child: Text('Doctor Account'))
+                        ],
+                      ),
+                    ),
+                  ]),
             ),
             Container(
               margin: EdgeInsets.only(
                   top: 50, left: sidePadding, right: sidePadding),
               child: RoundedButton(
                 text: "Login",
-                press: () => _formKey.currentState.validate()
-                    ? Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                        return MainNavAuth();
-                      }))
-                    : {},
+                press: () => _formKey.currentState.validate() ? login() : {},
                 color: kPrimaryColor,
                 borderColor: Colors.white,
                 textColor: Colors.white,
@@ -110,6 +152,24 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
       ),
-    );
+    ));
+  }
+
+  void login() async {
+    try {
+      if (radioButtonValue == 1) {
+        context.read<UserProvider>().setDoctorUser(await DoctorUser.login(
+            '${_data['email']}', '${_data['password']}'));
+      } else {
+        context.read<UserProvider>().setRegularUser(await RegularUser.login(
+            '${_data['email']}', '${_data['password']}'));
+      }
+    } catch (e) {
+      final snackBar = SnackBar(
+        content: Text('$e'),
+        backgroundColor: kPrimaryColor,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
   }
 }
