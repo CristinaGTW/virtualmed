@@ -100,6 +100,7 @@ class Constants {
         "onYesResponse": [{"diagnosis": "COSTOCHONDRITIS", "score": 5}, {"diagnosis": "FRACTURE", "score": 5}]
       }
     ],
+
     "Chest Pain, Chronic": [
       {
         "question": "Do you have shortness of breath?",
@@ -165,6 +166,7 @@ class Constants {
         "onYesResponse": [{"diagnosis": "", "score": 10}]
       }
     ],
+
     "Chest Pain in Infants and Children": [
       {
         "question": "Does your child have a fever, a cough that produces mucus, and shortness of breath?",
@@ -205,6 +207,155 @@ class Constants {
         "onYesResponse": [{"diagnosis": "COSTOCHONDRITIS", "score": 10}]
       }
     ],
+
+    "Thighs" : [
+      {
+        "question": "Do you have pain in your leg or ankle after a fall or injury, is there a deformity of your leg, or are you unable to stand or put pressure on your leg?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "BROKEN BONE", "score": 10}],
+      },
+      {
+        "question": "Do you have a tender red area or a red streak anywhere on your leg?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "CELLULITIS", "score": 10}]
+      },
+      {
+        "question": "Do you have swelling in both of your feet or lower legs?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "EDEMA", "score": 10}]
+      }
+    ],
+
+    "Calves" : [
+      {
+        "question": "Do you have pain in your leg or ankle after a fall or injury, is there a deformity of your leg, or are you unable to stand or put pressure on your leg?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "BROKEN BONE", "score": 10}],
+      },
+      {
+        "question": "Do you have pain or mild swelling in the front or inner part of your lower leg that may have developed soon after starting or increasing physical activity, such as running, jumping or marching?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "SHIN SPLINTS", "score": 5}, {"diagnosis": "inflammation of the ligaments", "score": 5}]
+      },
+      {
+        "question": "Do you have a tender red area or a red streak anywhere on your leg?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "CELLULITIS", "score": 10}]
+      },
+      {
+        "question": "Do your calves ache after walking, and is the pain relieved with rest?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "PERIPHERAL ARTERIAL DISEASE (PAD)", "score": 10}]
+      },
+      {
+        "question": "Do you have swelling in both of your feet or lower legs?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "EDEMA", "score": 10}]
+      },
+      {
+        "question": "Is there bruising or swelling of your calf?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "ACHILLES TENDON", "score": 10}]
+      },
+      {
+        "question": "Do you have pain, swelling, redness, or warmth in your calf? Is one calf bigger than the other?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "DEEP VENOUS THROMBOSIS", "score": 10}]
+      },
+    ],
+
+    "Knees": [
+      {
+        "question": "Did your knee pain or swelling begin after a fall, twisting injury, or after your knee was hit by an object or person?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "FRACTURED", "score": 20},
+                          {"diagnosis": "TORN some LIGAMENTS", "score": 20}]
+      },
+      {
+        "question": "Is your knee deformed?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "FRACTURED", "score": 5},
+                          {"diagnosis": "TORN some LIGAMENTS", "score": 5}]
+      },
+      {
+        "question": "Is your kneecap swollen, tender, and warm, and do you have pain with activity?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "FRACTURED", "score": 5},
+                          {"diagnosis": "PREPATELLAR BURSITIS", "score": 5}]
+      },
+      {
+        "question": "Is your knee tender and swollen, and does the pain get worse after sitting for a long time or after using the stairs?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "TORN CARTILAGE/MENISCUS", "score": 3},
+                          {"diagnosis": "TORN LIGAMENT", "score": 3},
+                          {"diagnosis": "CHONDROMALACIA PATELLAE", "score": 3}]
+      },
+      {
+        "question": "Do you have a sharp pain behind your knee and is it painful to extend (stretch out straight) your leg?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "TORN HAMSTRING MUSCLE", "score": 10}]
+      },
+      {
+        "question": "Do you still have a grinding feeling in your joint or does it ever lock (i.e., you can’t flex or extend the joint or it is stuck in one of those positions), even after your knee pain is better?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "TORN CARTILAGE/TORN MENISCUS", "score": 10}]
+      },
+      {
+        "question": "Is your knee swollen and/or red?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "", "score": -1}]
+      },
+      {
+        "question": "Do you have a fever along with swollen and/or red joints?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "RHEUMATOID ARTHRITIS", "score": 3},
+                          {"diagnosis": "RHEUMATIC FEVER", "score": 5},
+                          {"diagnosis": "SEPTICE JOINT INFECTION", "score": 5}]
+      },
+      {
+        "question": "Has your knee become tender over many months or years and does the pain get worse when the weather changes?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "OSTEOARTHRITIS", "score": 10}]
+      },
+      {
+        "question": "Is the back of your knee swollen or tender?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "ARTHRITIS", "score": 10}]
+      },
+      {
+        "question": "Are you between 12 and 18 years, and do you have a pain on the front of your knee below your kneecap that gets worse with activities like running or jumping?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": " OSGOOD-SCHLATTER DISEASE", "score": 10}]
+      },
+      {
+        "question": "Are you younger than 18 years, and do you have knee pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "If there is no discernible issue at the knee, you may have a hip problem that feels like knee pain.", "score": 10}]
+      }
+    ],
+
     "Feet": [
       {
         "question":
@@ -262,6 +413,7 @@ class Constants {
                           {"diagnosis": "LUNG CANCER", "score": 30}]
       }
     ],
+
     "Eyes": [
       // {
       //   "question": "Is your eye tearing?",
@@ -367,6 +519,7 @@ class Constants {
       //       "INFECTION, CORNEAL ABRASION, or a scratch caused by your contact lens",
       // } TODO
     ],
+
     "Ears": [
       // {
       //   "question": "Do you have a fever?",
@@ -474,76 +627,7 @@ class Constants {
         "onYesResponse": [{"diagnosis": "CAULIFLOWER EAR", "score": 10}]
       }
     ],
-    // "LegProblems": [
-    //   {
-    //     "question":
-    //     "Do you have pain in your leg or ankle after a fall or injury?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "Possible Broken Bone",
-    //   },
-    //   {
-    //     "question":
-    //     "Is there a deformity of your leg, or are you unable to stand or put pressure on your leg?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "Broken Bone",
-    //   },
-    //   {
-    //     "question":
-    //     "Did you hear a popping or grinding sound at the time of the injury?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "SPRAINED ankle",
-    //   },
-    //   {
-    //     "question": "Is there bruising or swelling of your calf or ankle?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "ACHILLES TENDON",
-    //   },
-    //   {
-    //     "question":
-    //     "Do you have pain or mild swelling in the front or inner part of your lower leg that may have developed soon after starting or increasing physical activity, such as running, jumping or marching?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "SHIN SPLINTS, inflammation of the ligaments",
-    //   },
-    //   {
-    //     "question":
-    //     "Do you have pain, swelling, redness, or warmth in your calf? Is one calf bigger than the other?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "DEEP VENOUS THROMBOSIS",
-    //   },
-    //   {
-    //     "question":
-    //     "Do you have twisted dark blue or purple veins near the surface of the skin of your calf, and do you have pain or cramping in your calf or leg that is worse after standing or sitting for a long time?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "VARICOSE VEINS",
-    //   },
-    //   {
-    //     "question":
-    //     "Do you have a tender red area or a red streak anywhere on your leg?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "CELLULITIS",
-    //   },
-    //   {
-    //     "question":
-    //     "Do your calves ache after walking, and is the pain relieved with rest?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "PERIPHERAL ARTERIAL DISEASE (PAD)",
-    //   },
-    //   {
-    //     "question": "Do you have swelling in both of your feet or lower legs?",
-    //     "answerType": AnswerType.MULTIPLE_CHOICE,
-    //     "answerChoices": ["No", "Yes"],
-    //     "onYesResponse": "EDEMA",
-    //   },
-    // ],
+    
     "Shoulders": [
       {
         "question":
@@ -646,6 +730,7 @@ class Constants {
         }]
       }
     ],
+
     "Back": [
       // {
       //   "question":
@@ -810,4 +895,5 @@ class Constants {
       }
     ]
   };
+
 }
