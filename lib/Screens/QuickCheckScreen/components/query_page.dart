@@ -9,9 +9,14 @@ class QueryPage extends StatelessWidget {
   final String bodyPartImage;
 
   final ValueChanged<List> onChanged;
+  final ValueChanged<List> onChangedAnswers;
 
   const QueryPage(
-      {Key key, @required this.bodyPart, this.bodyPartImage, this.onChanged})
+      {Key key,
+      @required this.bodyPart,
+      this.bodyPartImage,
+      this.onChanged,
+      this.onChangedAnswers})
       : super(key: key);
 
   @override
@@ -35,6 +40,7 @@ class QueryPage extends StatelessWidget {
             child: QueryBody(
               bodyPart: bodyPart,
               onChanged: onChanged,
+              onChangedAnswers: onChangedAnswers,
             ),
           ),
         ],

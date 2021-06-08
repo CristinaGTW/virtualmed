@@ -5,8 +5,7 @@ import 'package:http/http.dart' as http;
 import '../Models/regular-user.dart';
 
 Future<RegularUser> fetchRegularUser() async {
-  final response =
-      await http.get(Uri.parse('http://127.0.0.1:5000/'));
+  final response = await http.get(Uri.parse('http://127.0.0.1:5000/'));
 
   if (response.statusCode == 200) {
     return RegularUser.fromJson(jsonDecode(response.body));
@@ -30,11 +29,6 @@ Future<Map<String, dynamic>> postToServer(
   }
   return {"msg": json.decode(utf8.decode(res.bodyBytes))['message']};
 }
-
-
-
-
-
 
 // Future<RegularUser> fetchRegularUser() async {
 //   final response =

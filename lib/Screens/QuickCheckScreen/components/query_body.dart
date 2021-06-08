@@ -8,8 +8,10 @@ import 'constants.dart';
 class QueryBody extends StatefulWidget {
   final String bodyPart;
   final ValueChanged<List> onChanged;
+  final ValueChanged<List> onChangedAnswers;
 
-  const QueryBody({Key key, @required this.bodyPart, this.onChanged})
+  const QueryBody(
+      {Key key, @required this.bodyPart, this.onChanged, this.onChangedAnswers})
       : super(key: key);
 
   @override
@@ -22,6 +24,7 @@ class _QueryBodyState extends State<QueryBody> {
   List<int> _groupValues = [];
   List<bool> _answeredBefore = [];
   List finalDiagnosesList = [];
+  List finalAnswers = [];
 
   _QueryBodyState(this.bodyPart);
 
@@ -30,6 +33,7 @@ class _QueryBodyState extends State<QueryBody> {
     super.initState();
     if (mounted) {
       _publishDiagnosis(finalDiagnosesList);
+      _publishAnswers(finalAnswers);
     }
   }
 
@@ -67,6 +71,7 @@ class _QueryBodyState extends State<QueryBody> {
     if (Constants.query[bodyPart] != null) {
       for (var i = 0; i < Constants.query[bodyPart].length; i++) {
         _groupValues.add(-1);
+        addQuestion(Constants.query[bodyPart][i]["question"]);
         finalQuestions.add(Stack(
           children: [
             Container(
@@ -147,27 +152,33 @@ class _QueryBodyState extends State<QueryBody> {
                   ? null
                   : (int value) {
                       setState(() {
-                        var diagnosisList = Constants.query[bodyPart][questionNo]
-                            ["onYesResponse"];
+                        var diagnosisList = Constants.query[bodyPart]
+                            [questionNo]["onYesResponse"];
 
                         diagnosisList.forEach((diagnosis) {
-                          var index = (diagnosisList as List).lastIndexOf(diagnosis);
+                          var index =
+                              (diagnosisList as List).lastIndexOf(diagnosis);
                           var diagnosisLabel = Constants.query[bodyPart]
                               [questionNo]["onYesResponse"][index]["diagnosis"];
                           if (choices[i].contains("Yes")) {
+                            updateAnswer(
+                                Constants.query[bodyPart][i]["question"],
+                                "Yes");
                             if (getDiagnoses(diagnosisLabel) == null) {
                               finalDiagnosesList.add(diagnosis);
                             } else {
-                              changeScore(
-                                  diagnosis, questionNo, diagnosis["score"], index);
+                              changeScore(diagnosis, questionNo,
+                                  diagnosis["score"], index);
                             }
                           }
                           if (choices[i].contains("No")) {
+                            updateAnswer(
+                                Constants.query[bodyPart][i]["question"], "No");
                             if (_answeredBefore.length > questionNo &&
                                 _answeredBefore[questionNo] == true &&
                                 getDiagnoses(diagnosisLabel) != null) {
-                              changeScore(
-                                  diagnosis, questionNo, -diagnosis["score"], index);
+                              changeScore(diagnosis, questionNo,
+                                  -diagnosis["score"], index);
                             }
                           }
                         });
@@ -188,8 +199,8 @@ class _QueryBodyState extends State<QueryBody> {
   }
 
   void changeScore(Object diagnosis, int questionNo, int score, int index) {
-    var diagnosisLabel =
-        Constants.query[bodyPart][questionNo]["onYesResponse"][index]["diagnosis"];
+    var diagnosisLabel = Constants.query[bodyPart][questionNo]["onYesResponse"]
+        [index]["diagnosis"];
     var previousDiagnosis = getDiagnoses(diagnosisLabel);
     var previousScore = previousDiagnosis["score"];
     if (previousScore + score > 0) {
@@ -205,6 +216,12 @@ class _QueryBodyState extends State<QueryBody> {
     }
   }
 
+  void _publishAnswers(List _answers) {
+    if (widget.onChangedAnswers != null) {
+      widget.onChangedAnswers(_answers);
+    }
+  }
+
   getDiagnoses(String diagnosisLabel) {
     for (var diagnosis in finalDiagnosesList) {
       if (diagnosis["diagnosis"] == diagnosisLabel) {
@@ -212,6 +229,30 @@ class _QueryBodyState extends State<QueryBody> {
       }
     }
     return null;
+  }
+
+  void addQuestion(String question) {
+    bool found = false;
+    for (var answer in finalAnswers) {
+      if (answer["question"] == question) {
+        found = true;
+      }
+    }
+    if (!found) {
+      finalAnswers.add({
+        "question": question,
+        "answer": ""
+      });
+    }
+  }
+
+  void updateAnswer(String question, String newAnswer) {
+    for (var answer in finalAnswers) {
+      if (answer["question"] == question) {
+        finalAnswers.remove(answer);
+        finalAnswers.add({"question": question, "answer": newAnswer});
+      }
+    }
   }
 }
 

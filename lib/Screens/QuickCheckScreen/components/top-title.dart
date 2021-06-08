@@ -8,7 +8,7 @@ class TopTitle extends StatelessWidget {
 
   const TopTitle(
       {Key key,
-      this.topMargin,
+      this.topMargin = 0,
       this.title,
       this.alignment = Alignment.topCenter})
       : super(key: key);
