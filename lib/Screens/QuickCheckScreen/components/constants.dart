@@ -25,13 +25,193 @@ class Constants {
       // },
       // {"question": "Describe what happened", "answerType": AnswerType.TEXT_BOX}
     ],
+    
+    "Chest": [
+      {
+        "question": "Do you have severe chest pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "HYPERVENTILATION", "score": 10}]
+      },
+      {
+        "question": "Do you have symptoms of a cold or the flu, such as fever, aches, chills, runny nose, and/or cough?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "PNEUMONIA", "score": 10}]
+      },
+      {
+        "question": "Do you have a cough that produces greenish, yellowish, or tan mucus, a fever, and shortness of breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "PNEUMONIA", "score": 10}]
+      },
+      {
+        "question": "Do you have a cough that produces a small amount of clear mucus, and does your chest hurt when you take a deep breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "VIRAL BRONCHITIS", "score": 5}, {"diagnosis": "PLEURISY", "score": 5}]
+      },
+      {
+        "question": "Are you uncomfortable from your shortness of breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "HEART ATTACK", "score": 5}, {"diagnosis": "MYOCARDIAL INFARCTION", "score": 5}]
+      },
+      {
+        "question": "Does the pain or discomfort occur only when you swallow or after you eat?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "GASTRITIS", "score": 5}, {"diagnosis": "ESOPHAGITIS", "score": 5}]
+      },
+      {
+        "question": "Do you have a severe, sharp pain on one side of your chest when you take a deep breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "PNEUMOTHORAX", "score": 10}]
+      },
+      {
+        "question": "Do you experience shortness of breath when you are physically active and/or when you’re lying down?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "CONGESTIVE HEART FAILURE", "score": 3}, {"diagnosis": "ASTHMA", "score": 3}, {"diagnosis": "PULMONARY EDEMA", "score": 3}]
+      },
+      {
+        "question": "Do you have pressure in your chest, shortness of breath and numbness around your lips or in your hands or feet?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "HYPERVENTILATION", "score": 10}]
+      },
+      {
+        "question": "Do you have any of the following symptoms: crushing pain or uncomfortable pressure in the middle of your chest that lasts more than a few minutes; squeezing pain in the chest or left upper arm; sweating and nausea; or severe shortness of breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "HEART ATTACK", "score": 5}, {"diagnosis": "MYOCARDIAL INFARCTION", "score": 5}]
+      },
+      {
+        "question": "Do you have a painful, blistering rash on your chest or back?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "SHINGLES", "score": 10}]
+      },
+      {
+        "question": "Do you have back pain that radiates around to the front of your chest?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "COSTOCHONDRITIS", "score": 5}, {"diagnosis": "FRACTURE", "score": 5}]
+      }
+    ],
+    "Chest Pain, Chronic": [
+      {
+        "question": "Do you have shortness of breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "POSTHERPETIC NEURALGIA", "score": 10}]
+      },
+      {
+        "question": "Do you have episodes of wheezing and a cough that won’t go away?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "ASTHMA", "score": 10}]
+      },
+      {
+        "question": "Does your chest ache along the edges of your breastbone, and does your pain get worse when you cough or take a deep breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "COSTOCHONDRITIS", "score": 10}]
+      },
+      {
+        "question": "Do physical activities, emotional stress, or extreme temperatures cause a feeling of pressure under the breastbone?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "ANGINA", "score": 10}]
+      },
+      {
+        "question": "Do you have fullness and pain under your breastbone or in the upper right side of your abdomen after eating a greasy or fatty meal?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "GALLBLADDER", "score": 10}]
+      },
+      {
+        "question": "Do you have a burning sensation in your chest that either feels worse when you eat or drink, or feels better when you eat or drink, but gets worse a few hours later?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "ULCER", "score": 15}, 
+                          {"diagnosis": "IRRITATION OF THE ESOPHAGUS", "score": 15}, 
+                          {"diagnosis": "SPASM", "score": 15}, 
+                          {"diagnosis": "HIATAL HERNIA", "score": 15}]
+      },
+      {
+        "question": "Do you have stinging or burning pain at the same location where you had a recent case of SHINGLES?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "SHINGLES", "score": 10}]
+      },
+      {
+        "question": "Do you have a tight feeling in your chest and on ongoing cough that produces a lot of mucus? Does this usually occur for 2-3 months around the same time each year over the past 1-2 (or more) years?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "CHRONIC BRONCHITIS", "score": 10}]
+      },
+      {
+        "question": "Do you have an ongoing, mild cough, has your shortness of breath been increasing slowly for years, and have you been a smoker or been exposed to dust and fumes where you work?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "EMPHYSEMA", "score": 10}]
+      },
+      {
+        "question": "Do you have a fever, chills, or night sweats, or are you coughing up bloody mucus?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "", "score": 10}]
+      }
+    ],
+    "Chest Pain in Infants and Children": [
+      {
+        "question": "Does your child have a fever, a cough that produces mucus, and shortness of breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "BRONCHITIS", "score": 15}, 
+                          {"diagnosis": "PNEUMONIA", "score": 15}]
+      },
+      {
+        "question": "Does your child have a tight cough, wheezing, and shortness of breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "BRONCHIOLITIS", "score": 15}, 
+                          {"diagnosis": "ASTHMA OF THE ESOPHAGUS", "score": 15}]
+      },
+      {
+        "question": "Does your child have a dry cough and a sharp pain in the chest when he or she takes a deep breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "PLEURISY", "score": 10}]
+      },
+      {
+        "question": "Does your child have sudden, sharp pain in one side of the chest with sudden shortness of breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "PNEUMOTHORAX", "score": 10}]
+      },
+      {
+        "question": "Does your child have a high fever, a very sore throat, and trouble breathing and/or swallowing? They may also be sitting forward resting on one arm (“tripoding.”)",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "EPIGLOTTITIS", "score": 10}]
+      },
+      {
+        "question": "Does your child have pain and tenderness in the front of the chest, along the border of the breastbone and ribs, and does it get worse when your child coughs or takes a deep breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": ["No", "Yes"],
+        "onYesResponse": [{"diagnosis": "COSTOCHONDRITIS", "score": 10}]
+      }
+    ],
     "Feet": [
       {
         "question":
             "Did you begin to have pain and/or swelling after the ankle was hit or after a fall or a twisting injury?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": ["No", "Yes"],
-        "onYesResponse": [{"diagnosis": "Sprain", "score": 5}],
+        "onYesResponse": [{"diagnosis": "Sprain", "score": 5}]
       },
       {
         "question":
@@ -76,7 +256,10 @@ class Constants {
             "Do you usually feel pain before or during a change in the weather, and/or are you experiencing swelling, stiffness, and pain that gets worse during or after you use your ankle?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": ["No", "Yes"],
-        "onYesResponse": [{"diagnosis": "OSTEOARTHRITIS", "score": 10}]
+        "onYesResponse": [{"diagnosis": "TUBERCULOSIS", "score": 15}, 
+                          {"diagnosis": "FUNGAL INFECTION", "score": 15}, 
+                          {"diagnosis": "PNEUMONIA", "score": 15}, 
+                          {"diagnosis": "LUNG CANCER", "score": 30}]
       }
     ],
     "Eyes": [
