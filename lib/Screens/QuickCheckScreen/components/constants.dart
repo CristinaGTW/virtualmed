@@ -67,8 +67,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": ["No", "Yes"],
         "onYesResponse": [
-          {"diagnosis": "HEART ATTACK", "score": 5},
-          {"diagnosis": "MYOCARDIAL INFARCTION", "score": 5}
+          {"diagnosis": "HEART ATTACK", "score": 10}
         ]
       },
       {
@@ -96,9 +95,8 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": ["No", "Yes"],
         "onYesResponse": [
-          {"diagnosis": "CONGESTIVE HEART FAILURE", "score": 3},
-          {"diagnosis": "ASTHMA", "score": 3},
-          {"diagnosis": "PULMONARY EDEMA", "score": 3}
+          {"diagnosis": "CONGESTIVE HEART FAILURE", "score": 5},
+          {"diagnosis": "ASTHMA", "score": 5}
         ]
       },
       {
@@ -116,8 +114,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": ["No", "Yes"],
         "onYesResponse": [
-          {"diagnosis": "HEART ATTACK", "score": 5},
-          {"diagnosis": "MYOCARDIAL INFARCTION", "score": 5}
+          {"diagnosis": "HEART ATTACK", "score": 10}
         ]
       },
       {
@@ -193,7 +190,7 @@ class Constants {
         "onYesResponse": [
           {"diagnosis": "ULCER", "score": 15},
           {"diagnosis": "IRRITATION OF THE ESOPHAGUS", "score": 15},
-          {"diagnosis": "SPASM", "score": 15},
+          {"diagnosis": "SPASM of the muscles of the esophagus", "score": 15},
           {"diagnosis": "HIATAL HERNIA", "score": 15}
         ]
       },
