@@ -119,9 +119,8 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(
-                  left: sidePadding + 50, right: sidePadding + 50),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
                     "Don't have an account? ",

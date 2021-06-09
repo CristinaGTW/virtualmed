@@ -127,9 +127,9 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(
-                  left: sidePadding + 50, right: sidePadding + 50),
+              alignment: Alignment.center,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
                     "Already have an account? ",

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Screens/Authentication/doctor_register_page.dart';
 import 'package:virtual_med/Screens/Authentication/regular_register_page.dart';
@@ -13,6 +14,7 @@ class AccountSelection extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
+      color: Colors.white,
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[

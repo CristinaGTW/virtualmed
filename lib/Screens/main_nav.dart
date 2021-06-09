@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_med/Screens/ChatScreens/chat_list.dart';
 
 import '../components.dart';
 import 'MapScreen/map_tab.dart';
@@ -85,15 +86,6 @@ class _MainNavUnauthState extends _MainNavState {
             alignment: Alignment.centerLeft,
             children: <Widget>[
               Text(tabsText[_currentIndex]),
-              Positioned(
-                // left: size.width * 0.7,
-                right: 20,
-                child: IconButton(
-                  icon: Icon(Icons.chat),
-                  color: Colors.white,
-                  onPressed: () {},
-                ),
-              ),
             ],
           ),
         ),
@@ -156,7 +148,11 @@ class _MainNavAuthState extends _MainNavState {
                 child: IconButton(
                   icon: Icon(Icons.chat),
                   color: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return ChatList();
+                    }));
+                  },
                 ),
               ),
             ],
