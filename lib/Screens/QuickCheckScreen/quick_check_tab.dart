@@ -3,7 +3,7 @@ import 'package:virtual_med/Models/regular-user.dart';
 import 'package:virtual_med/Screens/Authentication/login_page.dart';
 import 'package:virtual_med/Screens/Authentication/regular_register_page.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/full_page_human_anatomy.dart';
-import 'package:virtual_med/Screens/QuickCheckScreen/components/top-title.dart';
+import 'package:virtual_med/components/top-title.dart';
 import 'package:virtual_med/Services/provider.dart';
 import 'package:virtual_med/Services/utils.dart';
 import 'package:virtual_med/components.dart';
@@ -49,10 +49,30 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         : "General";
 
     switch (bodyPart) {
+      case "Ears":
+        return "images/ear.png";
+      case "Eyes":
+        return "images/eye.png";
+      case "Head Front":
+        return "images/head.png";
+      case "Neck":
+        return "images/neck.png";
+      case "Chest":
+        return "images/chest.png";
+      case "Back":
+        return "images/back.png";
       case "Hands":
-        return "assets/images/hand.png";
+        return "images/hand.png";
+      case "Calves":
+        return "images/calves.png";
+      case "Knees":
+        return "images/knee.png";
+      case "Thighs":
+        return "images/leg.png";
+      case "Feet":
+        return "images/feet.png";
       default:
-        return "assets/images/hand.png";
+        return "images/hand.png";
     }
   }
 

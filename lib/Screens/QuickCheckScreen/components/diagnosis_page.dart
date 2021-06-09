@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:virtual_med/Screens/QuickCheckScreen/components/top-title.dart';
+import 'package:virtual_med/components/top-title.dart';
 import 'package:virtual_med/components.dart';
 
 import 'diagnosis_body.dart';

@@ -75,7 +75,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
                 false),
             bodyPart(
                 "assets/front/neck.svg",
-                "Neck Front",
+                "Neck",
                 normalizeSize(58.0, humanHeight),
                 0.0,
                 0.0,
@@ -181,7 +181,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
                 normalizeSize(60.0, humanHeight), true),
             bodyPart(
                 "assets/back/neck.svg",
-                "Neck Back",
+                "Neck",
                 normalizeSize(52.0, humanHeight),
                 0.0,
                 0.0,
