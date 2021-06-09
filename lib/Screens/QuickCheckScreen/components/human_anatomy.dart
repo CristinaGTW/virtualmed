@@ -271,8 +271,8 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
           EdgeInsets.only(top: marginTop, right: marginRight, left: marginLeft),
       height: height,
       alignment: Alignment.topCenter,
-      child: FlatButton(
-          onPressed: () {
+      child: GestureDetector(
+          onTap: () {
             setState(() {
               if (_bodyPartList.contains(svgName)) {
                 _bodyPartList.remove(svgName);
