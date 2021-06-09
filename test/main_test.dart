@@ -5,7 +5,7 @@ import 'package:virtual_med/main.dart';
 void main() {
   testWidgets(
     "Landing page displays the buttons", (WidgetTester tester) async {
-      
+
 
       // await tester.pumpWidget(VirtualMed());
 
