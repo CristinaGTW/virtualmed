@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/diagnosis-overview.dart';
-import 'package:virtual_med/Screens/QuickCheckScreen/components/top-title.dart';
+import 'package:virtual_med/components/top-title.dart';
 
 import '../../../components.dart';
 
@@ -30,8 +30,8 @@ class DiagnosisBody extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 10, bottom: 10),
             padding: EdgeInsets.all(20),
-            child: Text(DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]
-            ['overview'], style: TextStyle(fontSize: 20),),
+            // child: Text(DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]
+            // ['overview'], style: TextStyle(fontSize: 20),),
           ),
           TopTitle(
             topMargin: 20.0,
@@ -46,9 +46,9 @@ class DiagnosisBody extends StatelessWidget {
                   topMargin: 20.0,
                   title: "Try",
                 ),
-                Column(
-                  children: getTry(),
-                )
+                // Column(
+                //   children: getTry(),
+                // )
               ],
             ),
           ),
@@ -61,9 +61,9 @@ class DiagnosisBody extends StatelessWidget {
                   topMargin: 20.0,
                   title: "Avoid",
                 ),
-                Column(
-                  children: getAvoid(),
-                )
+                // Column(
+                //   children: getAvoid(),
+                // )
               ],
             ),
           ),

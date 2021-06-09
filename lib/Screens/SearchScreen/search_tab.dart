@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:virtual_med/Screens/QuickCheckScreen/components/top-title.dart';
+import 'package:virtual_med/components/top-title.dart';
 
 import '../../components.dart';
 
