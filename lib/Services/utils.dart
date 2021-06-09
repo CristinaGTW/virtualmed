@@ -30,6 +30,10 @@ Future<Map<String, dynamic>> postToServer(
   return {"msg": json.decode(utf8.decode(res.bodyBytes))['message']};
 }
 
+void sendContactRequest(int user_id, String specialization,
+    String query_answers, String description) async {
+}
+
 // Future<RegularUser> fetchRegularUser() async {
 //   final response =
 //       await http.get(Uri.parse('https://virtual-med-backend.herokuapp.com/'));

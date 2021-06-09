@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Models/regular-user.dart';
-import 'package:virtual_med/Screens/Authentication/login_page.dart';
-import 'package:virtual_med/Screens/Authentication/regular_register_page.dart';
+import 'package:virtual_med/Screens/Authentication/components/rounded_input_field.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/full_page_human_anatomy.dart';
 import 'package:virtual_med/components/top-title.dart';
 import 'package:virtual_med/Services/provider.dart';
@@ -11,6 +10,8 @@ import 'package:virtual_med/components/rounded_button.dart';
 import 'package:provider/provider.dart';
 import 'components/diagnosis_page.dart';
 import 'components/query_page.dart';
+
+Map<String, String> _data = {'full_name': '', 'phone': '', 'age': '', 'height': '', 'weight': '', 'chronic_diseases': ''};
 
 class QuickCheckTab extends StatefulWidget {
   @override
@@ -185,24 +186,73 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
             child: TopTitle(
               topMargin: 50,
               title:
-                  "You have to be logged in to submit a direct request. Please login or create an account if you do not have one",
+                  "As you are not logged in, you have to provide the following information for the request to be complete:",
             ),
           ),
           Container(
             padding: EdgeInsets.only(
-                top: size.height / 5,
+                top: 100,
                 left: (size.width - 400) / 2,
                 right: (size.width - 400) / 2),
-            child: Container(
-              child: RoundedButton(
-                width: 400,
-                text: "Login",
-                press: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return LoginPage();
-                  }));
-                },
-              ),
+            child: RoundedInputField(
+              inputText: "Full Name",
+              icon: Icons.person,
+              onChanged: (value) => _data['full_name'] = value,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 10,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
+            child: RoundedInputField(
+              inputText: "Phone",
+              icon: Icons.phone,
+              onChanged: (value) => _data['phone'] = value,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 10,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
+            child: RoundedInputField(
+              inputText: "Age",
+              icon: Icons.cake,
+              onChanged: (value) => _data['age'] = value,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 10,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
+            child: RoundedInputField(
+              inputText: "Height",
+              icon: Icons.height,
+              onChanged: (value) => _data['age'] = value,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 10,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
+            child: RoundedInputField(
+              inputText: "Weight",
+              icon: Icons.person,
+              onChanged: (value) => _data['weight'] = value,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 10,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
+            child: RoundedInputField(
+              inputText: "Chronic Diseases",
+              icon: Icons.local_hospital,
+              onChanged: (value) => _data['chronic_diseases'] = value,
             ),
           ),
           Container(
@@ -213,11 +263,10 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
             child: Container(
               child: RoundedButton(
                 width: 400,
-                text: "Register",
+                text: "Submit",
                 press: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return RegularRegisterPage();
-                  }));
+                  sendRequest();
+                  setProgress(4);
                 },
               ),
             ),
@@ -267,16 +316,29 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
     var query_answers = composeAnswers();
     print(query_answers);
 
-    var user_id = regularUser.userId;
-    //TODO get specialization
-    var specialization = "General";
+    var user_id = regularUser != null ? regularUser.userId : -1;
+    var specialization = "General"; //TODO get specialization
     var description = "";
+    var full_name = regularUser == null ? _data['full_name'] : (regularUser.firstName + " " + regularUser.lastName);
+    var phone = regularUser == null ? _data['phone'] : regularUser.phone;
+    var age = _data['age']; // var full_name = regularUser == null ? _data['full_name'] : regularUser.age;
+    var height = _data['height']; // var height = regularUser == null ? _data['height'] : regularUser.height;
+    var weight = _data['weight']; // var weight = regularUser == null ? _data['weight'] : regularUser.weight;
+    var chronic_diseases = _data['chronic_diseases']; // var chronic_diseases = regularUser == null ? _data['chronic_diseases'] : regularUser.chronic_diseases;
+
+
     try {
       var res = await postToServer(api: 'SendRequest', body: {
         'patient_id': user_id,
         'specialization': specialization,
         'query_answers': query_answers,
-        'description': description
+        'description': description,
+        'full_name': full_name,
+        'phone': phone,
+        'age': age,
+        'height': height,
+        'weight': weight,
+        'chronic_diseases': chronic_diseases
       });
       if (res['msg'] == 'Success') {
         print("Request sent successfully");
