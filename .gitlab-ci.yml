@@ -20,6 +20,6 @@ test:
 deploy:
   stage: deploy
   script:
-    - dpl --provider=heroku --app=virtual-med --api-key=ad8eeb85-79df-41a1-a996-92e355ed119c --skip-cleanup
+    - dpl --provider=heroku --app=virtual-med --api-key=9c962830-e71b-4709-9f1e-9b2d28b61f1d
   only:
     - master
