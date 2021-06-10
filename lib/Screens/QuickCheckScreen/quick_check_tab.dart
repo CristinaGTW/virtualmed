@@ -316,96 +316,6 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    regularUser = context.watch<UserProvider>().regularUser;
-    isLoggedIn = regularUser != null;
-    switch (_currentIndex) {
-      case 0:
-        return getBodySelectionPage();
-      case 1:
-        return getQueryPage(_questionIndex);
-      case 2:
-        return getDiagnosisPage();
-      case 3:
-        return getFurtherActionsPage();
-      case 4:
-        return getConfirmationPage();
-      case 5:
-        return getChestSelectionPage();
-    }
-    return Scaffold(
-      body: Text("Error"),
-    );
-  }
-
-  void sendRequest() async {
-    var query_answers = composeAnswers();
-    print(query_answers);
-
-    var user_id = regularUser != null ? regularUser.userId : -1;
-    var specialization = "General"; //TODO get specialization
-    var description = "";
-    var full_name = regularUser == null
-        ? _data['full_name']
-        : (regularUser.firstName + " " + regularUser.lastName);
-    var phone = regularUser == null ? _data['phone'] : regularUser.phone;
-    var age = _data[
-        'age']; // var full_name = regularUser == null ? _data['full_name'] : regularUser.age;
-    var height = _data[
-        'height']; // var height = regularUser == null ? _data['height'] : regularUser.height;
-    var weight = _data[
-        'weight']; // var weight = regularUser == null ? _data['weight'] : regularUser.weight;
-    var chronic_diseases = _data[
-        'chronic_diseases']; // var chronic_diseases = regularUser == null ? _data['chronic_diseases'] : regularUser.chronic_diseases;
-
-    try {
-      var res = await postToServer(api: 'SendRequest', body: {
-        'patient_id': user_id,
-        'specialization': specialization,
-        'query_answers': query_answers,
-        'description': description,
-        'full_name': full_name,
-        'phone': phone,
-        'age': age,
-        'height': height,
-        'weight': weight,
-        'chronic_diseases': chronic_diseases
-      });
-      if (res['msg'] == 'Success') {
-        print("Request sent successfully");
-      }
-    } catch (e) {
-      final snackBar = SnackBar(
-        content: Text('$e'),
-        backgroundColor: kPrimaryColor,
-      );
-      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-    }
-  }
-
-  String composeAnswers() {
-    String result = "";
-    for (var answer in _finalAnswers) {
-      result += answer["question"] + "\n" + answer["answer"] + "\n\n";
-    }
-    return result;
-  }
-
-  String getBodyPart() {
-    return _finalBodyPartList.isNotEmpty
-        ? _finalBodyPartList.elementAt(0)
-        : "General";
-  }
-
-  List<String> getAnswerChoices(query) {
-    List<String> answers = List<String>();
-    for (var answer in query) {
-      answers.add(answer["answer"]);
-    }
-    return answers;
-  }
-
   Widget getChestSelectionPage() {
     Size size = MediaQuery.of(context).size;
     return Container(
@@ -470,5 +380,106 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         ],
       ),
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    regularUser = context.watch<UserProvider>().regularUser;
+    isLoggedIn = regularUser != null;
+    switch (_currentIndex) {
+      case 0:
+        return getBodySelectionPage();
+      case 1:
+        return getQueryPage(_questionIndex);
+      case 2:
+        return getDiagnosisPage();
+      case 3:
+        return getFurtherActionsPage();
+      case 4:
+        return getConfirmationPage();
+      case 5:
+        return getChestSelectionPage();
+    }
+    return Scaffold(
+      body: Text("Error"),
+    );
+  }
+
+  void sortDiagnoses() {
+    _possibleDiagnosis.sort((snd, fst) {
+      int fstScore = fst["score"];
+      int sndScore = snd["score"];
+      return fstScore.compareTo(sndScore);
+    });
+  }
+
+  void sendRequest() async {
+    var query_answers = composeAnswers();
+    print(query_answers);
+
+    var user_id = regularUser != null ? regularUser.userId : -1;
+    var specialization = "General"; //TODO get specialization
+    sortDiagnoses();
+    var diagnosis = _possibleDiagnosis[0]["diagnosis"];
+    var full_name = regularUser == null
+        ? _data['full_name']
+        : (regularUser.firstName + " " + regularUser.lastName);
+    var phone = regularUser == null ? _data['phone'] : regularUser.phone;
+    var time = DateTime.now().toString();
+    var age = _data[
+        'age']; // var full_name = regularUser == null ? _data['full_name'] : regularUser.age;
+    var height = _data[
+        'height']; // var height = regularUser == null ? _data['height'] : regularUser.height;
+    var weight = _data[
+        'weight']; // var weight = regularUser == null ? _data['weight'] : regularUser.weight;
+    var chronic_diseases = _data[
+        'chronic_diseases']; // var chronic_diseases = regularUser == null ? _data['chronic_diseases'] : regularUser.chronic_diseases;
+
+    try {
+      var res = await postToServer(api: 'SendRequest', body: {
+        'patient_id': user_id,
+        'specialization': specialization,
+        'query_answers': query_answers,
+        'diagnosis': diagnosis,
+        'full_name': full_name,
+        'phone': phone,
+        'time': time,
+        'age': age,
+        'height': height,
+        'weight': weight,
+        'chronic_diseases': chronic_diseases
+      });
+      if (res['msg'] == 'Success') {
+        print("Request sent successfully");
+      }
+    } catch (e) {
+      final snackBar = SnackBar(
+        content: Text('$e'),
+        backgroundColor: kPrimaryColor,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
+  }
+
+  String composeAnswers() {
+    String result = "";
+    for (var answer in _finalAnswers) {
+      result += answer["question"] + "\n" + answer["answer"] + "\n\n";
+    }
+    return result;
+  }
+
+  String getBodyPart() {
+    return _finalBodyPartList.isNotEmpty
+        ? _finalBodyPartList.elementAt(0)
+        : "General";
+  }
+
+  List<String> getAnswerChoices(query) {
+    List<String> answers = List<String>();
+    for (var answer in query) {
+      answers.add(answer["answer"]);
+    }
+    return answers;
   }
 }
