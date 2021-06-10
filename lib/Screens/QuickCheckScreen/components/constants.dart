@@ -12,7 +12,13 @@ class Constants {
           {"answer": "No", "nextQuestion": 3},
           {"answer": "Yes", "nextQuestion": 1}
         ],
-        "onYesResponse": [],
+        "onYesResponse": [
+          {
+            "diagnosis":
+                "If there is no fracture, the tendons (a cord of tissue connecting muscle to bone) or ligaments (tissue connecting bones to each another) around the joint may be SPRAINED or STRAINED.",
+            "score": 5
+          }
+        ],
       },
       //Q1
       {
@@ -55,7 +61,7 @@ class Constants {
           {
             "diagnosis":
                 "If there is no fracture, the tendons (a cord of tissue connecting muscle to bone) or ligaments (tissue connecting bones to each another) around the joint may be SPRAINED or STRAINED.",
-            "score": 10
+            "score": 5
           }
         ],
       },
@@ -911,7 +917,11 @@ class Constants {
           {"answer": "No", "nextQuestion": 7},
           {"answer": "Yes", "nextQuestion": 7}
         ],
-        "onYesResponse": []
+        "onYesResponse": [
+          {"diagnosis": "RHEUMATOID ARTHRITIS", "score": 3},
+          {"diagnosis": "RHEUMATIC FEVER", "score": 5},
+          {"diagnosis": "SEPTICE JOINT INFECTION", "score": 5}
+        ]
       },
       //Q7
       {
@@ -1089,7 +1099,9 @@ class Constants {
           {"answer": "No", "nextQuestion": 1},
           {"answer": "Yes", "nextQuestion": 10}
         ],
-        "onYesResponse": [],
+        "onYesResponse": [
+          {"diagnosis": "TOOMUCHGLUCOSE", "score": 3}
+        ],
       },
       //Q1
       {
@@ -1099,7 +1111,9 @@ class Constants {
           {"answer": "No", "nextQuestion": 2},
           {"answer": "Yes", "nextQuestion": 7}
         ],
-        "onYesResponse": [],
+        "onYesResponse": [
+          {"diagnosis": "TOOMUCHGLUCOSE", "score": 3}
+        ],
       },
       //Q2
       {
@@ -1176,7 +1190,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "TOOMUCHGLUCOSE", "score": 10}
+          {"diagnosis": "TOOMUCHGLUCOSE", "score": 4}
         ]
       },
       //Q8
