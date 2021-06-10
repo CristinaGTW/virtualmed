@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:virtual_med/Screens/QuickCheckScreen/components/diagnosis_page.dart';
+import 'package:virtual_med/Screens/QuickCheckScreen/components/query_page.dart';
 import 'package:virtual_med/components/top-title.dart';
 
 import '../../../components.dart';
@@ -9,9 +11,12 @@ class QueryBody extends StatefulWidget {
   final String bodyPart;
   final ValueChanged<List> onChanged;
   final ValueChanged<List> onChangedAnswers;
+  final ValueChanged<int> nextQuestion;
+  final int questionIndex;
+
 
   const QueryBody(
-      {Key key, @required this.bodyPart, this.onChanged, this.onChangedAnswers})
+      {Key key, @required this.bodyPart, this.onChanged, this.onChangedAnswers, this.nextQuestion, this.questionIndex})
       : super(key: key);
 
   @override
@@ -20,6 +25,7 @@ class QueryBody extends StatefulWidget {
 
 class _QueryBodyState extends State<QueryBody> {
   final String bodyPart;
+  var _nextQuestion = 0;
 
   List<int> _groupValues = [];
   List<bool> _answeredBefore = [];
@@ -28,12 +34,14 @@ class _QueryBodyState extends State<QueryBody> {
 
   _QueryBodyState(this.bodyPart);
 
+
   @override
   void initState() {
     super.initState();
     if (mounted) {
       _publishDiagnosis(finalDiagnosesList);
       _publishAnswers(finalAnswers);
+      _publishNextQuestion(_nextQuestion);
     }
   }
 
@@ -57,9 +65,33 @@ class _QueryBodyState extends State<QueryBody> {
           ),
           Container(
             margin: EdgeInsets.only(top: 50),
-            child: Column(
-              children: getQuestions(),
-            ),
+            // child: Column(
+            //   children: getQuestions(),
+
+            child: currentQuestion(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget currentQuestion() {
+    _groupValues.add(-1);
+    addQuestion(Constants.query[bodyPart][widget.questionIndex]["question"]);
+    List<String> answerChoices = getAnswerChoices(Constants.query[bodyPart][widget.questionIndex]["answerChoices"]);
+    return Container(
+      alignment: Alignment.topLeft,
+      margin: EdgeInsets.only(top: 30, left: 20),
+      child: Stack(
+        children: <Widget>[
+          Text(
+                Constants.query[bodyPart][widget.questionIndex]["question"],
+            style: TextStyle(fontSize: 20),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 80),
+            child: getAnswer(Constants.query[bodyPart][widget.questionIndex]["answerType"],
+                answerChoices, widget.questionIndex),
           ),
         ],
       ),
@@ -72,6 +104,7 @@ class _QueryBodyState extends State<QueryBody> {
       for (var i = 0; i < Constants.query[bodyPart].length; i++) {
         _groupValues.add(-1);
         addQuestion(Constants.query[bodyPart][i]["question"]);
+        List<String> answerChoices = getAnswerChoices(Constants.query[bodyPart][i]["answerChoices"]);
         finalQuestions.add(Stack(
           children: [
             Container(
@@ -80,15 +113,13 @@ class _QueryBodyState extends State<QueryBody> {
               child: Stack(
                 children: <Widget>[
                   Text(
-                    (i + 1).toString() +
-                        ". " +
                         Constants.query[bodyPart][i]["question"],
                     style: TextStyle(fontSize: 20),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 80),
                     child: getAnswer(Constants.query[bodyPart][i]["answerType"],
-                        Constants.query[bodyPart][i]["answerChoices"], i),
+                        answerChoices, i),
                   ),
                 ],
               ),
@@ -170,6 +201,8 @@ class _QueryBodyState extends State<QueryBody> {
                               changeScore(diagnosis, questionNo,
                                   diagnosis["score"], index);
                             }
+                            _nextQuestion = Constants.query[bodyPart][widget.questionIndex]["answerChoices"][1]["nextQuestion"];
+                            _publishNextQuestion(_nextQuestion);
                           }
                           if (choices[i].contains("No")) {
                             updateAnswer(
@@ -180,6 +213,8 @@ class _QueryBodyState extends State<QueryBody> {
                               changeScore(diagnosis, questionNo,
                                   -diagnosis["score"], index);
                             }
+                            _nextQuestion = Constants.query[bodyPart][widget.questionIndex]["answerChoices"][0]["nextQuestion"];
+                            _publishNextQuestion(_nextQuestion);
                           }
                         });
                         _groupValues[questionNo] = value;
@@ -222,6 +257,10 @@ class _QueryBodyState extends State<QueryBody> {
     }
   }
 
+  void _publishNextQuestion(int _question) {
+    widget.nextQuestion(_question);
+  }
+
   getDiagnoses(String diagnosisLabel) {
     for (var diagnosis in finalDiagnosesList) {
       if (diagnosis["diagnosis"] == diagnosisLabel) {
@@ -253,6 +292,14 @@ class _QueryBodyState extends State<QueryBody> {
         finalAnswers.add({"question": question, "answer": newAnswer});
       }
     }
+  }
+
+  List<String> getAnswerChoices(query) {
+    List<String> answers = List<String>();
+    for (var answer in query) {
+      answers.add(answer["answer"]);
+    }
+    return answers;
   }
 }
 

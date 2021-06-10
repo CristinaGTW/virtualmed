@@ -7,7 +7,8 @@ import 'package:virtual_med/components.dart';
 class QueryPage extends StatelessWidget {
   final String bodyPart;
   final String bodyPartImage;
-
+  final ValueChanged<int> nextQuestion;
+  final int questionIndex;
   final ValueChanged<List> onChanged;
   final ValueChanged<List> onChangedAnswers;
 
@@ -16,11 +17,13 @@ class QueryPage extends StatelessWidget {
       @required this.bodyPart,
       this.bodyPartImage,
       this.onChanged,
-      this.onChangedAnswers})
+      this.onChangedAnswers,
+      this.nextQuestion, this.questionIndex})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print(questionIndex);
     return Container(
       color: kPrimaryBgColor,
       child: Column(
@@ -41,6 +44,8 @@ class QueryPage extends StatelessWidget {
               bodyPart: bodyPart,
               onChanged: onChanged,
               onChangedAnswers: onChangedAnswers,
+              nextQuestion: nextQuestion,
+              questionIndex: questionIndex
             ),
           ),
         ],
