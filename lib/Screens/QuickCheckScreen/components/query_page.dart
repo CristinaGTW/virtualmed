@@ -23,7 +23,6 @@ class QueryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(questionIndex);
     return Container(
       color: kPrimaryBgColor,
       child: Column(

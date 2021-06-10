@@ -73,6 +73,7 @@ class DiagnosisBody extends StatelessWidget {
 
   List<Widget> getTry() {
     List tryFinal = List<Widget>();
+
     var tryList =
         DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]['try'];
 
@@ -89,7 +90,7 @@ class DiagnosisBody extends StatelessWidget {
           )
       );
     }
-    return tryFinal.length == 0 ? Container() : tryFinal;
+    return tryFinal;
   }
 
   List<Widget> getAvoid() {
@@ -112,7 +113,7 @@ class DiagnosisBody extends StatelessWidget {
       );
     }
 
-    return avoidFinal.length == 0 ? Container() : avoidFinal;
+    return avoidFinal;
   }
 
   Widget getOverview() {

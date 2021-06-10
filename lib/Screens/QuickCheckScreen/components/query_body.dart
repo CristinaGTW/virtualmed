@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:virtual_med/Screens/QuickCheckScreen/components/diagnosis_page.dart';
-import 'package:virtual_med/Screens/QuickCheckScreen/components/query_page.dart';
 import 'package:virtual_med/components/top-title.dart';
 
 import '../../../components.dart';
@@ -14,9 +12,13 @@ class QueryBody extends StatefulWidget {
   final ValueChanged<int> nextQuestion;
   final int questionIndex;
 
-
   const QueryBody(
-      {Key key, @required this.bodyPart, this.onChanged, this.onChangedAnswers, this.nextQuestion, this.questionIndex})
+      {Key key,
+      @required this.bodyPart,
+      this.onChanged,
+      this.onChangedAnswers,
+      this.nextQuestion,
+      this.questionIndex})
       : super(key: key);
 
   @override
@@ -34,7 +36,6 @@ class _QueryBodyState extends State<QueryBody> {
 
   _QueryBodyState(this.bodyPart);
 
-
   @override
   void initState() {
     super.initState();
@@ -47,6 +48,14 @@ class _QueryBodyState extends State<QueryBody> {
 
   @override
   Widget build(BuildContext context) {
+    if (widget.questionIndex == 0) {
+      Constants.query[bodyPart].forEach((q) => addQuestion(q['question']));
+      if (Constants.query[bodyPart] != null) {
+        for (var i = 0; i < Constants.query[bodyPart].length; i++) {
+          _groupValues.add(-1);
+        }
+      }
+    }
     return Container(
       padding: EdgeInsets.only(bottom: 50),
       decoration: BoxDecoration(
@@ -65,9 +74,6 @@ class _QueryBodyState extends State<QueryBody> {
           ),
           Container(
             margin: EdgeInsets.only(top: 50),
-            // child: Column(
-            //   children: getQuestions(),
-
             child: currentQuestion(),
           ),
         ],
@@ -78,20 +84,23 @@ class _QueryBodyState extends State<QueryBody> {
   Widget currentQuestion() {
     _groupValues.add(-1);
     addQuestion(Constants.query[bodyPart][widget.questionIndex]["question"]);
-    List<String> answerChoices = getAnswerChoices(Constants.query[bodyPart][widget.questionIndex]["answerChoices"]);
+    List<String> answerChoices = getAnswerChoices(
+        Constants.query[bodyPart][widget.questionIndex]["answerChoices"]);
     return Container(
       alignment: Alignment.topLeft,
       margin: EdgeInsets.only(top: 30, left: 20),
       child: Stack(
         children: <Widget>[
           Text(
-                Constants.query[bodyPart][widget.questionIndex]["question"],
+            Constants.query[bodyPart][widget.questionIndex]["question"],
             style: TextStyle(fontSize: 20),
           ),
           Container(
             margin: EdgeInsets.only(top: 80),
-            child: getAnswer(Constants.query[bodyPart][widget.questionIndex]["answerType"],
-                answerChoices, widget.questionIndex),
+            child: getAnswer(
+                Constants.query[bodyPart][widget.questionIndex]["answerType"],
+                answerChoices,
+                widget.questionIndex),
           ),
         ],
       ),
@@ -104,7 +113,8 @@ class _QueryBodyState extends State<QueryBody> {
       for (var i = 0; i < Constants.query[bodyPart].length; i++) {
         _groupValues.add(-1);
         addQuestion(Constants.query[bodyPart][i]["question"]);
-        List<String> answerChoices = getAnswerChoices(Constants.query[bodyPart][i]["answerChoices"]);
+        List<String> answerChoices =
+            getAnswerChoices(Constants.query[bodyPart][i]["answerChoices"]);
         finalQuestions.add(Stack(
           children: [
             Container(
@@ -113,7 +123,7 @@ class _QueryBodyState extends State<QueryBody> {
               child: Stack(
                 children: <Widget>[
                   Text(
-                        Constants.query[bodyPart][i]["question"],
+                    Constants.query[bodyPart][i]["question"],
                     style: TextStyle(fontSize: 20),
                   ),
                   Container(
@@ -169,62 +179,76 @@ class _QueryBodyState extends State<QueryBody> {
     for (int i = 0; i < choices.length; i++) {
       displayChoices.add(
         Container(
+          margin: EdgeInsets.only(top: 10),
           height: 30,
           width: 200,
           child: ListTile(
             title: Text(
               choices[i],
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            leading: Radio(
-              value: i,
-              groupValue: _groupValues[questionNo],
-              activeColor: kPrimaryColor,
-              onChanged: i == choices.length
-                  ? null
-                  : (int value) {
-                      setState(() {
-                        var diagnosisList = Constants.query[bodyPart]
-                            [questionNo]["onYesResponse"];
+            leading: Transform.scale(
+              scale: 2.0,
+              child: Radio(
+                value: i,
+                groupValue: _groupValues[questionNo],
+                activeColor: kPrimaryColor,
+                onChanged: i == choices.length
+                    ? null
+                    : (int value) {
+                        setState(() {
+                          var diagnosisList = Constants.query[bodyPart]
+                              [questionNo]["onYesResponse"];
 
-                        diagnosisList.forEach((diagnosis) {
-                          var index =
-                              (diagnosisList as List).lastIndexOf(diagnosis);
-                          var diagnosisLabel = Constants.query[bodyPart]
-                              [questionNo]["onYesResponse"][index]["diagnosis"];
-                          if (choices[i].contains("Yes")) {
-                            updateAnswer(
-                                Constants.query[bodyPart][i]["question"],
-                                "Yes");
-                            if (getDiagnoses(diagnosisLabel) == null) {
-                              finalDiagnosesList.add(diagnosis);
-                            } else {
-                              changeScore(diagnosis, questionNo,
-                                  diagnosis["score"], index);
+                          diagnosisList.forEach((diagnosis) {
+                            var index =
+                                (diagnosisList as List).lastIndexOf(diagnosis);
+                            var diagnosisLabel = Constants.query[bodyPart]
+                                    [questionNo]["onYesResponse"][index]
+                                ["diagnosis"];
+
+                            if (choices[i].contains("Yes")) {
+                              updateAnswer(
+                                  Constants.query[bodyPart][i]["question"],
+                                  "Yes");
+                              if (getDiagnoses(diagnosisLabel) == null) {
+                                finalDiagnosesList.add(diagnosis);
+                              } else {
+                                changeScore(diagnosis, questionNo,
+                                    diagnosis["score"], index);
+                              }
+                              _nextQuestion = Constants.query[bodyPart]
+                                      [widget.questionIndex]["answerChoices"][1]
+                                  ["nextQuestion"];
+                              _publishNextQuestion(_nextQuestion);
                             }
-                            _nextQuestion = Constants.query[bodyPart][widget.questionIndex]["answerChoices"][1]["nextQuestion"];
-                            _publishNextQuestion(_nextQuestion);
-                          }
-                          if (choices[i].contains("No")) {
-                            updateAnswer(
-                                Constants.query[bodyPart][i]["question"], "No");
-                            if (_answeredBefore.length > questionNo &&
-                                _answeredBefore[questionNo] == true &&
-                                getDiagnoses(diagnosisLabel) != null) {
-                              changeScore(diagnosis, questionNo,
-                                  -diagnosis["score"], index);
+
+                            if (choices[i].contains("No")) {
+                              updateAnswer(
+                                  Constants.query[bodyPart][i]["question"],
+                                  "No");
+                              if (_answeredBefore.length > questionNo &&
+                                  _answeredBefore[questionNo] == true &&
+                                  getDiagnoses(diagnosisLabel) != null) {
+                                changeScore(diagnosis, questionNo,
+                                    -diagnosis["score"], index);
+                              }
+                              _nextQuestion = Constants.query[bodyPart]
+                                      [widget.questionIndex]["answerChoices"][0]
+                                  ["nextQuestion"];
+                              _publishNextQuestion(_nextQuestion);
                             }
-                            _nextQuestion = Constants.query[bodyPart][widget.questionIndex]["answerChoices"][0]["nextQuestion"];
-                            _publishNextQuestion(_nextQuestion);
+
+                          });
+                          _groupValues[questionNo] = value;
+                          // print(diagnosesList);
+                          if (_answeredBefore.length >= questionNo) {
+                            _answeredBefore.add(false);
+                            _answeredBefore[questionNo] = true;
                           }
                         });
-                        _groupValues[questionNo] = value;
-                        // print(diagnosesList);
-                        if (_answeredBefore.length >= questionNo) {
-                          _answeredBefore.add(false);
-                          _answeredBefore[questionNo] = true;
-                        }
-                      });
-                    },
+                      },
+              ),
             ),
           ),
         ),
@@ -278,10 +302,7 @@ class _QueryBodyState extends State<QueryBody> {
       }
     }
     if (!found) {
-      finalAnswers.add({
-        "question": question,
-        "answer": ""
-      });
+      finalAnswers.add({"question": question, "answer": ""});
     }
   }
 

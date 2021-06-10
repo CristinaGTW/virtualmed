@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Models/regular-user.dart';
 import 'package:virtual_med/Screens/Authentication/components/rounded_input_field.dart';
-import 'package:virtual_med/Screens/Authentication/login_page.dart';
-import 'package:virtual_med/Screens/Authentication/regular_register_page.dart';
-import 'package:virtual_med/Screens/QuickCheckScreen/components/constants.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/full_page_human_anatomy.dart';
-import 'package:virtual_med/Screens/QuickCheckScreen/components/query_body.dart';
 import 'package:virtual_med/components/top-title.dart';
 import 'package:virtual_med/Services/provider.dart';
 import 'package:virtual_med/Services/utils.dart';
