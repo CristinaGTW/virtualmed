@@ -15,7 +15,14 @@ import 'package:provider/provider.dart';
 import 'components/diagnosis_page.dart';
 import 'components/query_page.dart';
 
-Map<String, String> _data = {'full_name': '', 'phone': '', 'age': '', 'height': '', 'weight': '', 'chronic_diseases': ''};
+Map<String, String> _data = {
+  'full_name': '',
+  'phone': '',
+  'age': '',
+  'height': '',
+  'weight': '',
+  'chronic_diseases': ''
+};
 
 class QuickCheckTab extends StatefulWidget {
   @override
@@ -104,7 +111,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         child: RoundedButton(
           width: 300,
           text: "Continue",
-          press: () => setProgress(1),
+          press: () =>
+              getBodyPart() == "Chest" ? setProgress(5) : setProgress(1),
         ),
       ),
     ]);
@@ -129,9 +137,9 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         color: kPrimaryLightColor,
         child: Container(
           child: RoundedButton(
-            width: 300,
-            text: "Confirm",
-            press: () {
+              width: 300,
+              text: "Confirm",
+              press: () {
                 if (_nextQuestion == -1) {
                   setProgress(2);
                 } else {
@@ -139,8 +147,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
                     _questionIndex = _nextQuestion;
                   });
                 }
-            }
-          ),
+              }),
         ),
       )
     ]);
@@ -324,6 +331,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         return getFurtherActionsPage();
       case 4:
         return getConfirmationPage();
+      case 5:
+        return getChestSelectionPage();
     }
     return Scaffold(
       body: Text("Error"),
@@ -337,13 +346,18 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
     var user_id = regularUser != null ? regularUser.userId : -1;
     var specialization = "General"; //TODO get specialization
     var description = "";
-    var full_name = regularUser == null ? _data['full_name'] : (regularUser.firstName + " " + regularUser.lastName);
+    var full_name = regularUser == null
+        ? _data['full_name']
+        : (regularUser.firstName + " " + regularUser.lastName);
     var phone = regularUser == null ? _data['phone'] : regularUser.phone;
-    var age = _data['age']; // var full_name = regularUser == null ? _data['full_name'] : regularUser.age;
-    var height = _data['height']; // var height = regularUser == null ? _data['height'] : regularUser.height;
-    var weight = _data['weight']; // var weight = regularUser == null ? _data['weight'] : regularUser.weight;
-    var chronic_diseases = _data['chronic_diseases']; // var chronic_diseases = regularUser == null ? _data['chronic_diseases'] : regularUser.chronic_diseases;
-
+    var age = _data[
+        'age']; // var full_name = regularUser == null ? _data['full_name'] : regularUser.age;
+    var height = _data[
+        'height']; // var height = regularUser == null ? _data['height'] : regularUser.height;
+    var weight = _data[
+        'weight']; // var weight = regularUser == null ? _data['weight'] : regularUser.weight;
+    var chronic_diseases = _data[
+        'chronic_diseases']; // var chronic_diseases = regularUser == null ? _data['chronic_diseases'] : regularUser.chronic_diseases;
 
     try {
       var res = await postToServer(api: 'SendRequest', body: {
@@ -390,5 +404,71 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       answers.add(answer["answer"]);
     }
     return answers;
+  }
+
+  Widget getChestSelectionPage() {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      color: kPrimaryBgColor,
+      child: ListView(
+        children: <Widget>[
+          TopTitle(
+            topMargin: 20.0,
+            title: "You selected: Chest",
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top:50,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
+            child: Container(
+              child: RoundedButton(
+                width: 400,
+                text: "Acute Chest Pain",
+                press: () {
+                  _finalBodyPartList.removeLast();
+                  _finalBodyPartList.add("Acute Chest Pain");
+                  setProgress(1);
+                },
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 50,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
+            child: Container(
+              child: RoundedButton(
+                width: 400,
+                text: "Chronic Chest Pain",
+                press: () {
+                  _finalBodyPartList.removeLast();
+                  _finalBodyPartList.add("Chronic Chest Pain");
+                  setProgress(1);
+                },
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 50,
+                left: (size.width - 400) / 2,
+                right: (size.width - 400) / 2),
+            child: Container(
+              child: RoundedButton(
+                width: 400,
+                text: "Chest Pain in Infants/Children",
+                press: () {
+                  _finalBodyPartList.removeLast();
+                  _finalBodyPartList.add("Chest Pain in Infants/Children");
+                  setProgress(1);
+                },
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

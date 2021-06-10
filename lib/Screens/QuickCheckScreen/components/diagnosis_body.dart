@@ -30,8 +30,7 @@ class DiagnosisBody extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 10, bottom: 10),
             padding: EdgeInsets.all(20),
-            // child: Text(DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]
-            // ['overview'], style: TextStyle(fontSize: 20),),
+            child: getOverview()
           ),
           TopTitle(
             topMargin: 20.0,
@@ -46,9 +45,9 @@ class DiagnosisBody extends StatelessWidget {
                   topMargin: 20.0,
                   title: "Try",
                 ),
-                // Column(
-                //   children: getTry(),
-                // )
+                Column(
+                  children: getTry(),
+                )
               ],
             ),
           ),
@@ -61,9 +60,9 @@ class DiagnosisBody extends StatelessWidget {
                   topMargin: 20.0,
                   title: "Avoid",
                 ),
-                // Column(
-                //   children: getAvoid(),
-                // )
+                Column(
+                  children: getAvoid(),
+                )
               ],
             ),
           ),
@@ -90,7 +89,7 @@ class DiagnosisBody extends StatelessWidget {
           )
       );
     }
-    return tryFinal;
+    return tryFinal.length == 0 ? Container() : tryFinal;
   }
 
   List<Widget> getAvoid() {
@@ -113,6 +112,11 @@ class DiagnosisBody extends StatelessWidget {
       );
     }
 
-    return avoidFinal;
+    return avoidFinal.length == 0 ? Container() : avoidFinal;
+  }
+
+  Widget getOverview() {
+    return (DiagnosisOverview.diagnoses[possibleDiagnoses[0]["diagnosis"]] != null) ? Text(DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]
+    ['overview'], style: TextStyle(fontSize: 20)) : Container() ;
   }
 }

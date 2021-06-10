@@ -26,7 +26,7 @@ class Constants {
       // },
       // {"question": "Describe what happened", "answerType": AnswerType.TEXT_BOX}
     ],
-    "Chest": [
+    "Acute Chest Pain": [
       {
         "question": "Do you have severe chest pain?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -140,7 +140,7 @@ class Constants {
     ],
 
     //TODO: Move "Chest Pain, Chronic" and "Chest Pain in Infants and Children" to "Chest"
-    "Chest Pain, Chronic": [
+    "Chronic Chest Pain": [
       {
         "question": "Do you have shortness of breath?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -234,7 +234,7 @@ class Constants {
         ]
       }
     ],
-    "Chest Pain in Infants and Children": [
+    "Chest Pain in Infants/Children": [
       {
         "question":
             "Does your child have a fever, a cough that produces mucus, and shortness of breath?",
