@@ -71,7 +71,9 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         return "images/head.png";
       case "Neck":
         return "images/neck.png";
-      case "Chest":
+      case "Acute Chest Pain":
+      case "Chronic Chest Pain":
+      case "Chest Pain in Infants/Children":
         return "images/chest.png";
       case "Back":
         return "images/back.png";
@@ -116,37 +118,40 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
 
   Widget getQueryPage(int questionNo) {
     Size size = MediaQuery.of(context).size;
-    return ListView(children: [
-      Container(
-        child: QueryPage(
-          bodyPart: getBodyPart(),
-          bodyPartImage: getBodyPartImage(),
-          onChanged: possibleDiagnosis,
-          onChangedAnswers: finalAnswers,
-          nextQuestion: setNextQuestion,
-          questionIndex: questionNo,
+    return Container(
+      color: kPrimaryLightColor,
+      child: ListView(children: [
+        Container(
+          child: QueryPage(
+            bodyPart: getBodyPart(),
+            bodyPartImage: getBodyPartImage(),
+            onChanged: possibleDiagnosis,
+            onChangedAnswers: finalAnswers,
+            nextQuestion: setNextQuestion,
+            questionIndex: questionNo,
+          ),
         ),
-      ),
-      Container(
-        padding: EdgeInsets.only(
-            left: (size.width - 300) / 2, right: (size.width - 300) / 2),
-        color: kPrimaryLightColor,
-        child: Container(
-          child: RoundedButton(
-              width: 300,
-              text: "Confirm",
-              press: () {
-                if (_nextQuestion == -1) {
-                  setProgress(2);
-                } else {
-                  setState(() {
-                    _questionIndex = _nextQuestion;
-                  });
-                }
-              }),
-        ),
-      )
-    ]);
+        Container(
+          padding: EdgeInsets.only(
+              left: (size.width - 300) / 2, right: (size.width - 300) / 2),
+          color: kPrimaryLightColor,
+          child: Container(
+            child: RoundedButton(
+                width: 300,
+                text: "Confirm",
+                press: () {
+                  if (_nextQuestion == -1) {
+                    setProgress(2);
+                  } else {
+                    setState(() {
+                      _questionIndex = _nextQuestion;
+                    });
+                  }
+                }),
+          ),
+        )
+      ]),
+    );
   }
 
   Widget getDiagnosisPage() {
@@ -324,7 +329,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           ),
           Container(
             padding: EdgeInsets.only(
-                top:50,
+                top: 50,
                 left: (size.width - 400) / 2,
                 right: (size.width - 400) / 2),
             child: Container(

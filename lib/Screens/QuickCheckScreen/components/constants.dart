@@ -165,7 +165,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 1},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
           {"diagnosis": "HYPERVENTILATION", "score": 10}
@@ -230,7 +230,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 6},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 10}
         ],
         "onYesResponse": [
           {"diagnosis": "HEART ATTACK", "score": 10}
@@ -310,7 +310,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 12},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 12}
         ],
         "onYesResponse": [
           {"diagnosis": "HEART ATTACK", "score": 20}
@@ -322,7 +322,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 13},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 13}
         ],
         "onYesResponse": [
           {"diagnosis": "HEART ATTACK", "score": 20}
