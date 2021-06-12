@@ -112,7 +112,7 @@ class _RequestsTabState extends State<RequestsTab> {
   }
 
   Future<List<Request>> getRequests() async {
-    var res = await postToServer(api: '/getRequests', body: {
+    var res = await postToServer(api: 'getRequests', body: {
       'specialization': 'General',
     });
     if (res['msg'] == 'Success') {
