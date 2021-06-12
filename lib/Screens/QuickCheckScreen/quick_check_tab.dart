@@ -64,31 +64,45 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
 
     switch (bodyPart) {
       case "Ears":
-        return "images/ear.png";
+        return "images/body_parts/ear.png";
       case "Eyes":
-        return "images/eye.png";
+        return "images/body_parts/eye.png";
       case "Head Front":
-        return "images/head.png";
+        return "images/body_parts/head_front.png";
       case "Neck":
-        return "images/neck.png";
+        return "images/body_parts/neck.png"; //TODO query
       case "Acute Chest Pain":
       case "Chronic Chest Pain":
       case "Chest Pain in Infants/Children":
-        return "images/chest.png";
-      case "Back":
-        return "images/back.png";
+        return "images/body_parts/chest.png";
+      case "Shoulders":
+        return "images/body_parts/shoulders.png";
+      case "Arms":
+        return "images/body_parts/arms.png"; //TODO query
       case "Hands":
-        return "images/hand.png";
-      case "Calves":
-        return "images/calves.png";
-      case "Knees":
-        return "images/knee.png";
+        return "images/body_parts/hand.png";
+      case "Torso":
+        return "images/body_parts/torso.png"; //TODO query
+      case "Pelvis":
+        return "images/body_parts/pelvis.png"; //TODO query
       case "Thighs":
-        return "images/leg.png";
+        return "images/body_parts/thigh.png";
+      case "Knees":
+        return "images/body_parts/knee.png";
+      case "Calves":
+        return "images/body_parts/calves.png";
       case "Feet":
-        return "images/feet.png";
+        return "images/body_parts/feet.png";
+      case "Head Back":
+        return "images/body_parts/head_back.png"; //TODO query
+      case "Elbows":
+        return "images/body_parts/elbows.png"; //TODO query
+      case "Back":
+        return "images/body_parts/back.png";
+      case "Glutes":
+        return "images/body_parts/glutes.png"; //TODO query
       default:
-        return "images/hand.png";
+        return "";
     }
   }
 

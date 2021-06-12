@@ -91,7 +91,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
                 false),
             bodyPart(
                 "assets/front/arms.svg",
-                "Arms Front",
+                "Arms",
                 normalizeSize(150.0, humanHeight),
                 0.0,
                 0.0,
@@ -205,7 +205,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
                 true),
             bodyPart(
                 "assets/back/arms.svg",
-                "Arms Back",
+                "Arms",
                 normalizeSize(227.0, humanHeight),
                 0.0,
                 0.0,
