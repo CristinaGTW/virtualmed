@@ -4,7 +4,123 @@ class Constants {
   //TODO: Put the correct nextQuestion index
   static const query = {
     "": [],
-    // lalalalala
+    "Neck": [
+      //Q0
+      {
+        "question": "Do you have lumps or swelling on both sides of your neck?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 1}
+        ],
+        "onYesResponse": []
+      },
+      //Q1
+      {
+        "question": "Do you have a fever, sore throat, cold, or flu symptoms?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "VIRAL SORE THROAT", "score": 3},
+          {"diagnosis": "STREP", "score": 3},
+          {"diagnosis": "MONONUCLEOSIS", "score": 3}
+        ]
+      },
+      //Q2
+      {
+        "question":
+            "Are the lumps getting larger, or have they been on your neck for longer than two weeks?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "LYMPHOMA", "score": 20}
+        ]
+      },
+      //Q3
+      {
+        "question":
+            "Do you have swelling in the back of your neck on one or both sides?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": 4}
+        ],
+        "onYesResponse": []
+      },
+      //Q4
+      {
+        "question": "Do you have a skin infection or rash on your scalp?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "LYMPH NODES", "score": 10}
+        ]
+      },
+      //Q5
+      {
+        "question": "Do you have a rash on your face or a fever?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "VIRAL ILLNESS", "score": 9},
+          {"diagnosis": "GERMAN MEASLES (RUBELLA)", "score": 1}
+        ]
+      },
+      //Q6
+      {
+        "question":
+            "Do you have swelling behind and over your jaw on one or both sides?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "MUMPS", "score": 10}
+        ]
+      },
+      //Q7
+      {
+        "question":
+            "Do you have swelling underneath the middle of your chin or directly in the front and middle of your neck?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "THYROGLOSSAL DUCT CYST", "score": 5},
+          {"diagnosis": "ABSCESS", "score": 5}
+        ]
+      },
+      //Q8
+      {
+        "question":
+            "Is there a soft swelling on the front of your neck above and between the collarbones?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ENLARGED THYROID", "score": 3},
+          {"diagnosis": "GOITER", "score": 3},
+          {"diagnosis": "THYROIDITIS", "score": 3}
+        ]
+      }
+    ],
     "Hands": [
       //Q0
       {
