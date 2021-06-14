@@ -130,13 +130,7 @@ class Constants {
           {"answer": "No", "nextQuestion": 3},
           {"answer": "Yes", "nextQuestion": 1}
         ],
-        "onYesResponse": [
-          {
-            "diagnosis":
-                "If there is no fracture, the tendons or ligaments around the joint may be SPRAINED or STRAINED.",
-            "score": 10
-          }
-        ],
+        "onYesResponse": []
       },
       //Q1
       {
@@ -147,7 +141,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURED bone", "score": 20}
+          {"diagnosis": "FRACTURE", "score": 20}
         ],
       },
       //Q2
@@ -160,10 +154,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "If there is no fracture, the limb may be SPRAINED",
-            "score": 10
-          }
+          {"diagnosis": "SPRAINED", "score": 10}
         ],
       },
       //Q3
@@ -176,11 +167,8 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis":
-                "If there is no fracture, the tendons (a cord of tissue connecting muscle to bone) or ligaments (tissue connecting bones to each another) around the joint may be SPRAINED or STRAINED.",
-            "score": 10
-          }
+          {"diagnosis": "SPRAINED", "score": 5},
+          {"diagnosis": "STRAINED", "score": 5}
         ],
       },
       //Q4
@@ -206,7 +194,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "HYPERVENTILATION", "score": 10}
+          {"diagnosis": " CARPAL TUNNEL SYNDROME", "score": 10}
         ],
       },
       //Q6
@@ -219,7 +207,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "HYPERVENTILATION", "score": 10}
+          {"diagnosis": "GANGLION CYST", "score": 10}
         ],
       },
       //Q7
@@ -232,7 +220,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "HYPERVENTILATION", "score": 10}
+          {"diagnosis": "INFECTION", "score": 10}
         ],
       },
       //Q8
@@ -245,23 +233,11 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "HYPERVENTILATION", "score": 10}
+          {"diagnosis": "RHEUMATOID ARTHRITIS", "score": 5},
+          {"diagnosis": "GOUT", "score": 5}
         ],
       },
       //Q9
-      {
-        "question":
-            "Do you have a firm lump or swelling near your wrist or finger joints?",
-        "answerType": AnswerType.MULTIPLE_CHOICE,
-        "answerChoices": [
-          {"answer": "No", "nextQuestion": 10},
-          {"answer": "Yes", "nextQuestion": -1}
-        ],
-        "onYesResponse": [
-          {"diagnosis": "HYPERVENTILATION", "score": 10}
-        ],
-      },
-      //Q10
       {
         "question":
             "Does your thumb hurt with gripping, typing, or writing with a pencil or pen?",
@@ -271,7 +247,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "HYPERVENTILATION", "score": 10}
+          {"diagnosis": "CARPAL TUNNEL SYNDROME", "score": 10}
         ],
       }
     ],
