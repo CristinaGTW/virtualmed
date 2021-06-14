@@ -121,10 +121,11 @@ class Constants {
         ]
       }
     ],
+
     "Hands": [
       //Q0
       {
-        "question": "Did you hit, twist, or fall on your arm, hand, or wrist?",
+        "question": "Did you hit, twist, or fall on your hand or wrist?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 3},
@@ -146,8 +147,7 @@ class Constants {
       },
       //Q2
       {
-        "question":
-            "Does the pain get worse when you move your arm, hand, or wrist?",
+        "question": "Does the pain get worse when you move your hand or wrist?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 3},
@@ -187,7 +187,7 @@ class Constants {
       //Q5
       {
         "question":
-            "Do you have numbness or pain in your fingers, hand, wrist, \n or arm, especially when you flex your wrist \n (i.e., bend your palm toward your forearm)?",
+            "Do you have numbness or pain in your fingers, hand, wrist, \n especially when you flex your wrist?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 6},
@@ -213,7 +213,7 @@ class Constants {
       //Q7
       {
         "question":
-            "Do you have redness, swelling, or pain in the skin around \n a cut or wound, or is there a red streak anywhere on your arm or hand?",
+            "Do you have redness, swelling, or pain in the skin around \n a cut or wound, or is there a red streak anywhere on your hand?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 8},
@@ -251,6 +251,304 @@ class Constants {
         ],
       }
     ],
+
+    "Arms": [
+      //Q0
+      {
+        "question": "Did you hit, twist, or fall on your arm?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 1}
+        ],
+        "onYesResponse": []
+      },
+      //Q1
+      {
+        "question": "Is the affected area deformed or swollen?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "FRACTURE", "score": 20}
+        ],
+      },
+      //Q2
+      {
+        "question": "Does the pain get worse when you move your arm?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SPRAINED", "score": 10}
+        ],
+      },
+      //Q3
+      {
+        "question":
+            "Does the pain get worse with repetitive movement \n (e.g., while working or playing a sport)?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SPRAINED", "score": 5},
+          {"diagnosis": "STRAINED", "score": 5}
+        ],
+      },
+      //Q4
+      {
+        "question":
+            "Do you have numbness or pain in your fingers, hand, wrist, \n or arm, especially when you flex your wrist \n (i.e., bend your palm toward your forearm)?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": " CARPAL TUNNEL SYNDROME", "score": 10}
+        ],
+      },
+      //Q5
+      {
+        "question":
+            "Do you have redness, swelling, or pain in the skin around \n a cut or wound, or is there a red streak anywhere on your arm?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "INFECTION", "score": 10}
+        ],
+      },
+      //Q6
+      {
+        "question":
+            "Are one or more joints swollen and tender? Do you have a fever?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "RHEUMATOID ARTHRITIS", "score": 5},
+          {"diagnosis": "GOUT", "score": 5}
+        ],
+      }
+    ],
+
+    // Abdominal Pain - Long Term
+    "Torso": [
+      //Q0
+      {
+        "question": "Does your pain get worse after you eat a big meal?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HIATAL HERNIA", "score": 10}
+        ]
+      },
+      //Q1
+      {
+        "question":
+            "Do you feel pressure in your upper abdomen that gets worse when you bend over or lie down at night?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HIATAL HERNIA", "score": 10}
+        ]
+      },
+      //Q2
+      {
+        "question":
+            "Is the pain relieved by antacids? Is your pain improved by eating?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "GASTRITIS", "score": 3},
+          {"diagnosis": "ULCER", "score": 3},
+          {"diagnosis": "HEARTBURN", "score": 3}
+        ]
+      },
+      //Q3
+      {
+        "question":
+            "Does the pain start in your upper middle or upper right abdomen, and is it brought on by greasy or fatty foods?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "GALLSTONES", "score": 10}
+        ]
+      },
+      //Q4
+      {
+        "question":
+            "Does your pain get worse when you’re under stress or do you alternate between loose and hard bowel movements?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "IRRITABLE BOWEL SYNDROME", "score": 10}
+        ]
+      },
+      //Q5
+      {
+        "question":
+            "Do you have soft or diarrhea-like bowel movements many times throughout the day AND mucus or blood in your stool?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "CROHN’S DISEASE", "score": 5},
+          {"diagnosis": "ULCERATIVE COLITIS", "score": 5}
+        ]
+      },
+      //Q6
+      {
+        "question":
+            "Do you have recurrent bouts of pain in the lower left side of your abdomen along with fever?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "DIVERTICULITIS", "score": 10}
+        ]
+      },
+      //Q7
+      {
+        "question":
+            "Do you have bright red blood in or on your bowel movements?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HEMORRHOID", "score": 2},
+          {"diagnosis": "POLYP", "score": 2},
+          {"diagnosis": "CANCER", "score": 4}
+        ]
+      },
+      //Q8
+      {
+        "question":
+            "Has it been a few days or longer since you last had a bowel movement and do you have to strain when you have a bowel movement? Do you have bloating and/or abdomen distension?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "CONSTIPATION", "score": 10}
+        ]
+      },
+      //Q9
+      {
+        "question":
+            "Has your appetite decreased? Have you lost 10 to 15 pounds over the past few months without trying?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 10},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "CANCER", "score": 10}
+        ]
+      },
+      //Q10
+      {
+        "question":
+            "Do your skin or eyes have a yellow color, or is your urine dark, or are your stools turning white?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 11},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HEPATITIS", "score": 10}
+        ]
+      },
+      //Q11
+      {
+        "question":
+            "Have you had fever, sore throat, or extreme tiredness? Do you have pain in your upper abdomen, mostly on the left upper quadrant?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 12},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "MONONUCLEOSIS", "score": 10}
+        ]
+      },
+      //Q12
+      {
+        "question":
+            "Do you have abdominal bloating and discomfort made worse by milk or wheat products?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 13},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "MALABSORPTION", "score": 3},
+          {"diagnosis": "LACTOSE INTOLERANCE", "score": 3},
+          {"diagnosis": "WHEAT/GLUTEN INTOLERANCE", "score": 3}
+        ]
+      },
+      //Q13
+      {
+        "question":
+            "Are your bowel movements yellow and/or greasy, and do they float in the toilet?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 14},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PANCREATIC INSUFFICIENCY", "score": 10}
+        ]
+      },
+      //Q14
+      {
+        "question":
+            "Do you have excess gas that smells foul and you have occasional loose bowel movements?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "GIARDIASIS", "score": 7},
+          {"diagnosis": "BOWEL INFECTION", "score": 3}
+        ]
+      }
+    ],
+
     "Acute Chest Pain": [
       //Q0
       {
@@ -1906,6 +2204,233 @@ class Constants {
         ]
       }
     ],
+
+    "Elbows": [
+      //Q0
+      {
+        "question":
+            "On the outside of the elbow, do you feel a gradual onset elbow pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 1},
+          {"answer": "Yes", "nextQuestion": 1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "TENNIS ELBOW", "score": 5},
+          {"diagnosis": "RADIOHUMERAL BURSITIS", "score": 5},
+          {
+            "diagnosis": "OSTEOCHONDRITIS DISSECANS IN THE ELBOW JOINT",
+            "score": 5
+          },
+          {"diagnosis": "RADIAL TUNNEL SYNDROME", "score": 5},
+        ]
+      },
+      //Q1
+      {
+        "question":
+            "On the outside of the elbow, do you feel weakness or pain gripping?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": 2}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "TENNIS ELBOW", "score": 5},
+          {"diagnosis": "RADIOHUMERAL BURSITIS", "score": 5},
+          {"diagnosis": "RADIAL TUNNEL SYNDROME", "score": 5}
+        ]
+      },
+      //Q2
+      {
+        "question": "On the outside of the elbow, do you have a swelling?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 3}
+        ],
+        "onYesResponse": [
+          {
+            "diagnosis": "OSTEOCHONDRITIS DISSECANS IN THE ELBOW JOINT",
+            "score": 5
+          }
+        ]
+      },
+      //Q3
+      {
+        "question":
+            "On the outside of the elbow, do you feel a locking elbow joint?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": 4}
+        ],
+        "onYesResponse": [
+          {
+            "diagnosis": "OSTEOCHONDRITIS DISSECANS IN THE ELBOW JOINT",
+            "score": 5
+          }
+        ]
+      },
+      //Q4
+      {
+        "question":
+            "In the inside of the elbow, do you feel a swelling on the elbow?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": 5}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ELBOW AVULSION FRACTURE", "score": 5},
+          {"diagnosis": "MEDIAL ELBOW LIGAMENT SPRAIN", "score": 5},
+          {"diagnosis": "GOLFER'S ELBOW", "score": 5}
+        ]
+      },
+      //Q5
+      {
+        "question":
+            "In the inside of the elbow, do you feel a tenderness on the inside of the elbow?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": 6}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ELBOW AVULSION FRACTURE", "score": 5},
+          {"diagnosis": "MEDIAL ELBOW LIGAMENT SPRAIN", "score": 5},
+          {"diagnosis": "GOLFER'S ELBOW", "score": 5}
+        ]
+      },
+      //Q6
+      {
+        "question":
+            "In the inside of the elbow, do you feel a weeknes or pain gripping?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": 7}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ELBOW AVULSION FRACTURE", "score": 5},
+          {"diagnosis": "GOLFER'S ELBOW", "score": 5}
+        ]
+      },
+      //Q7
+      {
+        "question":
+            "In the inside of the elbow, do you feel a gradual onset elbow pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "GOLFER'S ELBOW", "score": 5}
+        ]
+      },
+      //Q8
+      {
+        "question":
+            "Do you feel the acute elbow pain injury with a swelling on the elbow?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": 9}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ELBOW AVULSION FRACTURE", "score": 5},
+          {"diagnosis": "MEDIAL ELBOW LIGAMENT SPRAIN", "score": 5},
+          {"diagnosis": "ELBOW HYPEREXTENSION INJURY", "score": 5},
+          {"diagnosis": "DISLOCATED ELBOW", "score": 5},
+          {"diagnosis": "ELBOW & FOREARM FRACTURES ", "score": 5},
+        ]
+      },
+      //Q9
+      {
+        "question":
+            "Do you feel the acute elbow pain injury with a tenderness on the inside of the elbow?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 10},
+          {"answer": "Yes", "nextQuestion": 10}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ELBOW AVULSION FRACTURE", "score": 5},
+          {"diagnosis": "MEDIAL ELBOW LIGAMENT SPRAIN", "score": 5},
+          {"diagnosis": "ULNAR NERVE COMPRESSION", "score": 5}
+        ]
+      },
+      //Q10
+      {
+        "question":
+            "Do you feel the acute elbow pain injury with a weakness or pain gripping?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 11},
+          {"answer": "Yes", "nextQuestion": 11}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ELBOW AVULSION FRACTURE", "score": 5}
+        ]
+      },
+      //Q11
+      {
+        "question":
+            "Do you feel the acute elbow pain injury with a tenderness at the back of the elbow?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 12},
+          {"answer": "Yes", "nextQuestion": 12}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "GOLFER'S ELBOW", "score": 5},
+          {"diagnosis": "GOLFER'S ELBOW", "score": 5}
+        ]
+      },
+      //Q12
+      {
+        "question":
+            "On the back of the elbow do you feel a gradual onset elbow pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 13},
+          {"answer": "Yes", "nextQuestion": 13}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "TRICEPS TENDONITIS", "score": 5},
+          {"diagnosis": "ELBOW BURSITIS(STUDENTS ELBOW)", "score": 5}
+        ]
+      },
+      //Q13
+      {
+        "question": "On the back of the elbow do you feel a tenderness?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 14},
+          {"answer": "Yes", "nextQuestion": 14}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "TRICEPS TENDONITIS", "score": 5},
+          {"diagnosis": "ELBOW BURSITIS(STUDENTS ELBOW)", "score": 5},
+          {"diagnosis": "OLECRANON FRACTURE", "score": 5}
+        ]
+      },
+      //Q14
+      {
+        "question":
+            "On the back of the elbow do you have a swelling on the elbow?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ELBOW BURSITIS(STUDENTS ELBOW)", "score": 5},
+          {"diagnosis": "OLECRANON FRACTURE", "score": 5}
+        ]
+      },
+    ],
+
     "Head Front": [
       {
         "question":
