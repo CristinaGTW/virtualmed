@@ -70,7 +70,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       case "Head Front":
         return "images/body_parts/head_front.png";
       case "Neck":
-        return "images/body_parts/neck.png"; //TODO query
+        return "images/body_parts/neck.png";
       case "Acute Chest Pain":
       case "Chronic Chest Pain":
       case "Chest Pain in Infants/Children":
@@ -78,11 +78,11 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       case "Shoulders":
         return "images/body_parts/shoulders.png";
       case "Arms":
-        return "images/body_parts/arms.png"; //TODO query
+        return "images/body_parts/arms.png";
       case "Hands":
         return "images/body_parts/hand.png";
       case "Torso":
-        return "images/body_parts/torso.png"; //TODO query
+        return "images/body_parts/torso.png";
       case "Pelvis":
         return "images/body_parts/pelvis.png"; //TODO query
       case "Thighs":
@@ -96,7 +96,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       case "Head Back":
         return "images/body_parts/head_back.png"; //TODO query
       case "Elbows":
-        return "images/body_parts/elbows.png"; //TODO query
+        return "images/body_parts/elbows.png";
       case "Back":
         return "images/body_parts/back.png";
       case "Glutes":

@@ -343,6 +343,361 @@ class Constants {
       }
     ],
 
+    // for Women
+    "Pelvis - Women": [
+      //Q0
+      {
+        "question":
+            "Do you have a vaginal discharge that is normal in color, consistency, and smell, but has the amount increased?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 1},
+          {"answer": "Yes", "nextQuestion": 1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ORAL CONTRACEPTIVES / PREGNANCY", "score": 5}
+        ]
+      },
+      //Q1
+      {
+        "question":
+            "Do you have a discharge that is white and curd-like (cottage-cheese like), or are you experiencing vaginal or labial (lips of the vagina) redness, itching, and/or irritation?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": 2}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "YEAST INFECTION", "score": 5},
+          {"diagnosis": "CANDIDIASIS", "score": 5}
+        ]
+      },
+      //Q2
+      {
+        "question":
+            "Do you have a greenish, yellow discharge with an unpleasant fishy odor?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 3}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PELVIC INFLAMMATORY DISEASE (PID)", "score": 5},
+          {"diagnosis": "SEXUALLY TRANSMITTED INFECTION", "score": 5}
+        ]
+      },
+      //Q3
+      {
+        "question":
+            "Are you experiencing abdominal pain or other pain during sex?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": 4}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PELVIC INFLAMMATORY DISEASE (PID)", "score": 5},
+          {"diagnosis": "SEXUALLY TRANSMITTED INFECTION", "score": 5}
+        ]
+      },
+      //Q4
+      {
+        "question":
+            "Do you have a tender swelling of the vaginal opening or swelling of one labia (vaginal lip)?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": 5}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "INFECTION IN A MUCOUS GLAND", "score": 5},
+          {"diagnosis": "ABSCESS", "score": 5},
+          {"diagnosis": "INFECTION IN THE LABIA (VAGINAL LIP)", "score": 5}
+        ]
+      },
+      //Q5
+      {
+        "question":
+            "Do you have a sore (ulcer) or raw area on the outside or inside of the vagina?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": 6}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HERPES", "score": 5},
+          {"diagnosis": " SEXUALLY TRANSMITTED INFECTIONS", "score": 5}
+        ]
+      },
+      //Q6
+      {
+        "question": "Do you have pain with intercourse?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": 7}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "INFECTION", "score": 5},
+          {"diagnosis": "HORMONE DEFICIENCY", "score": 5}
+        ]
+      },
+      //Q7
+      {
+        "question":
+            "Does your vagina seem dry, or are you experiencing vaginal itching and irritation?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": 8}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "INFECTION", "score": 5},
+          {"diagnosis": "HORMONE DEFICIENCY", "score": 5}
+        ]
+      },
+      //Q8
+      {
+        "question": "Are you anxious about having sex?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": 9}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "VAGINISMUS", "score": 5}
+        ]
+      },
+      //Q9
+      {
+        "question":
+            "Do you have pain or burning with urination? Do you feel like you suddenly have to urinate and can’t make it to the toilet in time? Do you feel that you are having trouble starting your stream of urine? Do you feel that you are not completely emptying your bladder when you urinate?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 10},
+          {"answer": "Yes", "nextQuestion": 10}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "URINARY TRACT INFECTION (UTI)", "score": 5}
+        ]
+      },
+      //Q10
+      {
+        "question":
+            "Do you leak urine when you cough, laugh, or lift a heavy object?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "STRESS INCONTINENCE", "score": 5}
+        ]
+      }
+    ],
+
+    // for Men
+    "Pelvis": [
+      // Q0
+      {
+        "question": "Do you have any swelling or tenderness in your scrotum?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": 1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SEXUALLY TRANSMITTED INFECTION", "score": 10}
+        ],
+      },
+      // Q1
+      {
+        "question":
+            "Do you have a yellowish or greenish discharge from the tip of your penis? Does anything other than urine or semen (e.g., blood, white discharge that is clumpy while you are urinating, etc.) come out of the tip of your penis?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SEXUALLY TRANSMITTED INFECTION", "score": 10}
+        ],
+      },
+      // Q2
+      {
+        "question": "Do you have a burning sensation or pain with urination?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "BLADDER INFECTION", "score": 10}
+        ]
+      },
+      // Q3
+      {
+        "question":
+            "Do you have a painful, itchy rash or small red bumps, blisters, or sores on your penis?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "YEAST INFECTION", "score": 3},
+          {"diagnosis": "HERPES", "score": 3},
+          {"diagnosis": "CANCER", "score": 4}
+        ],
+      },
+      // Q4
+      {
+        "question":
+            "Do you have a painless sore, ulcer, or small white or flesh-colored flat-topped bumps on the shaft or head of your penis?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "GENITAL WARTS", "score": 3},
+          {"diagnosis": "SYPHILIS", "score": 3},
+          {"diagnosis": "CANCER", "score": 4}
+        ],
+      },
+      // Q5
+      {
+        "question": "Is the entire tip of your penis tender or swollen?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "BALANITIS", "score": 10}
+        ],
+      },
+      // Q6
+      {
+        "question":
+            "Do you have blood in your urine or semen, or pain with ejaculation? Do you have deep-down pelvic pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PROSTATITIS", "score": 10}
+        ],
+      },
+      // Q7
+      {
+        "question": "Do you have pain with sexual intercourse?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ALLERGY", "score": 3},
+          {"diagnosis": "PROSTATITIS", "score": 3},
+          {"diagnosis": "INFECTION", "score": 3}
+        ],
+      },
+      // Q8
+      {
+        "question":
+            "Is your scrotum very tender although no injury has occurred to the testicle?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "EPIDIDYMITIS", "score": 5},
+          {"diagnosis": "TESTICULAR TORSION", "score": 5}
+        ],
+      },
+      // Q9
+      {
+        "question": "Do you have mild tenderness around one testicle?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 10},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "EPIDIDYMITIS", "score": 10}
+        ],
+      },
+      // Q10
+      {
+        "question":
+            "Is there a hard, painless knot on one testicle that feels like a frozen pea?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 11},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SPERMATOCELE", "score": 5},
+          {"diagnosis": "TESTICULAR CANCER", "score": 5}
+        ],
+      },
+      // Q11
+      {
+        "question":
+            "Is there a soft, painless swelling of the testicle or around your testicle in your scrotum on one or both sides?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 12},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "VARICOCELE", "score": 5},
+          {"diagnosis": "HYDROCELE", "score": 5}
+        ],
+      },
+      // Q12
+      {
+        "question":
+            "Is there a soft swelling above your testicle that gets bigger or becomes painful with activity, lifting, or coughing?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 13},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "INGUINAL HERNIA", "score": 10}
+        ],
+      },
+      // Q13
+      {
+        "question":
+            "Do you have an erection that has lasted for more than 4 hours?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 14},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PRIAPISM", "score": 10}
+        ],
+      },
+      // Q14
+      {
+        "question": "Do you have trouble achieving or maintaining an erection?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ERECTILE DYSFUNCTION", "score": 10}
+        ],
+      }
+    ],
+
     // Abdominal Pain - Long Term
     "Torso": [
       //Q0
@@ -2429,6 +2784,427 @@ class Constants {
           {"diagnosis": "OLECRANON FRACTURE", "score": 5}
         ]
       },
+    ],
+
+    "Glutes": [
+      //Q0
+      {
+        "question": "Do you feel pain deep in the buttock?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 1},
+          {"answer": "Yes", "nextQuestion": 1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PIRIFORMIS SYNDROME", "score": 5},
+          {"diagnosis": "MYOFASCIAL PAIN IN BUTTOCK MUSCLES", "score": 5}
+        ]
+      },
+      //Q1
+      {
+        "question": "Do you feel a buttock pain radiating into legs?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": 2}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PIRIFORMIS SYNDROME", "score": 5}
+        ]
+      },
+      //Q2
+      {
+        "question": "Do you feel a sharp pain in the buttock?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 3}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PIRIFORMIS SYNDROME", "score": 5}
+        ]
+      },
+      //Q3
+      {
+        "question": "Do you feel pain under buttock?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PELVIC AVULSION FRACTURE", "score": 5}
+        ]
+      },
+      //Q4
+      {
+        "question": "Do you feel a lower back pain/stiffness?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": 5}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "MYOFASCIAL PAIN IN BUTTOCK MUSCLES", "score": 5},
+          {"diagnosis": "SACROILIAC JOINT PAIN", "score": 5}
+        ]
+      },
+      //Q5
+      {
+        "question": "Do you feel a upper back pain/stiffness?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": 6}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "MYOFASCIAL PAIN IN BUTTOCK MUSCLES", "score": 5},
+          {"diagnosis": "SACROILIAC JOINT PAIN", "score": 5}
+        ]
+      },
+      //Q6
+      {
+        "question": "Do you feel a front hip pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": 7}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "RECTUS FEMORIS TENDON STRAIN", "score": 5},
+          {"diagnosis": "HIP POINTER", "score": 5},
+          {"diagnosis": "ILIUM APOPHYSITIS", "score": 5},
+          {"diagnosis": "LABRAL TEAR OF THE HIP JOINT", "score": 5}
+        ]
+      },
+      //Q7
+      {
+        "question": "Did you feel a sudden hip pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": 8}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "RECTUS FEMORIS TENDON STRAIN", "score": 5},
+          {"diagnosis": "HIP POINTER", "score": 5},
+          {"diagnosis": "LABRAL TEAR OF THE HIP JOINT", "score": 5}
+        ]
+      },
+      //Q8
+      {
+        "question": "Do you feel a chronic hip pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": 9}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PELVIC STRESS FRACTURE", "score": 5},
+          {"diagnosis": "PERTHES' DISEASE", "score": 5},
+          {"diagnosis": "HIP BURSITIS", "score": 5},
+          {"diagnosis": "OSTEOARTHRITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SYNOVITIS OF THE HIP", "score": 5},
+          {"diagnosis": "LABRAL TEAR OF THE HIP JOINT", "score": 5},
+          {"diagnosis": "SLIPPED CAPITAL FEMORAL EPIPHYSIS", "score": 5}
+        ]
+      },
+      //Q9
+      {
+        "question": "Do you feel a gradual onset groin pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 10},
+          {"answer": "Yes", "nextQuestion": 10}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PELVIC STRESS FRACTURE", "score": 5},
+          {"diagnosis": "PERTHES' DISEASE", "score": 5},
+          {"diagnosis": "HIP BURSITIS", "score": 5},
+          {"diagnosis": "LABRAL TEAR OF THE HIP JOINT", "score": 5},
+          {"diagnosis": "SLIPPED CAPITAL FEMORAL EPIPHYSIS", "score": 5}
+        ]
+      },
+      //Q10
+      {
+        "question": "Do you feel a hip stiffness?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 11},
+          {"answer": "Yes", "nextQuestion": 11}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PELVIC STRESS FRACTURE", "score": 5},
+          {"diagnosis": "HIP POINTER", "score": 5},
+          {"diagnosis": "ILIUM APOPHYSITIS", "score": 5},
+          {"diagnosis": "PERTHES' DISEASE", "score": 5},
+          {"diagnosis": "OSTEOARTHRITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SYNOVITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SLIPPED CAPITAL FEMORAL EPIPHYSIS", "score": 5}
+        ]
+      },
+      //Q11
+      {
+        "question": "Do you have a hip swelling?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 12},
+          {"answer": "Yes", "nextQuestion": 12}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HIP POINTER", "score": 5},
+          {"diagnosis": "ILIUM APOPHYSITIS", "score": 5},
+          {"diagnosis": "OSTEOARTHRITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SYNOVITIS OF THE HIP", "score": 5},
+        ]
+      },
+      //Q12
+      {
+        "question": "Do you have an outer hip pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 13},
+          {"answer": "Yes", "nextQuestion": 13}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HIP POINTER", "score": 5},
+          {"diagnosis": "HIP BURSITIS", "score": 5},
+          {"diagnosis": "LABRAL TEAR OF THE HIP JOINT", "score": 5}
+        ]
+      },
+      //Q13
+      {
+        "question": "Do you have sore hips?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 14},
+          {"answer": "Yes", "nextQuestion": 14}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HIP POINTER", "score": 5},
+          {"diagnosis": "OSTEOARTHRITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SYNOVITIS OF THE HIP", "score": 5},
+          {"diagnosis": "LABRAL TEAR OF THE HIP JOINT", "score": 5},
+          {"diagnosis": "SLIPPED CAPITAL FEMORAL EPIPHYSIS", "score": 5}
+        ]
+      },
+      //Q14
+      {
+        "question": "Do you have aching hips?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 15},
+          {"answer": "Yes", "nextQuestion": 15}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ILIUM APOPHYSITIS", "score": 5},
+          {"diagnosis": "OSTEOARTHRITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SYNOVITIS OF THE HIP", "score": 5},
+          {"diagnosis": "LABRAL TEAR OF THE HIP JOINT", "score": 5},
+          {"diagnosis": "SLIPPED CAPITAL FEMORAL EPIPHYSIS", "score": 5}
+        ]
+      },
+      //Q15
+      {
+        "question": "Hip pain in Children / Injuries affecting young athletes?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 16},
+          {"answer": "Yes", "nextQuestion": 16}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PERTHES' DISEASE", "score": 5}
+        ]
+      },
+      //Q16
+      {
+        "question": "Do you have hip pain balancing on one leg?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 17},
+          {"answer": "Yes", "nextQuestion": 17}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HIP BURSITIS", "score": 5},
+          {"diagnosis": "OSTEOARTHRITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SYNOVITIS OF THE HIP", "score": 5}
+        ]
+      },
+      //Q17
+      {
+        "question": "Do you feel hip joint pain?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 18},
+          {"answer": "Yes", "nextQuestion": 18}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "OSTEOARTHRITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SYNOVITIS OF THE HIP", "score": 5},
+          {"diagnosis": "LABRAL TEAR OF THE HIP JOINT", "score": 5},
+          {"diagnosis": "SLIPPED CAPITAL FEMORAL EPIPHYSIS", "score": 5}
+        ]
+      },
+      //Q18
+      {
+        "question": "Do you feel hip pain at night?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 19},
+          {"answer": "Yes", "nextQuestion": 19}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "OSTEOARTHRITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SYNOVITIS OF THE HIP", "score": 5}
+        ]
+      },
+      //Q19
+      {
+        "question": "Do you feel hip pain when sitting?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "OSTEOARTHRITIS OF THE HIP", "score": 5},
+          {"diagnosis": "SYNOVITIS OF THE HIP", "score": 5}
+        ]
+      }
+    ],
+
+    "Head Back": [
+      //Q0
+      {
+        "question":
+            "Do you have a head injury such as direct trauma/shaking of the head?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 1},
+          {"answer": "Yes", "nextQuestion": 1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "BRAIN BLEED", "score": 5},
+          {"diagnosis": "SKULL FRACTURE", "score": 5},
+          {"diagnosis": "CONCUSSION", "score": 5},
+          {"diagnosis": "HEADACHES IN SPORT", "score": 5},
+          {"diagnosis": "POST CONCUSSION SYNDROME", "score": 5}
+        ]
+      },
+      //Q1
+      {
+        "question": "Do you have a head injury that provokes a headache?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": 2}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "BRAIN BLEED", "score": 5},
+          {"diagnosis": "SKULL FRACTURE", "score": 5},
+          {"diagnosis": "CONCUSSION", "score": 5},
+          {"diagnosis": "HEADACHES IN SPORT", "score": 5},
+          {"diagnosis": "POST CONCUSSION SYNDROME", "score": 5},
+          {"diagnosis": "MIGRAINE", "score": 5}
+        ]
+      },
+      //Q2
+      {
+        "question": "Do you have a head injury and nausea?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 3}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "BRAIN BLEED", "score": 5},
+          {"diagnosis": "SKULL FRACTURE", "score": 5},
+          {"diagnosis": "CONCUSSION", "score": 5},
+          {"diagnosis": "HEADACHES IN SPORT", "score": 5},
+          {"diagnosis": "POST CONCUSSION SYNDROME", "score": 5}
+        ]
+      },
+      //Q3
+      {
+        "question":
+            "Do you have a head injury and are you bleeding from ears, eyes, or nose?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": 4}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SKULL FRACTURE", "score": 5}
+        ]
+      },
+      //Q4
+      {
+        "question": "Did you have a head injury and you lost consciousness?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": 5}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SKULL FRACTURE", "score": 5},
+          {"diagnosis": "CONCUSSION", "score": 5}
+        ]
+      },
+      //Q5
+      {
+        "question": "Do you have a straw coloured liquid from eyes or ears?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": 6}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SKULL FRACTURE", "score": 5}
+        ]
+      },
+      //Q6
+      {
+        "question": "Do you have visual disturbance after a head injury?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": 7}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SKULL FRACTURE", "score": 5},
+          {"diagnosis": "CONCUSSION", "score": 5},
+          {"diagnosis": "MIGRAINE", "score": 5}
+        ]
+      },
+      //Q7
+      {
+        "question":
+            "Did you have memory loss or confusion after a head injury?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": 8}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "CONCUSSION", "score": 5},
+          {"diagnosis": "POST CONCUSSION SYNDROME", "score": 5}
+        ]
+      },
+      //Q8
+      {
+        "question": "Do you feel dizziness after a head injury?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "CONCUSSION", "score": 10},
+          {"diagnosis": "POST CONCUSSION SYNDROME", "score": 5},
+          {"diagnosis": "POST CONCUSSION SYNDROME", "score": 5},
+          {"diagnosis": "HEADACHES IN SPORT", "score": 5}
+        ]
+      }
     ],
 
     "Head Front": [
