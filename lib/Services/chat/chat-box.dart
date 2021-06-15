@@ -36,11 +36,16 @@ class _ChatBoxState extends State<ChatBox> {
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
                         bottomLeft: Radius.circular(20)),
-            color: kPrimaryBgColor,
+            color: widget.chatMessage.direction == MessageDirection.RECEIVED
+            ? KMenuSelectorColor
+                : kPrimaryLightColor
           ),
           padding: EdgeInsets.all(10),
           child: Text(
             widget.chatMessage.message,
+            style: TextStyle(color: widget.chatMessage.direction == MessageDirection.RECEIVED
+            ? Colors.white
+            : Colors.black),
           ),
         ),
       ),
