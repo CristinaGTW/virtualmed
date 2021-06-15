@@ -13,7 +13,7 @@ class Constants {
           {"answer": "No", "nextQuestion": 3},
           {"answer": "Yes", "nextQuestion": 1}
         ],
-        "onYesResponse": []
+        "onYesResponse": [""]
       },
       //Q1
       {
@@ -39,7 +39,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "LYMPHOMA", "score": 20}
+          {"diagnosis": "INFECTED LYMPH NODES", "score": 10}
         ]
       },
       //Q3
@@ -62,7 +62,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "LYMPH NODES", "score": 10}
+          {"diagnosis": "INFECTED LYMPH NODES", "score": 10}
         ]
       },
       //Q5
@@ -115,9 +115,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "ENLARGED THYROID", "score": 3},
-          {"diagnosis": "GOITER", "score": 3},
-          {"diagnosis": "THYROIDITIS", "score": 3}
+          {"diagnosis": "THYROIDITIS", "score": 10}
         ]
       }
     ],
@@ -167,8 +165,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "SPRAINED", "score": 5},
-          {"diagnosis": "STRAINED", "score": 5}
+          {"diagnosis": "SPRAINED", "score": 10}
         ],
       },
       //Q4
@@ -194,7 +191,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": " CARPAL TUNNEL SYNDROME", "score": 10}
+          {"diagnosis": "CARPAL TUNNEL SYNDROME", "score": 10}
         ],
       },
       //Q6
@@ -297,8 +294,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "SPRAINED", "score": 5},
-          {"diagnosis": "STRAINED", "score": 5}
+          {"diagnosis": "SPRAINED", "score": 10}
         ],
       },
       //Q4

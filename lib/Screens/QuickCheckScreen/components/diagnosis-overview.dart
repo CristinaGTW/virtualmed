@@ -1,5 +1,6 @@
 class DiagnosisOverview {
   static const diagnoses = {
+    // For Chest:
     "HYPERVENTILATION": {
       "overview":
           "Hyperventilation occurs when you over breathe, i.e. if you breathe in excess of your body’s needs.",
@@ -392,9 +393,9 @@ class DiagnosisOverview {
       "avoid": ["Most cases of thyroiditis cannot be prevented."]
     },
 
-      //"Glutes": Buttock, Hip & Groin
-    "PIRIFORMIS SYNDROME" : {
-      "overview" : 
+    //"Glutes": Buttock, Hip & Groin
+    "PIRIFORMIS SYNDROME": {
+      "overview":
           "Piriformis syndrome is compression of the sciatic nerve. It causes pain deep in the buttocks which radiates down into the leg. Here we explain the symptoms, causes, treatment, and exercises for preventing and treating Piriformis syndrome.",
       "try": [
         "First reducing pain by relaxing the muscle through ice or heat, electrotherapy, massage, and stretching.",
@@ -404,19 +405,17 @@ class DiagnosisOverview {
         "Activities which make symptoms worse. This is likely to include running and other weight-bearing activities."
       ]
     },
-    "MYOFASCIAL PAIN IN BUTTOCK MUSCLES" : {
-      "overview" : 
+    "MYOFASCIAL PAIN IN BUTTOCK MUSCLES": {
+      "overview":
           "Myofascial pain or trigger points in the Gluteus medius and Piriformis muscles can cause pain in the buttock area. A trigger point is a tiny localised knot in the muscle. It will cause pain in the buttock or lower back which may spread to other areas. Movement around the hip will be difficult, but this can be helped by stretching and massage.",
       "try": [
         "Begin a comprehensive stretching routine for the muscles of the lower back, hip, and groin.",
         "See a sports injury specialist or physiotherapist.",
       ],
-      "avoid": [
-        "Any intense physical activity!"
-      ]
+      "avoid": ["Any intense physical activity!"]
     },
-    "PELVIC AVULSION FRACTURE" : {
-      "overview" : 
+    "PELVIC AVULSION FRACTURE": {
+      "overview":
           "A pelvic avulsion fracture is where the tendon comes away from the bone, often taking a piece of bone with it. This most commonly occurs at the ischial tuberosity where the hamstrings attach, or the iliac spine, at the front where the thigh attaches. Pain can be caused by explosive movements, and the location of the pain indicates what kind of avulsion fracture it is.",
       "try": [
         "If this injury is suspected, seek medical attention as soon as possible.",
@@ -427,12 +426,10 @@ class DiagnosisOverview {
         "In some cases, surgery may be performed to re-attach the bone and tendon to the pelvis. This is mainly reserved for large fractures of where the fracture is displaced considerably.",
         "Following the rest period, a gradual rehabilitation programme can be commenced which aims to regain full strength and movement at the hip."
       ],
-      "avoid": [
-        "Any physical activity that include this area!"
-      ]
+      "avoid": ["Any physical activity that include this area!"]
     },
-    "SACROILIAC JOINT PAIN" : {
-      "overview" : 
+    "SACROILIAC JOINT PAIN": {
+      "overview":
           "Inflammation of the Sacroiliac joint causes pain in the lower back and buttocks, usually on one side only. Here we explain the symptoms, causes, and treatment for Sacroiliac joint pain.",
       "try": [
         "Wearing a sacroiliac support belt which may help take the strain off the joint and provide relief from symptoms. It works by applying compression around the hip and across the joint, protecting it from further injury.",
@@ -443,8 +440,8 @@ class DiagnosisOverview {
         "Heat if acute inflammation of the joint is suspected though as this will make the condition worse. In this case, cold therapy may be more effective."
       ]
     },
-    "RECTUS FEMORIS TENDON STRAIN" : {
-      "overview" : 
+    "RECTUS FEMORIS TENDON STRAIN": {
+      "overview":
           "A Rectus femoris tendon strain is a tear of the tendon of the powerful quadriceps muscles at the front of the thigh. It often occurs at its origin at the front of the hip. An avulsion strain occurs when the tendon tears, pulling a small piece of bone away with it.",
       "try": [
         "Apply cold therapy and compression immediately. Ice can be applied for 10 to 15 minutes every hour for the first 24 hours or so during the painful acute stage. Frequency can reduce to two or three times a day as symptoms subside.",
@@ -453,12 +450,10 @@ class DiagnosisOverview {
         "Sports massage after the acute stage can be beneficial. Both cross friction massage applied to the tendon itself, and deep tissue massage to relax the muscles.",
         "A full rehabilitation program of stretching and strengthening exercises should be done before more sports specific functional exercises to return the athlete back to full fitness."
       ],
-      "avoid": [
-        "Any physical activity!"
-      ]
+      "avoid": ["Any physical activity!"]
     },
-    "HIP POINTER" : {
-      "overview" : 
+    "HIP POINTER": {
+      "overview":
           "A hip pointer occurs following an impact to the iliac crest at the front/top of your hip bone. It is common in contact sports such as American Football and Rugby.",
       "try": [
         "Begin treatment by resting, applying ice and compression to the injury.",
@@ -467,12 +462,10 @@ class DiagnosisOverview {
         "Visit a sports injury professional who can fully assess the injury to rule out any complications as stated above.",
         "They can also advise on a full rehabilitation program with hip stretching and mobility exercises followed by hip strengthening exercises."
       ],
-      "avoid": [
-        "Unsupervised physical activity"
-      ]
+      "avoid": ["Unsupervised physical activity"]
     },
-    "ILIUM APOPHYSITIS" : {
-      "overview" : 
+    "ILIUM APOPHYSITIS": {
+      "overview":
           "Ilium apophysitis is an overuse injury which occurs in children and adolescents at the front of the pelvis. It particularly affects those who participate in a lot of sport. Here we explain the symptoms, causes, and treatment of Ilium apophysitis.",
       "try": [
         "Apply ice or cold therapy products to ease pain and inflammation.",
@@ -483,12 +476,10 @@ class DiagnosisOverview {
         "Ensure a full warm-up is performed and stop if any pain is felt.",
         "The condition will ease on its own once growth is finished and the bone is fully matured."
       ],
-      "avoid": [
-        "Aggravating activities until pain and tenderness ease."
-      ]
+      "avoid": ["Aggravating activities until pain and tenderness ease."]
     },
-    "LABRAL TEAR OF THE HIP JOINT" : {
-      "overview" : 
+    "LABRAL TEAR OF THE HIP JOINT": {
+      "overview":
           "A labral tear of the hip joint is a tear to the cartilage lining of the hip joint, called the acetabulum which acts as cushioning for the joint. A tear can cause hip and groin pain and make the joint stiff. This hip injury can be caused by a direct impact or come on gradually through degeneration.",
       "try": [
         "Treatment usually requires surgery known as debridement via an arthroscopy (key-hole surgery).",
@@ -496,24 +487,20 @@ class DiagnosisOverview {
         "A rehabilitation program should be followed after surgery to restore full strength and movement to the hip joint and prevent further injuries or instability.",
         "If left the injury could degenerate into a worn hip joint with eroding of the hard cartilage on the ends of the bone and development of Osteoarthritis in the hip."
       ],
-      "avoid": [
-        "Any physical activity and seek immediate medical attention!"
-      ]
+      "avoid": ["Any physical activity and seek immediate medical attention!"]
     },
-    "PELVIC STRESS FRACTURE" : {
-      "overview" : 
+    "PELVIC STRESS FRACTURE": {
+      "overview":
           "A pelvic stress fracture is a hairline fracture of the pelvis bone. It is caused by repetitive impacts or forces, rather than one sudden impact or accident. Here we explain the symptoms and causes of a stress fracture of the pelvis.",
       "try": [
         "Try to stay off the feet as much as possible for the first 2 weeks.",
         "Apply cold therapy or ice to the painful area to ease pain, swelling, and inflammation",
         "Seek medical attention."
       ],
-      "avoid": [
-        "Activities which cause pain."
-      ]
+      "avoid": ["Activities which cause pain."]
     },
-    "PERTHES' DISEASE" : {
-      "overview" : 
+    "PERTHES' DISEASE": {
+      "overview":
           "Perthes’ disease affects children, most commonly boys aged between four and ten years old, but can also occasionally occur in younger children and teenagers. Tiredness and groin pain are two common symptoms, and they may have a noticeable limp. Medical help is needed to diagnose this condition as early as possible to try to prevent and limit any future problems.",
       "try": [
         "It is important that any pain in the knee or hip joints in children should always be looked at by a medical professional. A correct and early diagnosis is important as long-term damage and complications can develop if the condition is not managed.",
@@ -522,12 +509,10 @@ class DiagnosisOverview {
         "Maintaining range of motion in the hip through mobility exercises. In particular, exercises to maintain abduction of the hip (moving the leg out sideways) and internal rotation of the hip.",
         "Treatment will depend on the age of the child and the severity of the condition but may include bed rest, crutches, traction, a plaster cast, leg brace, or surgery in extremely severe cases. Arthroscopic (keyhole) surgery is done to remove loose bodies within the joint and repair damaged cartilage (chondroplasty)."
       ],
-      "avoid": [
-        "Aggravating activity or exercise"
-      ]
+      "avoid": ["Aggravating activity or exercise"]
     },
-    "HIP BURSITIS" : {
-      "overview" : 
+    "HIP BURSITIS": {
+      "overview":
           "Perthes’ disease will usually resolve over time as the athlete grows as long as it is managed properly. Athletes can return to sport when they are free of symptoms. With competitive young athletes managing injuries and diseases is important. This may mean changing sporting activity for a while, or reducing the volume of training and focussing on quality. For example, a young soccer player may play once or twice a week and substitute other activities such as swimming, or light technical training.",
       "try": [
         "Apply ice to the area to reduce pain and inflammation. Cold can be applied for 10 minutes every hour and reduced to 3 or 4 times a day as the injury heals.",
@@ -539,8 +524,8 @@ class DiagnosisOverview {
         "Continuing to train when the pain is not completely released, since will increase the inflammation and prevent hip bursitis from healing."
       ]
     },
-    "OSTEOARTHRITIS OF THE HIP" : {
-      "overview" : 
+    "OSTEOARTHRITIS OF THE HIP": {
+      "overview":
           "Osteoarthritis is a degenerative condition resulting from wear and tear in the hip. The cartilage that covers the hip joint facilitates movement, so when this degenerates, mobility reduces while pain and stiffness increases. It is common in older people over the age of 50, especially women. Although there is no cure, there are several things you can do to ease the pain and help slow down degeneration.",
       "try": [
         "NSAID’s- Non-Steroidal Anti-Inflammatory Drugs such as Ibuprofen can provide some temporary pain relief.",
@@ -551,12 +536,10 @@ class DiagnosisOverview {
         "Viscosupplementation – A viscosupplement can be administered as an injection by a clinician. This substance helps to lubricate the hip joint and can decrease the amount of inflammation.",
         "Hip Replacement – Hip replacement operations have become more frequent as procedures have advanced"
       ],
-      "avoid": [
-        "Being obese"
-      ]
+      "avoid": ["Being obese"]
     },
-    "SYNOVITIS OF THE HIP" : {
-      "overview" : 
+    "SYNOVITIS OF THE HIP": {
+      "overview":
           "Hip synovitis is inflammation of the synovial membrane of the hip. It often occurs in sports people alongside another hip joint injury.",
       "try": [
         "Treatment should be aimed at addressing the original cause or co-existing condition.",
@@ -567,12 +550,10 @@ class DiagnosisOverview {
         "Anti-inflammatory medication may be prescribed (such as ibuprofen).",
         "Generally, the condition is left to run its course, although the child should be closely observed and temperature checks should be made."
       ],
-      "avoid": [
-        "Activity when you fell a hip joint injury."
-      ]
+      "avoid": ["Activity when you fell a hip joint injury."]
     },
-    "SLIPPED CAPITAL FEMORAL EPIPHYSIS" : {
-      "overview" : 
+    "SLIPPED CAPITAL FEMORAL EPIPHYSIS": {
+      "overview":
           "A slipped capital femoral epiphysis occurs when there is a fracture at the neck or top of the thigh bone causing hip pain. It is more common in boys aged 11 to 16 years old and usually develops gradually but can occur suddenly. Failure to recognise this injury may cause long-term damage and surgery may be required.",
       "try": [
         "If you suspect this is the cause of hip pain then seek medical attention as soon as possible.",
@@ -580,14 +561,12 @@ class DiagnosisOverview {
         "A slipped capital femoral epiphysis that develops gradually may also require surgery.",
         "Failure to treat this injury may lead to the death of the head of the femur and permanent injury or disability."
       ],
-      "avoid": [
-        "Not taking the pain seriously. Contact a doctor immediately!"
-      ]
+      "avoid": ["Not taking the pain seriously. Contact a doctor immediately!"]
     },
 
     //Elbows
-    "TENNIS ELBOW" : {
-      "overview" : 
+    "TENNIS ELBOW": {
+      "overview":
           "Tennis elbow is also known as lateral epicondylitis, lateral elbow tendinopathy, or extensor tendinopathy. It is a common term used to describe long-term, chronic pain on the outside of the elbow.",
       "try": [
         "Immediate first aid: If your elbow is acutely painful or you have recently noticed it, then for the first 72 hours post-injury, apply the principles of P.R.I.C.E. (Protection, Rest, Ice, Compression, and Elevation).",
@@ -599,168 +578,237 @@ class DiagnosisOverview {
         "Gripping heavy things, opening heavy doors, using a screwdriver and of course playing a backhand in tennis."
       ]
     },
-    "RADIOHUMERAL BURSITIS" : {
-      "overview" : 
+    "RADIOHUMERAL BURSITIS": {
+      "overview":
           "Radiohumeral bursitis is inflammation of a bursa in the elbow and has similar symptoms to Tennis elbow. Here we explain the causes and treatment of Radiohumeral bursitis.",
-      "try" : [
+      "try": [
         "Treatment for Radiohumeral bursitis is to rest the inflamed area as much as possible. If you must resume normal activity immediately, wear a sling until the pain becomes more bearable.",
         "To prevent your elbow from becoming stiff or difficult to move (frozen elbow), begin normal, slow joint movement as soon as possible.",
         "Painkillers and anti-inflammatory drugs may be prescribed or Corticosteroid injections into the bursa to reduce inflammation."
       ],
-      "avoid" : [
+      "avoid": [
         "Gripping heavy things, opening heavy doors, using a screwdriver"
       ]
     },
-    "OSTEOCHONDRITIS DISSECANS IN THE ELBOW JOINT" : {
-      "overview" : 
+    "OSTEOCHONDRITIS DISSECANS IN THE ELBOW JOINT": {
+      "overview":
           "Osteochondritis Dissecans is fragmentation of the cartilage and sometimes the underlying bone within a joint. It is more common in adolescents, especially those who do throwing sports. This is because the ends of their bones are not yet fully hardened.",
-      "try" : [
+      "try": [
         "Initial treatment involves rest, ice, compression and elevation to ease pain and swelling.",
         "If problems persist, seek medical attention.",
         "An X-ray or MRI may be taken to confirm the diagnosis.",
         "The need for surgery depends on the amount of displacement of the fragment and the severity of symptoms.",
         "Surgery involves removing the bone fragment (known as debridement)"
       ],
-      "avoid" : [
+      "avoid": [
         "If surgery is not undertaken, treatment involves rest, the range of motion exercises and avoidance of throwing activities until the pain has cleared."
       ]
     },
-    "RADIAL TUNNEL SYNDROME" : {
-      "overview" : 
+    "RADIAL TUNNEL SYNDROME": {
+      "overview":
           "Radial tunnel syndrome, also known as radial nerve entrapment, occurs when the radial nerve in the forearm gets compressed or pinched. It has symptoms similar to Tennis Elbow. Here we explain the symptoms, causes, and treatment of radial nerve impingement.",
-      "try" : [
+      "try": [
         "Treatment involves applying the PRICE principles of protection, rest, ice/cold therapy to the elbow and forearm to reduce pain and inflammation.",
         "A doctor may prescribe anti-inflammatory medication such as Ibuprofen to reduce pain and inflammation and relax the muscles (check with your doctor before taking any medication and do not take Ibuprofen if you have asthma). In severe or persistent cases a surgeon may operate to decompress the nerve which is generally successful.",
         "A professional therapist may use soft tissue massage techniques to relax and release the supinator muscle in the forearm which is often the cause of entrapment. Massage will pump blood into the muscle, reducing muscle spasm and helping to relax any tension in the muscle."
       ],
-      "avoid" : [
-        "Any repetitive wrist movements."
-      ]
+      "avoid": ["Any repetitive wrist movements."]
     },
-    "ELBOW AVULSION FRACTURE" : {
-      "overview" : 
+    "ELBOW AVULSION FRACTURE": {
+      "overview":
           "An elbow avulsion fracture occurs when a tendon or ligament tears, pulling a small fragment of bone away with it. It is more common in children and usually occurs on the inside of the elbow. Here we explain the symptoms, causes, and treatment for elbow avulsion fractures.",
-      "try" : [
+      "try": [
         "Treatment is often the same whether there is an avulsion fracture or just a sprain.",
         "However, it may depend on the severity of the fracture and whether the fragment is displaced or not.",
         "Children are also more likely to be offered an alternative treatment for an avulsion fracture as long term, their skeletal growth could be affected.",
         "More severe avulsion fractures or fractures in children may require casting for 6-8 weeks to allow the bone to heal.",
         "Following this, a period of rehabilitation will be required to ensure that full strength and mobility are regained."
       ],
-      "avoid" : [
+      "avoid": [
         "Gripping heavy things, opening heavy doors, using a screwdriver"
       ]
     },
-    "MEDIAL ELBOW LIGAMENT SPRAIN" : {
-      "overview" : 
+    "MEDIAL ELBOW LIGAMENT SPRAIN": {
+      "overview":
           "The medial collateral ligament (MCL) of the elbow is situated on the inside of the elbow. It helps to provide stability to the joint. The ligament is injured from a sudden traumatic injury, or from repetitive overuse, for example throwing with poor technique.",
-      "try" : [
+      "try": [
         "Initial treatment is to apply the PRICE principles of protection, rest, ice, compression, and elevation.",
         "Apply ice – or cold therapy to reduce pain and inflammation. Do not apply ice directly to the skin as it may cause ice burn. Wrap in a wet tea towel, or use a commercially available cold therapy wrap which can apply compression to the joint as well.",
         "Compression – will help reduce swelling, support and protect the joint. Wear an elbow brace or support to protect the area from further injury whilst healing."
       ],
-      "avoid" : [
+      "avoid": [
         "All activities which stress the elbow, or increase symptoms. For mild injuries, this may mean a short rest period and if caught early enough simply modifying the technique to avoid stressing the ligaments may be enough. However, for more long term chronic injuries or severe acute injuries complete rest may be necessary."
       ]
     },
-    "GOLFER'S ELBOW" : {
-      "overview" : 
+    "GOLFER'S ELBOW": {
+      "overview":
           "Golfer's elbow is also known as medial epicondylitis, thrower's elbow, or little league elbow. It causes pain on the inside of the elbow, which develops gradually over time. Here we explain the symptoms, causes, and treatment of Golfer's elbow.",
-      "try" : [
+      "try": [
         "Ice – apply a cold therapy and compression wrap for 10 to 15 minutes every hour. After the first few hours, this can be reduced to 3 to 4 times a day as required. Later in the rehabilitation program or if the injury becomes chronic applying heat may be more beneficial.",
         "Elbow brace – Wear a brace or elbow support. This will provide protection and help prevent further injury. A Tennis or Golfer’s elbow type brace is worn around the forearm just below the elbow and changes the angle that the forces transmit through the tendon, hence taking some of the strain off the injured part.",
         "Heat – after the initial acute phase, which may take anywhere from 2 days and 2 weeks, applying heat and using a heat retainer or elbow support, may be more beneficial than ice. Heat will help stimulate blood flow which aids healing."
       ],
-      "avoid" : [
+      "avoid": [
         "Activity that causes pain. Continuing to use the wrist may result in your injury becoming chronic, making it much more difficult to treat. This may mean simply adapting your training to avoid overstressing the elbow.",
         "Or for more serious injuries, a period of complete rest might be required. In particular, avoid gripping anything tightly or opening heavy doors."
       ]
     },
-    "ELBOW HYPEREXTENSION INJURY" : {
-      "overview" : 
+    "ELBOW HYPEREXTENSION INJURY": {
+      "overview":
           "An elbow hyperextension injury occurs when the elbow is bent back the wrong way. This over-straightening causes damage to the ligaments and structures of the elbow. Like several elbow injuries, this often occurs in contact sports like rugby and causes instant pain. Ice, compression, and taping are some of the ways this injury can be treated.",
-      "try" : [
+      "try": [
         "Immediate treatment involves an application of cold therapy and compression.",
         "Wear a support or heat retainer.",
         "Apply elbow strapping to prevent the elbow from hyperextending (bending backward) whilst healing.",
         "A professional therapist may use electrotherapy such as ultrasound to help reduce pain and swelling as well as advise on a full rehabilitation program."
       ],
-      "avoid" : [
-        "Physical activity."
-      ]
+      "avoid": ["Physical activity."]
     },
-    "DISLOCATED ELBOW" : {
-      "overview" : 
+    "DISLOCATED ELBOW": {
+      "overview":
           "Elbow dislocations are the second most common dislocations in adults, behind the shoulder. The elbow is a very stable joint and so it requires a lot of force to dislocate it. Severe pain and obvious deformity are the common symptoms for this elbow injury, which is normally caused by a fall or direct impact. Read an explanation of elbow dislocations, treatments and how to rehabilitate after the injury.",
-      "try" : [
+      "try": [
         "Visit a Doctor or Hospital immediately",
         "Apply ice or cold therapy to the elbow.",
         "Put the elbow in a sling to support it."
       ],
-      "avoid" : [
-        "to ‘pop it back in’ yourself! This can cause further damage"
-      ]
+      "avoid": ["to ‘pop it back in’ yourself! This can cause further damage"]
     },
-    "ELBOW & FOREARM FRACTURE" : {
-      "overview" : 
+    "ELBOW & FOREARM FRACTURE": {
+      "overview":
           "Elbow dislocations are the second most common dislocations in adults, behind the shoulder. The elbow is a very stable joint and so it requires a lot of force to dislocate it. Severe pain and obvious deformity are the common symptoms for this elbow injury, which is normally caused by a fall or direct impact. Read an explanation of elbow dislocations, treatments and how to rehabilitate after the injury.",
-      "try" : [
-        "Seek medical attenttion immediately!"
-      ],
-      "avoid" : [
-        "Any physical activities."
-      ]
+      "try": ["Seek medical attenttion immediately!"],
+      "avoid": ["Any physical activities."]
     },
-    "ULNAR NERVE COMPRESSION" : {
-      "overview" : 
+    "ULNAR NERVE COMPRESSION": {
+      "overview":
           "An Ulnar nerve compression is caused either by a direct blow to the inside of the elbow, or from repetitive trauma. It causes numbness and tingling down the forearm and into the forth and fifth fingers. Sometimes it is referred to as 'hitting your funny bone'.",
-      "try" : [
+      "try": [
         "Treatment will depend on the cause. For acute Ulnar nerve contusions, these usually pass after a few minutes. For gradual onset and long term nerve compression injuries then identifying the cause is important, alongside treating the immediate symptoms.",
         "Apply cold therapy. Cold reduces pain and inflammation.",
         "If you are a cyclist then consider having the way your bike is set up looked at by an experienced cycling coach. Make sure you adjust your position on the handlebars occasionally on long rides."
       ],
-      "avoid" : [
-        "Any physical activities!"
-      ]
+      "avoid": ["Any physical activities!"]
     },
-    "TRICEPS TENDONITIS" : {
-      "overview" : 
+    "TRICEPS TENDONITIS": {
+      "overview":
           "Triceps tendonitis (tendinopathy) is an overuse injury, resulting in inflammation (or degeneration) of the triceps tendon where it inserts into the back of the elbow.",
-      "try" : [
+      "try": [
         "Apply ice or cold therapy to the injury in the first two days to reduce pain and inflammation.",
         "Ice can be applied for 10 minutes every hour initially reducing frequency to two or three times a day as symptoms allow. Do not apply ice directly to the skin as it may cause ice burns. Wrap the ice in a wet tea towel or use a commercially available cold therapy wrap.",
         "Later in the healing process, after the acute stage has passed, applying heat and wearing a heat retainer is likely to be more beneficial.",
         "Continue to rest until normal daily activities are pain-free."
       ],
-      "avoid" : [
-        "Any physical activities!"
-      ]
+      "avoid": ["Any physical activities!"]
     },
-    "ELBOW BURSITIS(STUDENTS ELBOW)" : {
-      "overview" : 
+    "ELBOW BURSITIS(STUDENTS ELBOW)": {
+      "overview":
           "Elbow bursitis, also known as Students elbow or Olecranon bursitis, is swelling and inflammation of the bursa at the back of the elbow. Here we explain the symptoms, causes, and treatment for elbow bursitis.",
-      "try" : [
+      "try": [
         "Apply ice or cold therapy. The is to help reduce pain and inflammation. Cold should be applied for 10 minutes every hour until the pain and swelling have gone down.",
         "A doctor may recommend anti-inflammatory medication such as ibuprofen.",
         "Aspirating the bursa is an option in some cases. A needle is inserted into the bursa and the fluid sucked out. In severe cases, a doctor may immobilize the arm or give a steroid injection.",
         "If conservative treatment fails then a surgeon may operate for elbow bursitis."
       ],
-      "avoid" : [
-        "Any physical activities!"
-      ]
+      "avoid": ["Any physical activities!"]
     },
-    "OLECRANON FRACTURE" : {
-      "overview" : 
+    "OLECRANON FRACTURE": {
+      "overview":
           "The Olecranon is the large bony prominence at the back of the elbow. It is usually fractured from a direct impact or fall onto a bent elbow. Here we explain the signs, symptoms, causes, and treatment for Olecranon fractures.",
-      "try" : [
+      "try": [
         "If you suspect you may have an Olecranon fracture then seek medical attention immediately!",
         "Apply the PRICE principles of protection, rest, ice, compression, and elevation.",
         "A doctor may prescribe pain medication and the use of a sling to avoid further injury.",
         "If the fragment is not displaced then your elbow will most likely be immobilised in a splint or cast to allow healing.",
         "However, if the fragment is displaced, then surgery may be needed to realign the fragment of bone and fix it securely in place."
       ],
-      "avoid" : [
-        "Any physical activities!"
+      "avoid": ["Any physical activities!"]
+    },
+
+    // Hands and Arms Diagnoses
+    "SPRAINED": {
+      "overview":
+          "If there is no fracture, the tendons (a cord of tissue connecting muscle to bone) or ligaments (tissue connecting bones to each another) around the joint may be SPRAINED or STRAINED.",
+      "try": [
+        "Use a towel as a sling to support the affected arm",
+        "Gently hold an ice pack (or a bag of frozen peas wrapped in a tea towel) to the injured area for up to 20 minutes every 2 to 3 hours",
+        "Stop any bleeding by applying pressure to the wound with a clean pad or dressing if possible",
+        "Remove any jewellery such as rings or watches – your fingers, wrist or hand could swell up",
+        "Take paracetamol for the pain"
+      ],
+      "avoid": [
+        "Do not eat or drink anything in case you need surgery to fix the bone when you get to hospital",
+        "Do not try to use the affected arm or wrist"
+      ]
+    },
+    "LATERAL EPICONDYLITIS": {
+      "overview":
+          "It occurs when the tendons that attach the muscle to the bone on the outside part of the elbow swell or tear. This weakens the elbow connection and puts great stress on the area.",
+      "try": [
+        "Try using light weights to strengthen and doing exercises to stretch.",
+        "Wearing a splint during activities may help prevent the condition from getting worse.",
+        "Try changing your sports equipment or technique.",
+        "Try changing your work habitat and habits, or job."
+      ],
+      "avoid": [
+        "Rest your arm by avoiding the movement that caused the condition."
+      ]
+    },
+    "CARPAL TUNNEL SYNDROME": {
+      "overview":
+          "Carpal tunnel syndrome is a painful disorder of the wrist and hand. The carpal tunnel is a narrow tunnel formed by the bones and other tissues of your wrist. This tunnel protects your median nerve. The median nerve helps you move your thumbs and the first 3 fingers on each hand.",
+      "try": [
+        "Lose weight if you’re overweight.",
+        "Get treatment for any disease you have that may cause carpal tunnel syndrome.",
+        "If you do the same tasks over and over with your hands, try not to bend, extend, or twist your hands for long periods of time.",
+        "If you use a keyboard a lot, adjust the height of your chair so that your forearms are level with your keyboard, and you don’t have to flex your wrists to type.",
+        "Take regular breaks from repeated hand movements to give your hands and wrists time to rest."
+      ],
+      "avoid": [
+        "Don’t work with your arms too close or too far from your body.",
+        "Don’t rest your wrists on hard surfaces for long periods of time."
+      ]
+    },
+    "GANGLION CYST": {
+      "overview":
+          "A ganglion cyst is a fluid-filled swelling that usually develops near a joint or tendon. The cyst can range from the size of a pea to the size of a golf ball.",
+      "try": [
+        "Treatment is usually only recommended if the cyst causes pain or affects the range of movement in a joint. The 2 main treatment options for a ganglion cyst are: draining fluid out of the cyst with a needle and syringe (aspiration) cutting the cyst out using surgery"
+      ],
+      "avoid": [""]
+    },
+    "INFECTION": {
+      "overview": "",
+      "try": [
+        "Apply cold compresses to your skin several times a day to reduce itching and inflammation.",
+        "Take over-the-counter antihistamines to decrease itching.",
+        "Use topical creams and ointment to reduce itching and discomfort. "
+      ],
+      "avoid": [
+        "Forget to hand washing as is one of the best ways to avoid infections."
+      ]
+    },
+    "RHEUMATOID ARTHRITIS": {
+      "overview":
+          "Rheumatoid arthritis (RA) is a chronic (lasting) inflammatory disorder. It causes swelling and pain in the lining of your joints. ",
+      "try": [
+        "Eat a healthy diet.",
+        "Reduce the stress on your affected joints.",
+        "Do regular, gentle exercise."
+      ],
+      "avoid": ["Smoking", "Being overweight"]
+    },
+    "GOUT": {
+      "overview":
+          "Gout is a common type of arthritis. It is marked by swelling and pain in your joints.",
+      "try": [
+        "Lose weight if you’re overweight.",
+        "Drink lots of water to help flush uric acid from your body.",
+        "Try to eat foods that are low in salt and fat."
+      ],
+      "avoid": [
+        "Limit or avoid foods that are rich in purines. These include salmon, sardines, herring, organ meats, asparagus, and mushrooms.",
+        "Limit the amount of alcohol you drink."
       ]
     }
   };
