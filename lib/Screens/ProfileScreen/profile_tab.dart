@@ -88,10 +88,10 @@ class _ProfileTabState extends State<ProfileTab> {
       padding: EdgeInsets.only(
           top: 10, left: (size.width - 400) / 2, right: (size.width - 400) / 2),
       child: RoundedInputField(
-        inputText: userField == '' ? fieldName : "",
+        inputText: (userField == '') || (userField == null) ? fieldName : "",
         initialValue: userField != '' ? userField : "",
         icon: iconData,
-        prefixIcon: userField == ''
+        prefixIcon: (userField == '') || (userField == null)
             ? Icon(
                 Icons.cancel_outlined,
                 color: Colors.red,
@@ -108,16 +108,30 @@ class _ProfileTabState extends State<ProfileTab> {
   void updateDetails() async {
     var id = regularUser.userId;
     var firstName =
-        _data["first_name"] == '' ? regularUser.firstName : _data["first_name"];
-    var lastName =
-        _data["last_name"] == '' ? regularUser.lastName : _data["last_name"];
-    var email = _data["email"] == '' ? regularUser.email : _data["email"];
-    var phone = _data["phone"] == '' ? regularUser.phone : _data["phone"];
+        (_data["first_name"] == '') && (regularUser.firstName != null)
+            ? regularUser.firstName
+            : _data["first_name"];
+    var lastName = (_data["last_name"] == '') && (regularUser.lastName != null)
+        ? regularUser.lastName
+        : _data["last_name"];
+    var email = (_data["email"] == '') && (regularUser.email != null)
+        ? regularUser.email
+        : _data["email"];
+    var phone = (_data["phone"] == '') && (regularUser.phone != null)
+        ? regularUser.phone
+        : _data["phone"];
     var birthdate =
-        _data["birthdate"] == '' ? regularUser.birthdate : _data["birthdate"];
-    var height = _data["height"] == '' ? regularUser.height : _data["height"];
-    var weight = _data["weight"] == '' ? regularUser.weight : _data["weight"];
-    var chronic_diseases = _data["chronic_diseases"] == ''
+        (_data["birthdate"] == '') && (regularUser.birthdate != null)
+            ? regularUser.birthdate
+            : _data["birthdate"];
+    var height = (_data["height"] == '') && (regularUser.height != null)
+        ? regularUser.height
+        : _data["height"];
+    var weight = (_data["weight"] == '') && (regularUser.weight != null)
+        ? regularUser.weight
+        : _data["weight"];
+    var chronic_diseases = (_data["chronic_diseases"] == '') &&
+            (regularUser.chronic_diseases != null)
         ? regularUser.chronic_diseases
         : _data["chronic_diseases"];
 

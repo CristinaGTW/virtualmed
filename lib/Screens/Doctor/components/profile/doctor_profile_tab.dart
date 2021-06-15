@@ -81,10 +81,10 @@ class _DoctorProfileTabState extends State<DoctorProfileTab> {
       padding: EdgeInsets.only(
           top: 10, left: (size.width - 400) / 2, right: (size.width - 400) / 2),
       child: RoundedInputField(
-        inputText: userField == '' ? fieldName : "",
+        inputText: (userField == '') || (userField == null) ? fieldName : "",
         initialValue: userField != '' ? userField : "",
         icon: iconData,
-        prefixIcon: userField == ''
+        prefixIcon: (userField == '') || (userField == null)
             ? Icon(
                 Icons.cancel_outlined,
                 color: Colors.red,
@@ -101,16 +101,25 @@ class _DoctorProfileTabState extends State<DoctorProfileTab> {
   void updateDetails() async {
     var id = doctorUser.userId;
     var firstName =
-        _data["first_name"] == '' ? doctorUser.firstName : _data["first_name"];
-    var lastName =
-        _data["last_name"] == '' ? doctorUser.lastName : _data["last_name"];
-    var email = _data["email"] == '' ? doctorUser.email : _data["email"];
-    var phone = _data["phone"] == '' ? doctorUser.phone : _data["phone"];
-    var specialization = _data["specialization"] == ''
-        ? doctorUser.specialization
-        : _data["specialization"];
-    var location =
-        _data["location"] == '' ? doctorUser.location : _data["location"];
+        (_data["first_name"] == '') && (doctorUser.firstName != null)
+            ? doctorUser.firstName
+            : _data["first_name"];
+    var lastName = (_data["last_name"] == '') && (doctorUser.lastName != null)
+        ? doctorUser.lastName
+        : _data["last_name"];
+    var email = (_data["email"] == '') && (doctorUser.email != null)
+        ? doctorUser.email
+        : _data["email"];
+    var phone = (_data["phone"] == '') && (doctorUser.phone != null)
+        ? doctorUser.phone
+        : _data["phone"];
+    var specialization =
+        (_data["specialization"] == '') && (doctorUser.specialization != null)
+            ? doctorUser.specialization
+            : _data["specialization"];
+    var location = (_data["location"] == '') && (doctorUser.location != null)
+        ? doctorUser.location
+        : _data["location"];
 
     var res = await postToServer(api: 'UpdateDoctorDetails', body: {
       'id': id,
