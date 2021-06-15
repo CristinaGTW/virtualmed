@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Models/doctor-user.dart';
 import 'package:virtual_med/Services/user-provider.dart';
@@ -96,15 +99,19 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
             ),
             Container(
               margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
-              child: RoundedPasswordField(
-                onChanged: (value) => _data['password'] = value,
-              ),
+              child: RoundedPasswordField(onChanged: (value) {
+                List<int> bytes = utf8.encode(value);
+                String hash = sha512.convert(bytes).toString();
+                _data['password'] = hash;
+              }),
             ),
             Container(
               margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
               child: RoundedPasswordField(
                 onChanged: (value) {
-                  if (value.compareTo(_data['password']) != 0) {
+                  List<int> bytes = utf8.encode(value);
+                  String hash = sha512.convert(bytes).toString();
+                  if (hash.compareTo(_data['password']) != 0) {
                     final snackBar = SnackBar(
                       content: Text('Passwords do not match'),
                       backgroundColor: kPrimaryColor,

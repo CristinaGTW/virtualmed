@@ -7,7 +7,8 @@ import 'package:virtual_med/Services/user-provider.dart';
 import 'package:virtual_med/components/rounded_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-
+import 'dart:convert';
+import 'package:crypto/crypto.dart';
 import '../../components.dart';
 import 'account_selection.dart';
 import 'components/logo.dart';
@@ -62,9 +63,11 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Container(
               margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
-              child: RoundedPasswordField(
-                onChanged: (value) => _data['password'] = value,
-              ),
+              child: RoundedPasswordField(onChanged: (value) {
+                List<int> bytes = utf8.encode(value);
+                String hash = sha512.convert(bytes).toString();
+                _data['password'] = hash;
+              }),
             ),
             Container(
               margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
