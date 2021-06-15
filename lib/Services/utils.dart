@@ -3,10 +3,11 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import '../Models/regular-user.dart';
-import 'package:socket_io_client/socket_io_client.dart' as IO;
+
+const String SERVER_URL = 'https://virtual-med-backend.herokuapp.com/';
 
 Future<RegularUser> fetchRegularUser() async {
-  final response = await http.get(Uri.parse('https://virtual-med-backend.herokuapp.com/'));
+  final response = await http.get(Uri.parse(SERVER_URL + 'index'));
 
   if (response.statusCode == 200) {
     return RegularUser.fromJson(jsonDecode(response.body));
@@ -20,29 +21,44 @@ Future<Map<String, dynamic>> postToServer(
   if (header == null) {
     header = {'Content-Type': 'application/json'};
   }
-  var res = await http.post("https://virtual-med-backend.herokuapp.com/$api",
-      headers: header, body: jsonEncode(body));
+  var res =
+      await http.post(SERVER_URL + "$api", headers: header, body: jsonEncode(body));
 
   if (res.statusCode == 200) {
     var body = json.decode(utf8.decode(res.bodyBytes));
-    print(body);
+    // print(body);
     return {"msg": "Success", "body": body};
   }
   return {"msg": json.decode(utf8.decode(res.bodyBytes))['message']};
 }
 
-void sendContactRequest(int user_id, String specialization,
-    String query_answers, String description) async {
+class StreamSocket{
+  final _socketResponse= StreamController<String>();
+
+  void Function(String) get addResponse => _socketResponse.sink.add;
+
+  Stream<String> get getResponse => _socketResponse.stream;
+
+  void dispose(){
+    _socketResponse.close();
+  }
 }
 
-// void chatClient() async {
+
+
+
+// void chatClient(String message) async {
 //   // Dart client
-//   IO.Socket socket = IO.io('http://127.0.0.1:5000/chat');
+//   IO.Socket socket = IO.io(SERVER_URL);
 //   socket.onConnect((_) {
-//     print('connect');
-//     socket.emit('message', 'test');
+//     // print('User Connected');
+//     socket.emit('message', message);
 //   });
-//   socket.on('event', (data) => print(data));
+//   // socket.on('event', (data) => print(data));
+//   socket.on('message', (data) {
+//     print("Received: " + data);
+//     MessageProvider().addMessage(data);
+//   });
 //   socket.onDisconnect((_) => print('disconnect'));
 //   socket.on('fromServer', (_) => print(_));
 // }

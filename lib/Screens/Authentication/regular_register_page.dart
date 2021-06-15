@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Models/regular-user.dart';
 import 'package:virtual_med/Screens/Authentication/login_page.dart';
-import 'package:virtual_med/Services/provider.dart';
+import 'package:virtual_med/Services/user-provider.dart';
 import 'package:virtual_med/components/rounded_button.dart';
 import 'package:provider/provider.dart';
 

@@ -8,12 +8,14 @@ class Chat extends StatefulWidget {
   String fragment;
   String image;
   String time;
+  int receiver_id;
 
   Chat(
       {@required this.name,
         @required this.fragment,
         @required this.image,
-        @required this.time});
+        @required this.time,
+        @required this.receiver_id});
 
   @override
   State<StatefulWidget> createState() => _ChatState();
@@ -25,7 +27,7 @@ class _ChatState extends State<Chat> {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return ConversationPage(name: widget.name, image: widget.image);
+          return ConversationPage(name: widget.name, image: widget.image, receiver_id: widget.receiver_id);
         }));
       },
       child: Container(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Models/doctor-user.dart';
-import 'package:virtual_med/Services/provider.dart';
+import 'package:virtual_med/Services/user-provider.dart';
 import 'package:virtual_med/components/rounded_button.dart';
 import 'package:provider/provider.dart';
 

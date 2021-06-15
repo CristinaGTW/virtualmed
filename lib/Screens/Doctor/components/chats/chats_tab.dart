@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_med/Models/regular-user.dart';
 
 import 'chat.dart';
-import 'chat_user.dart';
 
 class ChatTab extends StatelessWidget {
   var chatUsers = [
-    ChatUser(
-        name: "John Smith",
-        diagnosis: "Possible Diagnosis: Hypertension, Heart Palpitations",
-        image: "images/profile_pic.png",
-        time: "Now"),
-    ChatUser(
-        name: "Peter Jones",
-        diagnosis: "Possible Diagnosis: Hypertension, Diabetes",
-        image: "images/profile_pic.png",
-        time: "Yesterday"),
+    RegularUser(
+        userId: 1,
+        firstName: "John",
+        lastName: "Wilson",
+        email: "john@email.com",
+        phone: "+4478729752",
+        password: "password"),
+    RegularUser(
+        userId: 2,
+        firstName: "Ion",
+        lastName: "Popescu",
+        email: "ion@email.com",
+        phone: "075216371",
+        password: "password")
   ];
 
   @override
@@ -34,10 +38,14 @@ class ChatTab extends StatelessWidget {
               physics: NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
                 return Chat(
-                    name: chatUsers[index].name,
-                    fragment: chatUsers[index].diagnosis,
-                    image: chatUsers[index].image,
-                    time: chatUsers[index].time);
+                  name: chatUsers[index].firstName +
+                      " " +
+                      chatUsers[index].lastName,
+                  fragment: "Diagnosis here",
+                  image: "images/profile_pic.png",
+                  time: "time here",
+                  receiver_id: chatUsers[index].userId,
+                );
               },
             ),
           ],

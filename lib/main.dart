@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:virtual_med/Screens/Doctor/main_nav_doctor.dart';
-import 'package:virtual_med/Screens/main_nav.dart';
-import 'package:virtual_med/Services/provider.dart';
+import 'package:virtual_med/Services/message-provider.dart';
+import 'package:virtual_med/Services/user-provider.dart';
 
-import 'components/body.dart';
+import 'Screens/Doctor/main_nav_doctor.dart';
+import 'Screens/main_nav.dart';
+import 'components/landing-page.dart';
 
-void main() =>
-    runApp(MultiProvider(
+void main() => runApp(MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider(create: (_) => MessageProvider())
       ],
       child: VirtualMed(),
     ));
@@ -18,13 +19,13 @@ class VirtualMed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'VirtualMed - Welcome',
-        theme: ThemeData(
-          primarySwatch: Colors.red,
-          // primarySwatch: Colors.blue,
-        ),
-        // home: Body(),
-        home: getPage(context),
+      title: 'VirtualMed - Welcome',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        // primarySwatch: Colors.blue,
+      ),
+      // home: Body(),
+      home: getPage(context),
     );
   }
 
@@ -39,14 +40,3 @@ class VirtualMed extends StatelessWidget {
   }
 }
 
-class LandingPage extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => _LandingPage();
-}
-
-class _LandingPage extends State<LandingPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Body();
-  }
-}

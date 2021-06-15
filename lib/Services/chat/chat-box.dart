@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Services/chat/conversation_page.dart';
-import 'package:virtual_med/Services/chat/message.dart';
+import 'package:virtual_med/Models/message.dart';
 
 import '../../components.dart';
 

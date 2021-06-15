@@ -3,7 +3,7 @@ import 'package:virtual_med/Models/regular-user.dart';
 import 'package:virtual_med/Screens/Authentication/components/rounded_input_field.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/full_page_human_anatomy.dart';
 import 'package:virtual_med/components/top-title.dart';
-import 'package:virtual_med/Services/provider.dart';
+import 'package:virtual_med/Services/user-provider.dart';
 import 'package:virtual_med/Services/utils.dart';
 import 'package:virtual_med/components.dart';
 import 'package:virtual_med/components/rounded_button.dart';
@@ -430,7 +430,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
 
   void sendRequest() async {
     var query_answers = composeAnswers();
-    print(query_answers);
+    // print(query_answers);
 
     var user_id = regularUser != null ? regularUser.userId : -1;
     var specialization = "General"; //TODO get specialization

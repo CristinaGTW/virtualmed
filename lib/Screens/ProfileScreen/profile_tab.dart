@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:virtual_med/Models/regular-user.dart';
-import 'package:virtual_med/Services/provider.dart';
+import 'package:virtual_med/Services/user-provider.dart';
 import 'package:virtual_med/Services/utils.dart';
 import 'package:provider/provider.dart';
 
