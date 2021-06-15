@@ -69,7 +69,7 @@ class _ProfileTabState extends State<ProfileTab> {
               child: Container(
                 child: RoundedButton(
                   width: 400,
-                  text: "Submit",
+                  text: "Update",
                   press: () {
                     updateDetails();
                   },
