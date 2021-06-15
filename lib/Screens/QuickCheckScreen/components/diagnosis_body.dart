@@ -28,10 +28,9 @@ class DiagnosisBody extends StatelessWidget {
             title: "Overview",
           ),
           Container(
-            margin: EdgeInsets.only(top: 10, bottom: 10),
-            padding: EdgeInsets.all(20),
-            child: getOverview()
-          ),
+              margin: EdgeInsets.only(top: 10, bottom: 10),
+              padding: EdgeInsets.all(20),
+              child: getOverview()),
           TopTitle(
             topMargin: 20.0,
             title: "Recommendations",
@@ -43,7 +42,7 @@ class DiagnosisBody extends StatelessWidget {
                 TopTitle(
                   alignment: Alignment.topLeft,
                   topMargin: 20.0,
-                  title: "Try",
+                  title: "Try:",
                 ),
                 Column(
                   children: getTry(),
@@ -58,7 +57,7 @@ class DiagnosisBody extends StatelessWidget {
                 TopTitle(
                   alignment: Alignment.topLeft,
                   topMargin: 20.0,
-                  title: "Avoid",
+                  title: "Avoid:",
                 ),
                 Column(
                   children: getAvoid(),
@@ -78,17 +77,16 @@ class DiagnosisBody extends StatelessWidget {
         DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]['try'];
 
     for (var tryElem in tryList) {
-      tryFinal.add(
-          Container(
-            alignment: Alignment.topLeft,
-            margin: EdgeInsets.only(top: 10, left: 20),
-            child: Text(
-              tryElem,
-              style: TextStyle(
-                  fontSize: 20,),
-            ),
-          )
-      );
+      tryFinal.add(Container(
+        alignment: Alignment.topLeft,
+        margin: EdgeInsets.only(top: 10, left: 20),
+        child: Text(
+          "• " + tryElem,
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
+      ));
     }
     return tryFinal;
   }
@@ -97,27 +95,31 @@ class DiagnosisBody extends StatelessWidget {
     List avoidFinal = List<Widget>();
 
     var avoidList =
-    DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]['avoid'];
+        DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]['avoid'];
 
     for (var avoidElem in avoidList) {
-      avoidFinal.add(
-          Container(
-            alignment: Alignment.topLeft,
-            margin: EdgeInsets.only(top: 10, left: 20),
-            child: Text(
-              avoidElem,
-              style: TextStyle(
-                fontSize: 20,),
-            ),
-          )
-      );
+      avoidFinal.add(Container(
+        alignment: Alignment.topLeft,
+        margin: EdgeInsets.only(top: 10, left: 20),
+        child: Text(
+          "• " + avoidElem,
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
+      ));
     }
 
     return avoidFinal;
   }
 
   Widget getOverview() {
-    return (DiagnosisOverview.diagnoses[possibleDiagnoses[0]["diagnosis"]] != null) ? Text(DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]
-    ['overview'], style: TextStyle(fontSize: 20)) : Container() ;
+    return (DiagnosisOverview.diagnoses[possibleDiagnoses[0]["diagnosis"]] !=
+            null)
+        ? Text(
+            DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']]
+                ['overview'],
+            style: TextStyle(fontSize: 20))
+        : Container();
   }
 }
