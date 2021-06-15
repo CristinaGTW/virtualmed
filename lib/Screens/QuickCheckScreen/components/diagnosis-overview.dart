@@ -280,6 +280,116 @@ class DiagnosisOverview {
           "Empyema is the medical term for pockets of pus that have collected inside a body cavity.",
       "try": ["Stop Smoking"],
       "avoid": ["Drink too much alcohol or take a lot of recreational drugs"]
+    },
+
+    // diagnoses for Neck :
+    "MONONUCLEOSIS": {
+      "overview":
+          "Mononucleosis (often called “mono”) is a contagious illness. It’s usually caused by the Epstein-Barr virus. It’s spread through saliva. For this reason, it’s sometimes called “kissing disease.” It’s most common in teens and young adults. However, anyone at any age can get it.",
+      "try": [
+        "The best thing you can do to avoid it is to stay away from anyone you know who has it."
+      ],
+      "avoid": ["Don’t kiss them or share utensils or other personal items."]
+    },
+    "STREP": {
+      "overview":
+          "Strep throat is an infection caused by bacteria. It is called “strep” because the bacteria that causes the infection is called streptococcus.",
+      "try": [
+        "Take ibuprofen or acetaminophen to relieve pain and reduce fever. Children should not take aspirin.",
+        "Gargle with warm salt water (1/4 teaspoon of salt in 1 cup [8 ounces] of warm water).",
+        "Adults and older children can suck on throat lozenges, hard candy, pieces of ice, or popsicles.",
+        "Eat soft foods (such as yogurt and applesauce) and drink cool drinks or warm liquids (such as broths, soups, and tea).",
+        "Get plenty of rest.",
+        "Sleep helps your body fight infection.",
+        "Drink plenty of water. ",
+        "This helps keep your throat lubricated and helps prevent dehydration.",
+        "Avoid acidic or spicy foods and drinks (such as orange juice and peppers)."
+      ],
+      "avoid": [
+        "Strep throat is very contagious. It can be hard to protect yourself when you are around people who are infected with strep throat.",
+        "Try to avoid people who have strep, when possible. If you must be around someone who has strep throat, be sure to wash your hands frequently."
+      ]
+    },
+    "VIRAL SORE THROAT": {
+      "overview":
+          "A sore throat means that your throat hurts. It feels irritated or scratchy. You may feel mild discomfort or a burning pain. A sore throat may feel worse when you swallow. Possible complications from a sore throat include ear and sinus infections.",
+      "try": [
+        "Avoid touching your eyes or mouth.",
+        "Cover your mouth when coughing or sneezing."
+      ],
+      "avoid": [
+        "The best way to avoid a sore throat is to avoid getting sick.",
+        "Avoid catching or spreading the viruses and bacteria that cause a sore throat."
+      ]
+    },
+    "INFECTED LYMPH NODES": {
+      "overview":
+          "When you’re sick and your lymph nodes send out disease-fighting cells and compounds, they may become inflamed or painful.",
+      "try": [
+        "Your doctor is likely to advise using a fever-reducing painkiller, such as ibuprofen, along with a warm compress.",
+        "Elevating the swollen area can also help relieve inflammation."
+      ],
+      "avoid": [""]
+    },
+    "VIRAL ILLNESS": {
+      "overview":
+          "For most viral infections, treatments can only help with symptoms while you wait for your immune system to fight off the virus. Antibiotics do not work for viral infections. There are antiviral medicines to treat some viral infections",
+      "try": [""],
+      "avoid": [""]
+    },
+    "GERMAN MEASLES (RUBELLA)": {
+      "overview":
+          "Rubella is a contagious disease caused by a virus. It can lead to serious complications, especially for unborn babies.",
+      "try": [
+        "Most cases of German measles are treated at home.",
+        "Your doctor may tell you to rest in bed and to take acetaminophen (Tylenol), which can help relieve discomfort from fever and aches.",
+        "They may also recommend that you stay home from work or school to prevent spreading the virus to others."
+      ],
+      "avoid": [""]
+    },
+    "MUMPS": {
+      "overview":
+          "Mumps is a virus. It causes the glands around your neck (between your ear and jaw) to swell. These glands make the saliva (spit) that helps you chew and swallow food.",
+      "try": [
+        "Place ice or heat packs on swollen cheeks.",
+        "Take acetaminophen for pain.",
+        "Take ibuprofen for pain and swelling. Never give aspirin to children or teenagers 18 old or younger. This increases the risk of Reye’s syndrome. Reye’s syndrome is a serious illness that can lead to death.",
+        "Drink lots of fluids.",
+        "Eat soft foods that don’t require much chewing.",
+        "Gargle with warm salt water several times a day.",
+        "Try popsicles to soothe your throat."
+      ],
+      "avoid": [
+        "Avoid acidic foods or foods that make your mouth water, such as citrus fruits.",
+        "Avoid public places and close contact for at least five days after symptoms appear. This is when you are the most contagious."
+      ]
+    },
+    "THYROGLOSSAL DUCT CYST": {
+      "overview":
+          "A thyroglossal duct cyst happens when your thyroid, a large gland in your neck that produces hormones, leaves behind extra cells while it’s forming during your development in the womb. These extra cells can become cysts. ",
+      "try": [
+        "If your cyst has a bacterial or viral infection, your doctor will prescribe antibiotics to help treat the infection."
+      ],
+      "avoid": [""]
+    },
+    "ABSCESS": {
+      "overview":
+          "An abscess is a painful collection of pus, usually caused by a bacterial infection. Abscesses can develop anywhere in the body."
+              "",
+      "try": [
+        "Maintaining a healthy, balanced diet",
+        "Losing weight if you're overweight or obese",
+        "Washing your hands regularly"
+      ],
+      "avoid": ["Smoking"]
+    },
+    "THYROIDITIS": {
+      "overview":
+          "Thyroiditis refers to a group of disorders that cause inflammation of the thyroid. Your thyroid is the gland located in the front of your neck below your Adam’s apple. Thyroiditis refers to a group of disorders that cause inflammation of the thyroid. Your thyroid is the gland located in the front of your neck below your Adam’s apple.",
+      "try": [
+        "Symptoms usually get better when the infection is treated with antibiotics."
+      ],
+      "avoid": ["Most cases of thyroiditis cannot be prevented."]
     }
   };
 }

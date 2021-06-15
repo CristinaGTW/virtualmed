@@ -496,8 +496,7 @@ class Constants {
       }
     ],
 
-    // for Men
-    "Pelvis": [
+    "Pelvis - Men": [
       // Q0
       {
         "question": "Do you have any swelling or tenderness in your scrotum?",
