@@ -392,6 +392,199 @@ class DiagnosisOverview {
       "avoid": ["Most cases of thyroiditis cannot be prevented."]
     },
 
+      //"Glutes": Buttock, Hip & Groin
+    "PIRIFORMIS SYNDROME" : {
+      "overview" : 
+          "Piriformis syndrome is compression of the sciatic nerve. It causes pain deep in the buttocks which radiates down into the leg. Here we explain the symptoms, causes, treatment, and exercises for preventing and treating Piriformis syndrome.",
+      "try": [
+        "First reducing pain by relaxing the muscle through ice or heat, electrotherapy, massage, and stretching.",
+        "Then when pain allows strengthening the muscle to help prevent the injury recurring."
+      ],
+      "avoid": [
+        "Activities which make symptoms worse. This is likely to include running and other weight-bearing activities."
+      ]
+    },
+    "MYOFASCIAL PAIN IN BUTTOCK MUSCLES" : {
+      "overview" : 
+          "Myofascial pain or trigger points in the Gluteus medius and Piriformis muscles can cause pain in the buttock area. A trigger point is a tiny localised knot in the muscle. It will cause pain in the buttock or lower back which may spread to other areas. Movement around the hip will be difficult, but this can be helped by stretching and massage.",
+      "try": [
+        "Begin a comprehensive stretching routine for the muscles of the lower back, hip, and groin.",
+        "See a sports injury specialist or physiotherapist.",
+      ],
+      "avoid": [
+        "Any intense physical activity!"
+      ]
+    },
+    "PELVIC AVULSION FRACTURE" : {
+      "overview" : 
+          "A pelvic avulsion fracture is where the tendon comes away from the bone, often taking a piece of bone with it. This most commonly occurs at the ischial tuberosity where the hamstrings attach, or the iliac spine, at the front where the thigh attaches. Pain can be caused by explosive movements, and the location of the pain indicates what kind of avulsion fracture it is.",
+      "try": [
+        "If this injury is suspected, seek medical attention as soon as possible.",
+        "Rest the area as much as possible.",
+        "Apply ice regularly for the first 2-3 days to ease pain and inflammation.",
+        "An X-ray will help confirm the diagnosis.",
+        "Generally, the treatment for a pelvic avulsion fracture is rest. They tend to heal on their own in 4-6 weeks.",
+        "In some cases, surgery may be performed to re-attach the bone and tendon to the pelvis. This is mainly reserved for large fractures of where the fracture is displaced considerably.",
+        "Following the rest period, a gradual rehabilitation programme can be commenced which aims to regain full strength and movement at the hip."
+      ],
+      "avoid": [
+        "Any physical activity that include this area!"
+      ]
+    },
+    "SACROILIAC JOINT PAIN" : {
+      "overview" : 
+          "Inflammation of the Sacroiliac joint causes pain in the lower back and buttocks, usually on one side only. Here we explain the symptoms, causes, and treatment for Sacroiliac joint pain.",
+      "try": [
+        "Wearing a sacroiliac support belt which may help take the strain off the joint and provide relief from symptoms. It works by applying compression around the hip and across the joint, protecting it from further injury.",
+        "If muscle spasm around the area is suspected use a heat pack to help them relax. Sports massage may also help reduce muscle tension.",
+        "Rest from any activities which cause pain, particularly running."
+      ],
+      "avoid": [
+        "Heat if acute inflammation of the joint is suspected though as this will make the condition worse. In this case, cold therapy may be more effective."
+      ]
+    },
+    "RECTUS FEMORIS TENDON STRAIN" : {
+      "overview" : 
+          "A Rectus femoris tendon strain is a tear of the tendon of the powerful quadriceps muscles at the front of the thigh. It often occurs at its origin at the front of the hip. An avulsion strain occurs when the tendon tears, pulling a small piece of bone away with it.",
+      "try": [
+        "Apply cold therapy and compression immediately. Ice can be applied for 10 to 15 minutes every hour for the first 24 hours or so during the painful acute stage. Frequency can reduce to two or three times a day as symptoms subside.",
+        "A professional therapist may use ultrasound and laser treatment to help with the pain, inflammation and healing process.",
+        "If the tendon has torn completely then you will need an operation to repair it.",
+        "Sports massage after the acute stage can be beneficial. Both cross friction massage applied to the tendon itself, and deep tissue massage to relax the muscles.",
+        "A full rehabilitation program of stretching and strengthening exercises should be done before more sports specific functional exercises to return the athlete back to full fitness."
+      ],
+      "avoid": [
+        "Any physical activity!"
+      ]
+    },
+    "HIP POINTER" : {
+      "overview" : 
+          "A hip pointer occurs following an impact to the iliac crest at the front/top of your hip bone. It is common in contact sports such as American Football and Rugby.",
+      "try": [
+        "Begin treatment by resting, applying ice and compression to the injury.",
+        "Ice or cold therapy can be applied for 10 minutes every hour initially reducing the frequency as required.",
+        "This will help to reduce or limit any pain, inflammation, and swelling.",
+        "Visit a sports injury professional who can fully assess the injury to rule out any complications as stated above.",
+        "They can also advise on a full rehabilitation program with hip stretching and mobility exercises followed by hip strengthening exercises."
+      ],
+      "avoid": [
+        "Unsupervised physical activity"
+      ]
+    },
+    "ILIUM APOPHYSITIS" : {
+      "overview" : 
+          "Ilium apophysitis is an overuse injury which occurs in children and adolescents at the front of the pelvis. It particularly affects those who participate in a lot of sport. Here we explain the symptoms, causes, and treatment of Ilium apophysitis.",
+      "try": [
+        "Apply ice or cold therapy products to ease pain and inflammation.",
+        "A doctor may recommend anti-inflammatory medication.",
+        "Once-daily activities are pain-free, stretches for the hip muscles can be performed.",
+        "Sports massage therapy may be able to help relax really tight muscles, especially the rectus femoris.",
+        "Once pain has gone, a gradual return to sport can be initiated.",
+        "Ensure a full warm-up is performed and stop if any pain is felt.",
+        "The condition will ease on its own once growth is finished and the bone is fully matured."
+      ],
+      "avoid": [
+        "Aggravating activities until pain and tenderness ease."
+      ]
+    },
+    "LABRAL TEAR OF THE HIP JOINT" : {
+      "overview" : 
+          "A labral tear of the hip joint is a tear to the cartilage lining of the hip joint, called the acetabulum which acts as cushioning for the joint. A tear can cause hip and groin pain and make the joint stiff. This hip injury can be caused by a direct impact or come on gradually through degeneration.",
+      "try": [
+        "Treatment usually requires surgery known as debridement via an arthroscopy (key-hole surgery).",
+        "The torn part of the labrum is removed. Generally results from this procedure are very good.",
+        "A rehabilitation program should be followed after surgery to restore full strength and movement to the hip joint and prevent further injuries or instability.",
+        "If left the injury could degenerate into a worn hip joint with eroding of the hard cartilage on the ends of the bone and development of Osteoarthritis in the hip."
+      ],
+      "avoid": [
+        "Any physical activity and seek immediate medical attention!"
+      ]
+    },
+    "PELVIC STRESS FRACTURE" : {
+      "overview" : 
+          "A pelvic stress fracture is a hairline fracture of the pelvis bone. It is caused by repetitive impacts or forces, rather than one sudden impact or accident. Here we explain the symptoms and causes of a stress fracture of the pelvis.",
+      "try": [
+        "Try to stay off the feet as much as possible for the first 2 weeks.",
+        "Apply cold therapy or ice to the painful area to ease pain, swelling, and inflammation",
+        "Seek medical attention."
+      ],
+      "avoid": [
+        "Activities which cause pain."
+      ]
+    },
+    "PERTHES' DISEASE" : {
+      "overview" : 
+          "Perthes’ disease affects children, most commonly boys aged between four and ten years old, but can also occasionally occur in younger children and teenagers. Tiredness and groin pain are two common symptoms, and they may have a noticeable limp. Medical help is needed to diagnose this condition as early as possible to try to prevent and limit any future problems.",
+      "try": [
+        "It is important that any pain in the knee or hip joints in children should always be looked at by a medical professional. A correct and early diagnosis is important as long-term damage and complications can develop if the condition is not managed.",
+        "A doctor may X-ray the hip to help diagnose the cause of hip pain. However, in the early stages of the disease, an x-ray may appear normal and so other investigations such as MRI or bone scans may be performed.",
+        "Depending on how severe the disease is will determine whether it requires conservative treatment or surgery.",
+        "Maintaining range of motion in the hip through mobility exercises. In particular, exercises to maintain abduction of the hip (moving the leg out sideways) and internal rotation of the hip.",
+        "Treatment will depend on the age of the child and the severity of the condition but may include bed rest, crutches, traction, a plaster cast, leg brace, or surgery in extremely severe cases. Arthroscopic (keyhole) surgery is done to remove loose bodies within the joint and repair damaged cartilage (chondroplasty)."
+      ],
+      "avoid": [
+        "Aggravating activity or exercise"
+      ]
+    },
+    "HIP BURSITIS" : {
+      "overview" : 
+          "Perthes’ disease will usually resolve over time as the athlete grows as long as it is managed properly. Athletes can return to sport when they are free of symptoms. With competitive young athletes managing injuries and diseases is important. This may mean changing sporting activity for a while, or reducing the volume of training and focussing on quality. For example, a young soccer player may play once or twice a week and substitute other activities such as swimming, or light technical training.",
+      "try": [
+        "Apply ice to the area to reduce pain and inflammation. Cold can be applied for 10 minutes every hour and reduced to 3 or 4 times a day as the injury heals.",
+        "Run only on flat, even surfaces to reduce the pressure on the bursa from uneven ground.",
+        "See a sports injury professional.",
+        "W"
+      ],
+      "avoid": [
+        "Continuing to train when the pain is not completely released, since will increase the inflammation and prevent hip bursitis from healing."
+      ]
+    },
+    "OSTEOARTHRITIS OF THE HIP" : {
+      "overview" : 
+          "Osteoarthritis is a degenerative condition resulting from wear and tear in the hip. The cartilage that covers the hip joint facilitates movement, so when this degenerates, mobility reduces while pain and stiffness increases. It is common in older people over the age of 50, especially women. Although there is no cure, there are several things you can do to ease the pain and help slow down degeneration.",
+      "try": [
+        "NSAID’s- Non-Steroidal Anti-Inflammatory Drugs such as Ibuprofen can provide some temporary pain relief.",
+        "Weight Loss – As obesity is associated with the onset of osteoarthritis, weight loss, if needed, can have a significant effect on slowing the disease progression.",
+        "Exercise Program – A specific exercise program can help to maintain healthy cartilage and range of motion of the joint. In addition, keeping the attaching muscles and tendons conditioned and strong will aid in the joint’s stability.",
+        "Muscle relaxants – These are usually administered in low doses and can relieve pain that arises from muscles strained in an attempt to support osteoarthritic joints.",
+        "Heat and Cold Treatments – Local application of heat and cold can help with relief from pain and inflammation after exercise.",
+        "Viscosupplementation – A viscosupplement can be administered as an injection by a clinician. This substance helps to lubricate the hip joint and can decrease the amount of inflammation.",
+        "Hip Replacement – Hip replacement operations have become more frequent as procedures have advanced"
+      ],
+      "avoid": [
+        "Being obese"
+      ]
+    },
+    "SYNOVITIS OF THE HIP" : {
+      "overview" : 
+          "Hip synovitis is inflammation of the synovial membrane of the hip. It often occurs in sports people alongside another hip joint injury.",
+      "try": [
+        "Treatment should be aimed at addressing the original cause or co-existing condition.",
+        "NSAID or anti-inflammatory medication may be prescribed along with physiotherapy to restore normal movement and function.",
+        "Any hip pain in children should be examined by a Doctor.",
+        "Synovitis must be distinguished from a bacterial infection which is far more serious. This can be done using blood tests.",
+        "X-rays may also be taken to rule out Perthes’ disease.",
+        "Anti-inflammatory medication may be prescribed (such as ibuprofen).",
+        "Generally, the condition is left to run its course, although the child should be closely observed and temperature checks should be made."
+      ],
+      "avoid": [
+        "Activity when you fell a hip joint injury."
+      ]
+    },
+    "SLIPPED CAPITAL FEMORAL EPIPHYSIS" : {
+      "overview" : 
+          "A slipped capital femoral epiphysis occurs when there is a fracture at the neck or top of the thigh bone causing hip pain. It is more common in boys aged 11 to 16 years old and usually develops gradually but can occur suddenly. Failure to recognise this injury may cause long-term damage and surgery may be required.",
+      "try": [
+        "If you suspect this is the cause of hip pain then seek medical attention as soon as possible.",
+        "An acute, sudden onset injury is a medical emergency requiring immediate surgery.",
+        "A slipped capital femoral epiphysis that develops gradually may also require surgery.",
+        "Failure to treat this injury may lead to the death of the head of the femur and permanent injury or disability."
+      ],
+      "avoid": [
+        "Not taking the pain seriously. Contact a doctor immediately!"
+      ]
+    },
+
     //Elbows
     "TENNIS ELBOW" : {
       "overview" : 
