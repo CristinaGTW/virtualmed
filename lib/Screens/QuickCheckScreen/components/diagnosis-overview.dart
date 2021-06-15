@@ -390,6 +390,185 @@ class DiagnosisOverview {
         "Symptoms usually get better when the infection is treated with antibiotics."
       ],
       "avoid": ["Most cases of thyroiditis cannot be prevented."]
+    },
+
+    //Elbows
+    "TENNIS ELBOW" : {
+      "overview" : 
+          "Tennis elbow is also known as lateral epicondylitis, lateral elbow tendinopathy, or extensor tendinopathy. It is a common term used to describe long-term, chronic pain on the outside of the elbow.",
+      "try": [
+        "Immediate first aid: If your elbow is acutely painful or you have recently noticed it, then for the first 72 hours post-injury, apply the principles of P.R.I.C.E. (Protection, Rest, Ice, Compression, and Elevation).",
+        "Rest: Rest is probably the most important part of treatment and is often difficult to do. If you continue to use the painful elbow then it will not recover as quickly and may become chronic and very difficult to treat.",
+        "Ice/cold therapy: Apply ice or a cold compression wrap to reduce pain and inflammation, especially if your elbow is acutely painful. Apply cold for for no more than 15 minutes as the injured tissues are very close to the skin and do not need longer. Ice should be wrapped in a wet tea towel to avoid ice burns, or better still use a commercially available cold therapy compression wrap.",
+        "Wear a Tennis elbow brace"
+      ],
+      "avoid": [
+        "Gripping heavy things, opening heavy doors, using a screwdriver and of course playing a backhand in tennis."
+      ]
+    },
+    "RADIOHUMERAL BURSITIS" : {
+      "overview" : 
+          "Radiohumeral bursitis is inflammation of a bursa in the elbow and has similar symptoms to Tennis elbow. Here we explain the causes and treatment of Radiohumeral bursitis.",
+      "try" : [
+        "Treatment for Radiohumeral bursitis is to rest the inflamed area as much as possible. If you must resume normal activity immediately, wear a sling until the pain becomes more bearable.",
+        "To prevent your elbow from becoming stiff or difficult to move (frozen elbow), begin normal, slow joint movement as soon as possible.",
+        "Painkillers and anti-inflammatory drugs may be prescribed or Corticosteroid injections into the bursa to reduce inflammation."
+      ],
+      "avoid" : [
+        "Gripping heavy things, opening heavy doors, using a screwdriver"
+      ]
+    },
+    "OSTEOCHONDRITIS DISSECANS IN THE ELBOW JOINT" : {
+      "overview" : 
+          "Osteochondritis Dissecans is fragmentation of the cartilage and sometimes the underlying bone within a joint. It is more common in adolescents, especially those who do throwing sports. This is because the ends of their bones are not yet fully hardened.",
+      "try" : [
+        "Initial treatment involves rest, ice, compression and elevation to ease pain and swelling.",
+        "If problems persist, seek medical attention.",
+        "An X-ray or MRI may be taken to confirm the diagnosis.",
+        "The need for surgery depends on the amount of displacement of the fragment and the severity of symptoms.",
+        "Surgery involves removing the bone fragment (known as debridement)"
+      ],
+      "avoid" : [
+        "If surgery is not undertaken, treatment involves rest, the range of motion exercises and avoidance of throwing activities until the pain has cleared."
+      ]
+    },
+    "RADIAL TUNNEL SYNDROME" : {
+      "overview" : 
+          "Radial tunnel syndrome, also known as radial nerve entrapment, occurs when the radial nerve in the forearm gets compressed or pinched. It has symptoms similar to Tennis Elbow. Here we explain the symptoms, causes, and treatment of radial nerve impingement.",
+      "try" : [
+        "Treatment involves applying the PRICE principles of protection, rest, ice/cold therapy to the elbow and forearm to reduce pain and inflammation.",
+        "A doctor may prescribe anti-inflammatory medication such as Ibuprofen to reduce pain and inflammation and relax the muscles (check with your doctor before taking any medication and do not take Ibuprofen if you have asthma). In severe or persistent cases a surgeon may operate to decompress the nerve which is generally successful.",
+        "A professional therapist may use soft tissue massage techniques to relax and release the supinator muscle in the forearm which is often the cause of entrapment. Massage will pump blood into the muscle, reducing muscle spasm and helping to relax any tension in the muscle."
+      ],
+      "avoid" : [
+        "Any repetitive wrist movements."
+      ]
+    },
+    "ELBOW AVULSION FRACTURE" : {
+      "overview" : 
+          "An elbow avulsion fracture occurs when a tendon or ligament tears, pulling a small fragment of bone away with it. It is more common in children and usually occurs on the inside of the elbow. Here we explain the symptoms, causes, and treatment for elbow avulsion fractures.",
+      "try" : [
+        "Treatment is often the same whether there is an avulsion fracture or just a sprain.",
+        "However, it may depend on the severity of the fracture and whether the fragment is displaced or not.",
+        "Children are also more likely to be offered an alternative treatment for an avulsion fracture as long term, their skeletal growth could be affected.",
+        "More severe avulsion fractures or fractures in children may require casting for 6-8 weeks to allow the bone to heal.",
+        "Following this, a period of rehabilitation will be required to ensure that full strength and mobility are regained."
+      ],
+      "avoid" : [
+        "Gripping heavy things, opening heavy doors, using a screwdriver"
+      ]
+    },
+    "MEDIAL ELBOW LIGAMENT SPRAIN" : {
+      "overview" : 
+          "The medial collateral ligament (MCL) of the elbow is situated on the inside of the elbow. It helps to provide stability to the joint. The ligament is injured from a sudden traumatic injury, or from repetitive overuse, for example throwing with poor technique.",
+      "try" : [
+        "Initial treatment is to apply the PRICE principles of protection, rest, ice, compression, and elevation.",
+        "Apply ice – or cold therapy to reduce pain and inflammation. Do not apply ice directly to the skin as it may cause ice burn. Wrap in a wet tea towel, or use a commercially available cold therapy wrap which can apply compression to the joint as well.",
+        "Compression – will help reduce swelling, support and protect the joint. Wear an elbow brace or support to protect the area from further injury whilst healing."
+      ],
+      "avoid" : [
+        "All activities which stress the elbow, or increase symptoms. For mild injuries, this may mean a short rest period and if caught early enough simply modifying the technique to avoid stressing the ligaments may be enough. However, for more long term chronic injuries or severe acute injuries complete rest may be necessary."
+      ]
+    },
+    "GOLFER'S ELBOW" : {
+      "overview" : 
+          "Golfer's elbow is also known as medial epicondylitis, thrower's elbow, or little league elbow. It causes pain on the inside of the elbow, which develops gradually over time. Here we explain the symptoms, causes, and treatment of Golfer's elbow.",
+      "try" : [
+        "Ice – apply a cold therapy and compression wrap for 10 to 15 minutes every hour. After the first few hours, this can be reduced to 3 to 4 times a day as required. Later in the rehabilitation program or if the injury becomes chronic applying heat may be more beneficial.",
+        "Elbow brace – Wear a brace or elbow support. This will provide protection and help prevent further injury. A Tennis or Golfer’s elbow type brace is worn around the forearm just below the elbow and changes the angle that the forces transmit through the tendon, hence taking some of the strain off the injured part.",
+        "Heat – after the initial acute phase, which may take anywhere from 2 days and 2 weeks, applying heat and using a heat retainer or elbow support, may be more beneficial than ice. Heat will help stimulate blood flow which aids healing."
+      ],
+      "avoid" : [
+        "Activity that causes pain. Continuing to use the wrist may result in your injury becoming chronic, making it much more difficult to treat. This may mean simply adapting your training to avoid overstressing the elbow.",
+        "Or for more serious injuries, a period of complete rest might be required. In particular, avoid gripping anything tightly or opening heavy doors."
+      ]
+    },
+    "ELBOW HYPEREXTENSION INJURY" : {
+      "overview" : 
+          "An elbow hyperextension injury occurs when the elbow is bent back the wrong way. This over-straightening causes damage to the ligaments and structures of the elbow. Like several elbow injuries, this often occurs in contact sports like rugby and causes instant pain. Ice, compression, and taping are some of the ways this injury can be treated.",
+      "try" : [
+        "Immediate treatment involves an application of cold therapy and compression.",
+        "Wear a support or heat retainer.",
+        "Apply elbow strapping to prevent the elbow from hyperextending (bending backward) whilst healing.",
+        "A professional therapist may use electrotherapy such as ultrasound to help reduce pain and swelling as well as advise on a full rehabilitation program."
+      ],
+      "avoid" : [
+        "Physical activity."
+      ]
+    },
+    "DISLOCATED ELBOW" : {
+      "overview" : 
+          "Elbow dislocations are the second most common dislocations in adults, behind the shoulder. The elbow is a very stable joint and so it requires a lot of force to dislocate it. Severe pain and obvious deformity are the common symptoms for this elbow injury, which is normally caused by a fall or direct impact. Read an explanation of elbow dislocations, treatments and how to rehabilitate after the injury.",
+      "try" : [
+        "Visit a Doctor or Hospital immediately",
+        "Apply ice or cold therapy to the elbow.",
+        "Put the elbow in a sling to support it."
+      ],
+      "avoid" : [
+        "to ‘pop it back in’ yourself! This can cause further damage"
+      ]
+    },
+    "ELBOW & FOREARM FRACTURE" : {
+      "overview" : 
+          "Elbow dislocations are the second most common dislocations in adults, behind the shoulder. The elbow is a very stable joint and so it requires a lot of force to dislocate it. Severe pain and obvious deformity are the common symptoms for this elbow injury, which is normally caused by a fall or direct impact. Read an explanation of elbow dislocations, treatments and how to rehabilitate after the injury.",
+      "try" : [
+        "Seek medical attenttion immediately!"
+      ],
+      "avoid" : [
+        "Any physical activities."
+      ]
+    },
+    "ULNAR NERVE COMPRESSION" : {
+      "overview" : 
+          "An Ulnar nerve compression is caused either by a direct blow to the inside of the elbow, or from repetitive trauma. It causes numbness and tingling down the forearm and into the forth and fifth fingers. Sometimes it is referred to as 'hitting your funny bone'.",
+      "try" : [
+        "Treatment will depend on the cause. For acute Ulnar nerve contusions, these usually pass after a few minutes. For gradual onset and long term nerve compression injuries then identifying the cause is important, alongside treating the immediate symptoms.",
+        "Apply cold therapy. Cold reduces pain and inflammation.",
+        "If you are a cyclist then consider having the way your bike is set up looked at by an experienced cycling coach. Make sure you adjust your position on the handlebars occasionally on long rides."
+      ],
+      "avoid" : [
+        "Any physical activities!"
+      ]
+    },
+    "TRICEPS TENDONITIS" : {
+      "overview" : 
+          "Triceps tendonitis (tendinopathy) is an overuse injury, resulting in inflammation (or degeneration) of the triceps tendon where it inserts into the back of the elbow.",
+      "try" : [
+        "Apply ice or cold therapy to the injury in the first two days to reduce pain and inflammation.",
+        "Ice can be applied for 10 minutes every hour initially reducing frequency to two or three times a day as symptoms allow. Do not apply ice directly to the skin as it may cause ice burns. Wrap the ice in a wet tea towel or use a commercially available cold therapy wrap.",
+        "Later in the healing process, after the acute stage has passed, applying heat and wearing a heat retainer is likely to be more beneficial.",
+        "Continue to rest until normal daily activities are pain-free."
+      ],
+      "avoid" : [
+        "Any physical activities!"
+      ]
+    },
+    "ELBOW BURSITIS(STUDENTS ELBOW)" : {
+      "overview" : 
+          "Elbow bursitis, also known as Students elbow or Olecranon bursitis, is swelling and inflammation of the bursa at the back of the elbow. Here we explain the symptoms, causes, and treatment for elbow bursitis.",
+      "try" : [
+        "Apply ice or cold therapy. The is to help reduce pain and inflammation. Cold should be applied for 10 minutes every hour until the pain and swelling have gone down.",
+        "A doctor may recommend anti-inflammatory medication such as ibuprofen.",
+        "Aspirating the bursa is an option in some cases. A needle is inserted into the bursa and the fluid sucked out. In severe cases, a doctor may immobilize the arm or give a steroid injection.",
+        "If conservative treatment fails then a surgeon may operate for elbow bursitis."
+      ],
+      "avoid" : [
+        "Any physical activities!"
+      ]
+    },
+    "OLECRANON FRACTURE" : {
+      "overview" : 
+          "The Olecranon is the large bony prominence at the back of the elbow. It is usually fractured from a direct impact or fall onto a bent elbow. Here we explain the signs, symptoms, causes, and treatment for Olecranon fractures.",
+      "try" : [
+        "If you suspect you may have an Olecranon fracture then seek medical attention immediately!",
+        "Apply the PRICE principles of protection, rest, ice, compression, and elevation.",
+        "A doctor may prescribe pain medication and the use of a sling to avoid further injury.",
+        "If the fragment is not displaced then your elbow will most likely be immobilised in a splint or cast to allow healing.",
+        "However, if the fragment is displaced, then surgery may be needed to realign the fragment of bone and fix it securely in place."
+      ],
+      "avoid" : [
+        "Any physical activities!"
+      ]
     }
   };
 }
