@@ -810,6 +810,87 @@ class DiagnosisOverview {
         "Limit or avoid foods that are rich in purines. These include salmon, sardines, herring, organ meats, asparagus, and mushrooms.",
         "Limit the amount of alcohol you drink."
       ]
-    }
+    },
+
+    // Thights Diagnoses
+    "CELLULITIS": {
+      "overview":
+          "Cellulitis is a skin infection that's treated with antibiotics. It can be serious if it's not treated quickly.",
+      "try": [
+        "taking paracetamol or ibuprofen for the pain",
+        "raising the affected body part on a pillow or chair when you're sitting or lying down, to reduce swelling",
+        "regularly moving the joint near the affected body part, such as your wrist or ankle, to stop it getting stiff",
+        "drinking plenty of fluids to avoid dehydration",
+        "wearing compression stockings until you're better"
+      ],
+      "avoid": ["wearing compression stockings until you're better"]
+    },
+    "EDEMA": {
+      "overview":
+          "Edema is the medical term for swelling. Body parts swell from injury or inflammation. It can affect a small area or the entire body. Medications, pregnancy, infections, and many other medical problems can cause edema.",
+      "try": [
+        "To treat edema, you often must treat its underlying cause. For example, you might take allergy medications to treat swelling from allergies."
+      ],
+      "avoid": [""]
+    },
+    "DEHYDRATATION": {
+      "overview":
+          "Dehydration means your body loses more fluids than you take in. If it's not treated, it can get worse and become a serious problem.",
+      "try": [
+        "Drink fluids when you feel any dehydration symptoms.",
+        "If you find it hard to drink because you feel sick or have been sick, start with small sips and then gradually drink more.",
+        "You can use a spoon to make it easier for your child to swallow the fluids.",
+        "You should drink enough during the day so your pee is a pale clear colour.",
+        "Drink when there's a higher risk of dehydrating. For example, if you're vomiting, sweating or you have diarrhoea."
+      ],
+      "avoid": [
+        "do not make formula weaker",
+        "do not give young children fruit juice or fizzy drinks – it makes things like diarrhoea or vomiting worse"
+      ]
+    },
+    "ATHEROSCLERORIS": {
+      "overview":
+          "Atherosclerosis is a potentially serious condition where arteries become clogged with fatty substances called plaques, or atheroma.",
+      "try": [
+        "have a healthy diet",
+        "exercise regularly",
+        "maintain a healthy weight"
+      ],
+      "avoid": ["stop smoking", "moderate your alcohol consumption"]
+    },
+    "TENDONITIS": {
+      "overview":
+          "Tendonitis is when a tendon swells (becomes inflamed) after a tendon injury. It can cause joint pain, stiffness, and affect how a tendon moves. You can treat mild tendon injuries yourself and should feel better within 2 to 3 weeks.",
+      "try": [
+        "warm up before exercising and gently stretch afterwards",
+        "wear supportive shoes for exercise, or insoles",
+        "take regular breaks from repetitive exercises"
+      ],
+      "avoid": [
+        "do not over-exercise tired muscles",
+        "do not start a new sport without some training or practice",
+        "do not do the same repetitive exercises"
+      ]
+    },
+    "SPINAL STENOSIS": {
+      "overview":
+          "Spinal stenosis is a narrowing of the spaces within your spine, which can put pressure on the nerves that travel through the spine.",
+      "try": [""],
+      "avoid": [""]
+    },
+    "BLOOD CLOT": {
+      "overview":
+          "Blood clots are gel-like clumps of blood. They are beneficial when they form in response to an injury or a cut, plugging the injured blood vessel, which stops bleeding.",
+      "try": [
+        "Enjoying regular physical activity.",
+        "Eating a healthy diet and making sure that you stay hydrated.",
+        "Maintaining a healthy weight.",
+        "Controlling medical problems such as high blood pressure and diabetes.",
+        "Make sure you are up to date with cancer screening."
+      ],
+      "avoid": [
+        "Do not smoke.",
+      ]
+    },
   };
 }

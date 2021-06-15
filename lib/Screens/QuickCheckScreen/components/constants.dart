@@ -1379,7 +1379,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "BROKEN BONE", "score": 10}
+          {"diagnosis": "FRACTURE", "score": 10}
         ]
       },
       //Q1
