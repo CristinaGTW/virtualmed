@@ -270,7 +270,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
             child: RoundedInputField(
               inputText: "Height",
               icon: Icons.height,
-              onChanged: (value) => _data['age'] = value,
+              onChanged: (value) => _data['height'] = value,
             ),
           ),
           Container(
@@ -442,13 +442,12 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
     var phone = regularUser == null ? _data['phone'] : regularUser.phone;
     var time = DateTime.now().toString();
     var age = _data[
-        'age']; // var full_name = regularUser == null ? _data['full_name'] : regularUser.age;
-    var height = _data[
-        'height']; // var height = regularUser == null ? _data['height'] : regularUser.height;
-    var weight = _data[
-        'weight']; // var weight = regularUser == null ? _data['weight'] : regularUser.weight;
-    var chronic_diseases = _data[
-        'chronic_diseases']; // var chronic_diseases = regularUser == null ? _data['chronic_diseases'] : regularUser.chronic_diseases;
+        'age']; // var full_name = regularUser == null ? _data['full_name'] : regularUser.age; // TODO solve birthdate => age
+    var height = regularUser == null ? _data['height'] : regularUser.height;
+    var weight = regularUser == null ? _data['weight'] : regularUser.weight;
+    var chronic_diseases = regularUser == null
+        ? _data['chronic_diseases']
+        : regularUser.chronic_diseases;
 
     try {
       var res = await postToServer(api: 'SendRequest', body: {

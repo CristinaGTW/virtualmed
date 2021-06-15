@@ -26,7 +26,6 @@ Future<Map<String, dynamic>> postToServer(
 
   if (res.statusCode == 200) {
     var body = json.decode(utf8.decode(res.bodyBytes));
-    // print(body);
     return {"msg": "Success", "body": body};
   }
   return {"msg": json.decode(utf8.decode(res.bodyBytes))['message']};

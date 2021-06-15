@@ -6,10 +6,12 @@ import '../../../components.dart';
 class RoundedInputField extends StatelessWidget {
   final String inputText;
   final IconData icon;
+  final Icon prefixIcon;
+  final String initialValue;
   final ValueChanged<String> onChanged;
 
   const RoundedInputField(
-      {Key key, @required this.inputText, this.icon, this.onChanged})
+      {Key key, this.inputText = "", this.icon, this.onChanged, this.prefixIcon, this.initialValue = ""})
       : super(key: key);
 
   @override
@@ -20,9 +22,11 @@ class RoundedInputField extends StatelessWidget {
         child: TextFormField(
           validator: (value) => value.isEmpty ? "This field is required" : null,
           onChanged: onChanged,
+          initialValue: initialValue,
           decoration: InputDecoration(
             icon: Icon(icon),
             hintText: inputText,
+            suffixIcon: prefixIcon,
             border: InputBorder.none,
           ),
           cursorColor: Colors.grey,

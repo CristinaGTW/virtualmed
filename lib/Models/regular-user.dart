@@ -5,11 +5,16 @@ import 'package:virtual_med/Services/utils.dart';
 
 class RegularUser {
   final int userId;
-  final String firstName;
-  final String lastName;
-  final String email;
-  final String phone;
-  final String password;
+  String firstName;
+  String lastName;
+  String email;
+  String phone;
+  String password;
+
+  String birthdate = '';
+  String height = '';
+  String weight = '';
+  String chronic_diseases = '';
 
   RegularUser({
     @required this.userId,
@@ -18,6 +23,10 @@ class RegularUser {
     @required this.email,
     @required this.phone,
     @required this.password,
+    this.birthdate,
+    this.height,
+    this.weight,
+    this.chronic_diseases,
   });
 
   factory RegularUser.fromJson(Map<String, dynamic> json) {
@@ -28,6 +37,10 @@ class RegularUser {
       phone: json['phone'],
       password: json['password'],
       userId: json['id'],
+      birthdate: json['birthdate'],
+      height: json['height'],
+      weight: json['weight'],
+      chronic_diseases: json['chronic_diseases']
     );
   }
 
@@ -42,7 +55,11 @@ class RegularUser {
           lastName: res['body'][0]['last_name'],
           email: res['body'][0]['email'],
           phone: res['body'][0]['phone'],
-          password: res['body'][0]['password']);
+          password: res['body'][0]['password'],
+          birthdate: res['body'][0]['birthdate'],
+          height: res['body'][0]['height'],
+          weight: res['body'][0]['weight'],
+          chronic_diseases: res['body'][0]['chronic_diseases']);
     }
   }
 
