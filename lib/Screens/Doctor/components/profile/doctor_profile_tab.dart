@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:virtual_med/Screens/Authentication/components/rounded_input_field.dart';
 import 'package:virtual_med/Services/user-provider.dart';
 import 'package:virtual_med/Services/utils.dart';
+import 'package:virtual_med/components/landing-page.dart';
 import 'package:virtual_med/components/rounded_button.dart';
 import 'package:virtual_med/components/top-title.dart';
 
@@ -59,15 +60,7 @@ class _DoctorProfileTabState extends State<DoctorProfileTab> {
                   top: 50,
                   left: (size.width - 400) / 2,
                   right: (size.width - 400) / 2),
-              child: Container(
-                child: RoundedButton(
-                  width: 400,
-                  text: "Update",
-                  press: () {
-                    updateDetails();
-                  },
-                ),
-              ),
+              child: getButtons()
             )
           ],
         ),
@@ -95,6 +88,34 @@ class _DoctorProfileTabState extends State<DoctorProfileTab> {
               ),
         onChanged: (value) => _data[dataField] = value,
       ),
+    );
+  }
+
+  Widget getButtons() {
+    return Column(
+      children: <Widget>[
+        Container(
+          child: RoundedButton(
+            width: 300,
+            text: "Update",
+            press: () {
+              updateDetails();
+            },
+          ),
+        ),
+        Container(
+          child: RoundedButton(
+            width: 300,
+            text: "Sign Out",
+            press: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return LandingPage();
+              }));
+              context.read<UserProvider>().setDoctorUser(null);
+            },
+          ),
+        ),
+      ],
     );
   }
 
