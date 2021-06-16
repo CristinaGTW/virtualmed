@@ -1076,6 +1076,167 @@ class DiagnosisOverview {
       "avoid": ["Do not smoke."]
     },
 
+    // Ears Diagnoses
+    "OTITIS MEDIA": {
+      "overview":
+          "Inflammation of the middle ear characterized by the accumulation of infected fluid in the middle ear, bulging of the eardrum, pain in the ear and, if eardrum is perforated, drainage of purulent material (pus) into the ear canal.",
+      "try": [
+        "Use painkillers such as paracetamol or ibuprofen (children under 16 should not take aspirin).",
+        "Place a warm or cold flannel on the ear.",
+        "Remove any discharge by wiping the ear with cotton wool."
+      ],
+      "avoid": [
+        "Putting anything inside your ear to remove earwax, such as cotton buds or your finger",
+        "Letting water or shampoo get in your ear",
+        "Using decongestants or antihistamines – there's no evidence they help with ear infections"
+      ]
+    },
+    "EAR MAY BE SERIOUSLY INFECTED": {
+      "overview":
+          "Your ear canal, outer ear, and the skin around your ear may be seriously infected.",
+      "try": [
+        "Use painkillers such as paracetamol or ibuprofen (children under 16 should not take aspirin).",
+        "Place a warm or cold flannel on the ear.",
+        "Remove any discharge by wiping the ear with cotton wool."
+      ],
+      "avoid": [
+        "Putting anything inside your ear to remove earwax, such as cotton buds or your finger",
+        "Letting water or shampoo get in your ear",
+        "Using decongestants or antihistamines – there's no evidence they help with ear infections"
+      ]
+    },
+    "MASTOIDITIS": {
+      "overview":
+          "Mastoiditis is a serious bacterial infection that affects the mastoid bone behind the ear. It's more common in children. Most people with mastoiditis recover quickly and have no complications as long as the condition is diagnosed and treated quickly.",
+      "try": [
+        "See your doctor right away.",
+        "Mastoiditis is a serious infection and should be diagnosed and treated quickly with antibiotics.",
+        "ou may need to go to hospital so antibiotics can be given directly into a vein through a drip (intravenously).",
+        "In some cases, surgery may be needed to either: drain the middle ear(a myringotomy) or remove part of the mastoid bone (mastoidectomy)"
+      ],
+      "avoid": [
+        "Putting anything inside your ear to remove earwax, such as cotton buds or your finger",
+        "Letting water or shampoo get in your ear",
+        "Using decongestants or antihistamines – there's no evidence they help with ear infections"
+      ]
+    },
+    "RUPTURED EARDRUM": {
+      "overview":
+          "A ruptured eardrum (tympanic membrane perforation) is a hole or tear in the thin tissue that separates your ear canal from your middle ear (eardrum). A ruptured eardrum can result in hearing loss. It can also make your middle ear vulnerable to infections. A ruptured eardrum usually heals within a few weeks without treatment. But sometimes it requires a patch or surgical repair to heal.",
+      "try": [
+        "Putting a warm heating pad on your ear may help relieve the pain.",
+        "Protect your ears during flight. If possible, don't fly if you have a cold or an active allergy that causes nasal or ear congestion. During takeoffs and landings, keep your ears clear with pressure-equalizing earplugs, yawning or chewing gum."
+      ],
+      "avoid": [
+        "Putting anything inside your ear to remove earwax, such as cotton buds or your finger",
+        "Letting water or shampoo get in your ear",
+        "Using decongestants or antihistamines – there's no evidence they help with ear infections",
+        "Infection by keeping your ear dry while it’s healing."
+      ]
+    },
+    "OTITIS EXTERNA": {
+      "overview":
+          "Otitis externa is a condition that causes inflammation (redness and swelling) of the external ear canal, which is the tube between the outer ear and eardrum. Otitis externa is often referred to as swimmer's ear because repeated exposure to water can make the ear canal more vulnerable to inflammation.",
+      "try": [
+        "See your doctor.",
+        "Keep your ear dry while it’s healing.",
+        "Putting a warm heating pad over your ear may help relieve the pain."
+      ],
+      "avoid": [
+        "Putting anything inside your ear to remove earwax, such as cotton buds or your finger",
+        "Letting water or shampoo get in your ear",
+        "Using decongestants or antihistamines – there's no evidence they help with ear infections"
+      ]
+    },
+    "TEMPOROMANDIBULAR JOINT SYNDROME": {
+      "overview":
+          "The temporomandibular joint (TMJ) acts like a sliding hinge, connecting your jawbone to your skull. You have one joint on each side of your jaw. TMJ disorders — a type of temporomandibular disorder or TMD — can cause pain in your jaw joint and in the muscles that control jaw movement.",
+      "try": [
+        "An anti-inflammatory medicine",
+        "Massaging the sore muscles around your jaw. ",
+        "Moist heat or cold packs may also help relieve the pain.",
+        "If there’s no improvement in 1 or 2 weeks, see your dentist or doctor.",
+        "If you’re experiencing severe pain or you can’t open your jaw, see your doctor right away."
+      ],
+      "avoid": [
+        "Waiting to get treatment, see a doctor right away"
+            "Chewing gum",
+        "Eating hard foods",
+        "Non-functional jaw activites",
+        "Resting on your chin",
+        "Slouching"
+      ]
+    },
+    "BLOCKED EUSTACHIAN TUBE": {
+      "overview":
+          "Blocked eustachian tubes can cause pain, hearing difficulties, and a feeling of fullness in the ears. Such a phenomenon is referred to as eustachian tube dysfunction (ETD). ETD is a relatively common condition. Depending on the cause, it may resolve on its own or through simple at-home treatment measures.",
+      "try": [
+        "Try an over-the-counter decongestant medicine for a few days.",
+        "Putting a warm heating pad on your ear may help relieve the pain.",
+        "If the pain is intense or doesn’t go away in 1 or 2 days, see your doctor."
+      ],
+      "avoid": ["Catching colds or the flu often lead to this condition."]
+    },
+    "BAROTRAUMA": {
+      "overview":
+          "Barotrauma of the ear occurs when the eardrum becomes stretched and tense. It causes ear pain and dulled hearing. It is due to unequal pressures that develop either side of the eardrum. This most commonly occurs when descending to land in a plane and is also experienced by scuba divers.",
+      "try": [
+        "If your symptoms don’t improve in a few hours or if the pain is severe, see your doctor.",
+        "Suck sweets when the plane begins to descend. Air is more likely to flow up the Eustachian tube if you swallow, yawn or chew. For babies, it is a good idea to feed them or give them a drink at the time of descent to encourage them to swallow.",
+        "Take a breath in. Then, try to breathe out gently with your mouth closed and pinching your nose (the Valsalva manoeuvre). In this way, no air is blown out but you are gently pushing air into the Eustachian tube. If you do this you may feel your ears go 'pop' as air is pushed into the middle ear. This often cures the problem. Repeat this every few minutes until landing - whenever you feel any discomfort in the ear.",
+        "Not sleep when the plane is descending to land. (Ask the air steward to wake you when the plane starts to descend.) If you are awake you can make sure that you suck and swallow to encourage air to get into the middle ear."
+      ],
+      "avoid": ["Wearing earplugs while diving or flying."]
+    },
+    "SEROUS OTITIS": {
+      "overview":
+          "Serous otitis media (SOM), also known as otitis media with effusion (OME), fluid in the ear, middle ear effusion (MEE), or secretory otitis media, is a condition in which fluid resides in the middle ear. Serous refers to the type of fluid that is collecting inside the middle ear. Serous fluid is usually straw (yellowish) colored liquid or mucus. In this case, there is a eustachian tube dysfunction and the auditory tube is unable to drain the fluid as it normally should.",
+      "try": [
+        "Serous otitis media will usually resolve without any intervention.",
+        "If the fluid behind the eardrum is not resolved within three to six months, it is generally best for your doctor to remove the fluid by surgically placing an ear tube",
+        "Talk to your doctor. He or she can tell you how to treat the wax or fluid buildup."
+      ],
+      "avoid": ["Wearing earplugs"]
+    },
+    "CERUMINOSIS": {
+      "overview":
+          "Ceruminosis is a partial or complete occlusion of the ear canal with wax (cerumen) that results in symptoms or prevents assessment of the ear canal, tympanic membrane (TM), or audiovestibular system.",
+      "try": [
+        "Putting 3-5 drops of warm water or 1 part warm water and 1 part white vinegar into your ear canal once per day to soften the wax.",
+        "After 2-5 minutes, turn your head and lightly tug on your ear to discharge the drops."
+      ],
+      "avoid": ["Inserting cotton swabs into the ear canal."]
+    },
+    "CAULIFLOWER EAR": {
+      "overview":
+          "The term cauliflower ear refers to a deformity of the ear caused by blunt trauma or other injury, such as what may occur during a boxing or wrestling match. Left untreated, the injury leads to a blockage that prevents blood flow and damages tissue.",
+      "try": [
+        "Wearing appropriately sized ear protection during all practices, sparring, and bouts will prevent CAULIFLOWER EAR.",
+        "If it develops, you can immediately have it drained and then compressed to reduce the chance that the fluid hardens and the changes become permanent."
+      ],
+      "avoid": [
+        "Not head gear when engaging in activities that increase your risk for ear trauma, such as wrestling, boxing, rugby, and other close-contact sports."
+      ]
+    },
+    "TOOTH PROBLEM": {
+      "overview":
+          "A tooth problem can radiate/send pain to the ear on the same side.",
+      "try": [
+        "Try a mild over-the-counter pain reliever, and see your dentist."
+      ],
+      "avoid": ["Chewing excessively"]
+    },
+    "INFECTION or LOCAL INFLAMMATION": {
+      "overview":
+          "A small INFECTION or LOCAL INFLAMMATION in the ear canal may be the cause.",
+      "try": [
+        "The infection/inflammation will probably go away by itself in 2 to 5 days. ",
+        "A mild pain reliever and warm compress may help relieve the pain.",
+        "See your doctor if the pain becomes severe or if redness and warmth spread into or around the ear or if you develop fever."
+      ],
+      "avoid": ["Wearing earplugs"]
+    },
+
     // Knees Diagnoses
     "PREPATELLAR BURSITIS": {
       "overview":

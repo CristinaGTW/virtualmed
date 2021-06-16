@@ -2016,96 +2016,89 @@ class Constants {
     ],
 
     "Ears": [
-      // {
-      //   "question": "Do you have a fever?",
-      //   "answerType": AnswerType.MULTIPLE_CHOICE,
-      //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
-      //   "onYesResponse": "Q2",
-      // }, // TODO
       //Q0
       {
-        "question":
-            "Are you experiencing pain deep in the ear or fluid draining from the ear?",
+        "question": "Do you have a fever?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 1},
-          {"answer": "Yes", "nextQuestion": 5}
+          {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "OTITIS", "score": 10}
+          {"diagnosis": "OTITIS MEDIA", "score": 10}
         ]
       },
       //Q1
       {
         "question":
-            "Do you have redness and swelling of the outer ear and the surrounding skin?",
+            "Are you experiencing pain deep in the ear or fluid draining from the ear?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": 2}
+          {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
-          {"diagnosis": "Self Care - See a doctor right away", "score": 10}
+          {"diagnosis": "OTITIS MEDIA", "score": 10}
         ]
       },
       //Q2
       {
-        "question": "Do you have headache-type pain?",
+        "question":
+            "Do you have redness and swelling of the outer ear and the surrounding skin?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 4},
+          {"answer": "No", "nextQuestion": 3},
           {"answer": "Yes", "nextQuestion": 3}
         ],
         "onYesResponse": [
-          {"diagnosis": "MASTODITIS", "score": 10}
+          {"diagnosis": "EAR MAY BE SERIOUSLY INFECTED", "score": 10}
         ]
       },
       //Q3
       {
-        "question":
-            "Does your ear has redness behind or tenderness when you touch the bone behind your ear?",
+        "question": "Do you have headache-type pain?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 4},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
-          {"diagnosis": "MASTODITIS", "score": 10}
+          {"diagnosis": "MASTOIDITIS", "score": 10}
         ]
       },
       //Q4
       {
         "question":
-            "Do you have thick pus-filled (white) or bloody drainage from the ear canal that started after a sharp, sudden pain?",
+            "Does your ear has redness behind or tenderness when you touch the bone behind your ear?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 5},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "RUPTURED EARDRUM", "score": 10}
+          {"diagnosis": "MASTOIDITIS", "score": 10}
         ]
       },
       //Q5
       {
-        "question": "Is your ear swollen?",
+        "question":
+            "Do you have thick pus-filled (white) or bloody drainage from the ear canal that started after a sharp, sudden pain?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 7},
-          {"answer": "Yes", "nextQuestion": 6}
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "OTITIS EXTERNA", "score": 10}
+          {"diagnosis": "RUPTURED EARDRUM", "score": 10}
         ]
       },
       //Q6
       {
-        "question":
-            "Does it itch or hurt when you pull on your ear or earlobe?",
+        "question": "Is your ear swollen?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 7},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": 7}
         ],
         "onYesResponse": [
           {"diagnosis": "OTITIS EXTERNA", "score": 10}
@@ -2114,35 +2107,35 @@ class Constants {
       //Q7
       {
         "question":
-            "Does your jaw joint “crack” when you chew or open your mouth, or do you feel tenderness in your jaw when chewing?",
+            "Does it itch or hurt when you pull on your ear or earlobe?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 8},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "TEMPOROMANDIBULAR JOINT SYNDROME", "score": 10}
+          {"diagnosis": "OTITIS EXTERNA", "score": 10}
         ]
       },
       //Q8
       {
-        "question": "Do you hear/feel fluid in your ear?",
+        "question":
+            "Does your jaw joint “crack” when you chew or open your mouth, or do you feel tenderness in your jaw when chewing?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 11},
-          {"answer": "Yes", "nextQuestion": 9}
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "BLOCKED EUSTACHIAN TUBE", "score": 10}
+          {"diagnosis": "TEMPOROMANDIBULAR JOINT SYNDROME", "score": 10}
         ]
       },
       //Q9
       {
-        "question":
-            "Do you feel pressure or stuffiness that can’t be cleared with coughing, yawning, or swallowing?",
+        "question": "Do you hear/feel fluid in your ear?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 11},
+          {"answer": "No", "nextQuestion": 12},
           {"answer": "Yes", "nextQuestion": 10}
         ],
         "onYesResponse": [
@@ -2151,79 +2144,111 @@ class Constants {
       },
       //Q10
       {
-        "question": "Do you have cold or flu symptoms?",
+        "question":
+            "Do you feel pressure or stuffiness that can’t be cleared with coughing, yawning, or swallowing?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 11},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 12},
+          {"answer": "Yes", "nextQuestion": 11}
         ],
         "onYesResponse": [
           {"diagnosis": "BLOCKED EUSTACHIAN TUBE", "score": 10}
         ]
       },
-      // {
-      //   "question":
-      //   "Do you have tooth pain on the same side as the ear pain when you bite down?",
-      //   "answerType": AnswerType.MULTIPLE_CHOICE,
-      //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
-      //   "onYesResponse":
-      //   "A tooth problem can radiate/send pain to the ear on the same side.",
-      // }, //TODO
       //Q11
       {
-        "question":
-            "Did your ear pain start during an airplane flight or right after you traveled on an airplane?",
+        "question": "Do you have cold or flu symptoms?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 12},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "BAROTRAUMA", "score": 10}
+          {"diagnosis": "BLOCKED EUSTACHIAN TUBE", "score": 10}
         ]
       },
-      // {
-      //   "question": "Can you see or feel a “pimple” in the ear canal?",
-      //   "answerType": AnswerType.MULTIPLE_CHOICE,
-      //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
-      //   "onYesResponse":
-      //   "A small INFECTION or LOCAL INFLAMMATION in the ear canal may be the cause.",
-      // }, TODO
       //Q12
       {
         "question":
-            "Is the affected person a child who doesn’t have ear pain or redness but is having problems hearing",
+            "Did your ear pain start during an airplane flight or right after you traveled on an airplane?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 13},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "SEROUS OTITIS", "score": 10}
+          {"diagnosis": "BAROTRAUMA", "score": 10}
         ]
       },
-      // {
-      //   "question":
-      //   "Is fullness of the ear present on one or both sides without any other symptoms? Does the person have a history of ear wax production?",
-      //   "answerType": AnswerType.MULTIPLE_CHOICE,
-      //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
-      //   "onYesResponse":
-      //   "This is likely a buildup of wax in the ear canal (CERUMINOSIS or CERUMEN IMPACTION).",
-      // }, TODO
       //Q13
       {
         "question":
-            "Do you have swelling or thickening of one or more ears after wrestling or doing another contact sport or fighting event?",
+            "Is the affected person a child who doesn’t have ear pain or redness but is having problems hearing",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 14},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
+          {"diagnosis": "SEROUS OTITIS", "score": 10},
+          {"diagnosis": "CERUMINOSIS", "score": 10},
+        ]
+      },
+      //Q14
+      {
+        "question":
+            "Do you have swelling or thickening of one or more ears after wrestling or doing another contact sport or fighting event?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 15},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
           {"diagnosis": "CAULIFLOWER EAR", "score": 10}
+        ]
+      },
+      //Q15
+      {
+        "question":
+            "Is fullness of the ear present on one or both sides without any other symptoms? Does the person have a history of ear wax production?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 16},
+          {"answer": "Yes", "nextQuestion": 16}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SEROUS OTITIS", "score": 10},
+          {"diagnosis": "CERUMINOSIS", "score": 10},
+        ]
+      },
+      //Q16
+      {
+        "question":
+            "Do you have tooth pain on the same side as the ear pain when you bite down?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 17},
+          {"answer": "Yes", "nextQuestion": 17}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "TOOTH PROBLEM", "score": 10},
+        ]
+      },
+      //Q17
+      {
+        "question": "Can you see or feel a “pimple” in the ear canal?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "INFECTION or LOCAL INFLAMMATION", "score": 10},
         ]
       }
     ],
+
+
     "Shoulders": [
       //Q0
       {
