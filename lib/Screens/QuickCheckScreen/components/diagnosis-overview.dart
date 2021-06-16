@@ -892,5 +892,58 @@ class DiagnosisOverview {
         "Do not smoke.",
       ]
     },
+
+    // Diagnoses for Calves
+    "SHIN SPLINTS": {
+      "overview":
+          "Shin splints is a type of shin pain, usually caused by exercise. It's not serious and there are things you can do to help get better.",
+      "try": [
+        "take paracetamol or ibuprofen to ease the pain",
+        "put an ice pack (or bag of frozen vegetables) in a towel on your shin for up to 20 minutes every 2 to 3 hours",
+        "switch to gentle exercise such as yoga or swimming while healing",
+        "exercise on soft ground, if you can, when you're feeling better",
+        "warm up before exercise and stretch after exercise",
+        "make sure your trainers or shoes support your feet properly"
+      ],
+      "avoid": [
+        "do not continue doing the exercise that caused your shin splints",
+        "do not rush back into exercise at the level you were at – build your exercise routine back up slowly"
+      ]
+    },
+    "PERIPHERAL ARTERIAL DISEASE (PAD)": {
+      "overview":
+          "Peripheral arterial disease (PAD) is a common condition where a build-up of fatty deposits in the arteries restricts blood supply to leg muscles. It's also known as peripheral vascular disease (PVD).",
+      "try": [
+        "eat a healthy diet",
+        "lose weight, if you're overweight or obese",
+        "moderate your consumption of alcohol"
+      ],
+      "avoid": ["Stop smoking"]
+    },
+    "ACHILLES TENDON": {
+      "overview":
+          "You may have a partial or complete TEAR of the ACHILLES TENDON that attaches the calf muscle to the heel. This injury will cause pain and difficulty pointing the foot down or walking. A TORN CALF MUSCLE will cause pain with walking and might produce bruising.",
+      "try": [
+        "warm up before exercising and gently stretch afterwards",
+        "wear supportive shoes for exercise, or insoles",
+        "take regular breaks from repetitive exercises"
+      ],
+      "avoid": [
+        "do not over-exercise tired muscles",
+        "do not start a new sport without some training or practice",
+        "do not do the same repetitive exercises"
+      ]
+    },
+    "DEEP VENOUS THROMBOSIS": {
+      "overview":
+          "Deep vein thrombosis (DVT) is a blood clot. These clots usually occur deep down in your leg veins. DVT is common and can be dangerous. If the blood clot breaks off and travels through your bloodstream, it can block a blood vessel in your lungs. This blockage (called a pulmonary embolism) can be fatal.",
+      "try": [
+        "Get frequent exercise",
+        "Get out of bed and move around as soon as you can after being ill or having surgery.",
+        "Control your blood pressure.",
+        "Lose weight if you are overweight."
+      ],
+      "avoid": ["Do not smoke."]
+    },
   };
 }
