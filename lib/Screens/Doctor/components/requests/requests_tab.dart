@@ -49,6 +49,7 @@ class _RequestsTabState extends State<RequestsTab> {
                       physics: NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) {
                         return Request(
+                          patient_id: userRequests[index].patient_id,
                           name: userRequests[index].name,
                           diagnosis: userRequests[index].diagnosis,
                           image: userRequests[index].image,
@@ -67,9 +68,7 @@ class _RequestsTabState extends State<RequestsTab> {
                   return Text("${snapshot.error}");
                 }
                 // By default, show a loading spinner.
-                return Center(
-                    child: CircularProgressIndicator()
-                );
+                return Center(child: CircularProgressIndicator());
               },
             ),
           ],
@@ -118,6 +117,7 @@ class _RequestsTabState extends State<RequestsTab> {
     if (res['msg'] == 'Success') {
       List<Request> requests = List<Request>();
       res['body'].forEach((req) => requests.add(Request(
+            patient_id: req['patient_id'],
             name: req['full_name'],
             status: 'Pending',
             time: req['time'],

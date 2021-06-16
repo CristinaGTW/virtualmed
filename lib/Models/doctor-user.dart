@@ -21,7 +21,7 @@ class DoctorUser {
     @required this.phone,
     @required this.specialization,
     @required this.location,
-    @required this.password,
+    this.password,
   });
 
   factory DoctorUser.fromJson(Map<String, dynamic> json) {

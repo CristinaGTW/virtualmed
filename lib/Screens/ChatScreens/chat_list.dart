@@ -1,33 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Models/doctor-user.dart';
-import 'package:virtual_med/Screens/ChatScreens/chat_doctor.dart';
+import 'package:virtual_med/Models/regular-user.dart';
 import 'package:virtual_med/Screens/Doctor/components/chats/chat.dart';
-import 'package:virtual_med/Models/chat_user.dart';
 
-class ChatList extends StatelessWidget {
-  var chatUsers = [
-    DoctorUser(
-        userId: 3,
-        firstName: "Daniel",
-        lastName: "Smith",
-        email: "daniel.smith@email.com",
-        phone: "+4412391292",
-        location: 'London',
-        specialization: 'Cardiology',
-        password: "password"),
-    DoctorUser(
-        userId: 13,
-        firstName: "Mike",
-        lastName: "Stones",
-        email: "mike.stones@email.com",
-        phone: "072949239",
-        location: 'Bristol',
-        specialization: 'Orthopedics',
-        password: "password")
-  ];
+import 'package:provider/provider.dart';
+import 'package:virtual_med/Services/user-provider.dart';
+import 'package:virtual_med/Services/utils.dart';
+
+class ChatList extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _ChatListState();
+
+}
+
+class _ChatListState extends State<ChatList> {
+  Future<List<DoctorUser>> futureChatUsers;
+  RegularUser regularUser;
 
   @override
   Widget build(BuildContext context) {
+    regularUser = context.watch<UserProvider>().regularUser;
+    futureChatUsers = _fetchConnections();
+
     Size size = MediaQuery.of(context).size;
     var sidePadding = (size.width - 400) / 2;
     return Scaffold(
@@ -44,19 +38,30 @@ class ChatList extends StatelessWidget {
       ),
       body: Column(children: [
         searchBar(sidePadding),
-        ListView.builder(
-          itemCount: chatUsers.length,
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          itemBuilder: (context, index) {
-            return Chat(
-              name:
-                  "Dr." + chatUsers[index].firstName + " " + chatUsers[index].lastName,
-              fragment: chatUsers[index].specialization,
-              image: "images/profile_pic.png",
-              time: "time here",
-              receiver_id: chatUsers[index].userId,
-            );
+        FutureBuilder<List<DoctorUser>>(
+          future: futureChatUsers,
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                itemCount: snapshot.data.length,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return Chat(
+                      name: "Dr. " + snapshot.data[index].firstName +
+                          " " +
+                          snapshot.data[index].lastName,
+                      fragment: snapshot.data[index].specialization,
+                      image: "images/profile_pic.png",
+                      time: "Accepted Request",
+                      receiver_id: snapshot.data[index].userId);
+                },
+              );
+            } else if (snapshot.hasError) {
+              return Text("${snapshot.error}");
+            }
+            // By default, show a loading spinner.
+            return Center(child: CircularProgressIndicator());
           },
         ),
       ]),
@@ -94,5 +99,27 @@ class ChatList extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<List<DoctorUser>> _fetchConnections() async {
+    List<DoctorUser> connections = List<DoctorUser>();
+
+    var res = await postToServer(
+        api: 'GetConnections', body: {"user_id": regularUser.userId});
+
+    if (res['msg'] == 'Success') {
+      for (var connection in res['body']) {
+        connections.add(DoctorUser(
+          userId: connection['id'],
+          firstName: connection['first_name'],
+          lastName: connection['last_name'],
+          email: connection['email'],
+          phone: connection['phone'],
+          specialization: connection['specialization'],
+          location: connection['location'],
+        ));
+      }
+      return connections;
+    }
   }
 }

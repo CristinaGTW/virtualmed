@@ -1482,7 +1482,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "BROKEN BONE", "score": 20}
+          {"diagnosis": "FRACTURE", "score": 20}
         ],
       },
       //Q1
@@ -1496,7 +1496,6 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": "SHIN SPLINTS", "score": 10},
-          {"diagnosis": "inflammation of the ligaments", "score": 10}
         ]
       },
       //Q2

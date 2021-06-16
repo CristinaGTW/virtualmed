@@ -22,7 +22,7 @@ class RegularUser {
     @required this.lastName,
     @required this.email,
     @required this.phone,
-    @required this.password,
+    this.password,
     this.birthdate,
     this.height,
     this.weight,
