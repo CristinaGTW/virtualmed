@@ -11,63 +11,71 @@ class DiagnosisBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(bottom: 50, left: 20, right: 20),
-      decoration: BoxDecoration(
-        color: kPrimaryLightColor,
-        border: Border.all(
+    if (DiagnosisOverview.diagnoses[possibleDiagnoses[0]['diagnosis']] ==
+        null) {
+      return Container();
+    }
+    try {
+      return Container(
+        padding: EdgeInsets.only(bottom: 50, left: 20, right: 20),
+        decoration: BoxDecoration(
           color: kPrimaryLightColor,
+          border: Border.all(
+            color: kPrimaryLightColor,
+          ),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(50), topRight: Radius.circular(50)),
         ),
-        borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(50), topRight: Radius.circular(50)),
-      ),
-      child: Column(
-        children: [
-          TopTitle(
-            topMargin: 20.0,
-            title: "Overview",
-          ),
-          Container(
-              margin: EdgeInsets.only(top: 10, bottom: 10),
-              padding: EdgeInsets.all(20),
-              child: getOverview()),
-          TopTitle(
-            topMargin: 20.0,
-            title: "Recommendations",
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 50),
-            child: Column(
-              children: <Widget>[
-                TopTitle(
-                  alignment: Alignment.topLeft,
-                  topMargin: 20.0,
-                  title: "Try:",
-                ),
-                Column(
-                  children: getTry(),
-                )
-              ],
+        child: Column(
+          children: [
+            TopTitle(
+              topMargin: 20.0,
+              title: "Overview",
             ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 50),
-            child: Column(
-              children: <Widget>[
-                TopTitle(
-                  alignment: Alignment.topLeft,
-                  topMargin: 20.0,
-                  title: "Avoid:",
-                ),
-                Column(
-                  children: getAvoid(),
-                )
-              ],
+            Container(
+                margin: EdgeInsets.only(top: 10, bottom: 10),
+                padding: EdgeInsets.all(20),
+                child: getOverview()),
+            TopTitle(
+              topMargin: 20.0,
+              title: "Recommendations",
             ),
-          ),
-        ],
-      ),
-    );
+            Container(
+              margin: EdgeInsets.only(top: 50),
+              child: Column(
+                children: <Widget>[
+                  TopTitle(
+                    alignment: Alignment.topLeft,
+                    topMargin: 20.0,
+                    title: "Try:",
+                  ),
+                  Column(
+                    children: getTry(),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 50),
+              child: Column(
+                children: <Widget>[
+                  TopTitle(
+                    alignment: Alignment.topLeft,
+                    topMargin: 20.0,
+                    title: "Avoid:",
+                  ),
+                  Column(
+                    children: getAvoid(),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    } catch (e) {
+      return Container();
+    }
   }
 
   List<Widget> getTry() {

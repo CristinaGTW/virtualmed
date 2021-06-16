@@ -340,52 +340,51 @@ class Constants {
     ],
 
     // for Women
-    "Pelvis - Women": [
+    "Pelvis": [
       //Q0
       {
-        "question":
-            "Do you have a vaginal discharge that is normal in color, consistency, and smell, but has the amount increased?",
+        "question": "Are you a woman?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 1},
+          {"answer": "No", "nextQuestion": 12},
           {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "ORAL CONTRACEPTIVES / PREGNANCY", "score": 5}
+          {"diagnosis": "", "score": 0}
         ]
       },
+
       //Q1
       {
         "question":
-            "Do you have a discharge that is white and curd-like (cottage-cheese like), or are you experiencing vaginal or labial (lips of the vagina) redness, itching, and/or irritation?",
+            "Do you have a vaginal discharge that is normal in color, consistency, and smell, but has the amount increased?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
           {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "YEAST INFECTION", "score": 5},
-          {"diagnosis": "CANDIDIASIS", "score": 5}
+          {"diagnosis": "ORAL CONTRACEPTIVES / PREGNANCY", "score": 5}
         ]
       },
       //Q2
       {
         "question":
-            "Do you have a greenish, yellow discharge with an unpleasant fishy odor?",
+            "Do you have a discharge that is white and curd-like (cottage-cheese like), or are you experiencing vaginal or labial (lips of the vagina) redness, itching, and/or irritation?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 3},
           {"answer": "Yes", "nextQuestion": 3}
         ],
         "onYesResponse": [
-          {"diagnosis": "PELVIC INFLAMMATORY DISEASE (PID)", "score": 5},
-          {"diagnosis": "SEXUALLY TRANSMITTED INFECTION", "score": 5}
+          {"diagnosis": "YEAST INFECTION", "score": 5},
+          {"diagnosis": "CANDIDIASIS", "score": 5}
         ]
       },
       //Q3
       {
         "question":
-            "Are you experiencing abdominal pain or other pain during sex?",
+            "Do you have a greenish, yellow discharge with an unpleasant fishy odor?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 4},
@@ -399,11 +398,25 @@ class Constants {
       //Q4
       {
         "question":
-            "Do you have a tender swelling of the vaginal opening or swelling of one labia (vaginal lip)?",
+            "Are you experiencing abdominal pain or other pain during sex?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 5},
           {"answer": "Yes", "nextQuestion": 5}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PELVIC INFLAMMATORY DISEASE (PID)", "score": 5},
+          {"diagnosis": "SEXUALLY TRANSMITTED INFECTION", "score": 5}
+        ]
+      },
+      //Q5
+      {
+        "question":
+            "Do you have a tender swelling of the vaginal opening or swelling of one labia (vaginal lip)?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
           {"diagnosis": "INFECTION IN A MUCOUS GLAND", "score": 5},
@@ -411,37 +424,23 @@ class Constants {
           {"diagnosis": "INFECTION IN THE LABIA (VAGINAL LIP)", "score": 5}
         ]
       },
-      //Q5
+      //Q6
       {
         "question":
             "Do you have a sore (ulcer) or raw area on the outside or inside of the vagina?",
-        "answerType": AnswerType.MULTIPLE_CHOICE,
-        "answerChoices": [
-          {"answer": "No", "nextQuestion": 6},
-          {"answer": "Yes", "nextQuestion": 6}
-        ],
-        "onYesResponse": [
-          {"diagnosis": "HERPES", "score": 5},
-          {"diagnosis": " SEXUALLY TRANSMITTED INFECTIONS", "score": 5}
-        ]
-      },
-      //Q6
-      {
-        "question": "Do you have pain with intercourse?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 7},
           {"answer": "Yes", "nextQuestion": 7}
         ],
         "onYesResponse": [
-          {"diagnosis": "INFECTION", "score": 5},
-          {"diagnosis": "HORMONE DEFICIENCY", "score": 5}
+          {"diagnosis": "HERPES", "score": 5},
+          {"diagnosis": " SEXUALLY TRANSMITTED INFECTIONS", "score": 5}
         ]
       },
       //Q7
       {
-        "question":
-            "Does your vagina seem dry, or are you experiencing vaginal itching and irritation?",
+        "question": "Do you have pain with intercourse?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 8},
@@ -454,30 +453,44 @@ class Constants {
       },
       //Q8
       {
-        "question": "Are you anxious about having sex?",
+        "question":
+            "Does your vagina seem dry, or are you experiencing vaginal itching and irritation?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 9},
           {"answer": "Yes", "nextQuestion": 9}
         ],
         "onYesResponse": [
-          {"diagnosis": "VAGINISMUS", "score": 5}
+          {"diagnosis": "INFECTION", "score": 5},
+          {"diagnosis": "HORMONE DEFICIENCY", "score": 5}
         ]
       },
       //Q9
       {
-        "question":
-            "Do you have pain or burning with urination? Do you feel like you suddenly have to urinate and can’t make it to the toilet in time? Do you feel that you are having trouble starting your stream of urine? Do you feel that you are not completely emptying your bladder when you urinate?",
+        "question": "Are you anxious about having sex?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 10},
           {"answer": "Yes", "nextQuestion": 10}
         ],
         "onYesResponse": [
-          {"diagnosis": "URINARY TRACT INFECTION (UTI)", "score": 5}
+          {"diagnosis": "VAGINISMUS", "score": 5}
         ]
       },
       //Q10
+      {
+        "question":
+            "Do you have pain or burning with urination? Do you feel like you suddenly have to urinate and can’t make it to the toilet in time? Do you feel that you are having trouble starting your stream of urine? Do you feel that you are not completely emptying your bladder when you urinate?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 11},
+          {"answer": "Yes", "nextQuestion": 11}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "URINARY TRACT INFECTION (UTI)", "score": 5}
+        ]
+      },
+      //Q11
       {
         "question":
             "Do you leak urine when you cough, laugh, or lift a heavy object?",
@@ -489,55 +502,54 @@ class Constants {
         "onYesResponse": [
           {"diagnosis": "STRESS INCONTINENCE", "score": 5}
         ]
-      }
-    ],
+      },
 
-    "Pelvis - Men": [
-      // Q0
+      // "Pelvis - Men":
+      // Q12
       {
         "question": "Do you have any swelling or tenderness in your scrotum?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": 1}
+          {"answer": "No", "nextQuestion": 14},
+          {"answer": "Yes", "nextQuestion": 13}
         ],
         "onYesResponse": [
           {"diagnosis": "SEXUALLY TRANSMITTED INFECTION", "score": 10}
         ],
       },
-      // Q1
+      // Q13
       {
         "question":
             "Do you have a yellowish or greenish discharge from the tip of your penis? Does anything other than urine or semen (e.g., blood, white discharge that is clumpy while you are urinating, etc.) come out of the tip of your penis?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 14},
+          {"answer": "Yes", "nextQuestion": 14}
         ],
         "onYesResponse": [
           {"diagnosis": "SEXUALLY TRANSMITTED INFECTION", "score": 10}
         ],
       },
-      // Q2
+      // Q14
       {
         "question": "Do you have a burning sensation or pain with urination?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 3},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 15},
+          {"answer": "Yes", "nextQuestion": 15}
         ],
         "onYesResponse": [
           {"diagnosis": "BLADDER INFECTION", "score": 10}
         ]
       },
-      // Q3
+      // Q15
       {
         "question":
             "Do you have a painful, itchy rash or small red bumps, blisters, or sores on your penis?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 4},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 16},
+          {"answer": "Yes", "nextQuestion": 17}
         ],
         "onYesResponse": [
           {"diagnosis": "YEAST INFECTION", "score": 3},
@@ -545,13 +557,13 @@ class Constants {
           {"diagnosis": "CANCER", "score": 4}
         ],
       },
-      // Q4
+      // Q16
       {
         "question":
             "Do you have a painless sore, ulcer, or small white or flesh-colored flat-topped bumps on the shaft or head of your penis?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 5},
+          {"answer": "No", "nextQuestion": 17},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
@@ -560,37 +572,37 @@ class Constants {
           {"diagnosis": "CANCER", "score": 4}
         ],
       },
-      // Q5
+      // Q17
       {
         "question": "Is the entire tip of your penis tender or swollen?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 6},
+          {"answer": "No", "nextQuestion": 18},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
           {"diagnosis": "BALANITIS", "score": 10}
         ],
       },
-      // Q6
+      // Q18
       {
         "question":
             "Do you have blood in your urine or semen, or pain with ejaculation? Do you have deep-down pelvic pain?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 7},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 19},
+          {"answer": "Yes", "nextQuestion": 19}
         ],
         "onYesResponse": [
           {"diagnosis": "PROSTATITIS", "score": 10}
         ],
       },
-      // Q7
+      // Q19
       {
         "question": "Do you have pain with sexual intercourse?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 8},
+          {"answer": "No", "nextQuestion": 20},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
@@ -599,39 +611,39 @@ class Constants {
           {"diagnosis": "INFECTION", "score": 3}
         ],
       },
-      // Q8
+      // Q20
       {
         "question":
             "Is your scrotum very tender although no injury has occurred to the testicle?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 9},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 21},
+          {"answer": "Yes", "nextQuestion": 21}
         ],
         "onYesResponse": [
           {"diagnosis": "EPIDIDYMITIS", "score": 5},
           {"diagnosis": "TESTICULAR TORSION", "score": 5}
         ],
       },
-      // Q9
+      // Q21
       {
         "question": "Do you have mild tenderness around one testicle?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 10},
+          {"answer": "No", "nextQuestion": 22},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
           {"diagnosis": "EPIDIDYMITIS", "score": 10}
         ],
       },
-      // Q10
+      // Q22
       {
         "question":
             "Is there a hard, painless knot on one testicle that feels like a frozen pea?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 11},
+          {"answer": "No", "nextQuestion": 23},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
@@ -639,13 +651,13 @@ class Constants {
           {"diagnosis": "TESTICULAR CANCER", "score": 5}
         ],
       },
-      // Q11
+      // Q23
       {
         "question":
             "Is there a soft, painless swelling of the testicle or around your testicle in your scrotum on one or both sides?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 12},
+          {"answer": "No", "nextQuestion": 24},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
@@ -653,33 +665,33 @@ class Constants {
           {"diagnosis": "HYDROCELE", "score": 5}
         ],
       },
-      // Q12
+      // Q24
       {
         "question":
             "Is there a soft swelling above your testicle that gets bigger or becomes painful with activity, lifting, or coughing?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 13},
+          {"answer": "No", "nextQuestion": 25},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
           {"diagnosis": "INGUINAL HERNIA", "score": 10}
         ],
       },
-      // Q13
+      // Q25
       {
         "question":
             "Do you have an erection that has lasted for more than 4 hours?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 14},
+          {"answer": "No", "nextQuestion": 26},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
           {"diagnosis": "PRIAPISM", "score": 10}
         ],
       },
-      // Q14
+      // Q26
       {
         "question": "Do you have trouble achieving or maintaining an erection?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -727,12 +739,12 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 3},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
-          {"diagnosis": "GASTRITIS", "score": 3},
-          {"diagnosis": "ULCER", "score": 3},
-          {"diagnosis": "HEARTBURN", "score": 3}
+          {"diagnosis": "GASTRITIS", "score": 5},
+          {"diagnosis": "ULCER", "score": 5},
+          {"diagnosis": "HEARTBURN", "score": 5}
         ]
       },
       //Q3
@@ -795,7 +807,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 8},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 9}
         ],
         "onYesResponse": [
           {"diagnosis": "HEMORRHOID", "score": 2},
@@ -1722,7 +1734,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "Sprain", "score": 5}
+          {"diagnosis": "Sprain ankle", "score": 5}
         ]
       },
       //Q1
@@ -1731,11 +1743,11 @@ class Constants {
             "Is the ankle significantly swollen, and is the pain so intense that \n you can’t put weight on that foot?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "Sprain", "score": 5}
+          {"diagnosis": "Sprain ankle", "score": 5}
         ]
       },
       //Q2
@@ -1819,7 +1831,8 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": "CHALAZION", "score": 5},
-          {"diagnosis": "HORDEOLUM(or STYE)", "score": 5}
+          {"diagnosis": "HORDEOLUM", "score": 5},
+          {"diagnosis": "STYE", "score": 5}
         ],
       },
       //Q1
@@ -1948,7 +1961,9 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "CHALAZION or HORDEOLUM or STYE", "score": 10}
+          {"diagnosis": "CHALAZION", "score": 5},
+          {"diagnosis": "HORDEOLUM", "score": 5},
+          {"diagnosis": "STYE", "score": 5}
         ], //TODO
       },
       //Q11
@@ -2011,30 +2026,33 @@ class Constants {
       //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
       //   "onYesResponse": "Q2",
       // }, // TODO
+      //Q0
       {
         "question":
             "Are you experiencing pain deep in the ear or fluid draining from the ear?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 1},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
           {"diagnosis": "OTITIS", "score": 10}
         ]
       },
+      //Q1
       {
         "question":
             "Do you have redness and swelling of the outer ear and the surrounding skin?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
           {"diagnosis": "Self Care - See a doctor right away", "score": 10}
         ]
       },
+      //Q2
       {
         "question": "Do you have headache-type pain?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -2046,6 +2064,7 @@ class Constants {
           {"diagnosis": "MASTODITIS", "score": 10}
         ]
       },
+      //Q3
       {
         "question":
             "Does your ear has redness behind or tenderness when you touch the bone behind your ear?",
@@ -2058,6 +2077,7 @@ class Constants {
           {"diagnosis": "MASTODITIS", "score": 10}
         ]
       },
+      //Q4
       {
         "question":
             "Do you have thick pus-filled (white) or bloody drainage from the ear canal that started after a sharp, sudden pain?",
@@ -2070,6 +2090,7 @@ class Constants {
           {"diagnosis": "RUPTURED EARDRUM", "score": 10}
         ]
       },
+      //Q5
       {
         "question": "Is your ear swollen?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -2078,9 +2099,10 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
-          {"diagnosis": "otitis externa", "score": 10}
+          {"diagnosis": "OTITIS EXTERNA", "score": 10}
         ]
       },
+      //Q6
       {
         "question":
             "Does it itch or hurt when you pull on your ear or earlobe?",
@@ -2090,9 +2112,10 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "otitis externa", "score": 10}
+          {"diagnosis": "OTITIS EXTERNA", "score": 10}
         ]
       },
+      //Q7
       {
         "question":
             "Does your jaw joint “crack” when you chew or open your mouth, or do you feel tenderness in your jaw when chewing?",
@@ -2102,9 +2125,10 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "temporomandibular joint syndrome", "score": 10}
+          {"diagnosis": "TEMPOROMANDIBULAR JOINT SYNDROME", "score": 10}
         ]
       },
+      //Q8
       {
         "question": "Do you hear/feel fluid in your ear?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -2116,6 +2140,7 @@ class Constants {
           {"diagnosis": "BLOCKED EUSTACHIAN TUBE", "score": 10}
         ]
       },
+      //Q9
       {
         "question":
             "Do you feel pressure or stuffiness that can’t be cleared with coughing, yawning, or swallowing?",
@@ -2128,6 +2153,7 @@ class Constants {
           {"diagnosis": "BLOCKED EUSTACHIAN TUBE", "score": 10}
         ]
       },
+      //Q10
       {
         "question": "Do you have cold or flu symptoms?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -2147,6 +2173,7 @@ class Constants {
       //   "onYesResponse":
       //   "A tooth problem can radiate/send pain to the ear on the same side.",
       // }, //TODO
+      //Q11
       {
         "question":
             "Did your ear pain start during an airplane flight or right after you traveled on an airplane?",
@@ -2166,6 +2193,7 @@ class Constants {
       //   "onYesResponse":
       //   "A small INFECTION or LOCAL INFLAMMATION in the ear canal may be the cause.",
       // }, TODO
+      //Q12
       {
         "question":
             "Is the affected person a child who doesn’t have ear pain or redness but is having problems hearing",
@@ -2186,6 +2214,7 @@ class Constants {
       //   "onYesResponse":
       //   "This is likely a buildup of wax in the ear canal (CERUMINOSIS or CERUMEN IMPACTION).",
       // }, TODO
+      //Q13
       {
         "question":
             "Do you have swelling or thickening of one or more ears after wrestling or doing another contact sport or fighting event?",
@@ -3201,39 +3230,42 @@ class Constants {
     ],
 
     "Head Front": [
+      //Q0
       {
         "question":
             "Do you have a fever, cold symptoms, nausea, vomiting, or diarrhea?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 10},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 1},
+          {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "You may have the COLD or the FLU", "score": 10}
+          {"diagnosis": "COLD/FLU", "score": 10}
         ]
       },
+      //Q1
       {
         "question": "Do you have a severe headache, stiff neck or vomiting?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 12},
-          {"answer": "Yes", "nextQuestion": 11}
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "You may have MENINGITIS", "score": 10}
+          {"diagnosis": "MENINGITIS", "score": 10}
         ]
       },
+      //Q2
       {
         "question":
             "Does normal light hurt your eyes, or do normal sounds hurt your ears?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 12},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 3}
         ],
         "onYesResponse": [
-          {"diagnosis": "You may have MENINGITIS", "score": 10}
+          {"diagnosis": "MENINGITIS", "score": 10}
         ]
       },
       // {
@@ -3244,134 +3276,135 @@ class Constants {
       //   "You may have a CONCUSSION (also called MILD TRAUMATIC BRAIN INJURY), or a SUBDURAL HEMATOMA",
       // },
       // TODO
+      //Q3
       {
         "question":
             "Do you have numbness, tingling, or weakness in the arms and legs, or do you have trouble speaking or understanding speech?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 13},
+          {"answer": "No", "nextQuestion": 4},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis":
-                "You may be having a STROKE or a TRANSIENT ISCHEMIC ATTACK",
-            "score": 10
-          }
+          {"diagnosis": "STROKE/TRANSIENT ISCHEMIC ATTACK", "score": 10}
         ]
       },
+      //Q4
       {
         "question":
             "Do you have pressure around your eyes, or do you have congestion with yellowish-green nasal discharge and a fever?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 14},
+          {"answer": "No", "nextQuestion": 5},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "You may have a sinus infection or SINUSITIS.",
-            "score": 10
-          }
+          {"diagnosis": "SINUS INFECTION or SINUSITIS.", "score": 10}
         ]
       },
+      //Q5
       {
         "question":
             "Do you have mild to moderate pressure or tightening around your temples?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 16},
-          {"answer": "Yes", "nextQuestion": 15}
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
-          {"diagnosis": "You may have a TENSION HEADACHE", "score": 10}
+          {"diagnosis": "TENSION HEADACHE", "score": 10}
         ]
       },
+      //Q6
       {
         "question":
             "Does the pain occur during times of stress or after you have been sitting in one position for a long time?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 16},
+          {"answer": "No", "nextQuestion": 7},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "You may have a TENSION HEADACHE", "score": 10}
+          {"diagnosis": "TENSION HEADACHE", "score": 10}
         ]
       },
+      //Q7
       {
         "question":
             "Do you have intense throbbing pain on one side of your head or temple, often with associated nausea or vomiting?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 18},
-          {"answer": "Yes", "nextQuestion": 17}
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": 8}
         ],
         "onYesResponse": [
-          {"diagnosis": "You may suffer from MIGRAINE headaches.", "score": 10}
+          {"diagnosis": "MIGRAINE HEADACHES", "score": 10}
         ]
       },
+      //Q8
       {
         "question": "And do see flashing lights or spots before the headache?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 18},
+          {"answer": "No", "nextQuestion": 9},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "You may suffer from MIGRAINE headaches.", "score": 10}
+          {"diagnosis": "MIGRAINE HEADACHES", "score": 10}
         ]
       },
+      //Q9
       {
         "question":
             "Do your headaches occur after you read, watch TV, or use a computer?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 19},
+          {"answer": "No", "nextQuestion": 10},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "Your headaches may be due to VISION PROBLEMS.",
-            "score": 10
-          }
+          {"diagnosis": "VISION PROBLEMS.", "score": 10}
         ]
       },
+      //Q10
       {
         "question":
             "Do you get headaches and feel shaky and weak if you miss a meal?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 20},
+          {"answer": "No", "nextQuestion": 11},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "Your headaches may be from HYPOGLYCEMIA", "score": 10}
+          {"diagnosis": "HYPOGLYCEMIA", "score": 10}
         ]
       },
+      //Q11
       {
         "question":
             "Are you trying to cut down on caffeine, alcohol, or some other drug?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 21},
+          {"answer": "No", "nextQuestion": 12},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "You may be suffering from withdrawal", "score": 10}
+          {"diagnosis": "WITHDRAWAL", "score": 10}
         ]
       },
+      //Q12
       {
         "question": "Do you have headaches that occur daily for several days?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": -1},
-          {"answer": "Yes", "nextQuestion": 22}
+          {"answer": "Yes", "nextQuestion": 13}
         ],
         "onYesResponse": [
-          {"diagnosis": "You have CLUSTER HEADACHES.", "score": 10}
+          {"diagnosis": "CLUSTER HEADACHES.", "score": 10}
         ]
       },
+      //Q13
       {
         "question":
             "Do you have eye discharge and runny nose from the same side as the headache?",
@@ -3381,7 +3414,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "You have CLUSTER HEADACHES.", "score": 10}
+          {"diagnosis": "CLUSTER HEADACHES.", "score": 10}
         ]
       }
     ]
