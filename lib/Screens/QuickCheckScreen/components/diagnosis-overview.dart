@@ -1022,6 +1022,7 @@ class DiagnosisOverview {
       ],
       "avoid": ["Scratching you eyes."]
     },
+    
     // Diagnoses for Calves
     "SHIN SPLINTS": {
       "overview":

@@ -1837,7 +1837,8 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 10}
         ],
         "onYesResponse": [
-          {"diagnosis": "CHALAZION or HORDEOLUM or STYE", "score": 10}
+          {"diagnosis": "CHALAZION", "score": 5},
+          {"diagnosis": "HORDEOLUM(or STYE)", "score": 5}
         ],
       },
       //Q1
