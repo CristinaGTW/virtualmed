@@ -892,5 +892,135 @@ class DiagnosisOverview {
         "Do not smoke.",
       ]
     },
+
+    //Eyes
+    "HORDEOLUM(or STYE)": {
+      "overview":
+          "Styes are common and should clear up on their own within 1 or 2 weeks. They're rarely a sign of anything serious, but may be painful until they heal.",
+      "try": [
+        "Soak a clean flannel in warm water.",
+        "Hold it against your eye for 5 to 10 minutes.",
+        "Repeat this 3 or 4 times a day.",
+        "To relieve the pain, take painkillers such as paracetamol or ibuprofen. Do not give aspirin to children under 16.",
+        "See a GP if your stye: is very painful or swollen, does not get better within a few weeks or affects your vision."
+      ],
+      "avoid": [
+        "Wearing contact lenses",
+        "Eye make-up until the stye has burst and healed.",
+        "To burst a stye or remove an eyelash yourself. This can spread the infection."
+      ]
+    },
+    "CHALAZION": {
+      "overview":
+          "A chalazion is a slowly developing lump that forms due to blockage and swelling of an oil gland in the eyelid.",
+      "try": [
+        "Apply warm compresses to the eyelid for 10 to 15 minutes, 4 to 6 times a day for several days. The warm compresses may help soften the hardened oil that is blocking the ducts and allow drainage and healing. Create a warm compress by dipping a clean, soft cloth in warm water and then wringing it out. Remoisten the cloth frequently to keep it wet and warm.",
+        "Gently massage the external eyelids several minutes each day to help promote drainage.",
+        "Once the chalazion drains on its own, keep the area clean, and keep hands away from the eyes. If the chalazion does not drain and heal within a month, contact a doctor of optometry."
+      ],
+      "avoid": [
+        "Do not attempt to squeeze or pop the chalazion, as it may inadvertently cause more damage."
+      ]
+    },
+    "TOO MUCH GLUCOSE": {
+      "overview":
+          "Over time, too much glucose (sugar) in the blood can cause eye problems and damage.",
+      "try": [
+        "Tell your doctor about the vision changes you have experienced.",
+        "He or she can give you advice on preventing eye problems.",
+        "You should also make sure that you are getting a dilated eye exam at least once per year."
+      ],
+      "avoid": ["Food that contain a high level of sugar."]
+    },
+    "DETACHED RETINA": {
+      "overview":
+          "A detached retina is when the thin layer at the back of your eye (retina) becomes loose. It needs to be treated quickly to stop it permanently affecting your sight.",
+      "try": [
+        "This is an urgent situation. Get medical help as soon as possible"
+      ],
+      "avoid": ["Driving"]
+    },
+    "ACUTE GLAUCOMA": {
+      "overview":
+          "Glaucoma is an eye disease that may cause loss of vision. It usually happens when fluid builds up in the eye, causing an increase in pressure. This damages the eye’s optic nerve.",
+      "try": [
+        "Promptly go to an emergency room or an eye doctor's (ophthalmologist's) office if you experience some of the symptoms of acute angle-closure glaucoma, such as severe headache, eye pain and blurred vision.",
+        "Remain in the supine position as long as possible",
+      ],
+      "avoid": ["Wear eye patches, covers, or blindfolds"]
+    },
+    "TEMPORAL ARTERITIS": {
+      "overview":
+          "Temporal arteritis (giant cell arteritis) is where the arteries, particularly those at the side of the head (the temples), become inflamed. It's serious and needs urgent treatment.",
+      "try": ["See your doctor right away."],
+      "avoid": ["Any self treatment!"]
+    },
+    "SINUSITIS": {
+      "overview":
+          "Sinusitis is an inflammation or swelling of the tissue lining the sinuses. Sinuses are hollow spaces within the bones between your eyes, behind your cheekbones, and in your forehead. They make mucus, which keeps the inside of your nose moist. That, in turn, helps protect against dust, allergens, and pollutants. Healthy sinuses are filled with air. But when they become blocked and filled with fluid, germs can grow and cause an infection.",
+      "try": [
+        "Take a cold or sinus medicine, and drink plenty of fluids.",
+        "Warm facial compresses may also help relieve the pain.",
+        "If your symptoms don’t improve within 10 days, or if you have constant fever or severe pain, or your symptoms improve and then worsen again, see your doctor as soon as possible."
+      ],
+      "avoid": ["Giving children 5 years and under cough or cold medicines."]
+    },
+    "IRITIS": {
+      "overview":
+          "Uveitis at the front of the eye (anterior uveitis or iritis) – this can cause redness and pain and tends to start quickly. This is the most common type of uveitis, accounting for about 3 in 4 cases",
+      "try": [
+        "Contact a GP as soon as possible if you have persistent eye pain or an unusual change in your vision, particularly if you've had previous episodes of iritis.",
+        "The GP may refer you to an eye specialist (ophthalmologist) who will examine your eye in more detail."
+      ],
+      "avoid": ["Any self treatment!"]
+    },
+    "ALLERGY OR INSECT BYTE": {
+      "overview": "You may have an allergy or have been bitten by an insect.",
+      "try": [
+        "Use a cool compress and take an antihistamine to relieve discomfort.",
+        "See your doctor if the swelling doesn’t get better or if you have a fever."
+      ],
+      "avoid": ["Scratching you eyes."]
+    },
+    "PERIORBITAL CELLULITIS": {
+      "overview":
+          "Periorbital (or preseptal) cellulitis, is an infective oedema of the eyelids and periorbital skin with no involvement of the orbit. Periorbital cellulitis is usually caused by Staphylococcus, streptococcus or Haemophilus bacteriae (more likely in unimmunised children)",
+      "try": ["See your doctor right away."],
+      "avoid": ["Any self treatment!"]
+    },
+    "SCRATCHED CORNEA / CORNEAL ABRASION": {
+      "overview":
+          "A corneal abrasion can occur when something gets into your eye, such as sand, dust, dirt, and wood or metal shavings. The cornea can also be scratched by a fingernail, a tree branch, or a contact lens that is dry or dirty. Rubbing your eyes very hard is another way that an abrasion can occur. You may also have an infection or a scratch caused by your contact lens.",
+      "try": [
+        "Rinse your eye with clean water or saline solution.",
+        "You can also flush your eye under the faucet.",
+        "If the sensation doesn’t go away, see your doctor as soon as possible."
+      ],
+      "avoid": [
+        "Scratching you eyes.",
+        "Removing something that is directly over the cornea — this might cause more serious damage."
+      ]
+    },
+    "CONJUNCTIVITIS": {
+      "overview":
+          "CONJUNCTIVITIS (also called PINK EYE) can be caused by an allergy, virus, bacteria, or fungus. If it is one-sided, it is more likely to be bacterial.",
+      "try": [
+        "BACTERIAL CONJUNCTIVITIS is very contagious, so avoid contact with the eye and wash your hands often",
+        "Try over-the-counter eyedrops and apply a warm compress to relieve any discomfort.",
+        "Remove your contacts and do not wear them until the inflammation has cleared.",
+        "If there’s no improvement with a warm compress and gently cleaning the secretions in 1-2 days, you may have a more serious form of VIRAL or BACTERIAL CONJUNCTIVITIS. See your doctor promptly."
+      ],
+      "avoid": ["Wearing make up and contact lenses."]
+    },
+    "BLEPHARITIS": {
+      "overview":
+          "This chronic irritation is called BLEPHARITIS, and it is a similar process to dandruff/flaking of the scalp.",
+      "try": [
+        "Apply a warm compress and wash your eye gently with an eyewash and washcloth.",
+        "You can also apply an over-the-counter anti-dandruff shampoo (very small amount) just before you shower/bathe and then wash it off after 5-10 minutes.",
+        "If the problem doesn’t resolve, see your doctor.",
+      ],
+      "avoid": ["Scratching you eyes."]
+    }
   };
 }

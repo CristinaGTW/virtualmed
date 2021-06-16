@@ -1941,9 +1941,8 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "ALLERGY", "score": 5},
-          {"diagnosis": "INSECT BITE", "score": 5}
-        ] //TODO
+          {"diagnosis": "ALLERGY or INSECT BYTE", "score": 10}
+        ]
       },
       //Q9
       {
@@ -1981,7 +1980,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "SCRATCHED CORNEA", "score": 10}
+          {"diagnosis": "SCRATCHED CORNEA / CORNEAL ABRASION", "score": 10}
         ]
       },
       //Q12
@@ -2019,11 +2018,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis":
-                "INFECTION, CORNEAL ABRASION, or a scratch caused by your contact lens",
-            "score": 10
-          }
+          {"diagnosis": "SCRATCHED CORNEA / CORNEAL ABRASION", "score": 10}
         ]
       } //TODO
     ],
