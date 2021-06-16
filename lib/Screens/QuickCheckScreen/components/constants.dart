@@ -2429,85 +2429,54 @@ class Constants {
       }
     ],
     "Back": [
-      // {
-      //   "question":
-      //   "Do you have numbness, burning, or electrical pain extending down the side of back of your leg?",
-      //   "answerType": AnswerType.MULTIPLE_CHOICE,
-      //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
-      //   "onYesResponse":
-      //   "You may have a HERNIATED DISC. You may also have SCIATICA, caused by irritation of the sciatic nerve.",
-      // }, TODO
-
       //Q0
       {
-        "question": "Are you over 60 years, have arthritis?",
+        "question":
+            "Do you have numbness, burning, or electrical pain extending down the side of back of your leg?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 2},
+          {"answer": "No", "nextQuestion": 1},
           {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURED SPINE.", "score": 10}
+          {"diagnosis": "HERNIATED DISC", "score": 10},
+          {"diagnosis": "SCIATICA", "score": 10}
         ]
       },
       //Q1
       {
-        "question": "Are you experiencing severe pain with any movement?",
+        "question": "Are you over 60 years, have arthritis?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURED SPINE.", "score": 10}
+          {"diagnosis": "FRACTURED SPINE", "score": 10}
         ]
       },
       //Q2
       {
-        "question": "Do you have pain when twisting, bending, or even sitting?",
+        "question": "Are you experiencing severe pain with any movement?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 3},
-          {"answer": "Yes", "nextQuestion": 4}
+          {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "MUSCLE SPASM", "score": 10}
+          {"diagnosis": "FRACTURED SPINE", "score": 10}
         ]
       },
-      // {
-      //   "question":
-      //   "Do you have pain that comes and goes that may have started in your teenage years?",
-      //   "answerType": AnswerType.MULTIPLE_CHOICE,
-      //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
-      //   "onYesResponse":
-      //   "You may have SPONDYLOLISTHESIS, when one vertebra in the spine slips over another, or SPONDYLOSIS, a type of arthritis resulting from wear and tear of the spine.",
-      // }, TODO
-      // {
-      //   "question":
-      //   "Do you have blood in your urine and one-sided back pain along with burning during urination?",
-      //   "answerType": AnswerType.MULTIPLE_CHOICE,
-      //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
-      //   "onYesResponse":
-      //   "You may have a kidney infection, such as PYELONEPHRITIS. You may also have KIDNEY STONES",
-      // }, TODO
-      // {
-      //   "question":
-      //   "Is your back stiff and sore in the morning and are other joints stiff, sore, swollen, or red?",
-      //   "answerType": AnswerType.MULTIPLE_CHOICE,
-      //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
-      //   "onYesResponse":
-      //   "You may have ANKYLOSING SPONDYLITIS, a form of arthritis that affects the spine. Other forms of ARTHRITIS can also cause back pain and stiffness.",
-      // }, TODO
       //Q3
       {
-        "question": "Are you pregnant?",
+        "question": "Do you have pain when twisting, bending, or even sitting?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 4},
           {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
-          {"diagnosis": "PREGNANCY", "score": 10}
+          {"diagnosis": "MUSCLE SPASM", "score": 10}
         ]
       },
       //Q4
@@ -2515,11 +2484,12 @@ class Constants {
         "question": "Is the pain centered in the lower spine?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 7},
+          {"answer": "No", "nextQuestion": 5},
           {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
-          {"diagnosis": "HERNIATED DISC/SPINAL STENOSIS", "score": 10}
+          {"diagnosis": "HERNIATED DISC", "score": 10},
+          {"diagnosis": "SPINAL STENOSIS", "score": 10}
         ]
       },
       //Q5
@@ -2527,11 +2497,12 @@ class Constants {
         "question": "Do you have pain down your leg?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 7},
+          {"answer": "No", "nextQuestion": 6},
           {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
-          {"diagnosis": "HERNIATED DISC/SPINAL STENOSIS", "score": 10}
+          {"diagnosis": "HERNIATED DISC", "score": 15},
+          {"diagnosis": "SPINAL STENOSIS", "score": 15}
         ]
       },
       //Q6
@@ -2544,7 +2515,8 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "HERNIATED DISC/SPINAL STENOSIS", "score": 10}
+          {"diagnosis": "HERNIATED DISC", "score": 20},
+          {"diagnosis": "SPINAL STENOSIS", "score": 20}
         ]
       },
       //Q7
@@ -2553,8 +2525,8 @@ class Constants {
             "Do you have back pain that wakes you up at night? Have you had unintentional weight loss?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": -1},
-          {"answer": "Yes", "nextQuestion": 8}
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
           {"diagnosis": "CANCER", "score": 10}
@@ -2562,18 +2534,58 @@ class Constants {
       },
       //Q8
       {
+        "question": "Do you have a fever?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": 9}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PYELONEPHRITIS", "score": 10},
+          {"diagnosis": "KIDNEY STONES", "score": 10}
+        ]
+      },
+      //Q9
+      {
         "question":
-            "Do you have back pain that wakes you up at night? Have you had unintentional weight loss?",
+            "Do you have blood in your urine and one-sided back pain along with burning during urination?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": -1},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "CANCER", "score": 10}
+          {"diagnosis": "PYELONEPHRITIS", "score": 10},
+          {"diagnosis": "KIDNEY STONES", "score": 10}
         ]
       }
     ],
+
+    // {
+    //   "question":
+    //   "Do you have pain that comes and goes that may have started in your teenage years?",
+    //   "answerType": AnswerType.MULTIPLE_CHOICE,
+    //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
+    //   "onYesResponse":
+    //   "You may have SPONDYLOLISTHESIS, when one vertebra in the spine slips over another, or SPONDYLOSIS, a type of arthritis resulting from wear and tear of the spine.",
+    // }, TODO
+    // {
+    //   "question":
+    //   "Do you have blood in your urine and one-sided back pain along with burning during urination?",
+    //   "answerType": AnswerType.MULTIPLE_CHOICE,
+    //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
+    //   "onYesResponse":
+    //   "You may have a kidney infection, such as PYELONEPHRITIS. You may also have KIDNEY STONES",
+    // }, TODO
+    // {
+    //   "question":
+    //   "Is your back stiff and sore in the morning and are other joints stiff, sore, swollen, or red?",
+    //   "answerType": AnswerType.MULTIPLE_CHOICE,
+    //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
+    //   "onYesResponse":
+    //   "You may have ANKYLOSING SPONDYLITIS, a form of arthritis that affects the spine. Other forms of ARTHRITIS can also cause back pain and stiffness.",
+    // }, TODO
+    //Q3
 
     "Elbows": [
       //Q0

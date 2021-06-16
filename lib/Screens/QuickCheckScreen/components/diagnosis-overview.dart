@@ -1309,10 +1309,84 @@ class DiagnosisOverview {
       "avoid": [""]
     },
 
-    "": {
-      "overview": "",
-      "try": [""],
+    // Back Diagnoses
+    "HERNIATED DISC": {
+      "overview":
+          "A herniated disk refers to a problem with one of the rubbery cushions (disks) that sit between the individual bones (vertebrae) that stack to make your spine.",
+      "try": [
+        "Exercise. Strengthening the trunk muscles stabilizes and supports the spine.",
+        "Maintain good posture. This reduces pressure on your spine and disks. Keep your back straight and aligned, particularly when sitting for long periods. Lift heavy objects properly, making your legs — not your back — do most of the work.",
+        "Maintain a healthy weight. Excess weight puts more pressure on the spine and disks, making them more susceptible to herniation."
+      ],
+      "avoid": ["Smoking"]
+    },
+    "SCIATICA": {
+      "overview":
+          "Sciatica is where the sciatic nerve, which runs from your lower back to your feet, is irritated or compressed. It usually gets better in 4 to 6 weeks but can last longer.",
+      "try": [
+        "carry on with your normal activities as much as possible",
+        "regular exercises for sciatica",
+        "start gentle exercise as soon as you can – anything that gets you moving can help",
+        "hold heat packs to the painful areas – you can buy these from pharmacies",
+        "ask your pharmacist about painkillers – NSAIDs like ibuprofen are often recommended – paracetamol on its own is unlikely to relieve your pain",
+        "put a small, firm cushion between your knees when sleeping on your side, or several firm pillows underneath your knees when lying on your back"
+      ],
+      "avoid": [
+        "do not sit or lie down for long periods – even if moving hurts, it's not harmful and can help you get better faster",
+        "do not use hot water bottles to ease the pain – you could scald yourself if your skin is numb"
+      ]
+    },
+    "FRACTURED SPINE": {
+      "overview":
+          "In these types of fractures, the bone collapses and breaks. The procedure injects cement into the bone. This holds the bone in place and keeps it from collapsing or breaking more. It’s also called percutaneous vertebroplasty.",
+      "try": ["Contact a docotor as soon as possible!"],
       "avoid": [""]
+    },
+    "MUSCLE SPASM": {
+      "overview":
+          "Muscle spasms (muscle cramps) are painful contractions and tightening of your muscles. They’re common, involuntary and unpredictable.",
+      "try": [
+        "Stretching",
+      ],
+      "avoid": [
+        "Muscle fatigue.",
+        "Exercising in the heat.",
+        "Dehydration.",
+        "Depletion of electrolytes (salts and minerals like potassium, magnesium and calcium in your body).",
+        "Restriction in the blood supply.",
+        "Stress.",
+        "Too much high-intensity exercise."
+      ]
+    },
+    "CANCER": {
+      "overview":
+          "Cancer is a group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body.",
+      "try": ["Contact a doctor immediately!"],
+      "avoid": [""]
+    },
+    "PYELONEPHRITIS": {
+      "overview":
+          "A kidney infection is a painful and unpleasant illness usually caused by cystitis, a common infection of the bladder.",
+      "try": [
+        "drinking plenty of fluids (plain water is best)",
+        "going to the loo as soon as you feel the need to, rather than holding it in",
+        "going to the loo after sex",
+        "wiping from front to back after going to the loo",
+        "washing your genitals every day, and before having sex if possible",
+        "treating any constipation – being constipated can increase your chance of developing a UTI"
+      ],
+      "avoid": [
+        "using a diaphragm or condoms coated in spermicide if you're prone to getting UTIs – it's thought spermicide can increase your risk of getting a UTI"
+      ]
+    },
+    "KIDNEY STONES": {
+      "overview":
+          "Kidney stones can develop in 1 or both kidneys and most often affect people aged 30 to 60.",
+      "try": [
+        "drink water, but drinks like tea and coffee also count",
+        "add fresh lemon juice to your water"
+      ],
+      "avoid": ["eating too much salt", "avoid fizzy drinks"]
     },
   };
 }
