@@ -137,7 +137,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
           {"diagnosis": "FRACTURE", "score": 20}
@@ -148,8 +148,8 @@ class Constants {
         "question": "Does the pain get worse when you move your hand or wrist?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 3},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": 3}
         ],
         "onYesResponse": [
           {"diagnosis": "SPRAINED", "score": 10}
@@ -162,7 +162,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 4},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
           {"diagnosis": "SPRAINED", "score": 10}
@@ -175,7 +175,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 5},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
           {"diagnosis": "LATERAL EPICONDYLITIS", "score": 10}
@@ -188,7 +188,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 6},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
           {"diagnosis": "CARPAL TUNNEL SYNDROME", "score": 10}
@@ -201,7 +201,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 7},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 7}
         ],
         "onYesResponse": [
           {"diagnosis": "GANGLION CYST", "score": 10}
@@ -214,7 +214,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 8},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 8}
         ],
         "onYesResponse": [
           {"diagnosis": "INFECTION", "score": 10}
@@ -266,7 +266,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
           {"diagnosis": "FRACTURE", "score": 20}
@@ -277,8 +277,8 @@ class Constants {
         "question": "Does the pain get worse when you move your arm?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 3},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": 3}
         ],
         "onYesResponse": [
           {"diagnosis": "SPRAINED", "score": 10}
@@ -291,7 +291,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 4},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
           {"diagnosis": "SPRAINED", "score": 10}
@@ -304,10 +304,10 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 5},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
-          {"diagnosis": " CARPAL TUNNEL SYNDROME", "score": 10}
+          {"diagnosis": "CARPAL TUNNEL SYNDROME", "score": 10}
         ],
       },
       //Q5
@@ -316,7 +316,7 @@ class Constants {
             "Do you have redness, swelling, or pain in the skin around \n a cut or wound, or is there a red streak anywhere on your arm?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 8},
+          {"answer": "No", "nextQuestion": 6},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
@@ -329,7 +329,7 @@ class Constants {
             "Are one or more joints swollen and tender? Do you have a fever?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 9},
+          {"answer": "No", "nextQuestion": -1},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
@@ -2219,164 +2219,177 @@ class Constants {
       }
     ],
     "Shoulders": [
+      //Q0
       {
         "question":
             "Did you hit, injure, or fall on your upper arm or shoulder recently?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 1},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "Dislocated Shoulder or Subluxed", "score": 5}
+          {"diagnosis": "DISLOCATED SHOULDER/SUBLUXED", "score": 5}
         ]
       },
+      //Q1
       {
         "question":
             "Did you feel your shoulder pop out of place or pop back into place?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "Dislocated Shoulder or Subluxed", "score": 10}
+          {"diagnosis": "DISLOCATED SHOULDER/SUBLUXED", "score": 10}
         ]
       },
+      //Q2
       {
         "question": "Is your upper arm swollen or deformed?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 3},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 3}
         ],
         "onYesResponse": [
-          {"diagnosis": "HUMERUS may be FRACTURED or Dislocated", "score": 10}
+          {"diagnosis": "FRACTURED/DISLOCATED HUMERUS", "score": 10}
         ]
       },
+      //Q3
       {
         "question": "Is your collarbone tender or do you have a bump on it?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 4},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
-          {"diagnosis": "CLAVICLE (collarbone) may be FRACTURED.", "score": 10}
+          {"diagnosis": "FRACTURED CLAVICLE", "score": 10}
         ]
       },
+      //Q4
       {
         "question":
             "Is there tenderness or pain near the shoulder end of your \n collarbone, and does lifting your arm with your uninjured arm help the pain?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 5},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
           {"diagnosis": "AC JOINT SEPARATION", "score": 10}
         ]
       },
+      //Q5
       {
         "question": "Does pain come with a twisting motion of your arm?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 6},
-          {"answer": "Yes", "nextQuestion": 5}
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
           {
-            "diagnosis": "TORN ROTATOR CUFF or SHOULDER INSTABILITY.",
+            "diagnosis": "TORN ROTATOR CUFF/SHOULDER INSTABILITY.",
             "score": 10
           }
         ]
       },
+      //Q6
       {
         "question":
             "Does a throwing motion cause pain, and does your shoulder seem weak?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 6},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": 7}
         ],
         "onYesResponse": [
           {
-            "diagnosis": "TORN ROTATOR CUFF or SHOULDER INSTABILITY.",
+            "diagnosis": "TORN ROTATOR CUFF/SHOULDER INSTABILITY.",
             "score": 10
           }
         ]
       },
+      //Q7
       {
         "question":
             "Within the last month have you had a sore throat or a skin infection?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 7},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": 8}
         ],
         "onYesResponse": [
           {"diagnosis": "RHEUMATIC FEVER", "score": 10}
         ]
       },
+      //Q8
       {
         "question":
             "Do you have redness and swelling in more than one joint, including your shoulder?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 8},
+          {"answer": "No", "nextQuestion": 9},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
           {"diagnosis": "RHEUMATOID ARTHRITIS,", "score": 10}
         ]
       },
+      //Q9
       {
         "question":
             "Do you feel pain when you move your arm above the level of your shoulder?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 10},
-          {"answer": "Yes", "nextQuestion": 9}
+          {"answer": "No", "nextQuestion": 11},
+          {"answer": "Yes", "nextQuestion": 10}
         ],
         "onYesResponse": [
           {
             "diagnosis":
-                "You may have IMPINGEMENT, BURSITIS or ROTATOR CUFF SYNDROME.",
+                "IMPINGEMENT/BURSITIS/ROTATOR CUFF SYNDROME",
             "score": 10
           }
         ]
       },
+      //Q10
       {
         "question": "There’s no swelling or redness?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 10},
+          {"answer": "No", "nextQuestion": 11},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
           {
             "diagnosis":
-                "You may have IMPINGEMENT, BURSITIS or ROTATOR CUFF SYNDROME.",
+                "IMPINGEMENT/BURSITIS/ROTATOR CUFF SYNDROME",
             "score": 10
           }
         ]
       },
+      //Q11
       {
         "question":
             "Do you have increasing stiffness and inability to move your shoulder?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": -1},
-          {"answer": "Yes", "nextQuestion": 11}
+          {"answer": "Yes", "nextQuestion": 12}
         ],
         "onYesResponse": [
           {
             "diagnosis":
-                "You may have ADHESIVE CAPSULITIS, also called a FROZEN SHOULDER",
+                "ADHESIVE CAPSULITIS/FROZEN SHOULDER",
             "score": 10
           }
         ]
       },
+      //Q12
       {
         "question": "Do you also have diabetes?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -2387,7 +2400,7 @@ class Constants {
         "onYesResponse": [
           {
             "diagnosis":
-                "You may have ADHESIVE CAPSULITIS, also called a FROZEN SHOULDER",
+                "ADHESIVE CAPSULITIS/FROZEN SHOULDER",
             "score": 10
           }
         ]
@@ -2402,6 +2415,8 @@ class Constants {
       //   "onYesResponse":
       //   "You may have a HERNIATED DISC. You may also have SCIATICA, caused by irritation of the sciatic nerve.",
       // }, TODO
+
+      //Q0
       {
         "question": "Are you over 60 years, have arthritis?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -2413,6 +2428,7 @@ class Constants {
           {"diagnosis": "FRACTURED SPINE.", "score": 10}
         ]
       },
+      //Q1
       {
         "question": "Are you experiencing severe pain with any movement?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -2424,12 +2440,13 @@ class Constants {
           {"diagnosis": "FRACTURED SPINE.", "score": 10}
         ]
       },
+      //Q2
       {
         "question": "Do you have pain when twisting, bending, or even sitting?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 3},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
           {"diagnosis": "MUSCLE SPASM", "score": 10}
@@ -2459,20 +2476,22 @@ class Constants {
       //   "onYesResponse":
       //   "You may have ANKYLOSING SPONDYLITIS, a form of arthritis that affects the spine. Other forms of ARTHRITIS can also cause back pain and stiffness.",
       // }, TODO
+      //Q3
       {
         "question": "Are you pregnant?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 4},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
           {
-            "diagnosis": "PREGNANCY causes stretching of the tendons ",
+            "diagnosis": "PREGNANCY",
             "score": 10
           }
         ]
       },
+      //Q4
       {
         "question": "Is the pain centered in the lower spine?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -2482,11 +2501,12 @@ class Constants {
         ],
         "onYesResponse": [
           {
-            "diagnosis": "You may have a HERNIATED DISC or SPINAL STENOSIS",
+            "diagnosis": "HERNIATED DISC/SPINAL STENOSIS",
             "score": 10
           }
         ]
       },
+      //Q5
       {
         "question": "Do you have pain down your leg?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
@@ -2496,11 +2516,12 @@ class Constants {
         ],
         "onYesResponse": [
           {
-            "diagnosis": "You may have a HERNIATED DISC or SPINAL STENOSIS",
+            "diagnosis": "HERNIATED DISC/SPINAL STENOSIS",
             "score": 10
           }
         ]
       },
+      //Q6
       {
         "question":
             "Does bending forward while walking seem to make it feel better?",
@@ -2511,39 +2532,41 @@ class Constants {
         ],
         "onYesResponse": [
           {
-            "diagnosis": "You may have a HERNIATED DISC or SPINAL STENOSIS",
+            "diagnosis": "HERNIATED DISC/SPINAL STENOSIS",
             "score": 10
           }
         ]
       },
+      //Q7
       {
         "question":
             "Do you have back pain that wakes you up at night? Have you had unintentional weight loss?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 9},
+          {"answer": "No", "nextQuestion": -1},
           {"answer": "Yes", "nextQuestion": 8}
         ],
         "onYesResponse": [
           {
             "diagnosis":
-                "You may have a serious condition, including certain types of CANCER",
+                "CANCER",
             "score": 10
           }
         ]
       },
+      //Q8
       {
         "question":
             "Do you have back pain that wakes you up at night? Have you had unintentional weight loss?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 9},
+          {"answer": "No", "nextQuestion": -1},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
           {
             "diagnosis":
-                "You may have a serious condition, including certain types of CANCER",
+                "CANCER",
             "score": 10
           }
         ]
@@ -2591,7 +2614,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 3},
-          {"answer": "Yes", "nextQuestion": 3}
+          {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
           {
@@ -2622,7 +2645,7 @@ class Constants {
             "In the inside of the elbow, do you feel a swelling on the elbow?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 5},
+          {"answer": "No", "nextQuestion": 6},
           {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
@@ -2667,7 +2690,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 8},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 8}
         ],
         "onYesResponse": [
           {"diagnosis": "GOLFER'S ELBOW", "score": 5}
@@ -2679,7 +2702,7 @@ class Constants {
             "Do you feel the acute elbow pain injury with a swelling on the elbow?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 9},
+          {"answer": "No", "nextQuestion": 10},
           {"answer": "Yes", "nextQuestion": 9}
         ],
         "onYesResponse": [
@@ -2696,7 +2719,7 @@ class Constants {
             "Do you feel the acute elbow pain injury with a tenderness on the inside of the elbow?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 10},
+          {"answer": "No", "nextQuestion": 11},
           {"answer": "Yes", "nextQuestion": 10}
         ],
         "onYesResponse": [
@@ -2729,7 +2752,6 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": "GOLFER'S ELBOW", "score": 5},
-          {"diagnosis": "GOLFER'S ELBOW", "score": 5}
         ]
       },
       //Q12
