@@ -1022,7 +1022,7 @@ class DiagnosisOverview {
       ],
       "avoid": ["Scratching you eyes."]
     },
-    
+
     // Diagnoses for Calves
     "SHIN SPLINTS": {
       "overview":
@@ -1074,6 +1074,67 @@ class DiagnosisOverview {
         "Lose weight if you are overweight."
       ],
       "avoid": ["Do not smoke."]
+    },
+
+    // Knees Diagnoses
+    "PREPATELLAR BURSITIS": {
+      "overview":
+          "PREPATELLAR BURSITIS is an irritation of a small lubricating sac (called bursa) in front of the kneecap.",
+      "try": [""],
+      "avoid": [""]
+    },
+    "TORN CARTILAGE/MENISCUS": {
+      "overview":
+          "A torn meniscus is one of the most common knee injuries. Any activity that causes you to forcefully twist or rotate your knee, especially when putting your full weight on it, can lead to a torn meniscus.",
+      "try": ["Ice and over-the-counter pain relievers can be helpful."],
+      "avoid": [
+        "Avoid activities that aggravate your knee pain — especially sports that involve pivoting or twisting your knee — until the pain disappears."
+      ]
+    },
+    "RHEUMATIC FEVER": {
+      "overview":
+          "Rheumatic fever is a very rare complication that can develop after a bacterial throat infection. It can cause painful joints and heart problems. Most people make a full recovery, but it can come back.",
+      "try": ["Call 911"],
+      "avoid": [""]
+    },
+    "SEPTICE JOINT INFECTION": {
+      "overview":
+          "Septic arthritis is a serious type of joint infection. It should be treated as soon as possible. You can make a full recovery with treatment but if left untreated it can be more serious.",
+      "try": ["Call 911"],
+      "avoid": [""]
+    },
+    "OSTEOARTHRITIS": {
+      "overview":
+          "Osteoarthritis is a condition that causes joints to become painful and stiff. It's the most common type of arthritis in the UK.",
+      "try": [
+        "regular exercise",
+        "losing weight if you're overweight",
+        "wearing suitable footwear",
+        "using special devices to reduce the strain on your joints during your everyday activities"
+      ],
+      "avoid": [""]
+    },
+    "ARTHRITIS": {
+      "overview":
+          "Arthritis is a common condition that causes pain and inflammation in a joint.",
+      "try": [
+        "Choose the right kinds of activities — those that build the muscles around your joints but don't damage the joints themselves."
+      ],
+      "avoid": [
+        "Running",
+        "Jumping",
+        "Tennis",
+        "High-impact aerobics",
+        "Repeating the same movement, such as a tennis serve, again and again"
+      ]
+    },
+    "OSGOOD-SCHLATTER DISEASE": {
+      "overview":
+          "Osgood-Schlatter disease can cause a painful, bony bump on the shinbone just below the knee. It usually occurs in children and adolescents experiencing growth spurts during puberty.",
+      "try": [
+        "Call your child's doctor if knee pain interferes with your child's ability to perform daily activities. Seek medical attention if the knee is swollen and red, or if the knee pain is associated with fever, locking or instability of the knee joint."
+      ],
+      "avoid": [""]
     }
   };
 }
