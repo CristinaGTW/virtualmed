@@ -1571,11 +1571,10 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 1},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURED", "score": 20},
-          {"diagnosis": "TORN some LIGAMENTS", "score": 20}
+          {"diagnosis": "FRACTURED", "score": 20}
         ]
       },
       //Q1
@@ -1587,8 +1586,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURED", "score": 5},
-          {"diagnosis": "TORN some LIGAMENTS", "score": 5}
+          {"diagnosis": "FRACTURED", "score": 10}
         ]
       },
       //Q2
@@ -1615,8 +1613,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "TORN CARTILAGE/MENISCUS", "score": 3},
-          {"diagnosis": "TORN LIGAMENT", "score": 3},
+          {"diagnosis": "TORN CARTILAGE/MENISCUS", "score": 7},
           {"diagnosis": "CHONDROMALACIA PATELLAE", "score": 3}
         ]
       },
@@ -1630,7 +1627,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "TORN HAMSTRING MUSCLE", "score": 10}
+          {"diagnosis": "TORN CARTILAGE/TORN MENISCUS", "score": 10}
         ]
       },
       //Q5
@@ -1710,22 +1707,6 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": " OSGOOD-SCHLATTER DISEASE", "score": 10}
-        ]
-      },
-      //Q11
-      {
-        "question": "Are you younger than 18 years, and do you have knee pain?",
-        "answerType": AnswerType.MULTIPLE_CHOICE,
-        "answerChoices": [
-          {"answer": "No", "nextQuestion": -1},
-          {"answer": "Yes", "nextQuestion": -1}
-        ],
-        "onYesResponse": [
-          {
-            "diagnosis":
-                "If there is no discernible issue at the knee, you may have a \n hip problem that feels like knee pain.",
-            "score": 10
-          }
         ]
       }
     ],
