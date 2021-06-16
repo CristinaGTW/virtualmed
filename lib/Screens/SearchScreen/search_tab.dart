@@ -82,15 +82,15 @@ class _SearchTabState extends State<SearchTab> {
             margin: EdgeInsets.all(20),
             height: 50,
             child: TextField(
-              cursorColor: Colors.black,
-              maxLines: 1,
-              style: TextStyle(fontSize: 18),
-              onChanged: (value) {
-                setState(() {
-                  keyWords = value;
-                });
-              },
-              decoration: InputDecoration(
+                cursorColor: Colors.black,
+                maxLines: 1,
+                style: TextStyle(fontSize: 18),
+                onChanged: (value) {
+                  setState(() {
+                    keyWords = value;
+                  });
+                },
+                decoration: InputDecoration(
                   prefixIcon: Icon(Icons.search),
                   filled: true,
                   fillColor: Colors.white,
@@ -102,9 +102,10 @@ class _SearchTabState extends State<SearchTab> {
                     borderSide: BorderSide(color: Colors.grey),
                     borderRadius: BorderRadius.circular(50),
                   ),
-                  hintText: 'Search',)
-                  // suffix: goButton()),
-            ),
+                  hintText: 'Search',
+                )
+                // suffix: goButton()),
+                ),
           ),
           Expanded(
             child: Container(
@@ -124,7 +125,9 @@ class _SearchTabState extends State<SearchTab> {
                     margin: EdgeInsets.only(bottom: 30),
                     child: TopTitle(
                       topMargin: 20.0,
-                      title: "Most Searched",
+                      title: keyWords == ""
+                          ? "Most Searched"
+                          : "Results for: \"" + keyWords + "\"",
                     ),
                   ),
                   Expanded(
@@ -151,6 +154,7 @@ class _SearchTabState extends State<SearchTab> {
           return Center(child: CircularProgressIndicator());
         }
         if (!elemContainsKey(index)) {
+          _fetchData();
           return Container();
         }
         var diagnosis = loadedList.elementAt(index).key;

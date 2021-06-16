@@ -701,7 +701,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 1},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
           {"diagnosis": "HIATAL HERNIA", "score": 10}
@@ -714,7 +714,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
           {"diagnosis": "HIATAL HERNIA", "score": 10}
