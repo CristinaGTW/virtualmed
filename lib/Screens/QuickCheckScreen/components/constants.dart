@@ -1384,11 +1384,11 @@ class Constants {
       //Q0
       {
         "question":
-            "Do you have pain in your leg or ankle after a fall or injury, \n is there a deformity of your leg, or are you unable to stand or put pressure on your leg?",
+            "Do you have pain in your leg after a fall or injury, is there a deformity of your leg, or are you unable to stand or put pressure on your leg?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 1},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
           {"diagnosis": "FRACTURE", "score": 10}
@@ -1401,7 +1401,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
           {"diagnosis": "CELLULITIS", "score": 10}
@@ -1459,7 +1459,7 @@ class Constants {
       //Q6
       {
         "question":
-            "Do you fel\el pain in both thighs and legs or numb and heavy feelings in your thighs",
+            "Do you feel pain in both thighs or a numb and heavy feelings in your thighs?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 7},
@@ -1487,11 +1487,11 @@ class Constants {
       //Q0
       {
         "question":
-            "Do you have pain in your leg after a fall or injury, \n is there a deformity of your leg, or are you unable to stand or put pressure on your leg?",
+            "Do you have pain in your leg after a fall or injury, is there a deformity of your leg, /n or are you unable to stand or put pressure on your leg?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 1},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
           {"diagnosis": "FRACTURE", "score": 20}
@@ -1504,7 +1504,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
           {"diagnosis": "SHIN SPLINTS", "score": 10},
@@ -1542,7 +1542,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 5},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
           {"diagnosis": "EDEMA", "score": 10}
@@ -1586,7 +1586,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURED", "score": 20}
+          {"diagnosis": "FRACTURE", "score": 10}
         ]
       },
       //Q1
@@ -1598,7 +1598,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURED", "score": 10}
+          {"diagnosis": "FRACTURE", "score": 10}
         ]
       },
       //Q2
@@ -1611,8 +1611,8 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURED", "score": 5},
-          {"diagnosis": "PREPATELLAR BURSITIS", "score": 5}
+          {"diagnosis": "FRACTURE", "score": 10},
+          {"diagnosis": "PREPATELLAR BURSITIS", "score": 10}
         ]
       },
       //Q3
@@ -1625,8 +1625,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "TORN CARTILAGE/MENISCUS", "score": 7},
-          {"diagnosis": "CHONDROMALACIA PATELLAE", "score": 3}
+          {"diagnosis": "TORN CARTILAGE", "score": 10}
         ]
       },
       //Q4
@@ -1639,7 +1638,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "TORN CARTILAGE/TORN MENISCUS", "score": 10}
+          {"diagnosis": "TORN CARTILAGE", "score": 10}
         ]
       },
       //Q5
@@ -1652,7 +1651,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "TORN CARTILAGE/TORN MENISCUS", "score": 10}
+          {"diagnosis": "TORN CARTILAGE", "score": 10}
         ]
       },
       //Q6
@@ -1664,7 +1663,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 7}
         ],
         "onYesResponse": [
-          {"diagnosis": "RHEUMATOID ARTHRITIS", "score": 3},
+          {"diagnosis": "RHEUMATOID ARTHRITIS", "score": 5},
           {"diagnosis": "RHEUMATIC FEVER", "score": 5},
           {"diagnosis": "SEPTICE JOINT INFECTION", "score": 5}
         ]
@@ -1678,7 +1677,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "RHEUMATOID ARTHRITIS", "score": 3},
+          {"diagnosis": "RHEUMATOID ARTHRITIS", "score": 5},
           {"diagnosis": "RHEUMATIC FEVER", "score": 5},
           {"diagnosis": "SEPTICE JOINT INFECTION", "score": 5}
         ]
@@ -1714,7 +1713,7 @@ class Constants {
             "Are you between 12 and 18 years, and do you have a pain on the \n front of your knee below your kneecap that gets \n worse with activities like running or jumping?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
-          {"answer": "No", "nextQuestion": 11},
+          {"answer": "No", "nextQuestion": -1},
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
@@ -1722,7 +1721,6 @@ class Constants {
         ]
       }
     ],
-
     "Feet": [
       //Q0
       {
@@ -1734,7 +1732,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "Sprain ankle", "score": 5}
+          {"diagnosis": "SPRAIN", "score": 10}
         ]
       },
       //Q1
@@ -1747,7 +1745,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "Sprain ankle", "score": 5}
+          {"diagnosis": "SPRAIN", "score": 10}
         ]
       },
       //Q2
@@ -1760,7 +1758,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "Sprained ankle", "score": 10}
+          {"diagnosis": "SPRAIN", "score": 10}
         ]
       },
       //Q3
@@ -1770,10 +1768,11 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 4},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
-          {"diagnosis": "RHEUMATOID ARTHRITIS or OSTEOARTHRITIS", "score": 10}
+          {"diagnosis": "RHEUMATOID ARTHRITIS", "score": 10},
+          {"diagnosis": "OSTEOARTHRITIS", "score": 10}
         ]
       },
       //Q4
@@ -1812,10 +1811,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "TUBERCULOSIS", "score": 15},
-          {"diagnosis": "FUNGAL INFECTION", "score": 15},
-          {"diagnosis": "PNEUMONIA", "score": 15},
-          {"diagnosis": "LUNG CANCER", "score": 30}
+          {"diagnosis": "OSTEOARTHRITIS", "score": 10}
         ]
       }
     ],
@@ -2301,10 +2297,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "TORN ROTATOR CUFF/SHOULDER INSTABILITY.",
-            "score": 10
-          }
+          {"diagnosis": "TORN ROTATOR CUFF/SHOULDER INSTABILITY.", "score": 10}
         ]
       },
       //Q6
@@ -2317,10 +2310,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 7}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "TORN ROTATOR CUFF/SHOULDER INSTABILITY.",
-            "score": 10
-          }
+          {"diagnosis": "TORN ROTATOR CUFF/SHOULDER INSTABILITY.", "score": 10}
         ]
       },
       //Q7
@@ -2360,8 +2350,7 @@ class Constants {
         ],
         "onYesResponse": [
           {
-            "diagnosis":
-                "IMPINGEMENT/BURSITIS/ROTATOR CUFF SYNDROME",
+            "diagnosis": "IMPINGEMENT/BURSITIS/ROTATOR CUFF SYNDROME",
             "score": 10
           }
         ]
@@ -2376,8 +2365,7 @@ class Constants {
         ],
         "onYesResponse": [
           {
-            "diagnosis":
-                "IMPINGEMENT/BURSITIS/ROTATOR CUFF SYNDROME",
+            "diagnosis": "IMPINGEMENT/BURSITIS/ROTATOR CUFF SYNDROME",
             "score": 10
           }
         ]
@@ -2392,11 +2380,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 12}
         ],
         "onYesResponse": [
-          {
-            "diagnosis":
-                "ADHESIVE CAPSULITIS/FROZEN SHOULDER",
-            "score": 10
-          }
+          {"diagnosis": "ADHESIVE CAPSULITIS/FROZEN SHOULDER", "score": 10}
         ]
       },
       //Q12
@@ -2408,11 +2392,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis":
-                "ADHESIVE CAPSULITIS/FROZEN SHOULDER",
-            "score": 10
-          }
+          {"diagnosis": "ADHESIVE CAPSULITIS/FROZEN SHOULDER", "score": 10}
         ]
       }
     ],
@@ -2495,10 +2475,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "PREGNANCY",
-            "score": 10
-          }
+          {"diagnosis": "PREGNANCY", "score": 10}
         ]
       },
       //Q4
@@ -2510,10 +2487,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 5}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "HERNIATED DISC/SPINAL STENOSIS",
-            "score": 10
-          }
+          {"diagnosis": "HERNIATED DISC/SPINAL STENOSIS", "score": 10}
         ]
       },
       //Q5
@@ -2525,10 +2499,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "HERNIATED DISC/SPINAL STENOSIS",
-            "score": 10
-          }
+          {"diagnosis": "HERNIATED DISC/SPINAL STENOSIS", "score": 10}
         ]
       },
       //Q6
@@ -2541,10 +2512,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "HERNIATED DISC/SPINAL STENOSIS",
-            "score": 10
-          }
+          {"diagnosis": "HERNIATED DISC/SPINAL STENOSIS", "score": 10}
         ]
       },
       //Q7
@@ -2557,11 +2525,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 8}
         ],
         "onYesResponse": [
-          {
-            "diagnosis":
-                "CANCER",
-            "score": 10
-          }
+          {"diagnosis": "CANCER", "score": 10}
         ]
       },
       //Q8
@@ -2574,11 +2538,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis":
-                "CANCER",
-            "score": 10
-          }
+          {"diagnosis": "CANCER", "score": 10}
         ]
       }
     ],
