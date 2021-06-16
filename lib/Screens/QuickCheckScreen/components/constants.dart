@@ -1962,7 +1962,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 11},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 11}
         ],
         "onYesResponse": [
           {"diagnosis": "CHALAZION", "score": 5},
@@ -1977,10 +1977,10 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 12},
-          {"answer": "Yes", "nextQuestion": -1}
+          {"answer": "Yes", "nextQuestion": 12}
         ],
         "onYesResponse": [
-          {"diagnosis": "SCRATCHED CORNEA / CORNEAL ABRASION", "score": 10}
+          {"diagnosis": "SCRATCHED CORNEA / CORNEAL ABRASION", "score": 5}
         ]
       },
       //Q12
@@ -1993,7 +1993,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "CONJUNCTIVITIS", "score": 10}
+          {"diagnosis": "CONJUNCTIVITIS", "score": 15}
         ]
       },
       //Q13

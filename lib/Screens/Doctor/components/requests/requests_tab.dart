@@ -37,7 +37,7 @@ class _RequestsTabState extends State<RequestsTab> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            searchBar(sidePadding),
+            // searchBar(sidePadding),
             FutureBuilder<List<Request>>(
               future: futureUserRequests,
               builder: (context, snapshot) {
@@ -67,7 +67,6 @@ class _RequestsTabState extends State<RequestsTab> {
                 } else if (snapshot.hasError) {
                   return Text("${snapshot.error}");
                 }
-                // By default, show a loading spinner.
                 return Center(child: CircularProgressIndicator());
               },
             ),

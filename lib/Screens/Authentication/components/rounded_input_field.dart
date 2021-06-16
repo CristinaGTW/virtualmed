@@ -9,15 +9,26 @@ class RoundedInputField extends StatelessWidget {
   final Icon prefixIcon;
   final String initialValue;
   final ValueChanged<String> onChanged;
+  final double width;
 
   const RoundedInputField(
-      {Key key, this.inputText = "", this.icon, this.onChanged, this.prefixIcon, this.initialValue = ""})
+      {Key key,
+      this.inputText = "",
+      this.icon,
+      this.onChanged,
+      this.prefixIcon,
+      this.initialValue = "",
+      this.width})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 5),
       height: 60,
+      width: width != null ? width : size.width * 0.6,
+      alignment: AlignmentDirectional.centerStart,
       child: TextFieldContainer(
         child: TextFormField(
           validator: (value) => value.isEmpty ? "This field is required" : null,

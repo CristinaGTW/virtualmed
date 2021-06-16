@@ -25,6 +25,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
   int radioButtonValue = 0;
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget getLoginPage() {
     Size size = MediaQuery.of(context).size;
-    double sidePadding = (size.width - 400) / 2;
+    double sidePadding = (size.width * 0.2) / 2;
     return SafeArea(
         child: Scaffold(
       body: Form(
@@ -115,7 +116,14 @@ class _LoginPageState extends State<LoginPage> {
                   top: 50, left: sidePadding, right: sidePadding),
               child: RoundedButton(
                 text: "Login",
-                press: () => _formKey.currentState.validate() ? login() : {},
+                press: () {
+                  if (_formKey.currentState.validate()) {
+                    setState(() {
+                      loading = true;
+                    });
+                    login();
+                  }
+                },
                 color: kPrimaryColor,
                 borderColor: Colors.white,
                 textColor: Colors.white,
@@ -128,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text(
                     "Don't have an account? ",
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         color: kPrimaryColor,
                         decoration: TextDecoration.none),
                   ),
@@ -142,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Text(
                         "Register here",
                         style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             color: kPrimaryColor,
                             fontWeight: FontWeight.bold,
                             decoration: TextDecoration.none),
@@ -152,6 +160,7 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
+            loading ? Center(child: CircularProgressIndicator()) : Container()
           ],
         ),
       ),
@@ -168,11 +177,24 @@ class _LoginPageState extends State<LoginPage> {
             '${_data['email']}', '${_data['password']}'));
       }
     } catch (e) {
+      String message = "Something went wrong! Please try again!";
+      if (e.toString().contains("no indices are valid: 0")) {
+        message =
+            "There is no account with this email and password. Please try again!";
+      }
+      if (e.toString().contains("XMLHttpRequest")) {
+        message =
+            "Internet connection issue. Please check your network connection";
+      }
+
       final snackBar = SnackBar(
-        content: Text('$e'),
+        content: Text(message),
         backgroundColor: kPrimaryColor,
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      setState(() {
+        loading = false;
+      });
     }
   }
 }

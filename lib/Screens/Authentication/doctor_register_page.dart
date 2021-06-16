@@ -31,11 +31,12 @@ class DoctorRegisterPage extends StatefulWidget {
 class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
   // final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    double sidePadding = (size.width - 400) / 2;
+    double sidePadding = (size.width * 0.2) / 2;
     return Scaffold(
       body: Form(
         key: _formKey,
@@ -127,21 +128,29 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
                   top: 50, bottom: 50, left: sidePadding, right: sidePadding),
               child: RoundedButton(
                 text: "Register",
-                press: () => _formKey.currentState.validate() ? register() : {},
+                press: () {
+                  if (_formKey.currentState.validate()) {
+                    setState(() {
+                      loading = true;
+                    });
+                    register();
+                  }
+                },
                 color: kPrimaryColor,
                 borderColor: Colors.white,
                 textColor: Colors.white,
               ),
             ),
+            loading ? Center(child: CircularProgressIndicator()) : Container(),
             Container(
               alignment: Alignment.center,
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
                     "Already have an account? ",
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         color: kPrimaryColor,
                         decoration: TextDecoration.none),
                   ),
@@ -155,7 +164,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
                       child: Text(
                         "Login here",
                         style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             color: kPrimaryColor,
                             fontWeight: FontWeight.bold,
                             decoration: TextDecoration.none),
@@ -182,11 +191,29 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
           '${_data['location']}',
           '${_data['password']}'));
     } catch (e) {
-      final snackBar = SnackBar(
-        content: Text('$e'),
-        backgroundColor: kPrimaryColor,
-      );
-      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      if (!e.toString().contains("JSON")) {
+        String message = "Something went wrong! This email may already be registered";
+
+        final snackBar = SnackBar(
+          content: Text(message),
+          backgroundColor: kPrimaryColor,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        setState(() {
+          loading = false;
+        });
+      }
+      return;
     }
+    final snackBar = SnackBar(
+      content: Text(
+          '${_data['first_name']} ${_data['last_name']} registered successfully'),
+      backgroundColor: Colors.green,
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    loading = false;
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return LoginPage();
+    }));
   }
 }

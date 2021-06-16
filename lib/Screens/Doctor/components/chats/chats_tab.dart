@@ -16,6 +16,7 @@ class ChatTab extends StatefulWidget {
 class _ChatTabState extends State<ChatTab> {
   Future<List<RegularUser>> futureChatUsers;
   DoctorUser doctorUser;
+  Widget pageContent;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class _ChatTabState extends State<ChatTab> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            searchBar(sidePadding),
+            // searchBar(sidePadding),
             FutureBuilder<List<RegularUser>>(
               future: futureChatUsers,
               builder: (context, snapshot) {
@@ -53,7 +54,6 @@ class _ChatTabState extends State<ChatTab> {
                 } else if (snapshot.hasError) {
                   return Text("${snapshot.error}");
                 }
-                // By default, show a loading spinner.
                 return Center(child: CircularProgressIndicator());
               },
             ),
