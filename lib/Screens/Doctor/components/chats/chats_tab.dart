@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_med/Models/doctor-user.dart';
 import 'package:virtual_med/Models/regular-user.dart';
+import 'package:virtual_med/Services/user-provider.dart';
+import 'package:virtual_med/Services/utils.dart';
+
+import 'package:provider/provider.dart';
 
 import 'chat.dart';
 
-class ChatTab extends StatelessWidget {
-  var chatUsers = [
-    RegularUser(
-        userId: 1,
-        firstName: "John",
-        lastName: "Wilson",
-        email: "john@email.com",
-        phone: "+4478729752",
-        password: "password"),
-    RegularUser(
-        userId: 2,
-        firstName: "Ion",
-        lastName: "Popescu",
-        email: "ion@email.com",
-        phone: "075216371",
-        password: "password")
-  ];
+class ChatTab extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _ChatTabState();
+}
+
+class _ChatTabState extends State<ChatTab> {
+  Future<List<RegularUser>> futureChatUsers;
+  DoctorUser doctorUser;
 
   @override
   Widget build(BuildContext context) {
+    doctorUser = context.watch<UserProvider>().doctorUser;
+    futureChatUsers = _fetchConnections();
+
     Size size = MediaQuery.of(context).size;
     var sidePadding = (size.width - 400) / 2;
     return Container(
@@ -32,20 +31,30 @@ class ChatTab extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             searchBar(sidePadding),
-            ListView.builder(
-              itemCount: chatUsers.length,
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) {
-                return Chat(
-                  name: chatUsers[index].firstName +
-                      " " +
-                      chatUsers[index].lastName,
-                  fragment: "Diagnosis here",
-                  image: "images/profile_pic.png",
-                  time: "time here",
-                  receiver_id: chatUsers[index].userId,
-                );
+            FutureBuilder<List<RegularUser>>(
+              future: futureChatUsers,
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return ListView.builder(
+                    itemCount: snapshot.data.length,
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      return Chat(
+                          name: snapshot.data[index].firstName +
+                              " " +
+                              snapshot.data[index].lastName,
+                          fragment: snapshot.data[index].phone,
+                          image: "images/profile_pic.png",
+                          time: "Accepted Request",
+                          receiver_id: snapshot.data[index].userId);
+                    },
+                  );
+                } else if (snapshot.hasError) {
+                  return Text("${snapshot.error}");
+                }
+                // By default, show a loading spinner.
+                return Center(child: CircularProgressIndicator());
               },
             ),
           ],
@@ -85,5 +94,29 @@ class ChatTab extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<List<RegularUser>> _fetchConnections() async {
+    List<RegularUser> connections = List<RegularUser>();
+
+    var res = await postToServer(
+        api: 'GetConnections', body: {"user_id": doctorUser.userId});
+
+    if (res['msg'] == 'Success') {
+      for (var connection in res['body']) {
+        connections.add(RegularUser(
+          userId: connection['id'],
+          firstName: connection['first_name'],
+          lastName: connection['last_name'],
+          email: connection['email'],
+          phone: connection['phone'],
+          birthdate: connection['birthdate'],
+          height: connection['height'],
+          weight: connection['weight'],
+          chronic_diseases: connection['chronic_diseases'],
+        ));
+      }
+      return connections;
+    }
   }
 }

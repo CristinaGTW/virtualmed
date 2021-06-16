@@ -6,7 +6,7 @@ class ConversationAppBar extends StatelessWidget
   final String name;
   final String image;
 
-  const ConversationAppBar({Key key, @required this.name, @required this.image})
+  const ConversationAppBar({Key key, @required this.name, this.image})
       : super(key: key);
 
   @override
@@ -26,7 +26,9 @@ class ConversationAppBar extends StatelessWidget
                 width: 20,
               ),
               CircleAvatar(
-                backgroundImage: AssetImage(image),
+                backgroundImage: image != null
+                    ? AssetImage(image)
+                    : AssetImage("images/profile_pic.png"),
                 maxRadius: 20,
               ),
               SizedBox(

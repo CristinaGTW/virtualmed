@@ -4,6 +4,7 @@ import 'package:virtual_med/Screens/Doctor/components/requests/components/reques
 import '../../../../../components.dart';
 
 class Request extends StatefulWidget {
+  final int patient_id;
   final String name;
   final String diagnosis;
   final String image;
@@ -18,16 +19,17 @@ class Request extends StatefulWidget {
 
   Request(
       {@required this.name,
-        @required this.diagnosis,
-        @required this.image,
-        @required this.time,
-        @required this.status,
-        @required this.phone,
-        @required this.age,
-        @required this.height,
-        @required this.weight,
-        @required this.chronic_diseases,
-        @required this.query_answers});
+      @required this.diagnosis,
+      @required this.image,
+      @required this.time,
+      @required this.status,
+      @required this.phone,
+      @required this.age,
+      @required this.height,
+      @required this.weight,
+      @required this.chronic_diseases,
+      @required this.query_answers,
+      @required this.patient_id});
 
   @override
   State<StatefulWidget> createState() => _RequestState();
@@ -40,6 +42,7 @@ class _RequestState extends State<Request> {
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
           return RequestPage(
+            patient_id: widget.patient_id,
             name: widget.name,
             image: widget.image,
             phone: widget.phone,

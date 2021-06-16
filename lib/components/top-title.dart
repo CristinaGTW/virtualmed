@@ -5,12 +5,16 @@ class TopTitle extends StatelessWidget {
   final double topMargin;
   final String title;
   final Alignment alignment;
+  final Color color;
+  final FontWeight fontWeight;
 
   const TopTitle(
       {Key key,
       this.topMargin = 0,
       this.title,
-      this.alignment = Alignment.topCenter})
+      this.alignment = Alignment.topCenter,
+      this.color = Colors.black,
+      this.fontWeight = FontWeight.bold})
       : super(key: key);
 
   @override
@@ -22,8 +26,7 @@ class TopTitle extends StatelessWidget {
       ),
       child: Text(
         title,
-        style: TextStyle(
-            fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.black),
+        style: TextStyle(fontSize: 24.0, fontWeight: fontWeight, color: color),
       ),
     );
   }
