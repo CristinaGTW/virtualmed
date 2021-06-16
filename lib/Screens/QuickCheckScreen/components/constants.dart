@@ -13,7 +13,11 @@ class Constants {
           {"answer": "No", "nextQuestion": 3},
           {"answer": "Yes", "nextQuestion": 1}
         ],
-        "onYesResponse": [""]
+        "onYesResponse": [
+          {"diagnosis": "VIRAL SORE THROAT", "score": 3},
+          {"diagnosis": "STREP", "score": 3},
+          {"diagnosis": "MONONUCLEOSIS", "score": 3}
+        ]
       },
       //Q1
       {
@@ -129,7 +133,9 @@ class Constants {
           {"answer": "No", "nextQuestion": 3},
           {"answer": "Yes", "nextQuestion": 1}
         ],
-        "onYesResponse": []
+        "onYesResponse": [
+          {"diagnosis": "FRACTURE", "score": 10}
+        ]
       },
       //Q1
       {
@@ -140,7 +146,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURE", "score": 20}
+          {"diagnosis": "FRACTURE", "score": 10}
         ],
       },
       //Q2
@@ -258,7 +264,9 @@ class Constants {
           {"answer": "No", "nextQuestion": 3},
           {"answer": "Yes", "nextQuestion": 1}
         ],
-        "onYesResponse": []
+        "onYesResponse": [
+          {"diagnosis": "FRACTURE", "score": 10}
+        ]
       },
       //Q1
       {
@@ -269,7 +277,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURE", "score": 20}
+          {"diagnosis": "FRACTURE", "score": 10}
         ],
       },
       //Q2
@@ -2247,7 +2255,6 @@ class Constants {
         ]
       }
     ],
-
 
     "Shoulders": [
       //Q0
