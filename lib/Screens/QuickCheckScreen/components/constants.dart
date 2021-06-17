@@ -3431,7 +3431,7 @@ class Constants {
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 1},
-          {"answer": "Yes", "nextQuestion": 11}
+          {"answer": "Yes", "nextQuestion": 10}
         ],
         "onYesResponse": [
           {"diagnosis": "IRRITATION OF THE AIRWAYS", "score": 10}
@@ -3552,18 +3552,6 @@ class Constants {
         ]
       },
       //Q10
-      {
-        "question": "Has you cough lasted longer than 6 weeks?",
-        "answerType": AnswerType.MULTIPLE_CHOICE,
-        "answerChoices": [
-          {"answer": "No", "nextQuestion": 11},
-          {"answer": "Yes", "nextQuestion": -1}
-        ],
-        "onYesResponse": [
-          {"diagnosis": "CHRONIC COUGH", "score": 10}
-        ]
-      },
-      //Q11
       {
         "question": "Do you have a fever with shaking chills and are very ill?",
         "answerType": AnswerType.MULTIPLE_CHOICE,

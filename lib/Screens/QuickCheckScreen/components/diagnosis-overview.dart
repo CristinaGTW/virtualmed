@@ -1388,5 +1388,61 @@ class DiagnosisOverview {
       ],
       "avoid": ["eating too much salt", "avoid fizzy drinks"]
     },
+
+    // Cough Diagnoses
+    "IRRITATION OF THE AIRWAYS": {
+      "overview": 
+          "Irritation of the airways will cause coughing to attempt to clear the object or irritation out of the airway.",
+      "try": [
+        "If the coughing is severe or if you don’t believe the irritant has been cleared from your airway, see your doctor or go to the emergency room right away."
+      ],
+      "avoid": [
+        "Smoking at all."
+      ],
+    },
+    "PULMONARY EDEMA": {
+      "overview": 
+          "Pulmonary edema is a condition caused by excess fluid in the lungs. This fluid collects in the numerous air sacs in the lungs, making it difficult to breathe. In most cases, heart problems cause pulmonary edema.",
+      "try": [
+        "Have someone drive you to the nearest emergency room",
+        "Call an ambulance right away."
+      ],
+      "avoid": [
+        "Driving."
+      ],
+    },
+    "VIRAL INFECTION": {
+      "overview": 
+          "You likely have a viral infection, which includes the FLU.",
+      "try": [
+        "If it is within 48-72 hours from the beginning of symptoms, there are medications that your doctor can prescribe if you test positive for, or they suspect the FLU.",
+        "If it is outside the 48-72-hour window or it is not the flu, then symptomatic treatment (treating cough, headache, sinus congestion, sore throat, etc. can be accomplished with an over-the-counter cough and cold medication).",
+        "Get plenty of rest and drink plenty of water.",
+        "Call your doctor if you have a high fever (>101.5°F) or your symptoms persist for more than 5 days."
+      ],
+      "avoid": [
+        "Smoking."
+      ],
+    },
+    "TUBERCULOSIS": {
+      "overview": 
+          "Tuberculosis (TB) is a disease caused by bacteria called Mycobacterium tuberculosis. The bacteria usually attack the lungs, but they can also damage other parts of the body. TB spreads through the air when a person with TB of the lungs or throat coughs, sneezes, or talks.",
+      "try": [
+        "Have someone drive you to the closest emergency room or call an ambulance."
+      ],
+      "avoid": [
+        "Smoking."
+      ],
+    },
+    "LUNG CANCER": {
+      "overview": 
+          "Lung cancer is a type of cancer that begins in the lungs. Your lungs are two spongy organs in your chest that take in oxygen when you inhale and release carbon dioxide when you exhale. Lung cancer is the leading cause of cancer deaths worldwide. People who smoke have the greatest risk of lung cancer, though lung cancer can also occur in people who have never smoked. The risk of lung cancer increases with the length of time and number of cigarettes you've smoked. If you quit smoking, even after smoking for many years, you can significantly reduce your chances of developing lung cancer.",
+      "try": [
+        "Have someone drive you to the closest emergency room or call an ambulance."
+      ],
+      "avoid": [
+        "Smoking."
+      ],
+    },
   };
 }
