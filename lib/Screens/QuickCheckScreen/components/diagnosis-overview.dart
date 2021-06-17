@@ -1688,6 +1688,54 @@ class DiagnosisOverview {
         "Giving OTC cough and cold medicines to a child younger than 4 years of age unless your child’s doctor says it’s okay."
       ],
       "Specialization": [""]
-    }
+    },
+
+    // Headaches
+    "MENINGITIS": {
+      "overview":
+          "Meningitis is an inflammation (swelling) of the protective membranes covering the brain and spinal cord. A bacterial or viral infection of the fluid surrounding the brain and spinal cord usually causes the swelling. However, injuries, cancer, certain drugs, and other types of infections also can cause meningitis.",
+      "try": ["See your doctor or go to the emergency room right away."],
+      "avoid": ["Smoking.", "Driving."],
+      "Specialization": [""]
+    },
+    "STROKE / TRANSIENT ISCHEMIC ATTACK": {
+      "overview":
+          "A stroke is a medical condition in which poor blood flow to the brain causes cell death. There are two main types of stroke: ischemic, due to lack of blood flow, and hemorrhagic, due to bleeding. Both cause parts of the brain to stop functioning properly.",
+      "try": ["See your doctor or go to the emergency room right away."],
+      "avoid": ["Smoking.", "Driving."],
+      "Specialization": [""]
+    },
+    "TENSION HEADACHE": {
+      "overview":
+          "A tension headache is the most common type of headache. It can cause mild, moderate, or intense pain behind your eyes and in your head and neck. Some people say that a tension headache feels like a tight band around their forehead. Most people who experience tension headaches have episodic headaches.",
+      "try": [
+        "Using over-the-counter medicine, such as ibuprofen or acetaminophen, to relieve pain.",
+        "Getting plenty of rest.",
+        "Taking a hot shower.",
+        "Applying ice packs to painful areas may also help."
+      ],
+      "avoid": ["Smokking."],
+      "Specialization": [""]
+    },
+    "VISION PROBLEMS": {
+      "overview": "You may have vision problems.",
+      "try": [
+        "See an optometrist or ophthalmologist for an eye exam to see if you need glasses or contacts to correct your vision."
+      ],
+      "avoid": ["Reading or studying for extended periods of time."],
+      "Specialization": [""]
+    },
+    "HYPOGLYCEMIA": {
+      "overview": "Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than normal. Glucose is your body's main energy source. Hypoglycemia is often related to diabetes treatment. But other drugs and a variety of conditions — many rare — can cause low blood sugar in people who don't have diabetes.",
+      "try": ["Eating 6 small meals a day rather than 3 large meals. This may regulate your blood sugar. "],
+      "avoid": ["Alcohol."],
+      "Specialization": [""]
+    },
+    "WITHDRAWAL": {
+      "overview": "Alcohol withdrawal syndrome is a set of symptoms that people can have when they stop drinking. Often it occurs in people who have had an alcohol abuse problem for weeks, months, or years. People who only drink once in a while rarely have withdrawal. People who have gone through withdrawal before are more likely to have symptoms each time they quit drinking.",
+      "try": ["Using over-the-counter medicine, such as ibuprofen or acetaminophen, to relieve pain and discomfort.", "Although painful, the symptoms are temporary and should fade after a few days."],
+      "avoid": ["Drinking", "Restarting your habit."],
+      "Specialization": [""]
+    },
   };
 }

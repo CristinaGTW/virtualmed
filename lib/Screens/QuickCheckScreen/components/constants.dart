@@ -3271,14 +3271,6 @@ class Constants {
           {"diagnosis": "MENINGITIS", "score": 10}
         ]
       },
-      // {
-      //   "question": "Have you injured your head or been knocked out recently?",
-      //   "answerType": AnswerType.MULTIPLE_CHOICE,
-      //           "answerChoices": [{"answer": "No", "nextQuestion": 1 }, {"answer": "Yes", "nextQuestion": 1}],
-      //   "onYesResponse":
-      //   "You may have a CONCUSSION (also called MILD TRAUMATIC BRAIN INJURY), or a SUBDURAL HEMATOMA",
-      // },
-      // TODO
       //Q3
       {
         "question":
@@ -3366,7 +3358,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "VISION PROBLEMS.", "score": 10}
+          {"diagnosis": "VISION PROBLEMS", "score": 10}
         ]
       },
       //Q10
@@ -3720,8 +3712,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "STROKE", "score": 15},
-          {"diagnosis": "TRANSIENT ISCHEMIC ATTACK", "score": 10}
+          {"diagnosis": "STROKE / TRANSIENT ISCHEMIC ATTACK", "score": 15}
         ]
       },
       //Q4
@@ -3812,7 +3803,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "HEADACHES", "score": 10}
+          {"diagnosis": "HEADACHES IN SPORT", "score": 10}
         ]
       }
     ]
