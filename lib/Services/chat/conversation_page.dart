@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:virtual_med/Models/chat_user.dart';
@@ -48,6 +50,8 @@ class _ConversationPageState extends State<ConversationPage> {
   StreamSocket streamSocket = StreamSocket();
   Future<List<Message>> futureMessageList;
 
+  int length = 0;
+
   _ConversationPageState({Key key, @required this.name, @required this.image});
 
   @override
@@ -61,6 +65,8 @@ class _ConversationPageState extends State<ConversationPage> {
       body: Stack(
         children: <Widget>[
           ListView(
+            padding: const EdgeInsets.only(bottom: kFloatingActionButtonMargin + 60),
+            reverse: true,
             children: [
               FutureBuilder<List<Message>>(
                 future: futureMessageList,
@@ -79,23 +85,6 @@ class _ConversationPageState extends State<ConversationPage> {
                   }
                   // By default, show a loading spinner.
                   return Center(child: CircularProgressIndicator());
-                },
-              ),
-              StreamBuilder(
-                stream: streamSocket.getResponse,
-                builder: (context, snapshot) {
-                  return ListView.builder(
-                    itemCount: snapshot.hasData ? 1 : 0,
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      return ChatBox(
-                          chatMessage: Message(
-                              message: '${snapshot.data}',
-                              time: DateTime.now().toString(),
-                              direction: MessageDirection.SENT));
-                    },
-                  );
                 },
               ),
             ],
@@ -126,17 +115,22 @@ class _ConversationPageState extends State<ConversationPage> {
                     width: 20,
                   ),
                   Expanded(
-                    child: Form(
-                      child: TextFormField(
-                        controller: _controller,
-                        decoration: InputDecoration(
-                          hintText: "New message ... ",
-                          hintStyle: TextStyle(color: Colors.grey.shade500),
-                          border: InputBorder.none,
+                    child: Container(
+                      margin: EdgeInsets.only(right: 75),
+                      child: Form(
+                        child: TextFormField(
+                          keyboardType: TextInputType.multiline,
+                          maxLines: null,
+                          controller: _controller,
+                          decoration: InputDecoration(
+                            hintText: "New message ... ",
+                            hintStyle: TextStyle(color: Colors.grey.shade500),
+                            border: InputBorder.none,
+                          ),
                         ),
                       ),
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -169,33 +163,60 @@ class _ConversationPageState extends State<ConversationPage> {
 
   void _sendMessage() async {
     if (_controller.text.isNotEmpty) {
-      socket.emit('message', _controller.text);
+      var message = _controller.text;
+      socket.emit('message', json.encode({
+        'sender_id': sender_id,
+        'receiver_id': widget.receiver_id,
+        'time': DateTime.now().toString(),
+        'message': message
+      }));
+
+      setState(() {
+        _controller.clear();
+      });
 
       try {
         var res = await postToServer(api: 'SendMessage', body: {
           'sender_id': sender_id,
           'receiver_id': widget.receiver_id,
           'time': DateTime.now().toString(),
-          'message': _controller.text
+          'message': message
         });
         if (res['msg'] == 'Success') {
           print("Request sent successfully");
         }
       } catch (e) {
-        final snackBar = SnackBar(
-          content: Text('$e'),
-          backgroundColor: kPrimaryColor,
-        );
-        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        if (!e.toString().contains("JSON")) {
+          final snackBar = SnackBar(
+            content: Text('$e'),
+            backgroundColor: kPrimaryColor,
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        }
       }
     }
   }
 
   void _retrieveMessage() {
     futureMessageList = fetchMessages();
-    socket.onConnect((_) => print('User Connected'));
+    // socket.onConnect((_) => print('User Connected'));
     socket.on('message', (data) {
-      streamSocket.addResponse(data);
+      // print("------- Received data: " + data);
+      setState(() {
+        length++;
+      });
+      var msg = json.decode(data);
+      if (msg['sender_id'] == sender_id) {
+        streamSocket.addResponse(Message(
+            message: msg['message'],
+            direction: MessageDirection.SENT,
+            time: msg['time']));
+      } else {
+        streamSocket.addResponse(Message(
+            message: msg['message'],
+            direction: MessageDirection.RECEIVED,
+            time: msg['time']));
+      }
     });
   }
 
