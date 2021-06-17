@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -47,12 +48,25 @@ class _ConversationPageState extends State<ConversationPage> {
 
   final TextEditingController _controller = TextEditingController();
   IO.Socket socket = IO.io(SERVER_URL);
-  StreamSocket streamSocket = StreamSocket();
   Future<List<Message>> futureMessageList;
 
   int length = 0;
 
   _ConversationPageState({Key key, @required this.name, @required this.image});
+
+  @override
+  void initState() {
+    super.initState();
+    setUpTimedFetch();
+  }
+
+  setUpTimedFetch() {
+    Timer.periodic(Duration(milliseconds: 2500), (timer) {
+      setState(() {
+        futureMessageList = fetchMessages();
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -198,29 +212,18 @@ class _ConversationPageState extends State<ConversationPage> {
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
         }
       }
+      setState(() {
+        futureMessageList = fetchMessages();
+      });
     }
   }
 
   void _retrieveMessage() {
     futureMessageList = fetchMessages();
-    // socket.onConnect((_) => print('User Connected'));
     socket.on('message', (data) {
-      // print("------- Received data: " + data);
       setState(() {
         length++;
       });
-      var msg = json.decode(data);
-      if (msg['sender_id'] == sender_id) {
-        streamSocket.addResponse(Message(
-            message: msg['message'],
-            direction: MessageDirection.SENT,
-            time: msg['time']));
-      } else {
-        streamSocket.addResponse(Message(
-            message: msg['message'],
-            direction: MessageDirection.RECEIVED,
-            time: msg['time']));
-      }
     });
   }
 
