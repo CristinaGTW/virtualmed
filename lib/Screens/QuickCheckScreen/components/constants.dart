@@ -3579,7 +3579,8 @@ class Constants {
       },
       //Q1
       {
-        "question": "Do you have a sore throat and headache without nasal drainage or a cough?",
+        "question":
+            "Do you have a sore throat and headache without nasal drainage or a cough?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 2},
@@ -3591,7 +3592,8 @@ class Constants {
       },
       //Q2
       {
-        "question": "Did your symptoms start suddenly, and do you have a combination of symptoms including muscle aches, fatigue, chills, sore throat, runny nose, and/or cough?",
+        "question":
+            "Did your symptoms start suddenly, and do you have a combination of symptoms including muscle aches, fatigue, chills, sore throat, runny nose, and/or cough?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 3},
@@ -3603,7 +3605,8 @@ class Constants {
       },
       //Q3
       {
-        "question": "Are you experiencing wheezing, shortness of breath, and a persistent cough that brings up clear, yellow, or green mucus?",
+        "question":
+            "Are you experiencing wheezing, shortness of breath, and a persistent cough that brings up clear, yellow, or green mucus?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 4},
@@ -3615,7 +3618,8 @@ class Constants {
       },
       //Q4
       {
-        "question": "Do you have a headache or muscle aches, nausea or vomiting, and watery diarrhea?",
+        "question":
+            "Do you have a headache or muscle aches, nausea or vomiting, and watery diarrhea?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 5},
@@ -3627,7 +3631,8 @@ class Constants {
       },
       //Q5
       {
-        "question": "Are you experiencing a runny and/or itchy nose, sneezing, and itchy eyes that get worse when you are outside or around certain triggers?",
+        "question":
+            "Are you experiencing a runny and/or itchy nose, sneezing, and itchy eyes that get worse when you are outside or around certain triggers?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 6},
@@ -3639,7 +3644,8 @@ class Constants {
       },
       //Q6
       {
-        "question": "Are you experiencing sneezing, a sore throat with a cough, a headache, congestion, and a runny nose?",
+        "question":
+            "Are you experiencing sneezing, a sore throat with a cough, a headache, congestion, and a runny nose?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": 7},
@@ -3651,7 +3657,8 @@ class Constants {
       },
       //Q7
       {
-        "question": "Do you have pressure or pain around your eyes, cheeks, nose, or forehead; nasal congestion; a headache; a dry cough; and/or any type of discharge from your nose?",
+        "question":
+            "Do you have pressure or pain around your eyes, cheeks, nose, or forehead; nasal congestion; a headache; a dry cough; and/or any type of discharge from your nose?",
         "answerType": AnswerType.MULTIPLE_CHOICE,
         "answerChoices": [
           {"answer": "No", "nextQuestion": -1},
@@ -3659,6 +3666,153 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": "SINUSITIS", "score": 10}
+        ]
+      }
+    ],
+
+    "Headaches": [
+      //Q0
+      {
+        "question":
+            "Do you have a fever, cold symptoms, nausea, vomiting, or diarrhea?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "GASTROENTERITIS", "score": 10},
+          {"diagnosis": "COLD", "score": 10}
+        ]
+      },
+      //Q1
+      {
+        "question":
+            "Do you have a severe headache, stiff neck, vomiting, and does normal light hurt your eyes, or do normal sounds hurt your ears?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "MENINGITIS", "score": 10}
+        ]
+      },
+      //Q2
+      {
+        "question": "Have you injured your head or been knocked out recently?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "CONCUSSION", "score": 10}
+        ]
+      },
+      //Q3
+      {
+        "question":
+            "Do you have numbness, tingling, or weakness in the arms and legs, or do you have trouble speaking or understanding speech?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "STROKE", "score": 15},
+          {"diagnosis": "TRANSIENT ISCHEMIC ATTACK", "score": 10}
+        ]
+      },
+      //Q4
+      {
+        "question":
+            "Do you have pressure around your eyes, or do you have congestion with yellowish-green nasal discharge and a fever?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SINUSITIS", "score": 10}
+        ]
+      },
+      //Q5
+      {
+        "question":
+            "Do you have mild to moderate pressure or tightening around your temples, and does the pain occur during times of stress or after you have been sitting in one position for a long time?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "TENSION HEADACHE", "score": 10}
+        ]
+      },
+      //Q6
+      {
+        "question":
+            "Do you have intense throbbing pain on one side of your head or temple, often with associated nausea or vomiting, and do see flashing lights or spots before the headache?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "MIGRAINE", "score": 10}
+        ]
+      },
+      //Q7
+      {
+        "question":
+            "Do your headaches occur after you read, watch TV, or use a computer?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "VISION PROBLEMS", "score": 10}
+        ]
+      },
+      //Q8
+      {
+        "question":
+            "Do you get headaches and feel shaky and weak if you miss a meal?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HYPOGLYCEMIA", "score": 10}
+        ]
+      },
+      //Q9
+      {
+        "question":
+            "Are you trying to cut down on caffeine, alcohol, or some other drug?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 10},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "WITHDRAWAL", "score": 10}
+        ]
+      },
+      //Q10
+      {
+        "question":
+            "Do you have headaches that occur daily for several days, and do you also have eye discharge and runny nose from the same side as the headache?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "HEADACHES", "score": 10}
         ]
       }
     ]
