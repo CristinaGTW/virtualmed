@@ -1,6 +1,6 @@
 class DiagnosisOverview {
   static const diagnoses = {
-    // For Chest:
+    // Chest Diagnoses
     "HYPERVENTILATION": {
       "overview":
           "Hyperventilation occurs when you over breathe, i.e. if you breathe in excess of your body’s needs.",
@@ -283,7 +283,7 @@ class DiagnosisOverview {
       "avoid": ["Drink too much alcohol or take a lot of recreational drugs"]
     },
 
-    // diagnoses for Neck :
+    // Neck Diagnoses
     "MONONUCLEOSIS": {
       "overview":
           "Mononucleosis (often called “mono”) is a contagious illness. It’s usually caused by the Epstein-Barr virus. It’s spread through saliva. For this reason, it’s sometimes called “kissing disease.” It’s most common in teens and young adults. However, anyone at any age can get it.",
@@ -393,7 +393,7 @@ class DiagnosisOverview {
       "avoid": ["Most cases of thyroiditis cannot be prevented."]
     },
 
-    //"Glutes": Buttock, Hip & Groin
+    //"Glutes": Buttock, Hip & Groin Diagnoses
     "PIRIFORMIS SYNDROME": {
       "overview":
           "Piriformis syndrome is compression of the sciatic nerve. It causes pain deep in the buttocks which radiates down into the leg. Here we explain the symptoms, causes, treatment, and exercises for preventing and treating Piriformis syndrome.",
@@ -564,7 +564,7 @@ class DiagnosisOverview {
       "avoid": ["Not taking the pain seriously. Contact a doctor immediately!"]
     },
 
-    //Elbows
+    // Elbows Diagnoses
     "TENNIS ELBOW": {
       "overview":
           "Tennis elbow is also known as lateral epicondylitis, lateral elbow tendinopathy, or extensor tendinopathy. It is a common term used to describe long-term, chronic pain on the outside of the elbow.",
