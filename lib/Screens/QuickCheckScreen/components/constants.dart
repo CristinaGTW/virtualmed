@@ -1968,7 +1968,7 @@ class Constants {
           {"diagnosis": "CHALAZION", "score": 5},
           {"diagnosis": "HORDEOLUM", "score": 5},
           {"diagnosis": "STYE", "score": 5}
-        ], //TODO
+        ],
       },
       //Q11
       {
@@ -2020,7 +2020,7 @@ class Constants {
         "onYesResponse": [
           {"diagnosis": "SCRATCHED CORNEA / CORNEAL ABRASION", "score": 10}
         ]
-      } //TODO
+      }
     ],
 
     "Ears": [
@@ -3419,6 +3419,148 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": "CLUSTER HEADACHES.", "score": 10}
+        ]
+      }
+    ],
+
+    "Cough": [
+      //Q0
+      {
+        "question":
+            "Has your cough begun recently? Consider recent exposures you may have experienced, including new pets, new environments, new medications, etc.",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 1},
+          {"answer": "Yes", "nextQuestion": 10}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "IRRITATION OF THE AIRWAYS", "score": 10}
+        ]
+      },
+      //Q1
+      {
+        "question":
+            "Are you very short of breath, and are you coughing up pink, frothy mucus?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PULMONARY EDEMA", "score": 10}
+        ]
+      },
+      //Q2
+      {
+        "question": "Does your cough produce clear or pale yellow mucus?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "VIRAL INFECTION", "score": 10}
+        ]
+      },
+      //Q3
+      {
+        "question": "Does your cough produce yellow, tan, or green mucus?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": 13}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "CHRONIC BRONCHITIS", "score": 10},
+          {"diagnosis": "PNEUMONIA", "score": 5}
+        ]
+      },
+      //Q4
+      {
+        "question":
+            "Does the cough come with shortness of breath and wheezing?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ASTHMA", "score": 10}
+        ]
+      },
+      //Q5
+      {
+        "question":
+            "Have you recently started coughing up blood or bloody sputum?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": 6}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "TUBERCULOSIS", "score": 10}
+        ]
+      },
+      //Q6
+      {
+        "question":
+            "Have you recently started having sharp chest pain, rapid heartbeat, swelling of the legs and sudden shortness of breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "TUBERCULOSIS", "score": 10}
+        ]
+      },
+      //Q7
+      {
+        "question":
+            "Do you have a fever, chills and night sweats along with chest pain when you cough or take a deep breath?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 8},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "TUBERCULOSIS", "score": 10}
+        ]
+      },
+      //Q8
+      {
+        "question": "Have you unintentionally lost weight?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 9},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "LUNG CANCER", "score": 10}
+        ]
+      },
+      //Q9
+      {
+        "question": "Did you inhale dust, particles, or an object?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 10},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "IRRITATION OF THE AIRWAYS", "score": 10}
+        ]
+      },
+      //Q10
+      {
+        "question": "Do you have a fever with shaking chills and are very ill?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "PNEUMONIA", "score": 10},
         ]
       }
     ]
