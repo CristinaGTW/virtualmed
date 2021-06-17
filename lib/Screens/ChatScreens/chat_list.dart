@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Models/doctor-user.dart';
 import 'package:virtual_med/Models/regular-user.dart';
+import 'package:virtual_med/Models/user.dart';
 import 'package:virtual_med/Screens/Doctor/components/chats/chat.dart';
 
 import 'package:provider/provider.dart';
@@ -10,11 +11,10 @@ import 'package:virtual_med/Services/utils.dart';
 class ChatList extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _ChatListState();
-
 }
 
 class _ChatListState extends State<ChatList> {
-  Future<List<DoctorUser>> futureChatUsers;
+  Future<List<User>> futureChatUsers;
   RegularUser regularUser;
 
   @override
@@ -38,7 +38,7 @@ class _ChatListState extends State<ChatList> {
       ),
       body: Column(children: [
         searchBar(sidePadding),
-        FutureBuilder<List<DoctorUser>>(
+        FutureBuilder<List<User>>(
           future: futureChatUsers,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
@@ -47,14 +47,28 @@ class _ChatListState extends State<ChatList> {
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
+                  if (snapshot.data[index].acc_type == AccountType.DOCTOR) {
+                    return Chat(
+                        name: "Dr. " +
+                            (snapshot.data[index] as DoctorUser).firstName +
+                            " " +
+                            (snapshot.data[index] as DoctorUser).lastName,
+                        fragment:
+                            (snapshot.data[index] as DoctorUser).specialization,
+                        image: "assets/images/profile_pic.png",
+                        time: "Accepted Request",
+                        receiver_id:
+                            (snapshot.data[index] as DoctorUser).userId);
+                  }
                   return Chat(
-                      name: "Dr. " + snapshot.data[index].firstName +
+                      name: (snapshot.data[index] as RegularUser).firstName +
                           " " +
-                          snapshot.data[index].lastName,
-                      fragment: snapshot.data[index].specialization,
+                          (snapshot.data[index] as RegularUser).lastName,
+                      fragment: (snapshot.data[index] as RegularUser).community,
                       image: "assets/images/profile_pic.png",
-                      time: "Accepted Request",
-                      receiver_id: snapshot.data[index].userId);
+                      time: "Community Buddy",
+                      receiver_id:
+                          (snapshot.data[index] as RegularUser).userId);
                 },
               );
             } else if (snapshot.hasError) {
@@ -101,23 +115,36 @@ class _ChatListState extends State<ChatList> {
     );
   }
 
-  Future<List<DoctorUser>> _fetchConnections() async {
-    List<DoctorUser> connections = List<DoctorUser>();
+  Future<List<User>> _fetchConnections() async {
+    List<User> connections = List<User>();
 
     var res = await postToServer(
         api: 'GetConnections', body: {"user_id": regularUser.userId});
 
     if (res['msg'] == 'Success') {
       for (var connection in res['body']) {
-        connections.add(DoctorUser(
-          userId: connection['id'],
-          firstName: connection['first_name'],
-          lastName: connection['last_name'],
-          email: connection['email'],
-          phone: connection['phone'],
-          specialization: connection['specialization'],
-          location: connection['location'],
-        ));
+        if (connection['acc_type'] == "doctor") {
+          connections.add(DoctorUser(
+            userId: connection['id'],
+            firstName: connection['first_name'],
+            lastName: connection['last_name'],
+            email: connection['email'],
+            phone: connection['phone'],
+            specialization: connection['specialization'],
+            location: connection['location'],
+          ));
+        } else {
+          var community = await postToServer(
+              api: 'GetCommunity', body: {"userId": connection['id']});
+
+          connections.add(RegularUser(
+              userId: connection['id'],
+              firstName: connection['first_name'],
+              lastName: connection['last_name'],
+              email: connection['email'],
+              phone: connection['phone'],
+              community: community['body'][0]['community']));
+        }
       }
       return connections;
     }

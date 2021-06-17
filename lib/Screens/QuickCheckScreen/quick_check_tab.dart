@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Models/regular-user.dart';
 import 'package:virtual_med/Screens/Authentication/components/rounded_input_field.dart';
+import 'package:virtual_med/Screens/ChatScreens/chat_list.dart';
 import 'package:virtual_med/Screens/QuickCheckScreen/components/full_page_human_anatomy.dart';
+import 'package:virtual_med/Screens/main_nav.dart';
 import 'package:virtual_med/components/top-title.dart';
 import 'package:virtual_med/Services/user-provider.dart';
 import 'package:virtual_med/Services/utils.dart';
@@ -199,7 +201,23 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
                   child: RoundedButton(
                     width: 400,
                     text: "View Nearby Medical Centers",
-                    press: () {},
+                    press: () {
+                      if (isLoggedIn) {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return MainNavAuth(
+                            currentIndex: 2,
+                          );
+                        }));
+                      } else {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return MainNavUnauth(
+                            currentIndex: 2,
+                          );
+                        }));
+                      }
+                    },
                   ),
                 ),
               ),
@@ -218,7 +236,60 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
                     },
                   ),
                 ),
-              )
+              ),
+              isLoggedIn
+                  ? Container(
+                      child: Container(
+                        child: RoundedButton(
+                          width: 400,
+                          text: "Join The Community",
+                          press: () {
+                            showModalBottomSheet<void>(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return Container(
+                                  height: 300,
+                                  color: kPrimaryColor,
+                                  child: Center(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: <Widget>[
+                                        TopTitle(
+                                          title: "Disclaimer",
+                                          color: Colors.white,
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.all(30),
+                                          child: Text(
+                                              "By joining the community, you agree to share personal medical information (i.e. the questionnaire responses you just completed and the provided diagnoses)." +
+                                                  " If you would not like to continue, press anywhere else on the screen.", style: TextStyle(color: Colors.white, fontSize: 14),),
+                                        ),
+                                        RoundedButton(
+                                          text: 'Accept and Join',
+                                          color: Colors.white,
+                                          textColor: kPrimaryColor,
+                                          press: () {
+                                            joinCommunity();
+                                            Navigator.push(context,
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return ChatList();
+                                            }));
+                                          },
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                        ),
+                      ),
+                    )
+                  : Container(),
             ],
           ),
         ),
@@ -508,7 +579,6 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
 
   void sendRequest() async {
     var query_answers = composeAnswers();
-    // print(query_answers);
 
     var user_id = regularUser != null ? regularUser.userId : -1;
     var specialization = "General"; //TODO get specialization
@@ -558,8 +628,6 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
 
   String composeAnswers() {
     String result = "";
-    //_finalAnswers = _finalAnswers.reversed.toList();
-    //   _finalAnswers = _finalAnswers.reversed;
     for (var answer in _finalAnswers) {
       result += answer["question"] + "\n" + answer["answer"] + "\n\n";
     }
@@ -578,5 +646,26 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       answers.add(answer["answer"]);
     }
     return answers;
+  }
+
+  void joinCommunity() async {
+    var specialization = "General"; //TODO get others as well
+    var user_id = regularUser != null ? regularUser.userId : -1;
+
+    try {
+      var res = await postToServer(api: 'JoinCommunity', body: {
+        'userId': user_id,
+        'specialization': specialization,
+      });
+      if (res['msg'] == 'Success') {
+        print("Joined" + specialization + "community successfully");
+      }
+    } catch (e) {
+      final snackBar = SnackBar(
+        content: Text('$e'),
+        backgroundColor: kPrimaryColor,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
   }
 }

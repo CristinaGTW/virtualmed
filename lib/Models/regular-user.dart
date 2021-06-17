@@ -1,9 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:virtual_med/Models/user.dart';
 import 'package:virtual_med/Services/utils.dart';
 
-class RegularUser {
+class RegularUser extends User{
   final int userId;
   String firstName;
   String lastName;
@@ -15,6 +16,7 @@ class RegularUser {
   String height = '';
   String weight = '';
   String chronic_diseases = '';
+  String community = '';
 
   RegularUser({
     @required this.userId,
@@ -27,7 +29,8 @@ class RegularUser {
     this.height,
     this.weight,
     this.chronic_diseases,
-  });
+    this.community,
+  }) : super(AccountType.REGULAR);
 
   factory RegularUser.fromJson(Map<String, dynamic> json) {
     return RegularUser(

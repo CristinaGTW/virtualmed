@@ -10,13 +10,22 @@ import 'SearchScreen/search_tab.dart';
 abstract class MainNav extends StatefulWidget {}
 
 class MainNavUnauth extends MainNav {
+  final int currentIndex;
+
+  MainNavUnauth({this.currentIndex});
+
   @override
-  _MainNavState createState() => _MainNavUnauthState();
+  _MainNavState createState() =>
+      _MainNavUnauthState(currentIndex: currentIndex);
 }
 
 class MainNavAuth extends MainNav {
+  final int currentIndex;
+
+  MainNavAuth({this.currentIndex});
+
   @override
-  _MainNavState createState() => _MainNavAuthState();
+  _MainNavState createState() => _MainNavAuthState(currentIndex: currentIndex);
 }
 
 abstract class _MainNavState extends State<MainNav> {
@@ -70,11 +79,13 @@ class _MainNavUnauthState extends _MainNavState {
     SearchTab(),
     MapTab(),
   ];
-  final tabsText = [
-    "Quick Symptom Checker",
-    "Search",
-    "Find Medical Centers"
-  ];
+  final tabsText = ["Quick Symptom Checker", "Search", "Find Medical Centers"];
+
+  _MainNavUnauthState({int currentIndex = 0}) {
+    if (currentIndex != null && currentIndex != 0) {
+      _currentIndex = currentIndex;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -132,6 +143,12 @@ class _MainNavAuthState extends _MainNavState {
     "Profile"
   ];
 
+  _MainNavAuthState({int currentIndex = 0}) {
+    if (currentIndex != null && currentIndex != 0) {
+      _currentIndex = currentIndex;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -149,7 +166,8 @@ class _MainNavAuthState extends _MainNavState {
                   icon: Icon(Icons.chat),
                   color: Colors.white,
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
                       return ChatList();
                     }));
                   },

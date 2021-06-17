@@ -1,9 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:virtual_med/Models/user.dart';
 import 'package:virtual_med/Services/utils.dart';
 
-class DoctorUser {
+class DoctorUser extends User {
   final int userId;
   final String firstName;
   final String lastName;
@@ -22,7 +23,7 @@ class DoctorUser {
     @required this.specialization,
     @required this.location,
     this.password,
-  });
+  }) : super(AccountType.DOCTOR);
 
   factory DoctorUser.fromJson(Map<String, dynamic> json) {
     return DoctorUser(
