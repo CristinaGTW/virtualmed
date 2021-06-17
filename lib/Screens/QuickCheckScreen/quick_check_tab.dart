@@ -147,11 +147,11 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         ),
         Container(
           padding: EdgeInsets.only(
-              left: (size.width - 300) / 2, right: (size.width - 300) / 2),
+              left: (size.width * 0.2) / 2, right: (size.width * 0.2) / 2),
           color: kPrimaryLightColor,
           child: Container(
             child: RoundedButton(
-                width: 300,
+                width: size.width * 0.8,
                 text: "Confirm",
                 press: () {
                   if (_nextQuestion == -1) {
@@ -477,6 +477,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
 
   String composeAnswers() {
     String result = "";
+    //_finalAnswers = _finalAnswers.reversed.toList();
+    //   _finalAnswers = _finalAnswers.reversed;
     for (var answer in _finalAnswers) {
       result += answer["question"] + "\n" + answer["answer"] + "\n\n";
     }

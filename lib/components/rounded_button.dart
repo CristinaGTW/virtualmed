@@ -22,11 +22,10 @@ class RoundedButton extends StatelessWidget {
     // Get the total width and height of our screen:
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: EdgeInsets.symmetric(vertical: 5),
       width: width != null ? width : size.width * 0.6,
       child: TextButton(
           child: Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
             child: Text(
               text,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),

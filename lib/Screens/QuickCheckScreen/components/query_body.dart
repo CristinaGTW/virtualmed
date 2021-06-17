@@ -49,7 +49,6 @@ class _QueryBodyState extends State<QueryBody> {
   @override
   Widget build(BuildContext context) {
     if (widget.questionIndex == 0) {
-      Constants.query[bodyPart].forEach((q) => addQuestion(q['question']));
       if (Constants.query[bodyPart] != null) {
         for (var i = 0; i < Constants.query[bodyPart].length; i++) {
           _groupValues.add(-1);
@@ -83,20 +82,18 @@ class _QueryBodyState extends State<QueryBody> {
 
   Widget currentQuestion() {
     _groupValues.add(-1);
-    addQuestion(Constants.query[bodyPart][widget.questionIndex]["question"]);
     List<String> answerChoices = getAnswerChoices(
         Constants.query[bodyPart][widget.questionIndex]["answerChoices"]);
     return Container(
       alignment: Alignment.topLeft,
-      margin: EdgeInsets.only(top: 30, left: 20),
-      child: Stack(
-        children: <Widget>[
-          Text(
+      margin: EdgeInsets.only(left: 20),
+      child: Column(
+        children: <Widget>[Text(
             Constants.query[bodyPart][widget.questionIndex]["question"],
             style: TextStyle(fontSize: 20),
           ),
           Container(
-            margin: EdgeInsets.only(top: 80),
+            margin: EdgeInsets.only(top: 10),
             child: getAnswer(
                 Constants.query[bodyPart][widget.questionIndex]["answerType"],
                 answerChoices,
@@ -112,7 +109,6 @@ class _QueryBodyState extends State<QueryBody> {
     if (Constants.query[bodyPart] != null) {
       for (var i = 0; i < Constants.query[bodyPart].length; i++) {
         _groupValues.add(-1);
-        addQuestion(Constants.query[bodyPart][i]["question"]);
         List<String> answerChoices =
             getAnswerChoices(Constants.query[bodyPart][i]["answerChoices"]);
         finalQuestions.add(Stack(
@@ -209,7 +205,8 @@ class _QueryBodyState extends State<QueryBody> {
 
                             if (choices[i].contains("Yes")) {
                               updateAnswer(
-                                  Constants.query[bodyPart][i]["question"],
+                                  Constants.query[bodyPart][questionNo]
+                                      ["question"],
                                   "Yes");
                               if (getDiagnoses(diagnosisLabel) == null) {
                                 finalDiagnosesList.add(diagnosis);
@@ -225,7 +222,8 @@ class _QueryBodyState extends State<QueryBody> {
 
                             if (choices[i].contains("No")) {
                               updateAnswer(
-                                  Constants.query[bodyPart][i]["question"],
+                                  Constants.query[bodyPart][questionNo]
+                                      ["question"],
                                   "No");
                               if (_answeredBefore.length > questionNo &&
                                   _answeredBefore[questionNo] == true &&
@@ -238,7 +236,6 @@ class _QueryBodyState extends State<QueryBody> {
                                   ["nextQuestion"];
                               _publishNextQuestion(_nextQuestion);
                             }
-
                           });
                           _groupValues[questionNo] = value;
                           // print(diagnosesList);
@@ -294,25 +291,13 @@ class _QueryBodyState extends State<QueryBody> {
     return null;
   }
 
-  void addQuestion(String question) {
-    bool found = false;
-    for (var answer in finalAnswers) {
-      if (answer["question"] == question) {
-        found = true;
-      }
-    }
-    if (!found) {
-      finalAnswers.add({"question": question, "answer": ""});
-    }
-  }
-
   void updateAnswer(String question, String newAnswer) {
-    for (var answer in finalAnswers) {
-      if (answer["question"] == question) {
-        finalAnswers.remove(answer);
-        finalAnswers.add({"question": question, "answer": newAnswer});
-      }
-    }
+    // for (var answer in finalAnswers) {
+    //   if (answer['question'] == question) {
+    //     finalAnswers.remove(answer);
+    //   }
+    // }
+    finalAnswers.add({"question": question, "answer": newAnswer});
   }
 
   List<String> getAnswerChoices(query) {

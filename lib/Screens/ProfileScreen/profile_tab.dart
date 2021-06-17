@@ -38,6 +38,7 @@ class _ProfileTabState extends State<ProfileTab> {
       body: Container(
         color: kPrimaryBgColor,
         child: ListView(
+          padding: EdgeInsets.only(left: size.width * 0.1, right: size.width * 0.1),
           children: <Widget>[
             Container(
               padding: EdgeInsets.all(20),
