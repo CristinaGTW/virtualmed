@@ -11,7 +11,8 @@ class DiagnosisOverview {
         "Let the air sigh out as you breathe out.",
         "Try to get a steady rhythm, taking the same size of breath each time"
       ],
-      "avoid": ["A", "B", "C"]
+      "avoid": ["A", "B", "C"],
+      "Specialization": ["Pulmonologist"]
     },
     "PNEUMONIA": {
       "overview":
@@ -21,7 +22,8 @@ class DiagnosisOverview {
         "Take antibiotics if the pneumonia is likely to be caused by a bacterial infection",
         "Drinking plenty of fluids"
       ],
-      "avoid": ["Do not eat Fried Foods"]
+      "avoid": ["Do not eat Fried Foods"],
+      "Specialization": ["Pulmonologist"]
     },
     "VIRAL BRONCHITIS": {
       "overview":
@@ -32,7 +34,8 @@ class DiagnosisOverview {
         "Take over-the-counter pain relievers to reduce inflammation, ease pain, and lower your fever.",
         "Increase the humidity in your home or use a humidifier."
       ],
-      "avoid": ["Smoking"]
+      "avoid": ["Smoking"],
+      "Specialization": ["Pulmonologist"]
     },
     "PLEURISY": {
       "overview":
@@ -44,7 +47,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "You can’t prevent pleurisy, but you can reduce your risk by promptly treating conditions that may cause it. You should also quit smoking tobacco, using electronic cigarettes, and smoking marijuana. If you don’t smoke, don’t start."
-      ]
+      ],
+      "Specialization": ["Pulmonologist"]
     },
     "HEART ATTACK": {
       "overview":
@@ -55,7 +59,8 @@ class DiagnosisOverview {
         "If you are alone and are able, unlock your door to let emergency personnel enter your home.",
         "Sit in a comfortable chair, wait for help and keep a phone near you."
       ],
-      "avoid": ["Smoking."]
+      "avoid": ["Smoking."],
+      "Specialization": ["Cardiologist"]
     },
     "GASTRITIS": {
       "overview":
@@ -67,7 +72,8 @@ class DiagnosisOverview {
       "avoid": [
         "Avoiding foods that can irritate the stomach, such as spicy, acidic or fried foods",
         "Quitting smoking if you smoke"
-      ]
+      ],
+      "Specialization": ["Gastroenterologist"]
     },
     "ESOPHAGITIS": {
       "overview":
@@ -80,7 +86,8 @@ class DiagnosisOverview {
         "Avoid spicy foods such as those with pepper, chili powder, curry and nutmeg.",
         "Avoid acidic foods and beverages such as tomatoes, oranges, grapefruits and their juices. Instead, try nectars and imitation fruit drinks with vitamin C.",
         "Avoid alcohol and tobacco."
-      ]
+      ],
+      "Specialization": ["Pulmonologist"]
     },
     "PNEUMOTHORAX": {
       "overview":
@@ -91,7 +98,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Avoid or limit activities with drastic changes in air pressure (scuba diving and flying)."
-      ]
+      ],
+      "Specialization": ["Pulmonologist"]
     },
     "CONGESTIVE HEART FAILURE": {
       "overview":
@@ -99,7 +107,8 @@ class DiagnosisOverview {
       "try": [
         "Lifestyle changes – including eating a healthy diet, exercising regularly"
       ],
-      "avoid": ["Smoking"]
+      "avoid": ["Smoking"],
+      "Specialization": ["Cardiologist"]
     },
     "ASTHMA": {
       "overview":
@@ -110,6 +119,7 @@ class DiagnosisOverview {
         "eating healthily"
       ],
       "Avoid": ["Smoking"],
+      "Specialization": ["Pulmonologist"]
     },
     "SHINGLES": {
       "overview":
@@ -124,6 +134,7 @@ class DiagnosisOverview {
         "Do not let dressings or plasters stick to the rash",
         "Do not use antibiotic cream – this slows healing"
       ],
+      "Specialization": ["Dermatologist"]
     },
     "COSTOCHONDRITIS": {
       "overview":
@@ -141,6 +152,7 @@ class DiagnosisOverview {
         "Deep breathing, coughing and sneezing",
         "Physical activity"
       ],
+      "Specialization": ["Pulmonologist"]
     },
     "FRACTURE": {
       "overview":
@@ -160,6 +172,7 @@ class DiagnosisOverview {
         "Scratch an itch that’s inside the cast by sticking a pen or other object inside. If you do, you could cut the skin, which is already vulnerable due to its lack of access to normal levels of oxygen and air.",
         "Let your cast get wet."
       ],
+      "Specialization": ["Orthopedist"]
     },
     "POSTHERPETIC NEURALGIA": {
       "overview":
@@ -174,6 +187,7 @@ class DiagnosisOverview {
         "Do not let dressings or plasters stick to the rash",
         "Do not use antibiotic cream – this slows healing"
       ],
+      "Specialization": ["Dermatologist"]
     },
     "ANGINA": {
       "overview":
@@ -190,6 +204,7 @@ class DiagnosisOverview {
         "Drinking alcohol",
         "Smoking"
       ],
+      "Specialization": ["Cardiologist"]
     },
     "GALLBLADDER": {
       "overview":
@@ -209,6 +224,7 @@ class DiagnosisOverview {
         "Skin-on poultry",
         "Foods that contain a lot of vegetables, peanut, canola, or olive oil"
       ],
+      "Specialization": ["Endocrinologist"]
     },
     "ULCER": {
       "overview":
@@ -224,6 +240,7 @@ class DiagnosisOverview {
         "Use common sense: If it upsets your stomach when you eat it, avoid it.",
         "Everyone is different, but spicy foods, citrus fruits, and fatty foods are common irritants."
       ],
+      "Specialization": ["Gastroenterologist"]
     },
     "IRRITATION OF THE ESOPHAGUS": {
       "overview":
@@ -241,8 +258,9 @@ class DiagnosisOverview {
         "Tough meats, fresh “doughy” bread or rolls, hard bread crust, and abrasive foods.",
         "Eating for 3 hours before bedtime."
       ],
+      "Specialization": ["Pulmonologist"]
     },
-    "SPASM of the muscles of the esophagus": {
+    "ESOPHAGUS SPASM": {
       "overview":
           "Esophageal spasms are painful contractions within the muscular tube connecting your mouth and stomach (esophagus). Esophageal spasms can feel like sudden, severe chest pain that lasts from a few minutes to hours. Some people may mistake it for heart pain (angina).",
       "try": [
@@ -258,6 +276,7 @@ class DiagnosisOverview {
         "Eating too close to bedtime or before laying down",
         "Constrictive clothing"
       ],
+      "Specialization": ["Pulmonologist"]
     },
     "HIATAL HERNIA": {
       "overview":
@@ -268,29 +287,33 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "If you smoke, try to give up, as it can irritate your digestive system and make your symptoms worse."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "CHRONIC BRONCHITIS": {
       "overview":
           "Bronchitis is an infection of the main airways of the lungs (bronchi), causing them to become irritated and inflamed.",
       "try": ["Eating a healthy diet", "regular moderate exercise"],
-      "avoid": ["Avoiding smoking"]
+      "avoid": ["Avoiding smoking"],
+      "Specialization": ["Pulmonologist"]
     },
     "EMPHYSEMA": {
       "overview":
           "Empyema is the medical term for pockets of pus that have collected inside a body cavity.",
       "try": ["Stop Smoking"],
-      "avoid": ["Drink too much alcohol or take a lot of recreational drugs"]
+      "avoid": ["Drink too much alcohol or take a lot of recreational drugs"],
+      "Specialization": ["Pulmonologist"]
     },
 
-    // diagnoses for Neck :
+    // Neck Diagnoses:
     "MONONUCLEOSIS": {
       "overview":
           "Mononucleosis (often called “mono”) is a contagious illness. It’s usually caused by the Epstein-Barr virus. It’s spread through saliva. For this reason, it’s sometimes called “kissing disease.” It’s most common in teens and young adults. However, anyone at any age can get it.",
       "try": [
         "The best thing you can do to avoid it is to stay away from anyone you know who has it."
       ],
-      "avoid": ["Don’t kiss them or share utensils or other personal items."]
+      "avoid": ["Don’t kiss them or share utensils or other personal items."],
+      "Specialization": ["Otolaryngologist"]
     },
     "STREP": {
       "overview":
@@ -309,7 +332,8 @@ class DiagnosisOverview {
       "avoid": [
         "Strep throat is very contagious. It can be hard to protect yourself when you are around people who are infected with strep throat.",
         "Try to avoid people who have strep, when possible. If you must be around someone who has strep throat, be sure to wash your hands frequently."
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "VIRAL SORE THROAT": {
       "overview":
@@ -321,7 +345,8 @@ class DiagnosisOverview {
       "avoid": [
         "The best way to avoid a sore throat is to avoid getting sick.",
         "Avoid catching or spreading the viruses and bacteria that cause a sore throat."
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "INFECTED LYMPH NODES": {
       "overview":
@@ -330,13 +355,15 @@ class DiagnosisOverview {
         "Your doctor is likely to advise using a fever-reducing painkiller, such as ibuprofen, along with a warm compress.",
         "Elevating the swollen area can also help relieve inflammation."
       ],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Otolaryngologist"]
     },
     "VIRAL ILLNESS": {
       "overview":
           "For most viral infections, treatments can only help with symptoms while you wait for your immune system to fight off the virus. Antibiotics do not work for viral infections. There are antiviral medicines to treat some viral infections",
       "try": [""],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Otolaryngologist"]
     },
     "GERMAN MEASLES (RUBELLA)": {
       "overview":
@@ -346,7 +373,8 @@ class DiagnosisOverview {
         "Your doctor may tell you to rest in bed and to take acetaminophen (Tylenol), which can help relieve discomfort from fever and aches.",
         "They may also recommend that you stay home from work or school to prevent spreading the virus to others."
       ],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Dermatologist"]
     },
     "MUMPS": {
       "overview":
@@ -363,7 +391,8 @@ class DiagnosisOverview {
       "avoid": [
         "Avoid acidic foods or foods that make your mouth water, such as citrus fruits.",
         "Avoid public places and close contact for at least five days after symptoms appear. This is when you are the most contagious."
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "THYROGLOSSAL DUCT CYST": {
       "overview":
@@ -371,18 +400,19 @@ class DiagnosisOverview {
       "try": [
         "If your cyst has a bacterial or viral infection, your doctor will prescribe antibiotics to help treat the infection."
       ],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Endocrinologist"]
     },
     "ABSCESS": {
       "overview":
-          "An abscess is a painful collection of pus, usually caused by a bacterial infection. Abscesses can develop anywhere in the body."
-              "",
+          "An abscess is a painful collection of pus, usually caused by a bacterial infection. Abscesses can develop anywhere in the body.",
       "try": [
         "Maintaining a healthy, balanced diet",
         "Losing weight if you're overweight or obese",
         "Washing your hands regularly"
       ],
-      "avoid": ["Smoking"]
+      "avoid": ["Smoking"],
+      "Specialization": ["Endocrinologist"]
     },
     "THYROIDITIS": {
       "overview":
@@ -390,10 +420,11 @@ class DiagnosisOverview {
       "try": [
         "Symptoms usually get better when the infection is treated with antibiotics."
       ],
-      "avoid": ["Most cases of thyroiditis cannot be prevented."]
+      "avoid": ["Most cases of thyroiditis cannot be prevented."],
+      "Specialization": ["Endocrinologist"]
     },
 
-    //"Glutes": Buttock, Hip & Groin
+    //"Glutes": Buttock, Hip & Groin Diagnoses
     "PIRIFORMIS SYNDROME": {
       "overview":
           "Piriformis syndrome is compression of the sciatic nerve. It causes pain deep in the buttocks which radiates down into the leg. Here we explain the symptoms, causes, treatment, and exercises for preventing and treating Piriformis syndrome.",
@@ -403,7 +434,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Activities which make symptoms worse. This is likely to include running and other weight-bearing activities."
-      ]
+      ],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "MYOFASCIAL PAIN IN BUTTOCK MUSCLES": {
       "overview":
@@ -412,7 +444,8 @@ class DiagnosisOverview {
         "Begin a comprehensive stretching routine for the muscles of the lower back, hip, and groin.",
         "See a sports injury specialist or physiotherapist.",
       ],
-      "avoid": ["Any intense physical activity!"]
+      "avoid": ["Any intense physical activity!"],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "PELVIC AVULSION FRACTURE": {
       "overview":
@@ -426,7 +459,8 @@ class DiagnosisOverview {
         "In some cases, surgery may be performed to re-attach the bone and tendon to the pelvis. This is mainly reserved for large fractures of where the fracture is displaced considerably.",
         "Following the rest period, a gradual rehabilitation programme can be commenced which aims to regain full strength and movement at the hip."
       ],
-      "avoid": ["Any physical activity that include this area!"]
+      "avoid": ["Any physical activity that include this area!"],
+      "Specialization": ["Orthopedist"]
     },
     "SACROILIAC JOINT PAIN": {
       "overview":
@@ -438,7 +472,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Heat if acute inflammation of the joint is suspected though as this will make the condition worse. In this case, cold therapy may be more effective."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "RECTUS FEMORIS TENDON STRAIN": {
       "overview":
@@ -450,7 +485,8 @@ class DiagnosisOverview {
         "Sports massage after the acute stage can be beneficial. Both cross friction massage applied to the tendon itself, and deep tissue massage to relax the muscles.",
         "A full rehabilitation program of stretching and strengthening exercises should be done before more sports specific functional exercises to return the athlete back to full fitness."
       ],
-      "avoid": ["Any physical activity!"]
+      "avoid": ["Any physical activity!"],
+      "Specialization": ["Orthopedist"]
     },
     "HIP POINTER": {
       "overview":
@@ -462,7 +498,8 @@ class DiagnosisOverview {
         "Visit a sports injury professional who can fully assess the injury to rule out any complications as stated above.",
         "They can also advise on a full rehabilitation program with hip stretching and mobility exercises followed by hip strengthening exercises."
       ],
-      "avoid": ["Unsupervised physical activity"]
+      "avoid": ["Unsupervised physical activity"],
+      "Specialization": ["Orthopedist"]
     },
     "ILIUM APOPHYSITIS": {
       "overview":
@@ -476,7 +513,8 @@ class DiagnosisOverview {
         "Ensure a full warm-up is performed and stop if any pain is felt.",
         "The condition will ease on its own once growth is finished and the bone is fully matured."
       ],
-      "avoid": ["Aggravating activities until pain and tenderness ease."]
+      "avoid": ["Aggravating activities until pain and tenderness ease."],
+      "Specialization": ["Orthopedist"]
     },
     "LABRAL TEAR OF THE HIP JOINT": {
       "overview":
@@ -487,7 +525,8 @@ class DiagnosisOverview {
         "A rehabilitation program should be followed after surgery to restore full strength and movement to the hip joint and prevent further injuries or instability.",
         "If left the injury could degenerate into a worn hip joint with eroding of the hard cartilage on the ends of the bone and development of Osteoarthritis in the hip."
       ],
-      "avoid": ["Any physical activity and seek immediate medical attention!"]
+      "avoid": ["Any physical activity and seek immediate medical attention!"],
+      "Specialization": ["Orthopedist"]
     },
     "PELVIC STRESS FRACTURE": {
       "overview":
@@ -497,7 +536,8 @@ class DiagnosisOverview {
         "Apply cold therapy or ice to the painful area to ease pain, swelling, and inflammation",
         "Seek medical attention."
       ],
-      "avoid": ["Activities which cause pain."]
+      "avoid": ["Activities which cause pain."],
+      "Specialization": ["Orthopedist"]
     },
     "PERTHES' DISEASE": {
       "overview":
@@ -509,7 +549,8 @@ class DiagnosisOverview {
         "Maintaining range of motion in the hip through mobility exercises. In particular, exercises to maintain abduction of the hip (moving the leg out sideways) and internal rotation of the hip.",
         "Treatment will depend on the age of the child and the severity of the condition but may include bed rest, crutches, traction, a plaster cast, leg brace, or surgery in extremely severe cases. Arthroscopic (keyhole) surgery is done to remove loose bodies within the joint and repair damaged cartilage (chondroplasty)."
       ],
-      "avoid": ["Aggravating activity or exercise"]
+      "avoid": ["Aggravating activity or exercise"],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "HIP BURSITIS": {
       "overview":
@@ -517,12 +558,12 @@ class DiagnosisOverview {
       "try": [
         "Apply ice to the area to reduce pain and inflammation. Cold can be applied for 10 minutes every hour and reduced to 3 or 4 times a day as the injury heals.",
         "Run only on flat, even surfaces to reduce the pressure on the bursa from uneven ground.",
-        "See a sports injury professional.",
-        "W"
+        "See a sports injury professional."
       ],
       "avoid": [
         "Continuing to train when the pain is not completely released, since will increase the inflammation and prevent hip bursitis from healing."
-      ]
+      ],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "OSTEOARTHRITIS OF THE HIP": {
       "overview":
@@ -536,7 +577,8 @@ class DiagnosisOverview {
         "Viscosupplementation – A viscosupplement can be administered as an injection by a clinician. This substance helps to lubricate the hip joint and can decrease the amount of inflammation.",
         "Hip Replacement – Hip replacement operations have become more frequent as procedures have advanced"
       ],
-      "avoid": ["Being obese"]
+      "avoid": ["Being obese"],
+      "Specialization": ["Orthopedist"]
     },
     "SYNOVITIS OF THE HIP": {
       "overview":
@@ -550,7 +592,8 @@ class DiagnosisOverview {
         "Anti-inflammatory medication may be prescribed (such as ibuprofen).",
         "Generally, the condition is left to run its course, although the child should be closely observed and temperature checks should be made."
       ],
-      "avoid": ["Activity when you fell a hip joint injury."]
+      "avoid": ["Activity when you fell a hip joint injury."],
+      "Specialization": ["Infectious Disease Physician "]
     },
     "SLIPPED CAPITAL FEMORAL EPIPHYSIS": {
       "overview":
@@ -561,7 +604,8 @@ class DiagnosisOverview {
         "A slipped capital femoral epiphysis that develops gradually may also require surgery.",
         "Failure to treat this injury may lead to the death of the head of the femur and permanent injury or disability."
       ],
-      "avoid": ["Not taking the pain seriously. Contact a doctor immediately!"]
+      "avoid": ["Not taking the pain seriously. Contact a doctor immediately!"],
+      "Specialization": ["Orthopedist"]
     },
 
     //Elbows
@@ -576,7 +620,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Gripping heavy things, opening heavy doors, using a screwdriver and of course playing a backhand in tennis."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "RADIOHUMERAL BURSITIS": {
       "overview":
@@ -588,7 +633,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Gripping heavy things, opening heavy doors, using a screwdriver"
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "OSTEOCHONDRITIS DISSECANS IN THE ELBOW JOINT": {
       "overview":
@@ -602,7 +648,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "If surgery is not undertaken, treatment involves rest, the range of motion exercises and avoidance of throwing activities until the pain has cleared."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "RADIAL TUNNEL SYNDROME": {
       "overview":
@@ -612,7 +659,8 @@ class DiagnosisOverview {
         "A doctor may prescribe anti-inflammatory medication such as Ibuprofen to reduce pain and inflammation and relax the muscles (check with your doctor before taking any medication and do not take Ibuprofen if you have asthma). In severe or persistent cases a surgeon may operate to decompress the nerve which is generally successful.",
         "A professional therapist may use soft tissue massage techniques to relax and release the supinator muscle in the forearm which is often the cause of entrapment. Massage will pump blood into the muscle, reducing muscle spasm and helping to relax any tension in the muscle."
       ],
-      "avoid": ["Any repetitive wrist movements."]
+      "avoid": ["Any repetitive wrist movements."],
+      "Specialization": ["Orthopedist"]
     },
     "ELBOW AVULSION FRACTURE": {
       "overview":
@@ -626,7 +674,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Gripping heavy things, opening heavy doors, using a screwdriver"
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "MEDIAL ELBOW LIGAMENT SPRAIN": {
       "overview":
@@ -638,7 +687,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "All activities which stress the elbow, or increase symptoms. For mild injuries, this may mean a short rest period and if caught early enough simply modifying the technique to avoid stressing the ligaments may be enough. However, for more long term chronic injuries or severe acute injuries complete rest may be necessary."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "GOLFER'S ELBOW": {
       "overview":
@@ -651,7 +701,8 @@ class DiagnosisOverview {
       "avoid": [
         "Activity that causes pain. Continuing to use the wrist may result in your injury becoming chronic, making it much more difficult to treat. This may mean simply adapting your training to avoid overstressing the elbow.",
         "Or for more serious injuries, a period of complete rest might be required. In particular, avoid gripping anything tightly or opening heavy doors."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "ELBOW HYPEREXTENSION INJURY": {
       "overview":
@@ -662,7 +713,8 @@ class DiagnosisOverview {
         "Apply elbow strapping to prevent the elbow from hyperextending (bending backward) whilst healing.",
         "A professional therapist may use electrotherapy such as ultrasound to help reduce pain and swelling as well as advise on a full rehabilitation program."
       ],
-      "avoid": ["Physical activity."]
+      "avoid": ["Physical activity."],
+      "Specialization": ["Orthopedist"]
     },
     "DISLOCATED ELBOW": {
       "overview":
@@ -672,13 +724,15 @@ class DiagnosisOverview {
         "Apply ice or cold therapy to the elbow.",
         "Put the elbow in a sling to support it."
       ],
-      "avoid": ["to ‘pop it back in’ yourself! This can cause further damage"]
+      "avoid": ["to ‘pop it back in’ yourself! This can cause further damage"],
+      "Specialization": ["Orthopedist"]
     },
     "ELBOW & FOREARM FRACTURE": {
       "overview":
           "Elbow dislocations are the second most common dislocations in adults, behind the shoulder. The elbow is a very stable joint and so it requires a lot of force to dislocate it. Severe pain and obvious deformity are the common symptoms for this elbow injury, which is normally caused by a fall or direct impact. Read an explanation of elbow dislocations, treatments and how to rehabilitate after the injury.",
       "try": ["Seek medical attenttion immediately!"],
-      "avoid": ["Any physical activities."]
+      "avoid": ["Any physical activities."],
+      "Specialization": ["Orthopedist"]
     },
     "ULNAR NERVE COMPRESSION": {
       "overview":
@@ -688,7 +742,8 @@ class DiagnosisOverview {
         "Apply cold therapy. Cold reduces pain and inflammation.",
         "If you are a cyclist then consider having the way your bike is set up looked at by an experienced cycling coach. Make sure you adjust your position on the handlebars occasionally on long rides."
       ],
-      "avoid": ["Any physical activities!"]
+      "avoid": ["Any physical activities!"],
+      "Specialization": ["Orthopedist"]
     },
     "TRICEPS TENDONITIS": {
       "overview":
@@ -699,7 +754,8 @@ class DiagnosisOverview {
         "Later in the healing process, after the acute stage has passed, applying heat and wearing a heat retainer is likely to be more beneficial.",
         "Continue to rest until normal daily activities are pain-free."
       ],
-      "avoid": ["Any physical activities!"]
+      "avoid": ["Any physical activities!"],
+      "Specialization": ["Orthopedist"]
     },
     "ELBOW BURSITIS(STUDENTS ELBOW)": {
       "overview":
@@ -710,7 +766,8 @@ class DiagnosisOverview {
         "Aspirating the bursa is an option in some cases. A needle is inserted into the bursa and the fluid sucked out. In severe cases, a doctor may immobilize the arm or give a steroid injection.",
         "If conservative treatment fails then a surgeon may operate for elbow bursitis."
       ],
-      "avoid": ["Any physical activities!"]
+      "avoid": ["Any physical activities!"],
+      "Specialization": ["Orthopedist"]
     },
     "OLECRANON FRACTURE": {
       "overview":
@@ -722,7 +779,8 @@ class DiagnosisOverview {
         "If the fragment is not displaced then your elbow will most likely be immobilised in a splint or cast to allow healing.",
         "However, if the fragment is displaced, then surgery may be needed to realign the fragment of bone and fix it securely in place."
       ],
-      "avoid": ["Any physical activities!"]
+      "avoid": ["Any physical activities!"],
+      "Specialization": ["Orthopedist"]
     },
 
     // Hands and Arms Diagnoses
@@ -739,7 +797,8 @@ class DiagnosisOverview {
       "avoid": [
         "Do not eat or drink anything in case you need surgery to fix the bone when you get to hospital",
         "Do not try to use the affected arm or wrist"
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "LATERAL EPICONDYLITIS": {
       "overview":
@@ -752,7 +811,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Rest your arm by avoiding the movement that caused the condition."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "CARPAL TUNNEL SYNDROME": {
       "overview":
@@ -767,7 +827,8 @@ class DiagnosisOverview {
       "avoid": [
         "Don’t work with your arms too close or too far from your body.",
         "Don’t rest your wrists on hard surfaces for long periods of time."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "GANGLION CYST": {
       "overview":
@@ -775,7 +836,8 @@ class DiagnosisOverview {
       "try": [
         "Treatment is usually only recommended if the cyst causes pain or affects the range of movement in a joint. The 2 main treatment options for a ganglion cyst are: draining fluid out of the cyst with a needle and syringe (aspiration) cutting the cyst out using surgery"
       ],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "INFECTION": {
       "overview": "",
@@ -786,7 +848,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Forget to hand washing as is one of the best ways to avoid infections."
-      ]
+      ],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "RHEUMATOID ARTHRITIS": {
       "overview":
@@ -796,7 +859,8 @@ class DiagnosisOverview {
         "Reduce the stress on your affected joints.",
         "Do regular, gentle exercise."
       ],
-      "avoid": ["Smoking", "Being overweight"]
+      "avoid": ["Smoking", "Being overweight"],
+      "Specialization": ["Orthopedist"]
     },
     "GOUT": {
       "overview":
@@ -809,7 +873,8 @@ class DiagnosisOverview {
       "avoid": [
         "Limit or avoid foods that are rich in purines. These include salmon, sardines, herring, organ meats, asparagus, and mushrooms.",
         "Limit the amount of alcohol you drink."
-      ]
+      ],
+      "Specialization": ["Infectious Disease Physician"]
     },
 
     //Eyes
@@ -827,7 +892,8 @@ class DiagnosisOverview {
         "Wearing contact lenses",
         "Eye make-up until the stye has burst and healed.",
         "To burst a stye or remove an eyelash yourself. This can spread the infection."
-      ]
+      ],
+      "Specialization": ["Ophthalmologist"]
     },
     "CHALAZION": {
       "overview":
@@ -839,7 +905,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Do not attempt to squeeze or pop the chalazion, as it may inadvertently cause more damage."
-      ]
+      ],
+      "Specialization": ["Ophthalmologist"]
     },
     "TOO MUCH GLUCOSE": {
       "overview":
@@ -849,7 +916,8 @@ class DiagnosisOverview {
         "He or she can give you advice on preventing eye problems.",
         "You should also make sure that you are getting a dilated eye exam at least once per year."
       ],
-      "avoid": ["Food that contain a high level of sugar."]
+      "avoid": ["Food that contain a high level of sugar."],
+      "Specialization": ["Ophthalmologist"]
     },
     "DETACHED RETINA": {
       "overview":
@@ -857,7 +925,8 @@ class DiagnosisOverview {
       "try": [
         "This is an urgent situation. Get medical help as soon as possible"
       ],
-      "avoid": ["Driving"]
+      "avoid": ["Driving"],
+      "Specialization": ["Ophthalmologist"]
     },
     "ACUTE GLAUCOMA": {
       "overview":
@@ -866,13 +935,15 @@ class DiagnosisOverview {
         "Promptly go to an emergency room or an eye doctor's (ophthalmologist's) office if you experience some of the symptoms of acute angle-closure glaucoma, such as severe headache, eye pain and blurred vision.",
         "Remain in the supine position as long as possible",
       ],
-      "avoid": ["Wear eye patches, covers, or blindfolds"]
+      "avoid": ["Wear eye patches, covers, or blindfolds"],
+      "Specialization": ["Ophthalmologist"]
     },
     "TEMPORAL ARTERITIS": {
       "overview":
           "Temporal arteritis (giant cell arteritis) is where the arteries, particularly those at the side of the head (the temples), become inflamed. It's serious and needs urgent treatment.",
       "try": ["See your doctor right away."],
-      "avoid": ["Any self treatment!"]
+      "avoid": ["Any self treatment!"],
+      "Specialization": ["Ophthalmologist"]
     },
     "SINUSITIS": {
       "overview":
@@ -882,7 +953,8 @@ class DiagnosisOverview {
         "Warm facial compresses may also help relieve the pain.",
         "If your symptoms don’t improve within 10 days, or if you have constant fever or severe pain, or your symptoms improve and then worsen again, see your doctor as soon as possible."
       ],
-      "avoid": ["Giving children 5 years and under cough or cold medicines."]
+      "avoid": ["Giving children 5 years and under cough or cold medicines."],
+      "Specialization": ["Ophthalmologist"]
     },
     "IRITIS": {
       "overview":
@@ -891,7 +963,8 @@ class DiagnosisOverview {
         "Contact a GP as soon as possible if you have persistent eye pain or an unusual change in your vision, particularly if you've had previous episodes of iritis.",
         "The GP may refer you to an eye specialist (ophthalmologist) who will examine your eye in more detail."
       ],
-      "avoid": ["Any self treatment!"]
+      "avoid": ["Any self treatment!"],
+      "Specialization": ["Ophthalmologist"]
     },
     "ALLERGY OR INSECT BYTE": {
       "overview": "You may have an allergy or have been bitten by an insect.",
@@ -899,13 +972,15 @@ class DiagnosisOverview {
         "Use a cool compress and take an antihistamine to relieve discomfort.",
         "See your doctor if the swelling doesn’t get better or if you have a fever."
       ],
-      "avoid": ["Scratching you eyes."]
+      "avoid": ["Scratching you eyes."],
+      "Specialization": ["Ophthalmologist"]
     },
     "PERIORBITAL CELLULITIS": {
       "overview":
           "Periorbital (or preseptal) cellulitis, is an infective oedema of the eyelids and periorbital skin with no involvement of the orbit. Periorbital cellulitis is usually caused by Staphylococcus, streptococcus or Haemophilus bacteriae (more likely in unimmunised children)",
       "try": ["See your doctor right away."],
-      "avoid": ["Any self treatment!"]
+      "avoid": ["Any self treatment!"],
+      "Specialization": ["Ophthalmologist"]
     },
     "SCRATCHED CORNEA / CORNEAL ABRASION": {
       "overview":
@@ -918,7 +993,8 @@ class DiagnosisOverview {
       "avoid": [
         "Scratching you eyes.",
         "Removing something that is directly over the cornea — this might cause more serious damage."
-      ]
+      ],
+      "Specialization": ["Ophthalmologist"]
     },
     "CONJUNCTIVITIS": {
       "overview":
@@ -929,7 +1005,8 @@ class DiagnosisOverview {
         "Remove your contacts and do not wear them until the inflammation has cleared.",
         "If there’s no improvement with a warm compress and gently cleaning the secretions in 1-2 days, you may have a more serious form of VIRAL or BACTERIAL CONJUNCTIVITIS. See your doctor promptly."
       ],
-      "avoid": ["Wearing make up and contact lenses."]
+      "avoid": ["Wearing make up and contact lenses."],
+      "Specialization": ["Ophthalmologist"]
     },
     "BLEPHARITIS": {
       "overview":
@@ -939,7 +1016,8 @@ class DiagnosisOverview {
         "You can also apply an over-the-counter anti-dandruff shampoo (very small amount) just before you shower/bathe and then wash it off after 5-10 minutes.",
         "If the problem doesn’t resolve, see your doctor.",
       ],
-      "avoid": ["Scratching you eyes."]
+      "avoid": ["Scratching you eyes."],
+      "Specialization": ["Ophthalmologist"]
     },
 
     // Thights Diagnoses
@@ -953,7 +1031,8 @@ class DiagnosisOverview {
         "drinking plenty of fluids to avoid dehydration",
         "wearing compression stockings until you're better"
       ],
-      "avoid": ["wearing compression stockings until you're better"]
+      "avoid": ["wearing compression stockings until you're better"],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "EDEMA": {
       "overview":
@@ -961,7 +1040,8 @@ class DiagnosisOverview {
       "try": [
         "To treat edema, you often must treat its underlying cause. For example, you might take allergy medications to treat swelling from allergies."
       ],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "DEHYDRATATION": {
       "overview":
@@ -976,7 +1056,8 @@ class DiagnosisOverview {
       "avoid": [
         "do not make formula weaker",
         "do not give young children fruit juice or fizzy drinks – it makes things like diarrhoea or vomiting worse"
-      ]
+      ],
+      "Specialization": ["Gastroenterologist"]
     },
     "ATHEROSCLERORIS": {
       "overview":
@@ -986,7 +1067,8 @@ class DiagnosisOverview {
         "exercise regularly",
         "maintain a healthy weight"
       ],
-      "avoid": ["stop smoking", "moderate your alcohol consumption"]
+      "avoid": ["stop smoking", "moderate your alcohol consumption"],
+      "Specialization": ["Cardiologist"]
     },
     "TENDONITIS": {
       "overview":
@@ -1000,13 +1082,15 @@ class DiagnosisOverview {
         "do not over-exercise tired muscles",
         "do not start a new sport without some training or practice",
         "do not do the same repetitive exercises"
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "SPINAL STENOSIS": {
       "overview":
           "Spinal stenosis is a narrowing of the spaces within your spine, which can put pressure on the nerves that travel through the spine.",
       "try": [""],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Orthopedist"]
     },
     "BLOOD CLOT": {
       "overview":
@@ -1020,7 +1104,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Do not smoke.",
-      ]
+      ],
+      "Specialization": ["Infectious Disease Physician"]
     },
 
     // Calves Diagnoses
@@ -1038,7 +1123,8 @@ class DiagnosisOverview {
       "avoid": [
         "do not continue doing the exercise that caused your shin splints",
         "do not rush back into exercise at the level you were at – build your exercise routine back up slowly"
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "PERIPHERAL ARTERIAL DISEASE (PAD)": {
       "overview":
@@ -1048,7 +1134,8 @@ class DiagnosisOverview {
         "lose weight, if you're overweight or obese",
         "moderate your consumption of alcohol"
       ],
-      "avoid": ["Stop smoking"]
+      "avoid": ["Stop smoking"],
+      "Specialization": ["Cardiologist"]
     },
     "ACHILLES TENDON": {
       "overview":
@@ -1062,7 +1149,8 @@ class DiagnosisOverview {
         "do not over-exercise tired muscles",
         "do not start a new sport without some training or practice",
         "do not do the same repetitive exercises"
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "DEEP VENOUS THROMBOSIS": {
       "overview":
@@ -1073,7 +1161,8 @@ class DiagnosisOverview {
         "Control your blood pressure.",
         "Lose weight if you are overweight."
       ],
-      "avoid": ["Do not smoke."]
+      "avoid": ["Do not smoke."],
+      "Specialization": ["Infectious Disease Physician"]
     },
 
     // Ears Diagnoses
@@ -1089,7 +1178,8 @@ class DiagnosisOverview {
         "Putting anything inside your ear to remove earwax, such as cotton buds or your finger",
         "Letting water or shampoo get in your ear",
         "Using decongestants or antihistamines – there's no evidence they help with ear infections"
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "EAR MAY BE SERIOUSLY INFECTED": {
       "overview":
@@ -1103,7 +1193,8 @@ class DiagnosisOverview {
         "Putting anything inside your ear to remove earwax, such as cotton buds or your finger",
         "Letting water or shampoo get in your ear",
         "Using decongestants or antihistamines – there's no evidence they help with ear infections"
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "MASTOIDITIS": {
       "overview":
@@ -1118,7 +1209,8 @@ class DiagnosisOverview {
         "Putting anything inside your ear to remove earwax, such as cotton buds or your finger",
         "Letting water or shampoo get in your ear",
         "Using decongestants or antihistamines – there's no evidence they help with ear infections"
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "RUPTURED EARDRUM": {
       "overview":
@@ -1132,7 +1224,8 @@ class DiagnosisOverview {
         "Letting water or shampoo get in your ear",
         "Using decongestants or antihistamines – there's no evidence they help with ear infections",
         "Infection by keeping your ear dry while it’s healing."
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "OTITIS EXTERNA": {
       "overview":
@@ -1146,7 +1239,8 @@ class DiagnosisOverview {
         "Putting anything inside your ear to remove earwax, such as cotton buds or your finger",
         "Letting water or shampoo get in your ear",
         "Using decongestants or antihistamines – there's no evidence they help with ear infections"
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "TEMPOROMANDIBULAR JOINT SYNDROME": {
       "overview":
@@ -1165,7 +1259,8 @@ class DiagnosisOverview {
         "Non-functional jaw activites",
         "Resting on your chin",
         "Slouching"
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "BLOCKED EUSTACHIAN TUBE": {
       "overview":
@@ -1175,7 +1270,8 @@ class DiagnosisOverview {
         "Putting a warm heating pad on your ear may help relieve the pain.",
         "If the pain is intense or doesn’t go away in 1 or 2 days, see your doctor."
       ],
-      "avoid": ["Catching colds or the flu often lead to this condition."]
+      "avoid": ["Catching colds or the flu often lead to this condition."],
+      "Specialization": ["Otolaryngologist"]
     },
     "BAROTRAUMA": {
       "overview":
@@ -1186,7 +1282,8 @@ class DiagnosisOverview {
         "Take a breath in. Then, try to breathe out gently with your mouth closed and pinching your nose (the Valsalva manoeuvre). In this way, no air is blown out but you are gently pushing air into the Eustachian tube. If you do this you may feel your ears go 'pop' as air is pushed into the middle ear. This often cures the problem. Repeat this every few minutes until landing - whenever you feel any discomfort in the ear.",
         "Not sleep when the plane is descending to land. (Ask the air steward to wake you when the plane starts to descend.) If you are awake you can make sure that you suck and swallow to encourage air to get into the middle ear."
       ],
-      "avoid": ["Wearing earplugs while diving or flying."]
+      "avoid": ["Wearing earplugs while diving or flying."],
+      "Specialization": ["Otolaryngologist"]
     },
     "SEROUS OTITIS": {
       "overview":
@@ -1196,7 +1293,8 @@ class DiagnosisOverview {
         "If the fluid behind the eardrum is not resolved within three to six months, it is generally best for your doctor to remove the fluid by surgically placing an ear tube",
         "Talk to your doctor. He or she can tell you how to treat the wax or fluid buildup."
       ],
-      "avoid": ["Wearing earplugs"]
+      "avoid": ["Wearing earplugs"],
+      "Specialization": ["Otolaryngologist"]
     },
     "CERUMINOSIS": {
       "overview":
@@ -1205,7 +1303,8 @@ class DiagnosisOverview {
         "Putting 3-5 drops of warm water or 1 part warm water and 1 part white vinegar into your ear canal once per day to soften the wax.",
         "After 2-5 minutes, turn your head and lightly tug on your ear to discharge the drops."
       ],
-      "avoid": ["Inserting cotton swabs into the ear canal."]
+      "avoid": ["Inserting cotton swabs into the ear canal."],
+      "Specialization": ["Otolaryngologist"]
     },
     "CAULIFLOWER EAR": {
       "overview":
@@ -1216,7 +1315,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "Not head gear when engaging in activities that increase your risk for ear trauma, such as wrestling, boxing, rugby, and other close-contact sports."
-      ]
+      ],
+      "Specialization": ["Otolaryngologist"]
     },
     "TOOTH PROBLEM": {
       "overview":
@@ -1224,7 +1324,8 @@ class DiagnosisOverview {
       "try": [
         "Try a mild over-the-counter pain reliever, and see your dentist."
       ],
-      "avoid": ["Chewing excessively"]
+      "avoid": ["Chewing excessively"],
+      "Specialization": ["Otolaryngologist"]
     },
     "INFECTION or LOCAL INFLAMMATION": {
       "overview":
@@ -1234,7 +1335,8 @@ class DiagnosisOverview {
         "A mild pain reliever and warm compress may help relieve the pain.",
         "See your doctor if the pain becomes severe or if redness and warmth spread into or around the ear or if you develop fever."
       ],
-      "avoid": ["Wearing earplugs"]
+      "avoid": ["Wearing earplugs"],
+      "Specialization": ["Otolaryngologist"]
     },
 
     // Knees Diagnoses
@@ -1247,7 +1349,8 @@ class DiagnosisOverview {
         "Elevation. Elevate the affected leg except when it is necessary to walk.",
         "Nonsteroidal anti-inflammatory drugs (NSAIDs). Medications such as naproxen and ibuprofen may relieve pain and control inflammation."
       ],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Orthopedist"]
     },
     "TORN CARTILAGE": {
       "overview":
@@ -1255,19 +1358,22 @@ class DiagnosisOverview {
       "try": ["Ice and over-the-counter pain relievers can be helpful."],
       "avoid": [
         "Avoid activities that aggravate your knee pain — especially sports that involve pivoting or twisting your knee — until the pain disappears."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "RHEUMATIC FEVER": {
       "overview":
           "Rheumatic fever is a very rare complication that can develop after a bacterial throat infection. It can cause painful joints and heart problems. Most people make a full recovery, but it can come back.",
       "try": ["Call 911"],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "SEPTICE JOINT INFECTION": {
       "overview":
           "Septic arthritis is a serious type of joint infection. It should be treated as soon as possible. You can make a full recovery with treatment but if left untreated it can be more serious.",
       "try": ["Call 911"],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "OSTEOARTHRITIS": {
       "overview":
@@ -1284,7 +1390,8 @@ class DiagnosisOverview {
         "Tennis",
         "High-impact aerobics",
         "Repeating the same movement, such as a tennis serve, again and again"
-      ]
+      ],
+      "Specialization": ["Cardiologist"]
     },
     "ARTHRITIS": {
       "overview":
@@ -1298,7 +1405,8 @@ class DiagnosisOverview {
         "Tennis",
         "High-impact aerobics",
         "Repeating the same movement, such as a tennis serve, again and again"
-      ]
+      ],
+      "Specialization": ["Cardiologist"]
     },
     "OSGOOD-SCHLATTER DISEASE": {
       "overview":
@@ -1306,7 +1414,8 @@ class DiagnosisOverview {
       "try": [
         "Call your child's doctor if knee pain interferes with your child's ability to perform daily activities. Seek medical attention if the knee is swollen and red, or if the knee pain is associated with fever, locking or instability of the knee joint."
       ],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Orthopedist"]
     },
 
     // Back Diagnoses
@@ -1318,7 +1427,8 @@ class DiagnosisOverview {
         "Maintain good posture. This reduces pressure on your spine and disks. Keep your back straight and aligned, particularly when sitting for long periods. Lift heavy objects properly, making your legs — not your back — do most of the work.",
         "Maintain a healthy weight. Excess weight puts more pressure on the spine and disks, making them more susceptible to herniation."
       ],
-      "avoid": ["Smoking"]
+      "avoid": ["Smoking"],
+      "Specialization": ["Orthopedist"]
     },
     "SCIATICA": {
       "overview":
@@ -1334,13 +1444,15 @@ class DiagnosisOverview {
       "avoid": [
         "do not sit or lie down for long periods – even if moving hurts, it's not harmful and can help you get better faster",
         "do not use hot water bottles to ease the pain – you could scald yourself if your skin is numb"
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "FRACTURED SPINE": {
       "overview":
           "In these types of fractures, the bone collapses and breaks. The procedure injects cement into the bone. This holds the bone in place and keeps it from collapsing or breaking more. It’s also called percutaneous vertebroplasty.",
       "try": ["Contact a docotor as soon as possible!"],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Orthopedist"]
     },
     "MUSCLE SPASM": {
       "overview":
@@ -1356,13 +1468,15 @@ class DiagnosisOverview {
         "Restriction in the blood supply.",
         "Stress.",
         "Too much high-intensity exercise."
-      ]
+      ],
+      "Specialization": ["Orthopedist"]
     },
     "CANCER": {
       "overview":
           "Cancer is a group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body.",
       "try": ["Contact a doctor immediately!"],
-      "avoid": [""]
+      "avoid": [""],
+      "Specialization": ["Oncologist"]
     },
     "PYELONEPHRITIS": {
       "overview":
@@ -1377,7 +1491,8 @@ class DiagnosisOverview {
       ],
       "avoid": [
         "using a diaphragm or condoms coated in spermicide if you're prone to getting UTIs – it's thought spermicide can increase your risk of getting a UTI"
-      ]
+      ],
+      "Specialization": ["Infectious Disease Physician"]
     },
     "KIDNEY STONES": {
       "overview":
@@ -1386,7 +1501,8 @@ class DiagnosisOverview {
         "drink water, but drinks like tea and coffee also count",
         "add fresh lemon juice to your water"
       ],
-      "avoid": ["eating too much salt", "avoid fizzy drinks"]
+      "avoid": ["eating too much salt", "avoid fizzy drinks"],
+      "Specialization": ["Nephrologist"]
     },
   };
 }

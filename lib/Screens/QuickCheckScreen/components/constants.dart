@@ -1220,7 +1220,7 @@ class Constants {
         "onYesResponse": [
           {"diagnosis": "ULCER", "score": 15},
           {"diagnosis": "IRRITATION OF THE ESOPHAGUS", "score": 15},
-          {"diagnosis": "SPASM of the muscles of the esophagus", "score": 15},
+          {"diagnosis": "ESOPHAGUS SPASM", "score": 15},
           {"diagnosis": "HIATAL HERNIA", "score": 15}
         ]
       },
@@ -1236,7 +1236,7 @@ class Constants {
         "onYesResponse": [
           {"diagnosis": "ULCER", "score": 15},
           {"diagnosis": "IRRITATION OF THE ESOPHAGUS", "score": 15},
-          {"diagnosis": "SPASM of the muscles of the esophagus", "score": 15},
+          {"diagnosis": "ESOPHAGUS SPASM", "score": 15},
           {"diagnosis": "HIATAL HERNIA", "score": 15}
         ]
       },
