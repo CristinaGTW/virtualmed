@@ -104,19 +104,30 @@ class _ChatTabState extends State<ChatTab> {
 
     if (res['msg'] == 'Success') {
       for (var connection in res['body']) {
-        connections.add(RegularUser(
-          userId: connection['id'],
-          firstName: connection['first_name'],
-          lastName: connection['last_name'],
-          email: connection['email'],
-          phone: connection['phone'],
-          birthdate: connection['birthdate'],
-          height: connection['height'],
-          weight: connection['weight'],
-          chronic_diseases: connection['chronic_diseases'],
-        ));
+        if (!alreadyAdded(connection['id'], connections)) {
+          connections.add(RegularUser(
+            userId: connection['id'],
+            firstName: connection['first_name'],
+            lastName: connection['last_name'],
+            email: connection['email'],
+            phone: connection['phone'],
+            birthdate: connection['birthdate'],
+            height: connection['height'],
+            weight: connection['weight'],
+            chronic_diseases: connection['chronic_diseases'],
+          ));
+        }
       }
       return connections;
     }
+  }
+
+  bool alreadyAdded(int userId, List<RegularUser> connections) {
+    for (var user in connections) {
+      if (user.userId == userId) {
+        return true;
+      }
+    }
+    return false;
   }
 }

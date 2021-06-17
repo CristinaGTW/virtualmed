@@ -38,7 +38,8 @@ class _ProfileTabState extends State<ProfileTab> {
       body: Container(
         color: kPrimaryBgColor,
         child: ListView(
-          padding: EdgeInsets.only(left: size.width * 0.1, right: size.width * 0.1),
+          padding:
+              EdgeInsets.only(left: size.width * 0.1, right: size.width * 0.1),
           children: <Widget>[
             Container(
               padding: EdgeInsets.all(20),
@@ -107,6 +108,53 @@ class _ProfileTabState extends State<ProfileTab> {
             text: "Update",
             press: () {
               updateDetails();
+            },
+          ),
+        ),
+        Container(
+          child: RoundedButton(
+            width: 300,
+            text: "Exit From Communities",
+            press: () {
+              showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return Container(
+                    height: 300,
+                    color: kPrimaryColor,
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          TopTitle(
+                            title: "Are you sure you want to exit?",
+                            color: Colors.white,
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(30),
+                            child: Text(
+                              "By continuing, you will exit from all communities you are currently in." +
+                                  " No new users will be able to contact you. You will still be able to keep in touch " +
+                                  "with all your current connections.",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 14),
+                            ),
+                          ),
+                          RoundedButton(
+                            text: 'Exit',
+                            color: Colors.white,
+                            textColor: kPrimaryColor,
+                            press: () {
+                              exitCommunity();
+                            },
+                          )
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
             },
           ),
         ),
@@ -189,6 +237,25 @@ class _ProfileTabState extends State<ProfileTab> {
     } else {
       final snackBar = SnackBar(
         content: Text('An error occurred. Please try again!'),
+        backgroundColor: kPrimaryColor,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
+  }
+
+  Future<void> exitCommunity() async {
+    var user_id = regularUser != null ? regularUser.userId : -1;
+
+    try {
+      var res = await postToServer(api: 'ExitCommunities', body: {
+        'userId': user_id,
+      });
+      if (res['msg'] == 'Success') {
+        print("Exited all communities successfully");
+      }
+    } catch (e) {
+      final snackBar = SnackBar(
+        content: Text('$e'),
         backgroundColor: kPrimaryColor,
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);

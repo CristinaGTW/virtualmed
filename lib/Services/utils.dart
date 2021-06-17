@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:virtual_med/Models/message.dart';
 import '../Models/regular-user.dart';
 
 const String SERVER_URL = 'https://virtual-med-backend.herokuapp.com/';

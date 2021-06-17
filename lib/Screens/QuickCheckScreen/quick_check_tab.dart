@@ -658,7 +658,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         'specialization': specialization,
       });
       if (res['msg'] == 'Success') {
-        print("Joined" + specialization + "community successfully");
+        print("Joined " + specialization + " community successfully");
       }
     } catch (e) {
       final snackBar = SnackBar(

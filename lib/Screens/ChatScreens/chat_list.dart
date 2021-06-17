@@ -123,30 +123,49 @@ class _ChatListState extends State<ChatList> {
 
     if (res['msg'] == 'Success') {
       for (var connection in res['body']) {
-        if (connection['acc_type'] == "doctor") {
-          connections.add(DoctorUser(
-            userId: connection['id'],
-            firstName: connection['first_name'],
-            lastName: connection['last_name'],
-            email: connection['email'],
-            phone: connection['phone'],
-            specialization: connection['specialization'],
-            location: connection['location'],
-          ));
-        } else {
-          var community = await postToServer(
-              api: 'GetCommunity', body: {"userId": connection['id']});
-
-          connections.add(RegularUser(
+        if (!alreadyAdded(connection['id'], connections)) {
+          if (connection['acc_type'] == "doctor") {
+            connections.add(DoctorUser(
               userId: connection['id'],
               firstName: connection['first_name'],
               lastName: connection['last_name'],
               email: connection['email'],
               phone: connection['phone'],
-              community: community['body'][0]['community']));
+              specialization: connection['specialization'],
+              location: connection['location'],
+            ));
+          } else {
+            var community = await postToServer(
+                api: 'GetCommunity', body: {"userId": connection['id']});
+
+            connections.add(RegularUser(
+                userId: connection['id'],
+                firstName: connection['first_name'],
+                lastName: connection['last_name'],
+                email: connection['email'],
+                phone: connection['phone'],
+                community: community['body'][0]['community']));
+          }
         }
       }
       return connections;
     }
+  }
+
+  bool alreadyAdded(int userId, List<User> connections) {
+    for (var user in connections) {
+      if (user.acc_type == AccountType.DOCTOR) {
+        var doctorUser = user as DoctorUser;
+        if (doctorUser.userId == userId) {
+          return true;
+        }
+      } else {
+        var regularUser = user as RegularUser;
+        if (regularUser.userId == userId) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 }
