@@ -2267,7 +2267,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 1}
         ],
         "onYesResponse": [
-          {"diagnosis": "DISLOCATED SHOULDER/SUBLUXED", "score": 5}
+          {"diagnosis": "DISLOCATED SHOULDER", "score": 10}
         ]
       },
       //Q1
@@ -2280,7 +2280,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 2}
         ],
         "onYesResponse": [
-          {"diagnosis": "DISLOCATED SHOULDER/SUBLUXED", "score": 10}
+          {"diagnosis": "DISLOCATED SHOULDER", "score": 10}
         ]
       },
       //Q2
@@ -2292,7 +2292,8 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 3}
         ],
         "onYesResponse": [
-          {"diagnosis": "FRACTURED/DISLOCATED HUMERUS", "score": 10}
+          {"diagnosis": "FRACTURE", "score": 10},
+          {"diagnosis": "DISLOCATED SHOULDER", "score": 10}
         ]
       },
       //Q3
@@ -2329,7 +2330,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 6}
         ],
         "onYesResponse": [
-          {"diagnosis": "TORN ROTATOR CUFF/SHOULDER INSTABILITY.", "score": 10}
+          {"diagnosis": "TORN ROTATOR CUFF", "score": 10}
         ]
       },
       //Q6
@@ -2342,7 +2343,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 7}
         ],
         "onYesResponse": [
-          {"diagnosis": "TORN ROTATOR CUFF/SHOULDER INSTABILITY.", "score": 10}
+          {"diagnosis": "TORN ROTATOR CUFF", "score": 10}
         ]
       },
       //Q7
@@ -2368,7 +2369,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "RHEUMATOID ARTHRITIS,", "score": 10}
+          {"diagnosis": "RHEUMATOID ARTHRITIS", "score": 10}
         ]
       },
       //Q9
@@ -2381,10 +2382,8 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 10}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "IMPINGEMENT/BURSITIS/ROTATOR CUFF SYNDROME",
-            "score": 10
-          }
+          {"diagnosis": "BURSITIS", "score": 10},
+          {"diagnosis": "TORN ROTATOR CUFF", "score": 10}
         ]
       },
       //Q10
@@ -2396,10 +2395,8 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {
-            "diagnosis": "IMPINGEMENT/BURSITIS/ROTATOR CUFF SYNDROME",
-            "score": 10
-          }
+          {"diagnosis": "BURSITIS", "score": 10},
+          {"diagnosis": "TORN ROTATOR CUFF", "score": 10}
         ]
       },
       //Q11
@@ -2412,7 +2409,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 12}
         ],
         "onYesResponse": [
-          {"diagnosis": "ADHESIVE CAPSULITIS/FROZEN SHOULDER", "score": 10}
+          {"diagnosis": "FROZEN SHOULDER", "score": 10}
         ]
       },
       //Q12
@@ -2424,7 +2421,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "ADHESIVE CAPSULITIS/FROZEN SHOULDER", "score": 10}
+          {"diagnosis": "FROZEN SHOULDER", "score": 10}
         ]
       }
     ],

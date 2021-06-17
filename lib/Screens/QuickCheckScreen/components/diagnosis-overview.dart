@@ -11,7 +11,7 @@ class DiagnosisOverview {
         "Let the air sigh out as you breathe out.",
         "Try to get a steady rhythm, taking the same size of breath each time"
       ],
-      "avoid": ["A", "B", "C"],
+      "avoid": ["caffeine", "traveling to elevations over 6,000 feet", "drugs"],
       "Specialization": ["Pulmonologist"]
     },
     "PNEUMONIA": {
@@ -1566,7 +1566,7 @@ class DiagnosisOverview {
         "Any food, drink or medication before seeking medical attention.",
         "Being left alone."
       ],
-      "Specialization": [""]
+      "Specialization": ["Neurologist"]
     },
     "SKULL FRACTURE": {
       "overview":
@@ -1581,7 +1581,7 @@ class DiagnosisOverview {
         "Any food, drink or medication before seeking medical attention.",
         "Being left alone."
       ],
-      "Specialization": [""]
+      "Specialization": ["Orthopedist"]
     },
     "CONCUSSION": {
       "overview":
@@ -1592,7 +1592,7 @@ class DiagnosisOverview {
         "As concussion can result in diverse symptoms, and problems can result in additional injury to the neck, a variety of treatments may be required."
       ],
       "avoid": ["Driving", "Physical activity."],
-      "Specialization": [""]
+      "Specialization": ["Neurologist"]
     },
     "HEADACHES IN SPORT": {
       "overview":
@@ -1607,7 +1607,7 @@ class DiagnosisOverview {
       "avoid": [
         "Not seeking medical attention if the headache persists through a longer period of time and is painful"
       ],
-      "Specialization": [""]
+      "Specialization": ["Neurologist"]
     },
     "POST CONCUSSION SYNDROME": {
       "overview":
@@ -1621,7 +1621,7 @@ class DiagnosisOverview {
         "Sports or intense exercise (gentle exercise may be beneficial).",
         "Consuming alcohol."
       ],
-      "Specialization": [""]
+      "Specialization": ["Neurologist"]
     },
     "MIGRAINE": {
       "overview":
@@ -1635,7 +1635,7 @@ class DiagnosisOverview {
       "avoid": [
         "Simple painkillers, such as aspirin, taken regularly in the event of a migraine as this may intensify symptoms in the future."
       ],
-      "Specialization": [""]
+      "Specialization": ["Family Physician"]
     },
 
     // Cold and Flu Diagnoses
@@ -1651,7 +1651,7 @@ class DiagnosisOverview {
       "avoid": [
         "Giving OTC cough and cold medicines to a child younger than 4 years of age unless your child’s doctor says it’s okay."
       ],
-      "Specialization": [""]
+      "Specialization": ["Infectious Disease Physician"]
     },
     "GASTROENTERITIS": {
       "overview":
@@ -1663,7 +1663,7 @@ class DiagnosisOverview {
       "avoid": [
         "Dehydration(for children) by giving an oral rehydration solution (ORS)."
       ],
-      "Specialization": [""]
+      "Specialization": ["Family Physician"]
     },
     "ALLERGIC RHINITIS": {
       "overview":
@@ -1674,7 +1674,7 @@ class DiagnosisOverview {
       "avoid": [
         "Not going to a doctor if  symptoms are getting worse or are hard to control."
       ],
-      "Specialization": [""]
+      "Specialization": ["Family Physician"]
     },
     "COLD": {
       "overview":
@@ -1687,7 +1687,7 @@ class DiagnosisOverview {
       "avoid": [
         "Giving OTC cough and cold medicines to a child younger than 4 years of age unless your child’s doctor says it’s okay."
       ],
-      "Specialization": [""]
+      "Specialization": ["Family Physician"]
     },
 
     // Headaches
@@ -1696,14 +1696,14 @@ class DiagnosisOverview {
           "Meningitis is an inflammation (swelling) of the protective membranes covering the brain and spinal cord. A bacterial or viral infection of the fluid surrounding the brain and spinal cord usually causes the swelling. However, injuries, cancer, certain drugs, and other types of infections also can cause meningitis.",
       "try": ["See your doctor or go to the emergency room right away."],
       "avoid": ["Smoking.", "Driving."],
-      "Specialization": [""]
+      "Specialization": ["Family Physician"]
     },
     "STROKE / TRANSIENT ISCHEMIC ATTACK": {
       "overview":
           "A stroke is a medical condition in which poor blood flow to the brain causes cell death. There are two main types of stroke: ischemic, due to lack of blood flow, and hemorrhagic, due to bleeding. Both cause parts of the brain to stop functioning properly.",
       "try": ["See your doctor or go to the emergency room right away."],
       "avoid": ["Smoking.", "Driving."],
-      "Specialization": [""]
+      "Specialization": ["Neurologist"]
     },
     "TENSION HEADACHE": {
       "overview":
@@ -1715,7 +1715,7 @@ class DiagnosisOverview {
         "Applying ice packs to painful areas may also help."
       ],
       "avoid": ["Smokking."],
-      "Specialization": [""]
+      "Specialization": ["Family Physician"]
     },
     "VISION PROBLEMS": {
       "overview": "You may have vision problems.",
@@ -1723,19 +1723,97 @@ class DiagnosisOverview {
         "See an optometrist or ophthalmologist for an eye exam to see if you need glasses or contacts to correct your vision."
       ],
       "avoid": ["Reading or studying for extended periods of time."],
-      "Specialization": [""]
+      "Specialization": ["Ophthalmologist"]
     },
     "HYPOGLYCEMIA": {
-      "overview": "Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than normal. Glucose is your body's main energy source. Hypoglycemia is often related to diabetes treatment. But other drugs and a variety of conditions — many rare — can cause low blood sugar in people who don't have diabetes.",
-      "try": ["Eating 6 small meals a day rather than 3 large meals. This may regulate your blood sugar. "],
+      "overview":
+          "Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than normal. Glucose is your body's main energy source. Hypoglycemia is often related to diabetes treatment. But other drugs and a variety of conditions — many rare — can cause low blood sugar in people who don't have diabetes.",
+      "try": [
+        "Eating 6 small meals a day rather than 3 large meals. This may regulate your blood sugar. "
+      ],
       "avoid": ["Alcohol."],
-      "Specialization": [""]
+      "Specialization": ["Family Physician"]
     },
     "WITHDRAWAL": {
-      "overview": "Alcohol withdrawal syndrome is a set of symptoms that people can have when they stop drinking. Often it occurs in people who have had an alcohol abuse problem for weeks, months, or years. People who only drink once in a while rarely have withdrawal. People who have gone through withdrawal before are more likely to have symptoms each time they quit drinking.",
-      "try": ["Using over-the-counter medicine, such as ibuprofen or acetaminophen, to relieve pain and discomfort.", "Although painful, the symptoms are temporary and should fade after a few days."],
+      "overview":
+          "Alcohol withdrawal syndrome is a set of symptoms that people can have when they stop drinking. Often it occurs in people who have had an alcohol abuse problem for weeks, months, or years. People who only drink once in a while rarely have withdrawal. People who have gone through withdrawal before are more likely to have symptoms each time they quit drinking.",
+      "try": [
+        "Using over-the-counter medicine, such as ibuprofen or acetaminophen, to relieve pain and discomfort.",
+        "Although painful, the symptoms are temporary and should fade after a few days."
+      ],
       "avoid": ["Drinking", "Restarting your habit."],
-      "Specialization": [""]
+      "Specialization": ["Family Physician"]
     },
+
+    // Shoulders Diagnoses
+    "DISLOCATED SHOULDER": {
+      "overview":
+          "A dislocated shoulder happens when your upper arm pops out of your shoulder socket.",
+      "try": [
+        "Go to your nearest accident and emergency (A&E) department immediately if you think you've dislocated your shoulder.",
+        "Place something soft, such as a folded blanket or pillow, in the gap between your arm and the side of your chest to support it.",
+        "If you can, ask someone to make a simple sling to hold your lower arm across your chest, with the elbow bent at a right angle."
+      ],
+      "avoid": [
+        "Do not try to pop your arm back in yourself",
+        "While waiting for medical help, avoid moving your upper arm as much as possible."
+      ],
+      "Specialization": ["Physiotherapist"]
+    },
+    "FRACTURED CLAVICLE": {
+      "overview":
+          "A broken collarbone, or fractured clavicle, is a common injury. It usually happens after a fall or a blow to the shoulder.",
+      "try": [
+        "While waiting to see a doctor, stabilise your arm using a towel as a sling – this goes under the forearm and then around the neck. Try to move your arm as little as possible.",
+        "Painkillers, such as paracetamol or ibuprofen, can help reduce the pain.",
+        "Holding an ice pack to the injured area can also help reduce the pain and swelling. A bag of frozen peas wrapped in a tea towel works well. But do not put ice directly onto your skin because it can burn."
+      ],
+      "avoid": ["Do not give aspirin to children under the age of 16."],
+      "Specialization": ["Orthopedist"]
+    },
+    "AC JOINT SEPARATION": {
+      "overview":
+          "An acromioclavicular joint separation, or AC separation, is a very frequent injury among physically active people. In this injury the clavicle (collar bone) separates from the scapula (shoulder blade). ",
+      "try": [
+        "ice to reduce pain and swelling.",
+        "rest and a protective sling until pain subsides. This usually takes about 1-2 weeks.",
+        "pain and anti-inflammatory medications.",
+        "A rehabilitation program to restore normal motion and strength is begun as soon as tolerated with gentle exercises and progresses as healing allows."
+      ],
+      "avoid": [""],
+      "Specialization": ["Orthopedist"]
+    },
+    "TORN ROTATOR CUFF": {
+      "overview":
+          "A rotator cuff injury can cause a dull ache in the shoulder, which often worsens with use of the arm away from the body.",
+      "try": [
+        "Most people exercise the front muscles of the chest, shoulder and upper arm, but it is equally important to strengthen the muscles in the back of the shoulder and around the shoulder blade to optimize shoulder muscle balance. Your doctor or a physical therapist can help you plan an exercise routine.",
+      ],
+      "avoid": [""],
+      "Specialization": ["Orthopedist"]
+    },
+    "FROZEN SHOULDER": {
+      "overview":
+          " This occurs when the joints in your shoulder are inflamed. The inflammation leads to scar tissue.",
+      "try": [
+        "Your doctor can teach you physical therapy exercises to help break up the scar tissue in your shoulder. They may refer you to a physical therapist to show you how to do the exercises.",
+        "Many of the exercises can be done at home.",
+      ],
+      "avoid": [""],
+      "Specialization": ["Orthopedist"]
+    },
+    "BURSITIS": {
+      "overview":
+          "Bursitis is when a joint becomes painful and swollen. It can usually be treated at home and should go away in a few weeks.",
+      "try": [
+        "maintain a healthy weight – being overweight puts more pressure on your joints",
+        "clean any cuts on elbows and knees to prevent infections",
+        "warm up properly before exercising and playing sport",
+        "use padding when putting a lot of pressure on joints (for example, when kneeling)",
+        "take regular breaks if you do things that put pressure on a joint, like kneeling"
+      ],
+      "avoid": ["do not knock or bang your joints"],
+      "Specialization": ["Orthopedist"]
+    }
   };
 }
