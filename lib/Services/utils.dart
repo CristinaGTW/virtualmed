@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:virtual_med/Models/message.dart';
 import '../Models/regular-user.dart';
 
 const String SERVER_URL = 'https://virtual-med-backend.herokuapp.com/';
@@ -31,32 +32,13 @@ Future<Map<String, dynamic>> postToServer(
 }
 
 class StreamSocket{
-  final _socketResponse= StreamController<String>();
+  final _socketResponse= StreamController<Message>();
 
-  void Function(String) get addResponse => _socketResponse.sink.add;
+  void Function(Message) get addResponse => _socketResponse.sink.add;
 
-  Stream<String> get getResponse => _socketResponse.stream;
+  Stream<Message> get getResponse => _socketResponse.stream;
 
   void dispose(){
     _socketResponse.close();
   }
 }
-
-
-
-
-// void chatClient(String message) async {
-//   // Dart client
-//   IO.Socket socket = IO.io(SERVER_URL);
-//   socket.onConnect((_) {
-//     // print('User Connected');
-//     socket.emit('message', message);
-//   });
-//   // socket.on('event', (data) => print(data));
-//   socket.on('message', (data) {
-//     print("Received: " + data);
-//     MessageProvider().addMessage(data);
-//   });
-//   socket.onDisconnect((_) => print('disconnect'));
-//   socket.on('fromServer', (_) => print(_));
-// }
