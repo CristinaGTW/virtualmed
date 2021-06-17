@@ -3564,5 +3564,106 @@ class Constants {
         ]
       }
     ]
+
+    // Cold and Flu
+    "Cold and Flu": [
+      //Q0
+      {
+        "question": "Do you have a fever?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": 1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "STREP THROAT", "score": 10}
+        ]
+      },
+      //Q1
+      {
+        "question": "Do you have a sore throat and headache without nasal drainage or a cough?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "STREP THROAT", "score": 10}
+        ]
+      },
+      //Q2
+      {
+        "question": "Did your symptoms start suddenly, and do you have a combination of symptoms including muscle aches, fatigue, chills, sore throat, runny nose, and/or cough?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "INFLUENZA", "score": 10}
+        ]
+      },
+      //Q3
+      {
+        "question": "Are you experiencing wheezing, shortness of breath, and a persistent cough that brings up clear, yellow, or green mucus?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ACUTE BRONCHITIS", "score": 10}
+        ]
+      },
+      //Q4
+      {
+        "question": "Do you have a headache or muscle aches, nausea or vomiting, and watery diarrhea?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": " GASTROENTERITIS", "score": 10}
+        ]
+      },
+      //Q5
+      {
+        "question": "Are you experiencing a runny and/or itchy nose, sneezing, and itchy eyes that get worse when you are outside or around certain triggers?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "ALLERGIC RHINITIS", "score": 10}
+        ]
+      },
+      //Q6
+      {
+        "question": "Are you experiencing sneezing, a sore throat with a cough, a headache, congestion, and a runny nose?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 7},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "COLD", "score": 10}
+        ]
+      },
+      //Q7
+      {
+        "question": "Do you have pressure or pain around your eyes, cheeks, nose, or forehead; nasal congestion; a headache; a dry cough; and/or any type of discharge from your nose?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "SINUSITIS", "score": 10}
+        ]
+      }
+    ]
+
   };
 }
