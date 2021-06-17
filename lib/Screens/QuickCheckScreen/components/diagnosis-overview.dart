@@ -1564,7 +1564,7 @@ class DiagnosisOverview {
         "Playing sport.",
         "Driving.",
         "Any food, drink or medication before seeking medical attention.",
-        "Being left alone".
+        "Being left alone"
       ],
       "Specialization": [""]
     },
