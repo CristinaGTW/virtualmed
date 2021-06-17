@@ -24,7 +24,7 @@ class _ChatTabState extends State<ChatTab> {
     futureChatUsers = _fetchConnections();
 
     Size size = MediaQuery.of(context).size;
-    var sidePadding = (size.width - 400) / 2;
+    var sidePadding = (size.width * 0.2) / 2;
     return Container(
       child: SingleChildScrollView(
         physics: BouncingScrollPhysics(),

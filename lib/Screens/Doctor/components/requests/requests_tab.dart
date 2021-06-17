@@ -30,7 +30,7 @@ class _RequestsTabState extends State<RequestsTab> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    var sidePadding = (size.width - 400) / 2;
+    var sidePadding = (size.width * 0.2) / 2;
     return Container(
       child: SingleChildScrollView(
         physics: BouncingScrollPhysics(),

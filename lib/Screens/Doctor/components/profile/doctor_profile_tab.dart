@@ -59,8 +59,8 @@ class _DoctorProfileTabState extends State<DoctorProfileTab> {
             Container(
               padding: EdgeInsets.only(
                   top: 50,
-                  left: (size.width - 400) / 2,
-                  right: (size.width - 400) / 2),
+                  left: (size.width*0.2) / 2,
+                  right: (size.width*0.2) / 2),
               child: getButtons()
             )
           ],
@@ -73,7 +73,7 @@ class _DoctorProfileTabState extends State<DoctorProfileTab> {
       IconData iconData, Size size) {
     return Container(
       padding: EdgeInsets.only(
-          top: 10, left: (size.width - 400) / 2, right: (size.width - 400) / 2),
+          top: 10, left: (size.width * 0.2) / 2, right: (size.width * 0.2) / 2),
       child: RoundedInputField(
         inputText: (userField == '') || (userField == null) ? fieldName : "",
         initialValue: userField != '' ? userField : "",

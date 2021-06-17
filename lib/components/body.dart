@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:virtual_med/Screens/Authentication/account_selection.dart';
 import 'package:virtual_med/Screens/Authentication/login_page.dart';
@@ -12,9 +13,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery
-        .of(context)
-        .size;
+    Size size = MediaQuery.of(context).size;
     return Container(
       color: kPrimaryColor,
       height: size.height,
@@ -32,8 +31,8 @@ class Body extends StatelessWidget {
               text: "EMERGENCY",
               press: () =>
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return MainNavUnauth();
-                  })),
+                return MainNavUnauth();
+              })),
               color: Colors.white,
               textColor: kPrimaryColor,
             ),
@@ -44,8 +43,8 @@ class Body extends StatelessWidget {
               text: "LOG IN",
               press: () =>
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return LoginPage();
-                  })),
+                return LoginPage();
+              })),
               color: kPrimaryColor,
               borderColor: Colors.white,
               textColor: Colors.white,
@@ -56,8 +55,8 @@ class Body extends StatelessWidget {
             child: TextButton(
               onPressed: () =>
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return AccountSelection();
-                  })),
+                return AccountSelection();
+              })),
               child: Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
                 child: Text(
@@ -70,6 +69,14 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+              bottom: 10,
+              child: Container(child: Text(
+                  "Disclaimer:\nThis app cannot replace a visit to the doctor.\n\"Medicine is not a cooking book.\"",
+                  textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white, fontSize: 16, decoration: TextDecoration.none),
+              ),
+                  padding: EdgeInsets.all(20)))
         ],
       ),
     );

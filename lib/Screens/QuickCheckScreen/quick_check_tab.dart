@@ -178,7 +178,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       )),
       Container(
         padding: EdgeInsets.only(
-            left: (size.width - 400) / 2, right: (size.width - 400) / 2),
+            left: (size.width * 0.2) / 2, right: (size.width * 0.2) / 2),
         color: kPrimaryLightColor,
         child: Container(
           child: Column(
@@ -234,8 +234,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 100,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: RoundedInputField(
               inputText: "Full Name",
               icon: Icons.person,
@@ -245,8 +245,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 10,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: RoundedInputField(
               inputText: "Phone",
               icon: Icons.phone,
@@ -256,8 +256,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 10,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: RoundedInputField(
               inputText: "Age",
               icon: Icons.cake,
@@ -267,8 +267,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 10,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: RoundedInputField(
               inputText: "Height",
               icon: Icons.height,
@@ -278,8 +278,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 10,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: RoundedInputField(
               inputText: "Weight",
               icon: Icons.person,
@@ -289,8 +289,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 10,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: RoundedInputField(
               inputText: "Chronic Diseases",
               icon: Icons.local_hospital,
@@ -300,8 +300,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 50,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: Container(
               child: RoundedButton(
                 width: 400,
@@ -346,8 +346,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 50,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: Container(
               child: RoundedButton(
                 width: 400,
@@ -363,8 +363,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 50,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: Container(
               child: RoundedButton(
                 width: 400,
@@ -380,8 +380,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
           Container(
             padding: EdgeInsets.only(
                 top: 50,
-                left: (size.width - 400) / 2,
-                right: (size.width - 400) / 2),
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
             child: Container(
               child: RoundedButton(
                 width: 400,
