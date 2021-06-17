@@ -91,18 +91,7 @@ class _RegularRegisterPageState extends State<RegularRegisterPage> {
           Container(
             margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
             child: RoundedPasswordField(
-              onChanged: (value) {
-                List<int> bytes = utf8.encode(value);
-                String hash = sha512.convert(bytes).toString();
-                _data['password'] = hash;
-                if (hash.compareTo(_data['password']) != 0) {
-                  final snackBar = SnackBar(
-                    content: Text('Passwords do not match'),
-                    backgroundColor: kPrimaryColor,
-                  );
-                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                }
-              },
+              password: _data['password'],
               confirm: true,
             ),
           ),
@@ -172,7 +161,8 @@ class _RegularRegisterPageState extends State<RegularRegisterPage> {
           '${_data['password']}'));
     } catch (e) {
       if (!e.toString().contains("JSON")) {
-        String message = "Something went wrong! This email may already be registered";
+        String message =
+            "Something went wrong! This email may already be registered";
 
         final snackBar = SnackBar(
           content: Text(message),

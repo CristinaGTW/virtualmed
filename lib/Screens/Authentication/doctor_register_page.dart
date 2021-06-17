@@ -109,17 +109,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
             Container(
               margin: EdgeInsets.only(left: sidePadding, right: sidePadding),
               child: RoundedPasswordField(
-                onChanged: (value) {
-                  List<int> bytes = utf8.encode(value);
-                  String hash = sha512.convert(bytes).toString();
-                  if (hash.compareTo(_data['password']) != 0) {
-                    final snackBar = SnackBar(
-                      content: Text('Passwords do not match'),
-                      backgroundColor: kPrimaryColor,
-                    );
-                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                  }
-                },
+                password: _data['password'],
                 confirm: true,
               ),
             ),
