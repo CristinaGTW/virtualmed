@@ -64,43 +64,44 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
 
     switch (bodyPart) {
       case "Ears":
-        return "images/body_parts/ear.png";
+        return "assets/images/body_parts/ear.png";
       case "Eyes":
-        return "images/body_parts/eye.png";
+        return "assets/images/body_parts/eye.png";
       case "Head Front":
-        return "images/body_parts/head_front.png";
+        return "assets/images/body_parts/head_front.png";
       case "Neck":
-        return "images/body_parts/neck.png";
+        return "assets/images/body_parts/neck.png";
       case "Acute Chest Pain":
       case "Chronic Chest Pain":
       case "Chest Pain in Infants/Children":
-        return "images/body_parts/chest.png";
+        return
+          "assets/images/body_parts/chest.png";
       case "Shoulders":
-        return "images/body_parts/shoulders.png";
+        return "assets/images/body_parts/shoulders.png";
       case "Arms":
-        return "images/body_parts/arms.png";
+        return "assets/images/body_parts/arms.png";
       case "Hands":
-        return "images/body_parts/hand.png";
+        return "assets/images/body_parts/hand.png";
       case "Torso":
-        return "images/body_parts/torso.png";
+        return "assets/images/body_parts/torso.png";
       case "Pelvis":
-        return "images/body_parts/pelvis.png"; //TODO query
+        return "assets/images/body_parts/pelvis.png";
       case "Thighs":
-        return "images/body_parts/thigh.png";
+        return "assets/images/body_parts/thigh.png";
       case "Knees":
-        return "images/body_parts/knee.png";
+        return "assets/images/body_parts/knee.png";
       case "Calves":
-        return "images/body_parts/calves.png";
+        return "assets/images/body_parts/calves.png";
       case "Feet":
-        return "images/body_parts/feet.png";
+        return "assets/images/body_parts/feet.png";
       case "Head Back":
-        return "images/body_parts/head_back.png"; //TODO query
+        return "assets/images/body_parts/head_back.png";
       case "Elbows":
-        return "images/body_parts/elbows.png";
+        return "assets/images/body_parts/elbows.png";
       case "Back":
-        return "images/body_parts/back.png";
+        return "assets/images/body_parts/back.png";
       case "Glutes":
-        return "images/body_parts/glutes.png"; //TODO query
+        return "assets/images/body_parts/glutes.png";
       default:
         return "";
     }
@@ -118,10 +119,10 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         ),
       ),
       Positioned(
-        left: (size.width - 300) / 2,
+        left: (size.width * 0.2) / 2,
         bottom: 10,
         child: RoundedButton(
-          width: 300,
+          width: size.width * 0.8,
           text: "Continue",
           press: () =>
               getBodyPart() == "Chest" ? setProgress(5) : setProgress(1),
