@@ -3662,7 +3662,9 @@ class Constants {
           {"diagnosis": "SINUSITIS", "score": 10}
         ]
       }
-    ]
+    ],
+
+    
 
   };
 }

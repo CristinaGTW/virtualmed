@@ -1555,9 +1555,93 @@ class DiagnosisOverview {
       "Specialization": ["Oncologist"]
     },
 
+    // Head Back Diagnoses
+    "BRAIN BLEED": {
+      "overview":
+          "A brain bleed can occur after a severe trauma to the head. Blood vessels within the brain rupture causing bleeding on the brain. Seek urgent medical attention with any head injury as they can be fatal.",
+      "try": ["Seek medical attention immediately."],
+      "avoid": [
+        "Playing sport.",
+        "Driving.",
+        "Any food, drink or medication before seeking medical attention.",
+        "Being left alone".
+      ],
+      "Specialization": [""]
+    },
+    "SKULL FRACTURE": {
+      "overview":
+          "A skull fracture is a break to one of the bones which form the head. These include the cranium at the back of the head, parietal bones on the side and frontal bone or forehead.",
+      "try": [
+        "Seek medical attention immediately.",
+        "Rest, in a seated position with the head elevated above the heart."
+      ],
+      "avoid": [
+        "Playing sport.",
+        "Driving.",
+        "Any food, drink or medication before seeking medical attention.",
+        "Being left alone"
+      ],
+      "Specialization": [""]
+    },
+    "CONCUSSION": {
+      "overview":
+          "Concussion has gained a lot of attention in sport over recent years. As a result, plenty of research has been done to identify and prevent concussion. Therefore, we understand this potentially serious brain injury much better.",
+      "try": [
+        "There is no specific treatment for a concussion.",
+        "Resting during the initial 24-48 hours following injury. Then gradually and progressively becoming more active, but stay below a threshold level of physical and cognitive activity (brainwork) which might bring on or worsen symptoms.",
+        "As concussion can result in diverse symptoms, and problems can result in additional injury to the neck, a variety of treatments may be required."
+      ],
+      "avoid": ["Driving", "Physical activity."],
+      "Specialization": [""]
+    },
+    "HEADACHES IN SPORT": {
+      "overview":
+          "Headaches are an extremely common complaint. They vary in pain intensity, pattern and location from individual to individual. Although irritating the majority of headaches do not require medical intervention. \n Cervical headaches are caused as a result of dysfunction in the muscles, joints, nerves or fascia in and around the neck region. Pain radiates towards the skull giving the sensation of a steady dull, ache. Cluster headaches are so-called as they commonly occur in ‘clusters’ over a period of weeks or months, at approximately the same time of day(attacks may last form 30-45 minutes, the pain associated is very intense, characterized by a burning or boring sensation that often immobilizes the person, are about 5 times more common in men).",
+      "try": [
+        "In case of Cluster Headache: Specific anti-migraine drugs can help with the symptoms of a cluster headache.",
+        "In case of Cluster Headache: Rapid inhalation of pure oxygen through a mask for 5 to 15 minutes is also known to help although the mechanism for this is unclear.",
+        "In case of Cervical Headache: Massage to release tension in the muscles.",
+        "In case of Cervical Headache: Acupuncture.",
+        "In case of Cervical Headache: Posture retraining similar to that which might be done for someone with Kyphosis of the neck."
+      ],
+      "avoid": [
+        "Not seeking medical attention if the headache persists through a longer period of time and is painful"
+      ],
+      "Specialization": [""]
+    },
+    "POST CONCUSSION SYNDROME": {
+      "overview":
+          "Post-concussion syndrome is a complication of concussion which may develop some time after the initial injury. There is a range of symptoms including headaches, lack of concentration or even depression, which the athlete may not initially associate with a previous concussion.",
+      "try": [
+        "At the moment there is no known treatment to speed up recovery from post-concussion syndrome.",
+        "Current advice is to rest and symptoms will fade on their own.",
+        "It is recommended that the individual tries to rest."
+      ],
+      "avoid": [
+        "Sports or intense exercise (gentle exercise may be beneficial).",
+        "Consuming alcohol."
+      ],
+      "Specialization": [""]
+    },
+    "MIGRAINE": {
+      "overview":
+          "Migraines are a severe form of a headache, usually involving visual disturbances. However, they may also include other symptoms such as nausea, dizziness or pins and needles.",
+      "try": [
+        "Drug prescription from a medical practitioner is thought to be the most effective treatment.",
+        "During a migraine headache, application of a cold pack to the head may provide relief.",
+        "Pressing on a prominent artery found either in front of the ear or on the painful side of the head may temporarily relieve symptoms.",
+        "Other methods of treatment are sleep, alteration of diet, biofeedback training and reduction of stress."
+      ],
+      "avoid": [
+        "Simple painkillers, such as aspirin, taken regularly in the event of a migraine as this may intensify symptoms in the future."
+      ],
+      "Specialization": [""]
+    },
+
     // Cold and Flu Diagnoses
     "INFLUENZA": {
-      "overview": "Influenza is a viral infection that attacks your respiratory system — your nose, throat and lungs. Influenza is commonly called the flu, but it's not the same as stomach 'flu' viruses that cause diarrhea and vomiting.",
+      "overview":
+          "Influenza is a viral infection that attacks your respiratory system — your nose, throat and lungs. Influenza is commonly called the flu, but it's not the same as stomach 'flu' viruses that cause diarrhea and vomiting.",
       "try": [
         "If you see your doctor within 48 hours of the start of your symptoms, he or she may prescribe an antiviral medicine to shorten the course of the flu.",
         "Get plenty of rest and drink lots of fluids.",
@@ -1570,7 +1654,8 @@ class DiagnosisOverview {
       "Specialization": [""]
     },
     "GASTROENTERITIS": {
-      "overview": "Gastroenteritis is a very common condition that causes diarrhoea and vomiting. It's usually caused by a bacterial or viral tummy bug. It affects people of all ages, but is particularly common in young children. Most cases in children are caused by a virus called rotavirus.",
+      "overview":
+          "Gastroenteritis is a very common condition that causes diarrhoea and vomiting. It's usually caused by a bacterial or viral tummy bug. It affects people of all ages, but is particularly common in young children. Most cases in children are caused by a virus called rotavirus.",
       "try": [
         "Get plenty of rest and stay hydrated.",
         "Ease back into eating with bland foods and clear liquids."
@@ -1581,7 +1666,8 @@ class DiagnosisOverview {
       "Specialization": [""]
     },
     "ALLERGIC RHINITIS": {
-      "overview": "Allergic rhinitis is inflammation of the inside of the nose caused by an allergen, such as pollen, dust, mould or flakes of skin from certain animals. It's a very common condition, estimated to affect around 1 in every 5 people in the UK.",
+      "overview":
+          "Allergic rhinitis is inflammation of the inside of the nose caused by an allergen, such as pollen, dust, mould or flakes of skin from certain animals. It's a very common condition, estimated to affect around 1 in every 5 people in the UK.",
       "try": [
         "An over-the-counter (OTC) antihistamine medicine or an OTC nasal steroid spray."
       ],
@@ -1591,7 +1677,8 @@ class DiagnosisOverview {
       "Specialization": [""]
     },
     "COLD": {
-      "overview": "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold. Healthy adults can expect to have two or three colds each year. Infants and young children may have even more frequent colds.",
+      "overview":
+          "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold. Healthy adults can expect to have two or three colds each year. Infants and young children may have even more frequent colds.",
       "try": [
         "Antibiotics do not work against the viruses that cause colds.",
         "Get plenty of rest and drink lots of fluids.",
