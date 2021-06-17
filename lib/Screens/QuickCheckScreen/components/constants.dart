@@ -3227,7 +3227,6 @@ class Constants {
         "onYesResponse": [
           {"diagnosis": "CONCUSSION", "score": 10},
           {"diagnosis": "POST CONCUSSION SYNDROME", "score": 5},
-          {"diagnosis": "POST CONCUSSION SYNDROME", "score": 5},
           {"diagnosis": "HEADACHES IN SPORT", "score": 5}
         ]
       }
@@ -3662,7 +3661,6 @@ class Constants {
           {"diagnosis": "SINUSITIS", "score": 10}
         ]
       }
-    ],
-
+    ]
   };
 }
