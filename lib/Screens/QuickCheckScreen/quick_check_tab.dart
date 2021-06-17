@@ -74,8 +74,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
       case "Acute Chest Pain":
       case "Chronic Chest Pain":
       case "Chest Pain in Infants/Children":
-        return
-          "assets/images/body_parts/chest.png";
+        return "assets/images/body_parts/chest.png";
       case "Shoulders":
         return "assets/images/body_parts/shoulders.png";
       case "Arms":
@@ -221,7 +220,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
     return Container(
       color: kPrimaryBgColor,
       child: ListView(
-        padding: EdgeInsets.only(left: size.width * 0.1, right: size.width * 0.1),
+        padding:
+            EdgeInsets.only(left: size.width * 0.1, right: size.width * 0.1),
         children: <Widget>[
           Container(
             padding: EdgeInsets.all(20),

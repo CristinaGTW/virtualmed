@@ -53,7 +53,7 @@ class _RequestsTabState extends State<RequestsTab> {
                           name: userRequests[index].name,
                           diagnosis: userRequests[index].diagnosis,
                           image: userRequests[index].image,
-                          time: userRequests[index].time,
+                          time: userRequests[index].time.substring(0, 16),
                           status: userRequests[index].status,
                           phone: userRequests[index].phone,
                           age: userRequests[index].age,
