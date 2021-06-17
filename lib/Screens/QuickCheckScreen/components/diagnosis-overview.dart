@@ -1553,6 +1553,54 @@ class DiagnosisOverview {
       ],
       "avoid": ["Smoking."],
       "Specialization": ["Oncologist"]
+    },
+
+    // Cold and Flu Diagnoses
+    "INFLUENZA": {
+      "overview": "Influenza is a viral infection that attacks your respiratory system — your nose, throat and lungs. Influenza is commonly called the flu, but it's not the same as stomach 'flu' viruses that cause diarrhea and vomiting.",
+      "try": [
+        "If you see your doctor within 48 hours of the start of your symptoms, he or she may prescribe an antiviral medicine to shorten the course of the flu.",
+        "Get plenty of rest and drink lots of fluids.",
+        "Over-the-counter (OTC) cough and cold medicines may relieve some of your symptoms.",
+        "Remember, you can prevent the flu by getting a flu shot each fall."
+      ],
+      "avoid": [
+        "Giving OTC cough and cold medicines to a child younger than 4 years of age unless your child’s doctor says it’s okay."
+      ],
+      "Specialization": [""]
+    },
+    "GASTROENTERITIS": {
+      "overview": "Gastroenteritis is a very common condition that causes diarrhoea and vomiting. It's usually caused by a bacterial or viral tummy bug. It affects people of all ages, but is particularly common in young children. Most cases in children are caused by a virus called rotavirus.",
+      "try": [
+        "Get plenty of rest and stay hydrated.",
+        "Ease back into eating with bland foods and clear liquids."
+      ],
+      "avoid": [
+        "Dehydration(for children) by giving an oral rehydration solution (ORS)."
+      ],
+      "Specialization": [""]
+    },
+    "ALLERGIC RHINITIS": {
+      "overview": "Allergic rhinitis is inflammation of the inside of the nose caused by an allergen, such as pollen, dust, mould or flakes of skin from certain animals. It's a very common condition, estimated to affect around 1 in every 5 people in the UK.",
+      "try": [
+        "An over-the-counter (OTC) antihistamine medicine or an OTC nasal steroid spray."
+      ],
+      "avoid": [
+        "Not going to a doctor if  symptoms are getting worse or are hard to control."
+      ],
+      "Specialization": [""]
+    },
+    "COLD": {
+      "overview": "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold. Healthy adults can expect to have two or three colds each year. Infants and young children may have even more frequent colds.",
+      "try": [
+        "Antibiotics do not work against the viruses that cause colds.",
+        "Get plenty of rest and drink lots of fluids.",
+        "An over-the-counter (OTC) cough and cold medicine to treat the specific symptoms you are having."
+      ],
+      "avoid": [
+        "Giving OTC cough and cold medicines to a child younger than 4 years of age unless your child’s doctor says it’s okay."
+      ],
+      "Specialization": [""]
     }
   };
 }

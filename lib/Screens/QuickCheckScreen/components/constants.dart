@@ -3565,7 +3565,6 @@ class Constants {
       }
     ],
 
-    // Cold and Flu
     "Cold and Flu": [
       //Q0
       {
@@ -3612,7 +3611,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": -1}
         ],
         "onYesResponse": [
-          {"diagnosis": "ACUTE BRONCHITIS", "score": 10}
+          {"diagnosis": "VIRAL BRONCHITIS", "score": 10}
         ]
       },
       //Q4
