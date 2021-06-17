@@ -65,7 +65,8 @@ class _ConversationPageState extends State<ConversationPage> {
       body: Stack(
         children: <Widget>[
           ListView(
-            padding: const EdgeInsets.only(bottom: kFloatingActionButtonMargin + 60),
+            padding:
+                const EdgeInsets.only(bottom: kFloatingActionButtonMargin + 60),
             reverse: true,
             children: [
               FutureBuilder<List<Message>>(
@@ -164,12 +165,14 @@ class _ConversationPageState extends State<ConversationPage> {
   void _sendMessage() async {
     if (_controller.text.isNotEmpty) {
       var message = _controller.text;
-      socket.emit('message', json.encode({
-        'sender_id': sender_id,
-        'receiver_id': widget.receiver_id,
-        'time': DateTime.now().toString(),
-        'message': message
-      }));
+      socket.emit(
+          'message',
+          json.encode({
+            'sender_id': sender_id,
+            'receiver_id': widget.receiver_id,
+            'time': DateTime.now().toString(),
+            'message': message
+          }));
 
       setState(() {
         _controller.clear();
@@ -186,7 +189,8 @@ class _ConversationPageState extends State<ConversationPage> {
           print("Request sent successfully");
         }
       } catch (e) {
-        if (!e.toString().contains("JSON")) {
+        if (!e.toString().contains("JSON") ||
+            !e.toString().toLowerCase().contains("unexpected character")) {
           final snackBar = SnackBar(
             content: Text('$e'),
             backgroundColor: kPrimaryColor,
