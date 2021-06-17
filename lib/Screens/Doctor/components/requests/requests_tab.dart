@@ -120,7 +120,7 @@ class _RequestsTabState extends State<RequestsTab> {
             name: req['full_name'],
             status: 'Pending',
             time: req['time'],
-            image: 'images/profile_pic.png',
+            image: 'assets/images/profile_pic.png',
             phone: req['phone'],
             query_answers: req['query_answers'],
             weight: req['weight'],

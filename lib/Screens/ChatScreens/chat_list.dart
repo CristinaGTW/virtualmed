@@ -52,7 +52,7 @@ class _ChatListState extends State<ChatList> {
                           " " +
                           snapshot.data[index].lastName,
                       fragment: snapshot.data[index].specialization,
-                      image: "images/profile_pic.png",
+                      image: "assets/images/profile_pic.png",
                       time: "Accepted Request",
                       receiver_id: snapshot.data[index].userId);
                 },

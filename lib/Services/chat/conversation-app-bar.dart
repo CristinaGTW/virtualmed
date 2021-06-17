@@ -28,7 +28,7 @@ class ConversationAppBar extends StatelessWidget
               CircleAvatar(
                 backgroundImage: image != null
                     ? AssetImage(image)
-                    : AssetImage("images/profile_pic.png"),
+                    : AssetImage("assets/images/profile_pic.png"),
                 maxRadius: 20,
               ),
               SizedBox(

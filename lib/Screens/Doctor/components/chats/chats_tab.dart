@@ -46,7 +46,7 @@ class _ChatTabState extends State<ChatTab> {
                               " " +
                               snapshot.data[index].lastName,
                           fragment: snapshot.data[index].phone,
-                          image: "images/profile_pic.png",
+                          image: "assets/images/profile_pic.png",
                           time: "Accepted Request",
                           receiver_id: snapshot.data[index].userId);
                     },

@@ -221,6 +221,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
     return Container(
       color: kPrimaryBgColor,
       child: ListView(
+        padding: EdgeInsets.only(left: size.width * 0.1, right: size.width * 0.1),
         children: <Widget>[
           Container(
             padding: EdgeInsets.all(20),
@@ -437,6 +438,9 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
     var specialization = "General"; //TODO get specialization
     sortDiagnoses();
     var diagnosis = _possibleDiagnosis[0]["diagnosis"];
+    if (_possibleDiagnosis.length >= 2) {
+      diagnosis = diagnosis + ", " + _possibleDiagnosis[1]["diagnosis"];
+    }
     var full_name = regularUser == null
         ? _data['full_name']
         : (regularUser.firstName + " " + regularUser.lastName);
