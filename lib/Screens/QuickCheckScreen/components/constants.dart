@@ -3563,7 +3563,7 @@ class Constants {
           {"diagnosis": "PNEUMONIA", "score": 10},
         ]
       }
-    ]
+    ],
 
     // Cold and Flu
     "Cold and Flu": [
