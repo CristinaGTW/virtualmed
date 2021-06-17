@@ -101,6 +101,11 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         return "assets/images/body_parts/back.png";
       case "Glutes":
         return "assets/images/body_parts/glutes.png";
+      case "General":
+      case "Cough":
+      case "Cold and Flu":
+      case "Headaches":
+        return "assets/images/body_parts/general.png";
       default:
         return "";
     }
@@ -121,11 +126,17 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         left: (size.width * 0.2) / 2,
         bottom: 10,
         child: RoundedButton(
-          width: size.width * 0.8,
-          text: "Continue",
-          press: () =>
-              getBodyPart() == "Chest" ? setProgress(5) : setProgress(1),
-        ),
+            width: size.width * 0.8,
+            text: "Continue",
+            press: () {
+              if (getBodyPart() == "Chest") {
+                setProgress(5);
+              } else if (getBodyPart() == "General") {
+                setProgress(6);
+              } else {
+                setProgress(1);
+              }
+            }),
       ),
     ]);
   }
@@ -399,6 +410,69 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
     );
   }
 
+  Widget getGeneralSelectionPage() {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      color: kPrimaryBgColor,
+      child: ListView(
+        children: <Widget>[
+          TopTitle(
+            topMargin: 20.0,
+            title: "You selected: General",
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 50,
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
+            child: Container(
+              child: RoundedButton(
+                width: 400,
+                text: "Cough",
+                press: () {
+                  _finalBodyPartList.add("Cough");
+                  setProgress(1);
+                },
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 50,
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
+            child: Container(
+              child: RoundedButton(
+                width: 400,
+                text: "Cold and Flu",
+                press: () {
+                  _finalBodyPartList.add("Cold and Flu");
+                  setProgress(1);
+                },
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 50,
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
+            child: Container(
+              child: RoundedButton(
+                width: 400,
+                text: "Headaches",
+                press: () {
+                  _finalBodyPartList.add("Headaches");
+                  setProgress(1);
+                },
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     regularUser = context.watch<UserProvider>().regularUser;
@@ -416,6 +490,8 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         return getConfirmationPage();
       case 5:
         return getChestSelectionPage();
+      case 6:
+        return getGeneralSelectionPage();
     }
     return Scaffold(
       body: Text("Error"),

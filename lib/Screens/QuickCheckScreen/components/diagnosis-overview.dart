@@ -315,7 +315,7 @@ class DiagnosisOverview {
       "avoid": ["Don’t kiss them or share utensils or other personal items."],
       "Specialization": ["Otolaryngologist"]
     },
-    "STREP": {
+    "STREP THROAT": {
       "overview":
           "Strep throat is an infection caused by bacteria. It is called “strep” because the bacteria that causes the infection is called streptococcus.",
       "try": [

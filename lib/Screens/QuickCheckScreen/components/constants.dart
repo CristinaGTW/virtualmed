@@ -15,7 +15,7 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": "VIRAL SORE THROAT", "score": 3},
-          {"diagnosis": "STREP", "score": 3},
+          {"diagnosis": "STREP THROAT", "score": 3},
           {"diagnosis": "MONONUCLEOSIS", "score": 3}
         ]
       },
@@ -29,7 +29,7 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": "VIRAL SORE THROAT", "score": 3},
-          {"diagnosis": "STREP", "score": 3},
+          {"diagnosis": "STREP THROAT", "score": 3},
           {"diagnosis": "MONONUCLEOSIS", "score": 3}
         ]
       },
