@@ -158,7 +158,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 3}
         ],
         "onYesResponse": [
-          {"diagnosis": "SPRAINED", "score": 10}
+          {"diagnosis": "SPRAIN", "score": 10}
         ],
       },
       //Q3
@@ -171,7 +171,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
-          {"diagnosis": "SPRAINED", "score": 10}
+          {"diagnosis": "SPRAIN", "score": 10}
         ],
       },
       //Q4
@@ -289,7 +289,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 3}
         ],
         "onYesResponse": [
-          {"diagnosis": "SPRAINED", "score": 10}
+          {"diagnosis": "SPRAIN", "score": 10}
         ],
       },
       //Q3
@@ -302,7 +302,7 @@ class Constants {
           {"answer": "Yes", "nextQuestion": 4}
         ],
         "onYesResponse": [
-          {"diagnosis": "SPRAINED", "score": 10}
+          {"diagnosis": "SPRAIN", "score": 10}
         ],
       },
       //Q4
@@ -443,7 +443,7 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": "HERPES", "score": 5},
-          {"diagnosis": " SEXUALLY TRANSMITTED INFECTIONS", "score": 5}
+          {"diagnosis": " SEXUALLY TRANSMITTED INFECTION", "score": 5}
         ]
       },
       //Q7
@@ -656,7 +656,7 @@ class Constants {
         ],
         "onYesResponse": [
           {"diagnosis": "SPERMATOCELE", "score": 5},
-          {"diagnosis": "TESTICULAR CANCER", "score": 5}
+          {"diagnosis": "CANCER", "score": 5}
         ],
       },
       // Q23

@@ -25,6 +25,17 @@ class DiagnosisOverview {
       "avoid": ["Do not eat Fried Foods"],
       "Specialization": ["Pulmonologist"]
     },
+    "BRONCHITIS": {
+      "overview":
+          "Bronchitis is an infection of the main airways of the lungs (bronchi), causing them to become irritated and inflamed.",
+      "try": [
+        "get plenty of rest",
+        "drink lots of fluid – this helps prevent dehydration and thins the mucus in your lungs, making it easier to cough up",
+        "treat headaches, a high temperature, and aches and pains with paracetamol or ibuprofen – although ibuprofen is not recommended if you have asthma"
+      ],
+      "avoid": ["smoking"],
+      "Specialization": ["Pulmonologist"]
+    },
     "VIRAL BRONCHITIS": {
       "overview":
           "Acute bronchitis is a contagious viral infection that causes inflammation of the bronchial tubes.",
@@ -1814,6 +1825,192 @@ class DiagnosisOverview {
       ],
       "avoid": ["do not knock or bang your joints"],
       "Specialization": ["Orthopedist"]
-    }
+    },
+
+    // Pelvis Diagnoses
+    "ORAL CONTRACEPTIVES / PREGNANCY": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "YEAST INFECTION": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "CANDIDIASIS": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "PELVIC INFLAMMATORY DISEASE (PID)": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "SEXUALLY TRANSMITTED INFECTION": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "MUCOUS GLAND INFECTION": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "INFECTION IN THE LABIA (VAGINAL LIP)": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "HORMONE DEFICIENCY": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "URINARY TRACT INFECTION (UTI)": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "STRESS INCONTINENCE": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "BLADDER INFECTION": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "HERPES": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "GENITAL WARTS": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "BALANITIS": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "PROSTATITIS": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "EPIDIDYMITIS": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "SPERMATOCELE": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "VARICOCELE": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "HYDROCELE": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "INGUINAL HERNIA": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "PRIAPISM": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "ERECTILE DYSFUNCTION": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
+    "ALLERGY": {
+      "overview": "",
+      "try": [
+        "",
+      ],
+      "avoid": [""],
+      "Specialization": ["Gynecologist"]
+    },
   };
 }
