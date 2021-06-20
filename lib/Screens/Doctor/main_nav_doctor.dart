@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_med/Screens/Doctor/components/requests/requests-page-tab.dart';
 
 import '../../components.dart';
 import 'components/chats/chats_tab.dart';
 import 'components/profile/doctor_profile_tab.dart';
-import 'components/requests/requests_tab.dart';
+import 'components/requests/pending-requests-tab.dart';
 
 class MainNavDoctor extends StatefulWidget {
+  final int preferredTab;
+
+  const MainNavDoctor({Key key, this.preferredTab}) : super(key: key);
+
   @override
-  _MainNavDoctorState createState() => _MainNavDoctorState();
+  _MainNavDoctorState createState() => _MainNavDoctorState(preferredTab: preferredTab);
 }
 
 class _MainNavDoctorState extends State<MainNavDoctor> {
@@ -15,11 +20,12 @@ class _MainNavDoctorState extends State<MainNavDoctor> {
   final _unselectedItemColor = Colors.white60;
   final _selectedBgColor = KMenuSelectorColor;
   final _unselectedBgColor = kPrimaryColor;
+  final int preferredTab;
   int _currentIndex = 0;
 
   final tabs = [
     ChatTab(),
-    RequestsTab(),
+    RequestsPage(),
     DoctorProfileTab(),
   ];
 
@@ -28,6 +34,12 @@ class _MainNavDoctorState extends State<MainNavDoctor> {
     "Requests",
     "Profile"
   ];
+
+  _MainNavDoctorState({this.preferredTab}) {
+    if (this.preferredTab != null && this.preferredTab != 0) {
+      _currentIndex = this.preferredTab;
+    }
+  }
 
   Color _getBgColor(int index) {
     return _currentIndex == index ? _selectedBgColor : _unselectedBgColor;
@@ -73,7 +85,7 @@ class _MainNavDoctorState extends State<MainNavDoctor> {
         title: Container(
           width: double.infinity,
           child: Stack(
-            alignment: Alignment.center,
+            // alignment: Alignment.center,
             children: <Widget>[
               Text(tabsText[_currentIndex]),
             ],

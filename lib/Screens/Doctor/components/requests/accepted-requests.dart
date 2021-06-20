@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
+
+import 'dart:async';
+
 import 'package:flutter/rendering.dart';
+import 'package:virtual_med/Models/doctor-user.dart';
+import 'package:virtual_med/Services/user-provider.dart';
 import 'package:virtual_med/Services/utils.dart';
+import 'package:provider/provider.dart';
 
 import 'components/request.dart';
 
-class RequestsTab extends StatefulWidget {
+class AcceptedRequestsTab extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _RequestsTabState();
+  State<StatefulWidget> createState() => _AcceptedRequestsTabState();
 }
 
-class _RequestsTabState extends State<RequestsTab> {
+class _AcceptedRequestsTabState extends State<AcceptedRequestsTab> {
   Future<List<Request>> futureUserRequests;
   List<Request> userRequests;
-
-  @override
-  void initState() {
-    super.initState();
-    initUserRequests();
-  }
+  DoctorUser doctorUser;
 
   void initUserRequests() async {
-    futureUserRequests = getRequests();
+    futureUserRequests = getAcceptedRequests();
   }
 
   void toRequestList() async {
@@ -29,8 +30,8 @@ class _RequestsTabState extends State<RequestsTab> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    var sidePadding = (size.width * 0.2) / 2;
+    doctorUser = context.watch<UserProvider>().doctorUser;
+    initUserRequests();
     return Container(
       child: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
@@ -53,14 +54,13 @@ class _RequestsTabState extends State<RequestsTab> {
                           name: userRequests[index].name,
                           diagnosis: userRequests[index].diagnosis,
                           image: userRequests[index].image,
-                          time: userRequests[index].time.substring(0, 16),
                           status: userRequests[index].status,
                           phone: userRequests[index].phone,
                           age: userRequests[index].age,
                           height: userRequests[index].height,
                           weight: userRequests[index].weight,
                           chronic_diseases:
-                              userRequests[index].chronic_diseases,
+                          userRequests[index].chronic_diseases,
                           query_answers: userRequests[index].query_answers,
                         );
                       });
@@ -109,26 +109,26 @@ class _RequestsTabState extends State<RequestsTab> {
     );
   }
 
-  Future<List<Request>> getRequests() async {
-    var res = await postToServer(api: 'getRequests', body: {
-      'specialization': 'General',
+  Future<List<Request>> getAcceptedRequests() async {
+    var res = await postToServer(api: 'getAcceptedRequests', body: {
+      'doctor_id': doctorUser.userId,
     });
     if (res['msg'] == 'Success') {
       List<Request> requests = List<Request>();
       res['body'].forEach((req) => requests.add(Request(
-            patient_id: req['patient_id'],
-            name: req['full_name'],
-            status: 'Pending',
-            time: req['time'],
-            image: 'assets/images/profile_pic.png',
-            phone: req['phone'],
-            query_answers: req['query_answers'],
-            weight: req['weight'],
-            diagnosis: req['diagnosis'],
-            age: req['age'],
-            chronic_diseases: req['chronic_diseases'],
-            height: req['height'],
-          )));
+        patient_id: req['patient_id'],
+        name: req['patient_name'],
+        status: 'Accepted',
+        time: req['time'],
+        image: 'assets/images/profile_pic.png',
+        phone: req['phone'],
+        query_answers: req['query_answers'],
+        weight: req['weight'],
+        diagnosis: req['diagnosis'],
+        age: req['age'],
+        chronic_diseases: req['chronic_diseases'],
+        height: req['height'],
+      )));
       return requests;
     }
   }

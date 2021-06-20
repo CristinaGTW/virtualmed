@@ -18,15 +18,16 @@ class Body extends StatelessWidget {
       color: kPrimaryColor,
       height: size.height,
       width: double.infinity,
-      child: Stack(
-        alignment: Alignment.center,
+      child: ListView(
+        // alignment: Alignment.center,
         children: <Widget>[
-          Positioned(
-            top: size.height / 5,
+          Container(
+            margin: EdgeInsets.only(top: size.height / 5),
             child: Logo(iconColor: Colors.white),
           ),
-          Positioned(
-            top: 3 * size.height / 5,
+          Container(
+            margin: EdgeInsets.only(top: 100),
+            padding: EdgeInsets.symmetric(horizontal: size.width * 0.2),
             child: RoundedButton(
               text: "EMERGENCY",
               press: () =>
@@ -37,8 +38,9 @@ class Body extends StatelessWidget {
               textColor: kPrimaryColor,
             ),
           ),
-          Positioned(
-            top: 3 * size.height / 5 + 75,
+          Container(
+            margin: EdgeInsets.only(top: 10),
+            padding: EdgeInsets.symmetric(horizontal: size.width * 0.2),
             child: RoundedButton(
               text: "LOG IN",
               press: () =>
@@ -50,8 +52,8 @@ class Body extends StatelessWidget {
               textColor: Colors.white,
             ),
           ),
-          Positioned(
-            top: 3 * size.height / 5 + 150,
+          Container(
+            margin: EdgeInsets.only(top: 15),
             child: TextButton(
               onPressed: () =>
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -69,14 +71,18 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-              bottom: 10,
-              child: Container(child: Text(
-                  "Disclaimer:\nThis app cannot replace a visit to the doctor.\n\"Medicine is not a cooking book.\"",
-                  textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 16, decoration: TextDecoration.none),
-              ),
-                  padding: EdgeInsets.all(20)))
+          Container(
+              margin: EdgeInsets.only(top: 20),
+              child: Container(
+                  child: Text(
+                    "Disclaimer:\nThis app cannot replace a visit to the doctor.\n\"Medicine is not a cooking book.\"",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        decoration: TextDecoration.none),
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: size.width * 0.1)))
         ],
       ),
     );

@@ -41,7 +41,7 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
             if (widget.confirm == true) {
               List<int> bytes = utf8.encode(value);
               String hash = sha512.convert(bytes).toString();
-              if (hash.compareTo(widget.password) != 0) {
+              if (hash.length == widget.password.length && hash.compareTo(widget.password) != 0) {
                 return "Passwords do not match. ";
               }
             }

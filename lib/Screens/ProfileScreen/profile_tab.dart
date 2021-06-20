@@ -206,14 +206,14 @@ class _ProfileTabState extends State<ProfileTab> {
 
     var res = await postToServer(api: 'UpdateRegularDetails', body: {
       'id': id,
-      'first_name': firstName,
-      'last_name': lastName,
-      'email': email,
-      'phone': phone,
-      'birthdate': birthdate,
-      'height': height,
-      'weight': weight,
-      'chronic_diseases': chronic_diseases,
+      'first_name': formatSpecialCharacters(firstName),
+      'last_name': formatSpecialCharacters(lastName),
+      'email': formatSpecialCharacters(email),
+      'phone': formatSpecialCharacters(phone),
+      'birthdate': formatSpecialCharacters(birthdate),
+      'height': formatSpecialCharacters(height),
+      'weight': formatSpecialCharacters(weight),
+      'chronic_diseases': formatSpecialCharacters(chronic_diseases),
     });
     if (res['msg'] == "Success") {
       context.read<UserProvider>().setRegularUser(RegularUser(
@@ -260,5 +260,18 @@ class _ProfileTabState extends State<ProfileTab> {
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
+  }
+
+  String formatSpecialCharacters(String message) {
+    String finalMessage = "";
+
+    for (var c in message.characters) {
+      if (c == '\'') {
+        finalMessage += '\'';
+      }
+      finalMessage += c;
+    }
+
+    return finalMessage;
   }
 }

@@ -49,6 +49,7 @@ class _ConversationPageState extends State<ConversationPage> {
   final TextEditingController _controller = TextEditingController();
   IO.Socket socket = IO.io(SERVER_URL);
   Future<List<Message>> futureMessageList;
+  Timer _updater;
 
   int length = 0;
 
@@ -60,12 +61,20 @@ class _ConversationPageState extends State<ConversationPage> {
     setUpTimedFetch();
   }
 
-  setUpTimedFetch() {
-    Timer.periodic(Duration(milliseconds: 2500), (timer) {
-      setState(() {
-        futureMessageList = fetchMessages();
+  @override
+  void dispose() {
+    _updater.cancel();
+    super.dispose();
+  }
+
+  void setUpTimedFetch() {
+    if (mounted) {
+      _updater = Timer.periodic(Duration(milliseconds: 5000), (timer) {
+        setState(() {
+          futureMessageList = fetchMessages();
+        });
       });
-    });
+    }
   }
 
   @override
@@ -178,7 +187,8 @@ class _ConversationPageState extends State<ConversationPage> {
 
   void _sendMessage() async {
     if (_controller.text.isNotEmpty) {
-      var message = _controller.text;
+      var message = formatSpecialCharacters(_controller.text);
+      print(message);
       socket.emit(
           'message',
           json.encode({
@@ -248,5 +258,18 @@ class _ConversationPageState extends State<ConversationPage> {
       }
       return messages;
     }
+  }
+
+  String formatSpecialCharacters(String message) {
+    String finalMessage = "";
+
+    for (var c in message.characters) {
+      if (c == '\'') {
+        finalMessage += '\'';
+      }
+      finalMessage += c;
+    }
+
+    return finalMessage;
   }
 }

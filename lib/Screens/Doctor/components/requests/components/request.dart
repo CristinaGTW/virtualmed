@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:virtual_med/Screens/Doctor/components/requests/components/request-page.dart';
+import 'package:virtual_med/Screens/Doctor/components/requests/components/pending-request-page.dart';
 
 import '../../../../../components.dart';
+import 'accepted-request-page.dart';
 
 class Request extends StatefulWidget {
   final int patient_id;
@@ -21,7 +22,7 @@ class Request extends StatefulWidget {
       {@required this.name,
       @required this.diagnosis,
       @required this.image,
-      @required this.time,
+      this.time,
       @required this.status,
       @required this.phone,
       @required this.age,
@@ -41,18 +42,31 @@ class _RequestState extends State<Request> {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return RequestPage(
-            patient_id: widget.patient_id,
-            name: widget.name,
-            image: widget.image,
-            phone: widget.phone,
-            age: widget.age,
-            height: widget.height,
-            weight: widget.weight,
-            chronic_diseases: widget.chronic_diseases,
-            query_answers: widget.query_answers,
-            diagnosis: widget.diagnosis,
-          );
+          return widget.status == "Pending request ..."
+              ? PendingRequestPage(
+                  patient_id: widget.patient_id,
+                  name: widget.name,
+                  image: widget.image,
+                  phone: widget.phone,
+                  age: widget.age,
+                  height: widget.height,
+                  weight: widget.weight,
+                  chronic_diseases: widget.chronic_diseases,
+                  query_answers: widget.query_answers,
+                  diagnosis: widget.diagnosis,
+                )
+              : AcceptedRequestPage(
+                  patient_id: widget.patient_id,
+                  name: widget.name,
+                  image: widget.image,
+                  phone: widget.phone,
+                  age: widget.age,
+                  height: widget.height,
+                  weight: widget.weight,
+                  chronic_diseases: widget.chronic_diseases,
+                  query_answers: widget.query_answers,
+                  diagnosis: widget.diagnosis,
+                );
         }));
       },
       child: Container(
@@ -79,14 +93,14 @@ class _RequestState extends State<Request> {
                           height: 5,
                         ),
                         Text(
-                          "Premliminary diagnoses:" + widget.diagnosis,
+                          "Preliminary diagnoses:" + widget.diagnosis,
                           style: TextStyle(fontSize: 14, color: kPrimaryColor),
                         ),
                         SizedBox(
                           height: 5,
                         ),
                         Text(
-                          "Pending request ...",
+                          widget.status,
                           style: TextStyle(
                               fontSize: 14, color: Colors.grey.shade500),
                         ),
@@ -96,10 +110,11 @@ class _RequestState extends State<Request> {
                 ],
               ),
             ),
+            widget.time != null ?
             Text(
               widget.time,
               style: TextStyle(fontSize: 12, color: Colors.grey.shade500),
-            ),
+            ) : Container(),
           ],
         ),
       ),

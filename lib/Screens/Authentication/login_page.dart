@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
               child: RoundedInputField(
                 inputText: "Email",
                 icon: Icons.email,
-                onChanged: (value) => _data['email'] = value,
+                onChanged: (value) => _data['email'] = formatSpecialCharacters(value),
               ),
             ),
             Container(
@@ -196,5 +196,18 @@ class _LoginPageState extends State<LoginPage> {
         loading = false;
       });
     }
+  }
+
+  String formatSpecialCharacters(String message) {
+    String finalMessage = "";
+
+    for (var c in message.characters) {
+      if (c == '\'') {
+        finalMessage += '\'';
+      }
+      finalMessage += c;
+    }
+
+    return finalMessage;
   }
 }

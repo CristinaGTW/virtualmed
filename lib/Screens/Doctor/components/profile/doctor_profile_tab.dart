@@ -145,12 +145,12 @@ class _DoctorProfileTabState extends State<DoctorProfileTab> {
 
     var res = await postToServer(api: 'UpdateDoctorDetails', body: {
       'id': id,
-      'first_name': firstName,
-      'last_name': lastName,
-      'email': email,
-      'phone': phone,
-      'specialization': specialization,
-      'location': location,
+      'first_name': formatSpecialCharacters(firstName),
+      'last_name': formatSpecialCharacters(lastName),
+      'email': formatSpecialCharacters(email),
+      'phone': formatSpecialCharacters(phone),
+      'specialization': formatSpecialCharacters(specialization),
+      'location': formatSpecialCharacters(location),
     });
     if (res['msg'] == "Success") {
       context.read<UserProvider>().setDoctorUser(DoctorUser(
@@ -176,5 +176,18 @@ class _DoctorProfileTabState extends State<DoctorProfileTab> {
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
+  }
+
+  String formatSpecialCharacters(String message) {
+    String finalMessage = "";
+
+    for (var c in message.characters) {
+      if (c == '\'') {
+        finalMessage += '\'';
+      }
+      finalMessage += c;
+    }
+
+    return finalMessage;
   }
 }

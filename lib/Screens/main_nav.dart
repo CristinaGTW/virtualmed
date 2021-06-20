@@ -137,8 +137,8 @@ class _MainNavAuthState extends _MainNavState {
     ProfileTab(),
   ];
   final tabsText = [
-    "Quick Symptom Checker",
-    "Search Doctors / Reviews",
+    "Symptom Checker",
+    "Search",
     "Find Medical Centers",
     "Profile"
   ];
@@ -161,7 +161,7 @@ class _MainNavAuthState extends _MainNavState {
               Text(tabsText[_currentIndex]),
               Positioned(
                 // left: size.width * 0.7,
-                right: 20,
+                right: 10,
                 child: IconButton(
                   icon: Icon(Icons.chat),
                   color: Colors.white,

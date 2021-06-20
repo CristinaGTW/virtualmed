@@ -53,7 +53,8 @@ class _RegularRegisterPageState extends State<RegularRegisterPage> {
             child: RoundedInputField(
               inputText: "First Name",
               icon: Icons.person,
-              onChanged: (value) => _data['first_name'] = value,
+              onChanged: (value) =>
+                  _data['first_name'] = formatSpecialCharacters(value),
             ),
           ),
           Container(
@@ -61,7 +62,8 @@ class _RegularRegisterPageState extends State<RegularRegisterPage> {
             child: RoundedInputField(
               inputText: "Last Name",
               icon: Icons.person,
-              onChanged: (value) => _data['last_name'] = value,
+              onChanged: (value) =>
+                  _data['last_name'] = formatSpecialCharacters(value),
             ),
           ),
           Container(
@@ -69,7 +71,8 @@ class _RegularRegisterPageState extends State<RegularRegisterPage> {
             child: RoundedInputField(
               inputText: "Your Email",
               icon: Icons.email,
-              onChanged: (value) => _data['email'] = value,
+              onChanged: (value) =>
+                  _data['email'] = formatSpecialCharacters(value),
             ),
           ),
           Container(
@@ -77,7 +80,8 @@ class _RegularRegisterPageState extends State<RegularRegisterPage> {
             child: RoundedInputField(
               inputText: "Phone Number",
               icon: Icons.phone,
-              onChanged: (value) => _data['phone'] = value,
+              onChanged: (value) =>
+                  _data['phone'] = formatSpecialCharacters(value),
             ),
           ),
           Container(
@@ -185,5 +189,18 @@ class _RegularRegisterPageState extends State<RegularRegisterPage> {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return LoginPage();
     }));
+  }
+
+  String formatSpecialCharacters(String message) {
+    String finalMessage = "";
+
+    for (var c in message.characters) {
+      if (c == '\'') {
+        finalMessage += '\'';
+      }
+      finalMessage += c;
+    }
+
+    return finalMessage;
   }
 }

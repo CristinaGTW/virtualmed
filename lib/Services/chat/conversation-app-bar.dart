@@ -14,8 +14,11 @@ class ConversationAppBar extends StatelessWidget
     return AppBar(
         foregroundColor: Colors.red,
         elevation: 0,
-        backgroundColor: kPrimaryColor,
-        flexibleSpace: Container(
+        backgroundColor: Colors.red,
+        actions: [
+          // PopupMenuButton(itemBuilder: itemBuilder)
+        ],
+        title: Container(
           alignment: Alignment.centerLeft,
           margin: EdgeInsets.only(
             left: 50,
@@ -38,20 +41,19 @@ class ConversationAppBar extends StatelessWidget
                 child: Text(
                   name,
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 20),
+                    color: Colors.white,
+                  ),
                 ),
               ),
-              Icon(
-                Icons.more_vert,
-                color: Colors.white,
-              )
+              // Icon(
+              //   Icons.more_vert,
+              //   color: Colors.white,
+              // )
             ],
           ),
         ));
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(60);
+  Size get preferredSize => Size.fromHeight(60.0);
 }

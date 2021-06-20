@@ -55,7 +55,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "First Name",
                 icon: Icons.person,
-                onChanged: (value) => _data['first_name'] = value,
+                onChanged: (value) => _data['first_name'] = formatSpecialCharacters(value),
               ),
             ),
             Container(
@@ -63,7 +63,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Last Name",
                 icon: Icons.person,
-                onChanged: (value) => _data['last_name'] = value,
+                onChanged: (value) => _data['last_name'] = formatSpecialCharacters(value),
               ),
             ),
             Container(
@@ -71,7 +71,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Your Office Email",
                 icon: Icons.email,
-                onChanged: (value) => _data['email'] = value,
+                onChanged: (value) => _data['email'] = formatSpecialCharacters(value),
               ),
             ),
             Container(
@@ -79,7 +79,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Phone Number",
                 icon: Icons.phone,
-                onChanged: (value) => _data['phone'] = value,
+                onChanged: (value) => _data['phone'] = formatSpecialCharacters(value),
               ),
             ),
             Container(
@@ -87,7 +87,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Your Specialization",
                 icon: Icons.medical_services,
-                onChanged: (value) => _data['specialization'] = value,
+                onChanged: (value) => _data['specialization'] = formatSpecialCharacters(value),
               ),
             ),
             Container(
@@ -95,7 +95,7 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
               child: RoundedInputField(
                 inputText: "Location",
                 icon: Icons.pin_drop,
-                onChanged: (value) => _data['location'] = value,
+                onChanged: (value) => _data['location'] = formatSpecialCharacters(value),
               ),
             ),
             Container(
@@ -205,5 +205,18 @@ class _DoctorRegisterPageState extends State<DoctorRegisterPage> {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return LoginPage();
     }));
+  }
+
+  String formatSpecialCharacters(String message) {
+    String finalMessage = "";
+
+    for (var c in message.characters) {
+      if (c == '\'') {
+        finalMessage += '\'';
+      }
+      finalMessage += c;
+    }
+
+    return finalMessage;
   }
 }

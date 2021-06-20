@@ -120,7 +120,7 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
         child: FullPageHumanAnatomy(
           title: "Please select the affected area",
           subtitle:
-              "If your general condition is affected, but nothing specifically hurts, just press continue",
+              "If general condition is affected (or for allergies), but nothing specifically hurts, just press continue",
           onChanged: bodyPartList,
         ),
       ),
@@ -263,8 +263,12 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
                                         Container(
                                           padding: EdgeInsets.all(30),
                                           child: Text(
-                                              "By joining the community, you agree to share personal medical information (i.e. the questionnaire responses you just completed and the provided diagnoses)." +
-                                                  " If you would not like to continue, press anywhere else on the screen.", style: TextStyle(color: Colors.white, fontSize: 14),),
+                                            "By joining the community, you agree to share personal medical information (i.e. the questionnaire responses you just completed and the provided diagnoses)." +
+                                                " If you would not like to continue, press anywhere else on the screen.",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 14),
+                                          ),
                                         ),
                                         RoundedButton(
                                           text: 'Accept and Join',

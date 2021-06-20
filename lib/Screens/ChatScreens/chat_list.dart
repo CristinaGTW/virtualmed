@@ -29,7 +29,7 @@ class _ChatListState extends State<ChatList> {
         title: Container(
           width: double.infinity,
           child: Stack(
-            alignment: Alignment.center,
+            // alignment: Alignment.center,
             children: <Widget>[
               Text("Chats"),
             ],
@@ -37,7 +37,7 @@ class _ChatListState extends State<ChatList> {
         ),
       ),
       body: Column(children: [
-        searchBar(sidePadding),
+        // searchBar(sidePadding),
         FutureBuilder<List<User>>(
           future: futureChatUsers,
           builder: (context, snapshot) {
