@@ -13,6 +13,19 @@ class DiagnosisPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    if (possibleDiagnoses.isEmpty) {
+      return Container(
+        padding: EdgeInsets.all(50),
+        height: size.height - 300,
+        color: kPrimaryLightColor,
+        child: Center(
+          child: TopTitle(
+            title: "We could not identify a cause for your symptoms.",
+          ),
+        ),
+      );
+    }
     return Container(
       color: kPrimaryBgColor,
       child: Column(
