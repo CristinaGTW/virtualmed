@@ -542,6 +542,22 @@ class _QuickCheckTabState extends State<QuickCheckTab> {
                 },
               ),
             ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: 50,
+                left: (size.width * 0.2) / 2,
+                right: (size.width * 0.2) / 2),
+            child: Container(
+              child: RoundedButton(
+                width: 400,
+                text: "Allergies",
+                press: () {
+                  _finalBodyPartList.add("Allergies");
+                  setProgress(1);
+                },
+              ),
+            ),
           )
         ],
       ),

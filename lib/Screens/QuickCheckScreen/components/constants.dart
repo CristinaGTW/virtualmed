@@ -3803,6 +3803,100 @@ class Constants {
           {"diagnosis": "HEADACHES IN SPORT", "score": 10}
         ]
       }
+    ],
+
+    "Allergies": [
+      //Q0
+      {
+        "question":
+            "Do you have allergic reaction throughout the body. Do you have skin reactions such as hives or a generalized reaction such as shortness of breath, throat and mouth swelling, nausea, vomiting, diarrhea, cramping abdominal pain, fall in blood pressure, fainting or Anaphylaxis (the most severe acute form of a drug reaction)?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "Drug Allergy", "score": 10}
+        ]
+      },
+      //Q1
+      {
+        "question":
+            "Do you have a reaction that involves the skin, mouth, eyes, lungs, heart, gut or brain. Some of the symptoms can include: skin rash, itching, hives, swelling of the lips, tongue or throat, shortness of breath, trouble breathing, wheezing, stomach pain, vomiting, diarrhe, feeling like something awful is about to happen?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 2},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "Food Allergy", "score": 10}
+        ]
+      },
+      //Q2
+      {
+        "question":
+            "Do you sneeze, cough, have a runny or stuffy nose, or itchy eyes, nose, mouth or throat? These symptoms can be confused with the common cold, but last for weeks or months at a time.",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 3},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "Insect Allergy", "score": 10}
+        ]
+      },
+      //Q3
+      {
+        "question":
+            "Do you have some of the following symptoms: itchy or swollen lips after blowing up a balloon, red or swollen skin after using a bandage, swelling or itching of the mouth or tongue after a dentist uses latex gloves, itching or swelling after using a condom or diaphragm?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 4},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "Latex Allergy", "score": 10}
+        ]
+      },
+      //Q4
+      {
+        "question":
+            "Do you have allergy symptoms in summer and fall such as sneezing, itching, runny nose, congestion and dry, scaling skin?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 5},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "Mold Allergy", "score": 10}
+        ]
+      },
+      //Q5
+      {
+        "question":
+            "When around a pet do you have reactions include swelling and itching of the membranes, stuffy nose and inflamed eyes? A pet scratch or lick can cause the skin area to become red.",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": 6},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "Pet Allergy", "score": 10}
+        ]
+      },
+      //Q6
+      {
+        "question":
+            "When you are outside do you have some of the following symptoms: runny nose and mucus production, sneezing, itchy nose, eyes, ears and mouth, stuffy nose (nasal congestion), red and watery eyes, swelling around the eyes?",
+        "answerType": AnswerType.MULTIPLE_CHOICE,
+        "answerChoices": [
+          {"answer": "No", "nextQuestion": -1},
+          {"answer": "Yes", "nextQuestion": -1}
+        ],
+        "onYesResponse": [
+          {"diagnosis": "Pollen Allergy", "score": 10}
+        ]
+      }
     ]
   };
 }

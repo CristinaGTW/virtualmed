@@ -2012,5 +2012,104 @@ class DiagnosisOverview {
       "avoid": [""],
       "Specialization": ["Gynecologist"]
     },
+
+    //Allergies
+    "Drug Allergy": {
+      "overview":
+          "People with a drug allergy have an over-sensitive immune system. Their immune system reacts to the drug as if it were an invader",
+      "try": [
+        "If you think you may be allergic to a medicine, tell your doctor.",
+      ],
+      "avoid": ["Avoid drugs"],
+      "Specialization": ["Allergist"]
+    },
+    "Food Allergy": {
+      "overview":
+          "A food allergy occurs when the body’s immune system sees a certain food as harmful and reacts by causing allergic symptoms.",
+      "try": [
+        "If you think you may be allergic to food, tell your doctor.",
+      ],
+      "avoid": [
+        "The most common causes of food allergy are these eight foods:"
+            "Milk",
+        "Egg",
+        "Peanut",
+        "Tree Nut",
+        "Soy",
+        "Wheat",
+        "Fish",
+        "Shellfish (crustaceans)"
+      ],
+      "Specialization": ["Allergist"]
+    },
+    "Insect Allergy": {
+      "overview":
+          "Neither bite or sting always cause an allergic reaction, but both trigger allergy and asthma to many people. If you have asthma, an allergic reaction could trigger asthma symptoms or an asthma attack.",
+      "try": [
+        "If you think you may be allergic to an insect, tell your doctor.",
+      ],
+      "avoid": [
+        "Avoid wearing sandals or walking barefoot in grass",
+        "Never swat a flying insect",
+        "Do not drink from open beverage cans",
+        "Keep food covered outdoors",
+        "Cover garbage cans with tight-fitting lids",
+        "Avoid sweet-smelling cosmetic items",
+        "Avoid bright-colored clothing",
+        "Do yard work and gardening with caution",
+        "Keep window and door screens in good repair and drive with car windows closed",
+        "Keep prescribed medications on you at all times, and follow instructions if you’re stung"
+      ],
+      "Specialization": ["Allergist"]
+    },
+    "Latex Allergy": {
+      "overview":
+          "People with latex allergies have over-sensitive immune systems. Their immune system reacts to latex as if it were a harmful substance.",
+      "try": [
+        "Get a letter about your latex allergy from your doctor.",
+        "Ask co-workers to wear only non-latex gloves.",
+        "Ask doctors, dentists and others health care workers to use latex-free gloves.",
+        "Check labels to make sure products do not contain latex. Do not assume “hypoallergenic” products are latex-free"
+      ],
+      "avoid": [
+        "Avoid latex. The only treatment for latex allergy is to prevent any contact with latex products."
+      ],
+      "Specialization": ["Allergist"]
+    },
+    "Mold Allergy": {
+      "overview":
+          "If you have an allergy that occurs over several seasons, you may be allergic to the spores of molds or other fungi. Molds live everywhere. Upsetting a mold source can send the spores into the air.",
+      "try": [
+        "Wear a dust mask when cutting grass, digging around plants, picking up leaves and disturbing other plant materials.",
+      ],
+      "avoid": [
+        "Limit your outdoor activities when mold counts are high. This will lessen the amount of mold spores you inhale and your symptoms.",
+      ],
+      "Specialization": ["Allergist"]
+    },
+    "Pet Allergy": {
+      "overview":
+          " People with pet allergies have over-sensitive immune systems. They can react to harmless proteins in the pet's urine, saliva or dander (dead skin cells). The symptoms that result are an allergic reaction.",
+      "try": [
+        "The best treatment is to avoid contact with cats or dogs or the areas where they live. Keep pets out of your home. If possible, try to avoid visiting homes with pets that you are allergic to. Avoiding cats and dogs may give you enough relief that you will not need medicine.",
+      ],
+      "avoid": [
+        "Remove your pet from the bedroom. You spend from one-third to one-half of your time there. Keep the bedroom door closed and clean the bedroom aggressively. You might consider using a HEPA air cleaner in your bedroom."
+      ],
+      "Specialization": ["Allergist"]
+    },
+    "Pollen Allergy": {
+      "overview":
+          "Pollen is one of the most common triggers of seasonal allergies. Many people know pollen allergy as “hay fever.” Experts usually refer to pollen allergy as “seasonal allergic rhinitis.",
+      "try": [
+        "If you think you may be allergic to pollen, tell your doctor.",
+      ],
+      "avoid": [
+        "Limit your outdoor activities when pollen counts are high.",
+        "Keep windows closed during pollen season",
+        "Bathe and shampoo your hair daily before going to bed."
+      ],
+      "Specialization": ["Allergist"]
+    }
   };
 }
