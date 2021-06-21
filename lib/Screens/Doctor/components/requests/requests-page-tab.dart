@@ -46,13 +46,10 @@ class _RequestsPageState extends State<RequestsPage>
           ],
         ),
         Container(
-          height: size.height * 0.8,
+          height: size.height * 0.7,
           child: TabBarView(
             controller: _tabController,
-            children: <Widget>[
-              PendingRequestsTab(),
-              AcceptedRequestsTab()
-            ],
+            children: <Widget>[PendingRequestsTab(), AcceptedRequestsTab()],
           ),
         )
       ],
